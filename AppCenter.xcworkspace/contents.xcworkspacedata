@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <Group
+      location = "container:"
+      name = "Apps">
+      <FileRef
+         location = "group:Apps/Wallhaven/Wallhaven.xcodeproj">
+      </FileRef>
+   </Group>
+   <Group
+      location = "container:"
+      name = "Packages">
+      <Group
+         location = "container:"
+         name = "UICore">
+         <FileRef
+            location = "group:Packages/UICore/AppLifecycle">
+         </FileRef>
+         <FileRef
+            location = "group:Packages/UICore/Chain">
+         </FileRef>
+         <FileRef
+            location = "group:Packages/UICore/UICombine">
+         </FileRef>
+         <FileRef
+            location = "group:Packages/UICore/UILayout">
+         </FileRef>
+      </Group>
+      <Group
+         location = "container:"
+         name = "Service">
+         <FileRef
+            location = "group:Packages/Service/AppModular">
+         </FileRef>
+         <FileRef
+            location = "group:Packages/Service/Crypto">
+         </FileRef>
+         <FileRef
+            location = "group:Packages/Service/ExtensionKit">
+         </FileRef>
+         <FileRef
+            location = "group:Packages/Service/KeyValueStore">
+         </FileRef>
+         <FileRef
+            location = "group:Packages/Service/Locks">
+         </FileRef>
+         <FileRef
+            location = "group:Packages/Service/LoggerPool">
+         </FileRef>
+         <FileRef
+            location = "group:Packages/Service/ORM">
+         </FileRef>
+         <FileRef
+            location = "group:Packages/Service/PropertyWrappers">
+         </FileRef>
+         <FileRef
+            location = "group:Packages/Service/WeakDelegate">
+         </FileRef>
+      </Group>
+   </Group>
+</Workspace>

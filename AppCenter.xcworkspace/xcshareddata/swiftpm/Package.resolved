@@ -1,0 +1,106 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "Asura",
+        "repositoryURL": "https://github.com/L1MeN9Yu/Asura.git",
+        "state": {
+          "branch": null,
+          "revision": "4b0628d00e0070570522610e1c7550e4d2f55b56",
+          "version": "2.1.0"
+        }
+      },
+      {
+        "package": "BinaryCodable",
+        "repositoryURL": "https://github.com/jverkoey/BinaryCodable.git",
+        "state": {
+          "branch": null,
+          "revision": "aebaa30f1b73c5c45c374d251029b8bd68bde755",
+          "version": "0.3.1"
+        }
+      },
+      {
+        "package": "CombineCocoa",
+        "repositoryURL": "https://github.com/CombineCommunity/CombineCocoa.git",
+        "state": {
+          "branch": null,
+          "revision": "4e262c2f9fb1cee1cb3be5717f7e6b55eb823971",
+          "version": "0.4.0"
+        }
+      },
+      {
+        "package": "CryptoSwift",
+        "repositoryURL": "https://github.com/krzyzanowskim/CryptoSwift.git",
+        "state": {
+          "branch": null,
+          "revision": "039f56c5d7960f277087a0be51f5eb04ed0ec073",
+          "version": "1.5.1"
+        }
+      },
+      {
+        "package": "DataConvert",
+        "repositoryURL": "https://github.com/L1MeN9Yu/DataConvert.git",
+        "state": {
+          "branch": null,
+          "revision": "80321bcda52eca42602368d60b928dbe3d5e356c",
+          "version": "1.0.0"
+        }
+      },
+      {
+        "package": "PinLayout",
+        "repositoryURL": "https://github.com/layoutBox/PinLayout.git",
+        "state": {
+          "branch": null,
+          "revision": "b44e3c8891a75fc711d85b86c03fed582d6c6ca5",
+          "version": "1.10.2"
+        }
+      },
+      {
+        "package": "RealmDatabase",
+        "repositoryURL": "https://github.com/realm/realm-core",
+        "state": {
+          "branch": null,
+          "revision": "472d325a2e844fcb48c400db74e6b9646f92ca93",
+          "version": "11.15.0"
+        }
+      },
+      {
+        "package": "Realm",
+        "repositoryURL": "https://github.com/realm/realm-swift.git",
+        "state": {
+          "branch": null,
+          "revision": "41fe221e2209ad31bee35593513d957dc3e6e458",
+          "version": "10.25.2"
+        }
+      },
+      {
+        "package": "Senna",
+        "repositoryURL": "https://github.com/L1MeN9Yu/Senna.git",
+        "state": {
+          "branch": null,
+          "revision": "fb7f7b18cd626feab25e0303cca620cfad438311",
+          "version": "3.1.0"
+        }
+      },
+      {
+        "package": "swift-extras-json",
+        "repositoryURL": "https://github.com/swift-extras/swift-extras-json.git",
+        "state": {
+          "branch": null,
+          "revision": "122b9454ef01bf89a4c190b8fd3717ddd0a2fbd0",
+          "version": "0.6.0"
+        }
+      },
+      {
+        "package": "swift-log",
+        "repositoryURL": "https://github.com/apple/swift-log.git",
+        "state": {
+          "branch": null,
+          "revision": "5d66f7ba25daf4f94100e7022febf3c75e37a6c7",
+          "version": "1.4.2"
+        }
+      }
+    ]
+  },
+  "version": 1
+}

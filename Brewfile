@@ -1,0 +1,6 @@
+brew "pre-commit"
+brew "swiftformat"
+brew "swiftlint"
+brew "protobuf"
+brew "swift-protobuf"
+brew "grpc-swift"
