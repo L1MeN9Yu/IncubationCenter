@@ -14,6 +14,7 @@
 		EB31A4A5E7F7E6B536E204D5 /* Exported.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB31AC662118840152C2DD86 /* Exported.swift */; };
 		EB31A58372387C28358640F6 /* DiscoveryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB31A3AC53CAC5454F780F75 /* DiscoveryViewController.swift */; };
 		EB31AB1670868BB2A19D8396 /* DiscoveryNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB31A5D1922C19ABFD35E292 /* DiscoveryNavigationViewController.swift */; };
+		EB31AC41CDB0A93720F289C5 /* DiscoveryContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB31A5593CCF06F0F1CEAE17 /* DiscoveryContentView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -34,6 +35,7 @@
 		1E7F75E928377D870035A8E2 /* Service.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Service.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E7F75EB28377D870035A8E2 /* UICore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = UICore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB31A3AC53CAC5454F780F75 /* DiscoveryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiscoveryViewController.swift; sourceTree = "<group>"; };
+		EB31A5593CCF06F0F1CEAE17 /* DiscoveryContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiscoveryContentView.swift; sourceTree = "<group>"; };
 		EB31A5D1922C19ABFD35E292 /* DiscoveryNavigationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiscoveryNavigationViewController.swift; sourceTree = "<group>"; };
 		EB31AB6CD314C8DAB63E8F0D /* DiscoveryModule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiscoveryModule.swift; sourceTree = "<group>"; };
 		EB31AC662118840152C2DD86 /* Exported.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Exported.swift; sourceTree = "<group>"; };
@@ -95,6 +97,7 @@
 			children = (
 				EB31A5D1922C19ABFD35E292 /* DiscoveryNavigationViewController.swift */,
 				EB31A3AC53CAC5454F780F75 /* DiscoveryViewController.swift */,
+				EB31A5593CCF06F0F1CEAE17 /* DiscoveryContentView.swift */,
 			);
 			path = Discovery;
 			sourceTree = "<group>";
@@ -161,6 +164,7 @@
 				EB31A4A5E7F7E6B536E204D5 /* Exported.swift in Sources */,
 				EB31AB1670868BB2A19D8396 /* DiscoveryNavigationViewController.swift in Sources */,
 				EB31A58372387C28358640F6 /* DiscoveryViewController.swift in Sources */,
+				EB31AC41CDB0A93720F289C5 /* DiscoveryContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

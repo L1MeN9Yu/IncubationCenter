@@ -102,13 +102,7 @@ extension ViewController {
     @objc
     open var isEnableScreenEdgePanGestureRecognizer: Bool { true }
 
-    override open var preferredStatusBarStyle: UIStatusBarStyle {
-        if #available(iOS 13.0, *) {
-            return .darkContent
-        } else {
-            return .default
-        }
-    }
+    override open var preferredStatusBarStyle: UIStatusBarStyle { .default }
 
     override open var hidesBottomBarWhenPushed: Bool {
         get { (navigationController?.viewControllers.count ?? 0) > 1 }
