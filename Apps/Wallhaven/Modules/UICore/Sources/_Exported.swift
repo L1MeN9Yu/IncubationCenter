@@ -8,3 +8,4 @@
 @_exported import UICombine
 @_exported import UIKit
 @_exported import UILayout
+@_exported import UIResource

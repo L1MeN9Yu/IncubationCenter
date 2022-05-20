@@ -29,6 +29,9 @@
          <FileRef
             location = "group:Packages/UICore/UILayout">
          </FileRef>
+         <FileRef
+            location = "group:Packages/UICore/UIResource">
+         </FileRef>
       </Group>
       <Group
          location = "container:"

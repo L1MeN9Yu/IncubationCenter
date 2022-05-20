@@ -5,10 +5,10 @@
 import AppModular
 import LoggerPool
 
-class AppTabBarModule: Modular {}
+class TabBarModule: Modular {}
 
-extension AppTabBarModule {
+extension TabBarModule {
     static let logger = Loggers[typeName]
 }
 
-let logger = AppTabBarModule.logger
+let logger = TabBarModule.logger

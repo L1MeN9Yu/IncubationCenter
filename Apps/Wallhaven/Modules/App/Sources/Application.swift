@@ -2,6 +2,7 @@
 // Created by Mengyu Li on 2022/5/20.
 //
 
+import AppDiscovery
 import AppTabBar
 import Foundation
 import Service
@@ -54,6 +55,7 @@ private extension Application {
     @discardableResult
     static func enterUI() -> Self.Type {
         window.rootViewController = AppTabBar.appTabBarViewControllerType.init(viewControllers: [
+            AppDiscovery.discoveryNavigationControllerType.init(),
         ])
         return self
     }

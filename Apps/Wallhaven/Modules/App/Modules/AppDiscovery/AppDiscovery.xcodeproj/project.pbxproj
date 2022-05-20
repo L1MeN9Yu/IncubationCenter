@@ -7,16 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1E7F75C0283743300035A8E2 /* Center.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E7F75BF283743300035A8E2 /* Center.framework */; };
-		1E7F75C2283743350035A8E2 /* Service.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E7F75C1283743350035A8E2 /* Service.framework */; };
-		1E7F75C42837433A0035A8E2 /* UICore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E7F75C32837433A0035A8E2 /* UICore.framework */; };
-		EB31A5310FDBE7FA3EE86D6B /* Exported.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB31AC340551194A69BD98CC /* Exported.swift */; };
-		EB31A74D58CF997B62B0F69A /* TabBarModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB31AE718C09D946A4AE3EF5 /* TabBarModule.swift */; };
-		EB31AD87B6CC1CDF3D10EC91 /* AppTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB31A7A9D64B83EC9B392431 /* AppTabBarViewController.swift */; };
+		1E7F75E828377D870035A8E2 /* Center.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E7F75E728377D870035A8E2 /* Center.framework */; };
+		1E7F75EA28377D870035A8E2 /* Service.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E7F75E928377D870035A8E2 /* Service.framework */; };
+		1E7F75EC28377D870035A8E2 /* UICore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E7F75EB28377D870035A8E2 /* UICore.framework */; };
+		EB31A37FE8ECD44181E2EF31 /* DiscoveryModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB31AB6CD314C8DAB63E8F0D /* DiscoveryModule.swift */; };
+		EB31A4A5E7F7E6B536E204D5 /* Exported.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB31AC662118840152C2DD86 /* Exported.swift */; };
+		EB31A58372387C28358640F6 /* DiscoveryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB31A3AC53CAC5454F780F75 /* DiscoveryViewController.swift */; };
+		EB31AB1670868BB2A19D8396 /* DiscoveryNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB31A5D1922C19ABFD35E292 /* DiscoveryNavigationViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		1E7F75AB283742740035A8E2 /* CopyFiles */ = {
+		1E7F75D428377D670035A8E2 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "include/$(PRODUCT_NAME)";
@@ -28,102 +29,112 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		1E7F75AD283742740035A8E2 /* libAppTabBar.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libAppTabBar.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		1E7F75BF283743300035A8E2 /* Center.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Center.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		1E7F75C1283743350035A8E2 /* Service.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Service.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		1E7F75C32837433A0035A8E2 /* UICore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = UICore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		EB31A7A9D64B83EC9B392431 /* AppTabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppTabBarViewController.swift; sourceTree = "<group>"; };
-		EB31AC340551194A69BD98CC /* Exported.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Exported.swift; sourceTree = "<group>"; };
-		EB31AE718C09D946A4AE3EF5 /* TabBarModule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarModule.swift; sourceTree = "<group>"; };
+		1E7F75D628377D670035A8E2 /* libAppDiscovery.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libAppDiscovery.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		1E7F75E728377D870035A8E2 /* Center.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Center.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1E7F75E928377D870035A8E2 /* Service.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Service.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1E7F75EB28377D870035A8E2 /* UICore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = UICore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EB31A3AC53CAC5454F780F75 /* DiscoveryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiscoveryViewController.swift; sourceTree = "<group>"; };
+		EB31A5D1922C19ABFD35E292 /* DiscoveryNavigationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiscoveryNavigationViewController.swift; sourceTree = "<group>"; };
+		EB31AB6CD314C8DAB63E8F0D /* DiscoveryModule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiscoveryModule.swift; sourceTree = "<group>"; };
+		EB31AC662118840152C2DD86 /* Exported.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Exported.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		1E7F75AA283742740035A8E2 /* Frameworks */ = {
+		1E7F75D328377D670035A8E2 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1E7F75C42837433A0035A8E2 /* UICore.framework in Frameworks */,
-				1E7F75C2283743350035A8E2 /* Service.framework in Frameworks */,
-				1E7F75C0283743300035A8E2 /* Center.framework in Frameworks */,
+				1E7F75E828377D870035A8E2 /* Center.framework in Frameworks */,
+				1E7F75EA28377D870035A8E2 /* Service.framework in Frameworks */,
+				1E7F75EC28377D870035A8E2 /* UICore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		1E7F75A4283742740035A8E2 = {
+		1E7F75CD28377D670035A8E2 = {
 			isa = PBXGroup;
 			children = (
-				1E7F75AF283742740035A8E2 /* Sources */,
-				1E7F75AE283742740035A8E2 /* Products */,
-				1E7F75BE283743300035A8E2 /* Frameworks */,
+				1E7F75D828377D670035A8E2 /* Sources */,
+				1E7F75D728377D670035A8E2 /* Products */,
+				1E7F75E628377D870035A8E2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
-		1E7F75AE283742740035A8E2 /* Products */ = {
+		1E7F75D728377D670035A8E2 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				1E7F75AD283742740035A8E2 /* libAppTabBar.a */,
+				1E7F75D628377D670035A8E2 /* libAppDiscovery.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		1E7F75AF283742740035A8E2 /* Sources */ = {
+		1E7F75D828377D670035A8E2 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				EB31AE718C09D946A4AE3EF5 /* TabBarModule.swift */,
-				EB31AC340551194A69BD98CC /* Exported.swift */,
-				EB31A7A9D64B83EC9B392431 /* AppTabBarViewController.swift */,
+				EB31AB6CD314C8DAB63E8F0D /* DiscoveryModule.swift */,
+				EB31AC662118840152C2DD86 /* Exported.swift */,
+				EB31AAB88515FA0F63745F98 /* Discovery */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
 		};
-		1E7F75BE283743300035A8E2 /* Frameworks */ = {
+		1E7F75E628377D870035A8E2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				1E7F75C32837433A0035A8E2 /* UICore.framework */,
-				1E7F75C1283743350035A8E2 /* Service.framework */,
-				1E7F75BF283743300035A8E2 /* Center.framework */,
+				1E7F75E728377D870035A8E2 /* Center.framework */,
+				1E7F75E928377D870035A8E2 /* Service.framework */,
+				1E7F75EB28377D870035A8E2 /* UICore.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EB31AAB88515FA0F63745F98 /* Discovery */ = {
+			isa = PBXGroup;
+			children = (
+				EB31A5D1922C19ABFD35E292 /* DiscoveryNavigationViewController.swift */,
+				EB31A3AC53CAC5454F780F75 /* DiscoveryViewController.swift */,
+			);
+			path = Discovery;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		1E7F75AC283742740035A8E2 /* AppTabBar */ = {
+		1E7F75D528377D670035A8E2 /* AppDiscovery */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1E7F75B4283742740035A8E2 /* Build configuration list for PBXNativeTarget "AppTabBar" */;
+			buildConfigurationList = 1E7F75DD28377D670035A8E2 /* Build configuration list for PBXNativeTarget "AppDiscovery" */;
 			buildPhases = (
-				1E7F75A9283742740035A8E2 /* Sources */,
-				1E7F75AA283742740035A8E2 /* Frameworks */,
-				1E7F75AB283742740035A8E2 /* CopyFiles */,
+				1E7F75D228377D670035A8E2 /* Sources */,
+				1E7F75D328377D670035A8E2 /* Frameworks */,
+				1E7F75D428377D670035A8E2 /* CopyFiles */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = AppTabBar;
-			productName = AppTabBar;
-			productReference = 1E7F75AD283742740035A8E2 /* libAppTabBar.a */;
+			name = AppDiscovery;
+			productName = AppDiscovery;
+			productReference = 1E7F75D628377D670035A8E2 /* libAppDiscovery.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		1E7F75A5283742740035A8E2 /* Project object */ = {
+		1E7F75CE28377D670035A8E2 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1340;
 				LastUpgradeCheck = 1340;
 				TargetAttributes = {
-					1E7F75AC283742740035A8E2 = {
+					1E7F75D528377D670035A8E2 = {
 						CreatedOnToolsVersion = 13.4;
 					};
 				};
 			};
-			buildConfigurationList = 1E7F75A8283742740035A8E2 /* Build configuration list for PBXProject "AppTabBar" */;
+			buildConfigurationList = 1E7F75D128377D670035A8E2 /* Build configuration list for PBXProject "AppDiscovery" */;
 			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -131,31 +142,32 @@
 				en,
 				Base,
 			);
-			mainGroup = 1E7F75A4283742740035A8E2;
-			productRefGroup = 1E7F75AE283742740035A8E2 /* Products */;
+			mainGroup = 1E7F75CD28377D670035A8E2;
+			productRefGroup = 1E7F75D728377D670035A8E2 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				1E7F75AC283742740035A8E2 /* AppTabBar */,
+				1E7F75D528377D670035A8E2 /* AppDiscovery */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		1E7F75A9283742740035A8E2 /* Sources */ = {
+		1E7F75D228377D670035A8E2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EB31A74D58CF997B62B0F69A /* TabBarModule.swift in Sources */,
-				EB31A5310FDBE7FA3EE86D6B /* Exported.swift in Sources */,
-				EB31AD87B6CC1CDF3D10EC91 /* AppTabBarViewController.swift in Sources */,
+				EB31A37FE8ECD44181E2EF31 /* DiscoveryModule.swift in Sources */,
+				EB31A4A5E7F7E6B536E204D5 /* Exported.swift in Sources */,
+				EB31AB1670868BB2A19D8396 /* DiscoveryNavigationViewController.swift in Sources */,
+				EB31A58372387C28358640F6 /* DiscoveryViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		1E7F75B2283742740035A8E2 /* Debug */ = {
+		1E7F75DB28377D670035A8E2 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -215,7 +227,7 @@
 			};
 			name = Debug;
 		};
-		1E7F75B3283742740035A8E2 /* Release */ = {
+		1E7F75DC28377D670035A8E2 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -269,7 +281,7 @@
 			};
 			name = Release;
 		};
-		1E7F75B5283742740035A8E2 /* Debug */ = {
+		1E7F75DE28377D670035A8E2 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
@@ -282,7 +294,7 @@
 			};
 			name = Debug;
 		};
-		1E7F75B6283742740035A8E2 /* Release */ = {
+		1E7F75DF28377D670035A8E2 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
@@ -298,25 +310,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		1E7F75A8283742740035A8E2 /* Build configuration list for PBXProject "AppTabBar" */ = {
+		1E7F75D128377D670035A8E2 /* Build configuration list for PBXProject "AppDiscovery" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				1E7F75B2283742740035A8E2 /* Debug */,
-				1E7F75B3283742740035A8E2 /* Release */,
+				1E7F75DB28377D670035A8E2 /* Debug */,
+				1E7F75DC28377D670035A8E2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		1E7F75B4283742740035A8E2 /* Build configuration list for PBXNativeTarget "AppTabBar" */ = {
+		1E7F75DD28377D670035A8E2 /* Build configuration list for PBXNativeTarget "AppDiscovery" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				1E7F75B5283742740035A8E2 /* Debug */,
-				1E7F75B6283742740035A8E2 /* Release */,
+				1E7F75DE28377D670035A8E2 /* Debug */,
+				1E7F75DF28377D670035A8E2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 1E7F75A5283742740035A8E2 /* Project object */;
+	rootObject = 1E7F75CE28377D670035A8E2 /* Project object */;
 }

@@ -2,7 +2,7 @@
 // Created by Mengyu Li on 2022/5/20.
 //
 
-import BaseUI
+import UICore
 
 class AppTabBarViewController: TabBarViewController {}
 
@@ -15,7 +15,7 @@ extension AppTabBarViewController {
 
 private extension AppTabBarViewController {
     func setup() {
-        tabBar.tintColor = .label
+        tabBar.tintColor = .systemBlack
         tabBar.isTranslucent = false
     }
 }
