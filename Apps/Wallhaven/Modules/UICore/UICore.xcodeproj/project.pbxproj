@@ -13,6 +13,8 @@
 		1E7F7589283680A70035A8E2 /* UICombine in Frameworks */ = {isa = PBXBuildFile; productRef = 1E7F7588283680A70035A8E2 /* UICombine */; };
 		1E7F758B283680AC0035A8E2 /* UILayout in Frameworks */ = {isa = PBXBuildFile; productRef = 1E7F758A283680AC0035A8E2 /* UILayout */; };
 		1E7F758D283730230035A8E2 /* BaseUI in Frameworks */ = {isa = PBXBuildFile; productRef = 1E7F758C283730230035A8E2 /* BaseUI */; };
+		1E7F759A28373B750035A8E2 /* Service.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E7F759928373B750035A8E2 /* Service.framework */; };
+		1E7F75A328373BC00035A8E2 /* _Exported.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7F75A228373BC00035A8E2 /* _Exported.swift */; };
 		EB31AB0268EDB7096AE528EA /* UICoreModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB31A7CBEFA92D8BD0CE88F0 /* UICoreModule.swift */; };
 /* End PBXBuildFile section */
 
@@ -20,6 +22,8 @@
 		1E7F752A283633B20035A8E2 /* UICore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = UICore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E7F752E283633B20035A8E2 /* UICore.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = UICore.docc; sourceTree = "<group>"; };
 		1E7F75852836809D0035A8E2 /* Chain */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = Chain; path = ../../../../Packages/UICore/Chain; sourceTree = "<group>"; };
+		1E7F759928373B750035A8E2 /* Service.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Service.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1E7F75A228373BC00035A8E2 /* _Exported.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = _Exported.swift; sourceTree = "<group>"; };
 		EB31A7CBEFA92D8BD0CE88F0 /* UICoreModule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UICoreModule.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -28,6 +32,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1E7F759A28373B750035A8E2 /* Service.framework in Frameworks */,
 				1E7F758D283730230035A8E2 /* BaseUI in Frameworks */,
 				1E7F758B283680AC0035A8E2 /* UILayout in Frameworks */,
 				1E7F7587283680A30035A8E2 /* Chain in Frameworks */,
@@ -68,6 +73,7 @@
 		1E7F755C283636300035A8E2 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				1E7F75A228373BC00035A8E2 /* _Exported.swift */,
 				EB31A7CBEFA92D8BD0CE88F0 /* UICoreModule.swift */,
 			);
 			path = Sources;
@@ -76,6 +82,7 @@
 		1E7F75822836808E0035A8E2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				1E7F759928373B750035A8E2 /* Service.framework */,
 				1E7F75852836809D0035A8E2 /* Chain */,
 			);
 			name = Frameworks;
@@ -166,6 +173,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1E7F75A328373BC00035A8E2 /* _Exported.swift in Sources */,
 				1E7F752F283633B20035A8E2 /* UICore.docc in Sources */,
 				EB31AB0268EDB7096AE528EA /* UICoreModule.swift in Sources */,
 			);

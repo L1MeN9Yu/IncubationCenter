@@ -14,10 +14,12 @@ import UIKit
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        ServiceModule.bootstrap()
-        CenterModule.bootstrap()
-        UICoreModule.bootstrap()
-        AppModule.bootstrap()
+        defer {
+            ServiceModule.bootstrap()
+            CenterModule.bootstrap()
+            UICoreModule.bootstrap()
+            AppModule.bootstrap()
+        }
         return true
     }
 
