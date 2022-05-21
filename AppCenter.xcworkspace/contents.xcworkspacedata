@@ -63,6 +63,9 @@
          <FileRef
             location = "group:Packages/Service/WeakDelegate">
          </FileRef>
+         <FileRef
+            location = "group:Packages/Service/RestfulClient">
+         </FileRef>
       </Group>
    </Group>
 </Workspace>

@@ -17,6 +17,7 @@
 		1E7F757128365FA80035A8E2 /* ORM in Frameworks */ = {isa = PBXBuildFile; productRef = 1E7F757028365FA80035A8E2 /* ORM */; };
 		1E7F757328365FA80035A8E2 /* PropertyWrappers in Frameworks */ = {isa = PBXBuildFile; productRef = 1E7F757228365FA80035A8E2 /* PropertyWrappers */; };
 		1E7F757528365FA80035A8E2 /* WeakDelegate in Frameworks */ = {isa = PBXBuildFile; productRef = 1E7F757428365FA80035A8E2 /* WeakDelegate */; };
+		1E7F762B2838869A0035A8E2 /* RestfulClient in Frameworks */ = {isa = PBXBuildFile; productRef = 1E7F762A2838869A0035A8E2 /* RestfulClient */; };
 		EB31AA0F7B2AC58AA81B16F4 /* ServiceModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB31ABDE456E7632DEA37A30 /* ServiceModule.swift */; };
 		EB31AF2A4C5C61EC79E2B829 /* _Exported.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB31A27E040CB9C074A4957A /* _Exported.swift */; };
 /* End PBXBuildFile section */
@@ -34,6 +35,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1E7F756B28365FA80035A8E2 /* KeyValueStore in Frameworks */,
+				1E7F762B2838869A0035A8E2 /* RestfulClient in Frameworks */,
 				1E7F757328365FA80035A8E2 /* PropertyWrappers in Frameworks */,
 				1E7F756528365FA80035A8E2 /* AppModular in Frameworks */,
 				1E7F756F28365FA80035A8E2 /* LoggerPool in Frameworks */,
@@ -127,6 +129,7 @@
 				1E7F757028365FA80035A8E2 /* ORM */,
 				1E7F757228365FA80035A8E2 /* PropertyWrappers */,
 				1E7F757428365FA80035A8E2 /* WeakDelegate */,
+				1E7F762A2838869A0035A8E2 /* RestfulClient */,
 			);
 			productName = Service;
 			productReference = 1E7F74FA283628D30035A8E2 /* Service.framework */;
@@ -426,6 +429,10 @@
 		1E7F757428365FA80035A8E2 /* WeakDelegate */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = WeakDelegate;
+		};
+		1E7F762A2838869A0035A8E2 /* RestfulClient */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = RestfulClient;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

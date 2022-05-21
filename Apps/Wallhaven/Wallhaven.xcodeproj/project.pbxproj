@@ -104,8 +104,8 @@
 				1E7F74A7283620A60035A8E2 /* Sources */,
 				1E7F74BD283624EC0035A8E2 /* Modules */,
 				1E7F74BC2836212B0035A8E2 /* Resources */,
-				1E7F74A6283620A60035A8E2 /* Products */,
 				1E7F74EB283625BF0035A8E2 /* Frameworks */,
+				1E7F74A6283620A60035A8E2 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
