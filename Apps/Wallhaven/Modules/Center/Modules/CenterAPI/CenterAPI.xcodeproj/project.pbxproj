@@ -7,9 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1E7F76452838D0340035A8E2 /* CenterAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7F76442838D0340035A8E2 /* CenterAPI.swift */; };
 		1E7F76532838D04C0035A8E2 /* Service.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E7F76522838D04C0035A8E2 /* Service.framework */; };
-		EB31A25D074F524B3933A949 /* BaseRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB31A6C5311FFE834DF9886D /* BaseRequest.swift */; };
+		EB31A2602E3215F10C638DFB /* APICenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB31A82AA4508911EAE23FFB /* APICenter.swift */; };
+		EB31A35D1BFAE516044ED643 /* ListRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB31AF579CA69FC8E43A68D0 /* ListRequest.swift */; };
+		EB31A46CD25E3448C219CFF9 /* BaseRequestable.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB31AC19DA9BE6F2F05C4560 /* BaseRequestable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -26,9 +27,10 @@
 
 /* Begin PBXFileReference section */
 		1E7F76412838D0340035A8E2 /* libCenterAPI.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libCenterAPI.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		1E7F76442838D0340035A8E2 /* CenterAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CenterAPI.swift; sourceTree = "<group>"; };
 		1E7F76522838D04C0035A8E2 /* Service.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Service.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		EB31A6C5311FFE834DF9886D /* BaseRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseRequest.swift; sourceTree = "<group>"; };
+		EB31A82AA4508911EAE23FFB /* APICenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APICenter.swift; sourceTree = "<group>"; };
+		EB31AC19DA9BE6F2F05C4560 /* BaseRequestable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseRequestable.swift; sourceTree = "<group>"; };
+		EB31AF579CA69FC8E43A68D0 /* ListRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListRequest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,8 +65,8 @@
 		1E7F76432838D0340035A8E2 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				1E7F76442838D0340035A8E2 /* CenterAPI.swift */,
-				EB31A6C5311FFE834DF9886D /* BaseRequest.swift */,
+				EB31AB9B920EB960775FBDC2 /* Requests */,
+				EB31A82AA4508911EAE23FFB /* APICenter.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -75,6 +77,15 @@
 				1E7F76522838D04C0035A8E2 /* Service.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EB31AB9B920EB960775FBDC2 /* Requests */ = {
+			isa = PBXGroup;
+			children = (
+				EB31AF579CA69FC8E43A68D0 /* ListRequest.swift */,
+				EB31AC19DA9BE6F2F05C4560 /* BaseRequestable.swift */,
+			);
+			path = Requests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,8 +146,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1E7F76452838D0340035A8E2 /* CenterAPI.swift in Sources */,
-				EB31A25D074F524B3933A949 /* BaseRequest.swift in Sources */,
+				EB31A2602E3215F10C638DFB /* APICenter.swift in Sources */,
+				EB31A35D1BFAE516044ED643 /* ListRequest.swift in Sources */,
+				EB31A46CD25E3448C219CFF9 /* BaseRequestable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

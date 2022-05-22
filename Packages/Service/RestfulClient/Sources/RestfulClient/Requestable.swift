@@ -1,5 +1,5 @@
 //
-// Created by Mengyu Li on 2022/5/21.
+// Created by Mengyu Li on 2022/5/22.
 //
 
 import AsyncHTTPClient
@@ -7,22 +7,15 @@ import Foundation
 import NIOHTTP1
 import NIOSSL
 
-open class Request {
-    public let url: String
-    public let method: HTTPMethod
-    public let headers: HTTPHeaders
-    public let body: [UInt8]?
-
-    public init(url: String, method: HTTPMethod, headers: HTTPHeaders, body: [UInt8]?) {
-        self.url = url
-        self.method = method
-        self.headers = headers
-        self.body = body
-    }
+public protocol Requestable {
+    var url: String { get }
+    var method: HTTPMethod { get }
+    var headers: HTTPHeaders { get }
+    var body: [UInt8]? { get }
 }
 
 @available(macOS 10.15, iOS 13.0, watchOS 6.0, tvOS 13.0, *)
-public extension Request {
+public extension Requestable {
     func export() -> HTTPClientRequest {
         var httpClientRequest = HTTPClientRequest(url: url)
         httpClientRequest.method = method
