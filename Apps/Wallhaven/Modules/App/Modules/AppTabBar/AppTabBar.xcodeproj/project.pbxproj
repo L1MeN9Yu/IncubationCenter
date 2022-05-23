@@ -71,8 +71,8 @@
 		1E7F75AF283742740035A8E2 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				EB31AE718C09D946A4AE3EF5 /* TabBarModule.swift */,
 				EB31AC340551194A69BD98CC /* Exported.swift */,
+				EB31AE718C09D946A4AE3EF5 /* TabBarModule.swift */,
 				EB31A7A9D64B83EC9B392431 /* AppTabBarViewController.swift */,
 			);
 			path = Sources;

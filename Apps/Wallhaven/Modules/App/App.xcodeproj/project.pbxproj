@@ -16,6 +16,8 @@
 		1E7F75F32837A67A0035A8E2 /* DiscoveryModule.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1E7F75F52837A67A0035A8E2 /* DiscoveryModule.strings */; };
 		1E7F761C2837BEE40035A8E2 /* libAppMe.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E7F76142837BEB30035A8E2 /* libAppMe.a */; };
 		1E7F761F2837C0C90035A8E2 /* MeModule.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1E7F76212837C0C90035A8E2 /* MeModule.strings */; };
+		1EDF08AA283B19C900025E14 /* FavoriteModule.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1EDF08AC283B19C900025E14 /* FavoriteModule.strings */; };
+		1EDF08AE283B1CF800025E14 /* libAppFavorite.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1EDF089E283B197A00025E14 /* libAppFavorite.a */; };
 		EB31A416AE6608AAF157CB65 /* Application.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB31A638C3265616F9781C04 /* Application.swift */; };
 		EB31AE5EFB17E3D66F9B98E2 /* AppModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB31ACCF3F107CD66FECD44C /* AppModule.swift */; };
 /* End PBXBuildFile section */
@@ -42,6 +44,13 @@
 			remoteGlobalIDString = 1E7F76052837BEB20035A8E2;
 			remoteInfo = AppMe;
 		};
+		1EDF089D283B197A00025E14 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1EDF0898283B197900025E14 /* AppFavorite.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 1EDF088E283B197900025E14;
+			remoteInfo = AppFavorite;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -57,6 +66,9 @@
 		1E7F760F2837BEB20035A8E2 /* AppMe.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = AppMe.xcodeproj; path = AppMe/AppMe.xcodeproj; sourceTree = "<group>"; };
 		1E7F76202837C0C90035A8E2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/MeModule.strings; sourceTree = "<group>"; };
 		1E7F76222837C0CA0035A8E2 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/MeModule.strings"; sourceTree = "<group>"; };
+		1EDF0898283B197900025E14 /* AppFavorite.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = AppFavorite.xcodeproj; path = AppFavorite/AppFavorite.xcodeproj; sourceTree = "<group>"; };
+		1EDF08AB283B19C900025E14 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/FavoriteModule.strings; sourceTree = "<group>"; };
+		1EDF08AD283B19CA00025E14 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/FavoriteModule.strings"; sourceTree = "<group>"; };
 		EB31A638C3265616F9781C04 /* Application.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Application.swift; sourceTree = "<group>"; };
 		EB31ACCF3F107CD66FECD44C /* AppModule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppModule.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -66,6 +78,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1EDF08AE283B1CF800025E14 /* libAppFavorite.a in Frameworks */,
 				1E7F759428373B670035A8E2 /* Service.framework in Frameworks */,
 				1E7F75ED28377D9B0035A8E2 /* libAppDiscovery.a in Frameworks */,
 				1E7F75BD283742930035A8E2 /* libAppTabBar.a in Frameworks */,
@@ -120,6 +133,7 @@
 			children = (
 				1E7F75B7283742740035A8E2 /* AppTabBar.xcodeproj */,
 				1E7F75E028377D670035A8E2 /* AppDiscovery.xcodeproj */,
+				1EDF0898283B197900025E14 /* AppFavorite.xcodeproj */,
 				1E7F760F2837BEB20035A8E2 /* AppMe.xcodeproj */,
 			);
 			path = Modules;
@@ -156,6 +170,7 @@
 			children = (
 				1E7F75F52837A67A0035A8E2 /* DiscoveryModule.strings */,
 				1E7F76212837C0C90035A8E2 /* MeModule.strings */,
+				1EDF08AC283B19C900025E14 /* FavoriteModule.strings */,
 			);
 			path = LocalizableStrings;
 			sourceTree = "<group>";
@@ -164,6 +179,14 @@
 			isa = PBXGroup;
 			children = (
 				1E7F76142837BEB30035A8E2 /* libAppMe.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1EDF0899283B197900025E14 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1EDF089E283B197A00025E14 /* libAppFavorite.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -232,6 +255,10 @@
 					ProjectRef = 1E7F75E028377D670035A8E2 /* AppDiscovery.xcodeproj */;
 				},
 				{
+					ProductGroup = 1EDF0899283B197900025E14 /* Products */;
+					ProjectRef = 1EDF0898283B197900025E14 /* AppFavorite.xcodeproj */;
+				},
+				{
 					ProductGroup = 1E7F76102837BEB20035A8E2 /* Products */;
 					ProjectRef = 1E7F760F2837BEB20035A8E2 /* AppMe.xcodeproj */;
 				},
@@ -269,6 +296,13 @@
 			remoteRef = 1E7F76132837BEB30035A8E2 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
+		1EDF089E283B197A00025E14 /* libAppFavorite.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libAppFavorite.a;
+			remoteRef = 1EDF089D283B197A00025E14 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 /* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
@@ -277,6 +311,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1E7F761F2837C0C90035A8E2 /* MeModule.strings in Resources */,
+				1EDF08AA283B19C900025E14 /* FavoriteModule.strings in Resources */,
 				1E7F75F32837A67A0035A8E2 /* DiscoveryModule.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -313,6 +348,15 @@
 				1E7F76222837C0CA0035A8E2 /* zh-Hans */,
 			);
 			name = MeModule.strings;
+			sourceTree = "<group>";
+		};
+		1EDF08AC283B19C900025E14 /* FavoriteModule.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1EDF08AB283B19C900025E14 /* en */,
+				1EDF08AD283B19CA00025E14 /* zh-Hans */,
+			);
+			name = FavoriteModule.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

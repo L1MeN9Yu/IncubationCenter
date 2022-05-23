@@ -19,11 +19,11 @@ extension DiscoveryViewController {
 
 private extension DiscoveryViewController {
     func setup() {
-        setNavigationBar()
+        setupNavigationBar()
         contentView.x.add(to: view).pin.all()
     }
 
-    func setNavigationBar() {
+    func setupNavigationBar() {
         title = DiscoveryModule.localizedString(key: "DiscoveryViewController.Title")
         let filterBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "slider.horizontal.3"), style: .plain, target: nil, action: nil)
         filterBarButtonItem

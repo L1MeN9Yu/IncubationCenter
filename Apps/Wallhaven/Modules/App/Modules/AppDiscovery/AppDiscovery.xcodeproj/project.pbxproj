@@ -75,8 +75,8 @@
 		1E7F75D828377D670035A8E2 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				EB31AB6CD314C8DAB63E8F0D /* DiscoveryModule.swift */,
 				EB31AC662118840152C2DD86 /* Exported.swift */,
+				EB31AB6CD314C8DAB63E8F0D /* DiscoveryModule.swift */,
 				EB31AAB88515FA0F63745F98 /* Discovery */,
 			);
 			path = Sources;

@@ -3,6 +3,7 @@
 //
 
 import AppDiscovery
+import AppFavorite
 import AppMe
 import AppTabBar
 import Foundation
@@ -57,6 +58,7 @@ private extension Application {
     static func enterUI() -> Self.Type {
         window.rootViewController = AppTabBar.appTabBarViewControllerType.init(viewControllers: [
             AppDiscovery.discoveryNavigationControllerType.init(),
+            AppFavorite.favoriteNavigationControllerType.init(),
             AppMe.meNavigationControllerType.init(),
         ])
         return self
