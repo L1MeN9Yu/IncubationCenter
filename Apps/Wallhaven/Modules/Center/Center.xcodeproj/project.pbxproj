@@ -10,6 +10,7 @@
 		1E7F754B283635880035A8E2 /* Center.docc in Sources */ = {isa = PBXBuildFile; fileRef = 1E7F754A283635880035A8E2 /* Center.docc */; };
 		1E7F759F28373B7E0035A8E2 /* Service.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E7F759E28373B7E0035A8E2 /* Service.framework */; };
 		1E7F76542838D05D0035A8E2 /* libCenterAPI.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E7F76502838D0340035A8E2 /* libCenterAPI.a */; };
+		EB31A29FD83CE63F9DEFBA76 /* Exported.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB31A39EEF2E4941A946D0F4 /* Exported.swift */; };
 		EB31A58D2C6B518D045DB363 /* CenterModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB31AA23E1DD77A2EAA89297 /* CenterModule.swift */; };
 /* End PBXBuildFile section */
 
@@ -28,6 +29,8 @@
 		1E7F754A283635880035A8E2 /* Center.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = Center.docc; sourceTree = "<group>"; };
 		1E7F759E28373B7E0035A8E2 /* Service.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Service.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E7F764B2838D0340035A8E2 /* CenterAPI.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = CenterAPI.xcodeproj; path = CenterAPI/CenterAPI.xcodeproj; sourceTree = "<group>"; };
+		EB31A39EEF2E4941A946D0F4 /* Exported.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Exported.swift; sourceTree = "<group>"; };
+		EB31A74475C6EF4572AB671B /* Center.Config.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Center.Config.xcconfig; sourceTree = "<group>"; };
 		EB31AA23E1DD77A2EAA89297 /* CenterModule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CenterModule.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -50,6 +53,7 @@
 				1E7F755D283636390035A8E2 /* Sources */,
 				1E7F76372838CFE60035A8E2 /* Modules */,
 				1E7F7548283635880035A8E2 /* Resources */,
+				1EDF08B1283B273E00025E14 /* XCConfig */,
 				1E7F7547283635880035A8E2 /* Products */,
 				1E7F759D28373B7E0035A8E2 /* Frameworks */,
 			);
@@ -74,6 +78,7 @@
 		1E7F755D283636390035A8E2 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				EB31A39EEF2E4941A946D0F4 /* Exported.swift */,
 				EB31AA23E1DD77A2EAA89297 /* CenterModule.swift */,
 			);
 			path = Sources;
@@ -101,6 +106,14 @@
 				1E7F76502838D0340035A8E2 /* libCenterAPI.a */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		1EDF08B1283B273E00025E14 /* XCConfig */ = {
+			isa = PBXGroup;
+			children = (
+				EB31A74475C6EF4572AB671B /* Center.Config.xcconfig */,
+			);
+			path = XCConfig;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -199,6 +212,7 @@
 			files = (
 				1E7F754B283635880035A8E2 /* Center.docc in Sources */,
 				EB31A58D2C6B518D045DB363 /* CenterModule.swift in Sources */,
+				EB31A29FD83CE63F9DEFBA76 /* Exported.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -207,6 +221,7 @@
 /* Begin XCBuildConfiguration section */
 		1E7F754D283635880035A8E2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EB31A74475C6EF4572AB671B /* Center.Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -270,6 +285,7 @@
 		};
 		1E7F754E283635880035A8E2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EB31A74475C6EF4572AB671B /* Center.Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;

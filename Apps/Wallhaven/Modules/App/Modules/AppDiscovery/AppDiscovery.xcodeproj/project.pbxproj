@@ -15,6 +15,7 @@
 		EB31A58372387C28358640F6 /* DiscoveryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB31A3AC53CAC5454F780F75 /* DiscoveryViewController.swift */; };
 		EB31AB1670868BB2A19D8396 /* DiscoveryNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB31A5D1922C19ABFD35E292 /* DiscoveryNavigationViewController.swift */; };
 		EB31AC41CDB0A93720F289C5 /* DiscoveryContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB31A5593CCF06F0F1CEAE17 /* DiscoveryContentView.swift */; };
+		EB31AE61A48B0E67226D825A /* DiscoveryProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB31AC41BE1A930A128F050A /* DiscoveryProvider.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -38,6 +39,7 @@
 		EB31A5593CCF06F0F1CEAE17 /* DiscoveryContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiscoveryContentView.swift; sourceTree = "<group>"; };
 		EB31A5D1922C19ABFD35E292 /* DiscoveryNavigationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiscoveryNavigationViewController.swift; sourceTree = "<group>"; };
 		EB31AB6CD314C8DAB63E8F0D /* DiscoveryModule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiscoveryModule.swift; sourceTree = "<group>"; };
+		EB31AC41BE1A930A128F050A /* DiscoveryProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiscoveryProvider.swift; sourceTree = "<group>"; };
 		EB31AC662118840152C2DD86 /* Exported.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Exported.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -98,6 +100,7 @@
 				EB31A5D1922C19ABFD35E292 /* DiscoveryNavigationViewController.swift */,
 				EB31A3AC53CAC5454F780F75 /* DiscoveryViewController.swift */,
 				EB31A5593CCF06F0F1CEAE17 /* DiscoveryContentView.swift */,
+				EB31AC41BE1A930A128F050A /* DiscoveryProvider.swift */,
 			);
 			path = Discovery;
 			sourceTree = "<group>";
@@ -165,6 +168,7 @@
 				EB31AB1670868BB2A19D8396 /* DiscoveryNavigationViewController.swift in Sources */,
 				EB31A58372387C28358640F6 /* DiscoveryViewController.swift in Sources */,
 				EB31AC41CDB0A93720F289C5 /* DiscoveryContentView.swift in Sources */,
+				EB31AE61A48B0E67226D825A /* DiscoveryProvider.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

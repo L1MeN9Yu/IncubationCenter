@@ -8,7 +8,6 @@
 @_exported import KeyValueStore
 @_exported import Locks
 @_exported import LoggerPool
-@_exported import ORM
 @_exported import PropertyWrappers
 @_exported import RestfulClient
 @_exported import WeakDelegate

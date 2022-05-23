@@ -14,7 +14,6 @@
 		1E7F756B28365FA80035A8E2 /* KeyValueStore in Frameworks */ = {isa = PBXBuildFile; productRef = 1E7F756A28365FA80035A8E2 /* KeyValueStore */; };
 		1E7F756D28365FA80035A8E2 /* Locks in Frameworks */ = {isa = PBXBuildFile; productRef = 1E7F756C28365FA80035A8E2 /* Locks */; };
 		1E7F756F28365FA80035A8E2 /* LoggerPool in Frameworks */ = {isa = PBXBuildFile; productRef = 1E7F756E28365FA80035A8E2 /* LoggerPool */; };
-		1E7F757128365FA80035A8E2 /* ORM in Frameworks */ = {isa = PBXBuildFile; productRef = 1E7F757028365FA80035A8E2 /* ORM */; };
 		1E7F757328365FA80035A8E2 /* PropertyWrappers in Frameworks */ = {isa = PBXBuildFile; productRef = 1E7F757228365FA80035A8E2 /* PropertyWrappers */; };
 		1E7F757528365FA80035A8E2 /* WeakDelegate in Frameworks */ = {isa = PBXBuildFile; productRef = 1E7F757428365FA80035A8E2 /* WeakDelegate */; };
 		1E7F762B2838869A0035A8E2 /* RestfulClient in Frameworks */ = {isa = PBXBuildFile; productRef = 1E7F762A2838869A0035A8E2 /* RestfulClient */; };
@@ -40,7 +39,6 @@
 				1E7F756528365FA80035A8E2 /* AppModular in Frameworks */,
 				1E7F756F28365FA80035A8E2 /* LoggerPool in Frameworks */,
 				1E7F756D28365FA80035A8E2 /* Locks in Frameworks */,
-				1E7F757128365FA80035A8E2 /* ORM in Frameworks */,
 				1E7F757528365FA80035A8E2 /* WeakDelegate in Frameworks */,
 				1E7F756728365FA80035A8E2 /* Crypto in Frameworks */,
 				1E7F756928365FA80035A8E2 /* ExtensionKit in Frameworks */,
@@ -126,7 +124,6 @@
 				1E7F756A28365FA80035A8E2 /* KeyValueStore */,
 				1E7F756C28365FA80035A8E2 /* Locks */,
 				1E7F756E28365FA80035A8E2 /* LoggerPool */,
-				1E7F757028365FA80035A8E2 /* ORM */,
 				1E7F757228365FA80035A8E2 /* PropertyWrappers */,
 				1E7F757428365FA80035A8E2 /* WeakDelegate */,
 				1E7F762A2838869A0035A8E2 /* RestfulClient */,
@@ -417,10 +414,6 @@
 		1E7F756E28365FA80035A8E2 /* LoggerPool */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = LoggerPool;
-		};
-		1E7F757028365FA80035A8E2 /* ORM */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = ORM;
 		};
 		1E7F757228365FA80035A8E2 /* PropertyWrappers */ = {
 			isa = XCSwiftPackageProductDependency;

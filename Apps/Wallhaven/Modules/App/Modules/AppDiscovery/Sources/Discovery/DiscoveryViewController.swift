@@ -8,6 +8,7 @@ import UICore
 class DiscoveryViewController: ViewController {
     private lazy var subscriptions = Set<AnyCancellable>()
     private lazy var contentView = DiscoveryContentView()
+    private lazy var provider = DiscoveryProvider()
 }
 
 extension DiscoveryViewController {
@@ -21,6 +22,7 @@ private extension DiscoveryViewController {
     func setup() {
         setupNavigationBar()
         contentView.x.add(to: view).pin.all()
+        loadData()
     }
 
     func setupNavigationBar() {
@@ -35,6 +37,16 @@ private extension DiscoveryViewController {
             }
             .store(in: &subscriptions)
         navigationItem.rightBarButtonItem = filterBarButtonItem
+    }
+
+    func loadData() {
+        Task {
+            do {
+                try await provider.loadList()
+            } catch {
+                logger.error("\(error)")
+            }
+        }
     }
 }
 
