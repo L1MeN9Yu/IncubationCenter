@@ -56,6 +56,15 @@
         }
       },
       {
+        "package": "LookinServer",
+        "repositoryURL": "https://github.com/QMUI/LookinServer.git",
+        "state": {
+          "branch": null,
+          "revision": "383e4bbee0e55427a77a2619b59248dfc80776d7",
+          "version": "1.0.5"
+        }
+      },
+      {
         "package": "PinLayout",
         "repositoryURL": "https://github.com/layoutBox/PinLayout.git",
         "state": {

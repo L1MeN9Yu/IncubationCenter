@@ -10,11 +10,16 @@
 		1E7F75E828377D870035A8E2 /* Center.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E7F75E728377D870035A8E2 /* Center.framework */; };
 		1E7F75EA28377D870035A8E2 /* Service.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E7F75E928377D870035A8E2 /* Service.framework */; };
 		1E7F75EC28377D870035A8E2 /* UICore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E7F75EB28377D870035A8E2 /* UICore.framework */; };
+		EB31A0724F2823329936D6AF /* DiscoveryCollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB31ADA4CEB967221F2FBF41 /* DiscoveryCollectionViewLayout.swift */; };
+		EB31A31AA47B4C6E75AA5E43 /* DiscoveryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB31ADA853BB44581D9DC2DA /* DiscoveryCollectionViewCell.swift */; };
 		EB31A37FE8ECD44181E2EF31 /* DiscoveryModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB31AB6CD314C8DAB63E8F0D /* DiscoveryModule.swift */; };
+		EB31A3F6C71C10B46695106B /* WallpaperListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB31A6ECFB7D16EB47E5CA85 /* WallpaperListViewModel.swift */; };
 		EB31A4A5E7F7E6B536E204D5 /* Exported.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB31AC662118840152C2DD86 /* Exported.swift */; };
 		EB31A58372387C28358640F6 /* DiscoveryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB31A3AC53CAC5454F780F75 /* DiscoveryViewController.swift */; };
+		EB31AA93EA0AB0DEB313A3F2 /* DiscoveryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB31AD4306F803DF3A3161A7 /* DiscoveryViewModel.swift */; };
 		EB31AB1670868BB2A19D8396 /* DiscoveryNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB31A5D1922C19ABFD35E292 /* DiscoveryNavigationViewController.swift */; };
 		EB31AC41CDB0A93720F289C5 /* DiscoveryContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB31A5593CCF06F0F1CEAE17 /* DiscoveryContentView.swift */; };
+		EB31ACB100858D5870A39FF8 /* DiscoveryCollectionViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB31A50C005BBB5452E76E7B /* DiscoveryCollectionViewDataSource.swift */; };
 		EB31AE61A48B0E67226D825A /* DiscoveryProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB31AC41BE1A930A128F050A /* DiscoveryProvider.swift */; };
 /* End PBXBuildFile section */
 
@@ -36,11 +41,16 @@
 		1E7F75E928377D870035A8E2 /* Service.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Service.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E7F75EB28377D870035A8E2 /* UICore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = UICore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB31A3AC53CAC5454F780F75 /* DiscoveryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiscoveryViewController.swift; sourceTree = "<group>"; };
+		EB31A50C005BBB5452E76E7B /* DiscoveryCollectionViewDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiscoveryCollectionViewDataSource.swift; sourceTree = "<group>"; };
 		EB31A5593CCF06F0F1CEAE17 /* DiscoveryContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiscoveryContentView.swift; sourceTree = "<group>"; };
 		EB31A5D1922C19ABFD35E292 /* DiscoveryNavigationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiscoveryNavigationViewController.swift; sourceTree = "<group>"; };
+		EB31A6ECFB7D16EB47E5CA85 /* WallpaperListViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WallpaperListViewModel.swift; sourceTree = "<group>"; };
 		EB31AB6CD314C8DAB63E8F0D /* DiscoveryModule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiscoveryModule.swift; sourceTree = "<group>"; };
 		EB31AC41BE1A930A128F050A /* DiscoveryProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiscoveryProvider.swift; sourceTree = "<group>"; };
 		EB31AC662118840152C2DD86 /* Exported.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Exported.swift; sourceTree = "<group>"; };
+		EB31AD4306F803DF3A3161A7 /* DiscoveryViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiscoveryViewModel.swift; sourceTree = "<group>"; };
+		EB31ADA4CEB967221F2FBF41 /* DiscoveryCollectionViewLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiscoveryCollectionViewLayout.swift; sourceTree = "<group>"; };
+		EB31ADA853BB44581D9DC2DA /* DiscoveryCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiscoveryCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +111,11 @@
 				EB31A3AC53CAC5454F780F75 /* DiscoveryViewController.swift */,
 				EB31A5593CCF06F0F1CEAE17 /* DiscoveryContentView.swift */,
 				EB31AC41BE1A930A128F050A /* DiscoveryProvider.swift */,
+				EB31ADA853BB44581D9DC2DA /* DiscoveryCollectionViewCell.swift */,
+				EB31AD4306F803DF3A3161A7 /* DiscoveryViewModel.swift */,
+				EB31A6ECFB7D16EB47E5CA85 /* WallpaperListViewModel.swift */,
+				EB31A50C005BBB5452E76E7B /* DiscoveryCollectionViewDataSource.swift */,
+				EB31ADA4CEB967221F2FBF41 /* DiscoveryCollectionViewLayout.swift */,
 			);
 			path = Discovery;
 			sourceTree = "<group>";
@@ -169,6 +184,11 @@
 				EB31A58372387C28358640F6 /* DiscoveryViewController.swift in Sources */,
 				EB31AC41CDB0A93720F289C5 /* DiscoveryContentView.swift in Sources */,
 				EB31AE61A48B0E67226D825A /* DiscoveryProvider.swift in Sources */,
+				EB31A31AA47B4C6E75AA5E43 /* DiscoveryCollectionViewCell.swift in Sources */,
+				EB31AA93EA0AB0DEB313A3F2 /* DiscoveryViewModel.swift in Sources */,
+				EB31A3F6C71C10B46695106B /* WallpaperListViewModel.swift in Sources */,
+				EB31ACB100858D5870A39FF8 /* DiscoveryCollectionViewDataSource.swift in Sources */,
+				EB31A0724F2823329936D6AF /* DiscoveryCollectionViewLayout.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -16,12 +16,17 @@ extension DiscoveryViewController {
         super.viewDidLoad()
         setup()
     }
+
+    override open func viewWillLayoutSubviews() {
+        super.viewWillLayoutSubviews()
+        contentView.pin.all(view.pin.safeArea)
+    }
 }
 
 private extension DiscoveryViewController {
     func setup() {
         setupNavigationBar()
-        contentView.x.add(to: view).pin.all()
+        contentView.x.add(to: view)
         loadData()
     }
 

@@ -32,6 +32,9 @@
          <FileRef
             location = "group:Packages/UICore/UIResource">
          </FileRef>
+         <FileRef
+            location = "group:Packages/UICore/UIHierarchy">
+         </FileRef>
       </Group>
       <Group
          location = "container:"
