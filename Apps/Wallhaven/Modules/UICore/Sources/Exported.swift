@@ -3,6 +3,7 @@
 //
 
 @_exported import AppLifecycle
+@_exported import AsyncImageView
 @_exported import BaseUI
 @_exported import Chain
 @_exported import UICombine

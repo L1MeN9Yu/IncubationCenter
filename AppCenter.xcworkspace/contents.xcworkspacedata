@@ -18,6 +18,9 @@
             location = "group:Packages/UICore/AppLifecycle">
          </FileRef>
          <FileRef
+            location = "group:Packages/UICore/AsyncImageView">
+         </FileRef>
+         <FileRef
             location = "group:Packages/UICore/BaseUI">
          </FileRef>
          <FileRef
