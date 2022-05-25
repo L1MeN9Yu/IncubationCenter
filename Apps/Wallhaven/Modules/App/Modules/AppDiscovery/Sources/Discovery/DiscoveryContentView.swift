@@ -13,8 +13,23 @@ class DiscoveryContentView: View {
             .instance
     )
     .x
+    .backgroundColor(.clear)
     .register(DiscoveryCollectionViewCell.self, forCellWithReuseIdentifier: DiscoveryCollectionViewCell.cellID)
     .delegate(self)
+    .topRefresher(
+        Refresher { [weak self] in
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                self?.collectionView.topRefresher?.endRefreshing()
+            }
+        }
+    )
+    .bottomRefresher(
+        Refresher { [weak self] in
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                self?.collectionView.bottomRefresher?.endRefreshing()
+            }
+        }
+    )
     .instance
 
     private lazy var dataSource = DiscoveryCollectionViewDataSource(collectionView: collectionView)
