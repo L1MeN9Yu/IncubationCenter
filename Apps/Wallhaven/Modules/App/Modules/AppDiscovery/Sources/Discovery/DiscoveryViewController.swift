@@ -9,6 +9,7 @@ class DiscoveryViewController: ViewController {
     private lazy var subscriptions = Set<AnyCancellable>()
     private lazy var contentView = DiscoveryContentView()
     private lazy var provider = DiscoveryProvider()
+    private lazy var viewModel = DiscoveryViewModel()
 }
 
 extension DiscoveryViewController {
@@ -47,7 +48,9 @@ private extension DiscoveryViewController {
     func loadData() {
         Task {
             do {
-                try await provider.loadList()
+                let listResponse = try await provider.loadList()
+                viewModel.reload(wallpapers: listResponse.wallpapers)
+                contentView.reloadData(viewModel: viewModel)
             } catch {
                 logger.error("\(error)")
             }

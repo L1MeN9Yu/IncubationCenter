@@ -8,9 +8,11 @@ import UICore
 
 class WallpaperListViewModel: ViewModel {
     let id: String
+    let imageURL: URL?
 
     init(model: Wallpaper) {
         id = model.id
+        imageURL = URL(string: model.thumbnail.large)
     }
 }
 

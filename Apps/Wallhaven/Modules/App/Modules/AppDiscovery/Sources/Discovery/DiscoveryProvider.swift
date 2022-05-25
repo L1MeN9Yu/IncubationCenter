@@ -9,8 +9,9 @@ import UICore
 class DiscoveryProvider: Provider {}
 
 extension DiscoveryProvider {
-    func loadList() async throws {
-        let listResponse = try await APICenter.loadList()
+    func loadList() async throws -> ListResponse {
+        let listResponse: ListResponse = try await APICenter.loadList()
         logger.info("\(listResponse)")
+        return listResponse
     }
 }

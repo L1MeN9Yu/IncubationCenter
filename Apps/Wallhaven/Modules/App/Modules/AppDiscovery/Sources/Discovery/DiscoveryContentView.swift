@@ -13,6 +13,7 @@ class DiscoveryContentView: View {
             .instance
     )
     .x
+    .register(DiscoveryCollectionViewCell.self, forCellWithReuseIdentifier: DiscoveryCollectionViewCell.cellID)
     .delegate(self)
     .instance
 
@@ -27,12 +28,16 @@ class DiscoveryContentView: View {
     required init?(coder: NSCoder) { fatalError("init(coder:) has not been implemented") }
 }
 
+// MARK: - Private
+
 private extension DiscoveryContentView {
     func setup() {
         backgroundColor = .systemWhite
         collectionView.x.add(to: self)
     }
 }
+
+// MARK: - Override
 
 extension DiscoveryContentView {
     override open func layoutSubviews() {
@@ -42,6 +47,19 @@ extension DiscoveryContentView {
     }
 }
 
+// MARK: - UICollectionViewDelegate
+
 extension DiscoveryContentView: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {}
+}
+
+// MARK: - Internal
+
+extension DiscoveryContentView {
+    func reloadData(viewModel: DiscoveryViewModel) {
+        var snapshot = NSDiffableDataSourceSnapshot<String, WallpaperListViewModel>()
+        snapshot.appendSections(["main"])
+        snapshot.appendItems(viewModel.wallpaperListViewModels)
+        dataSource.apply(snapshot, animatingDifferences: false)
+    }
 }
