@@ -26,7 +26,7 @@ public final class Refresher: UIView {
 
     public var isEnable: Bool = true {
         didSet {
-            if isEnable && position == .bottom {
+            if isEnable, position == .bottom {
                 removeNoMoreDataView()
             }
         }
@@ -118,7 +118,7 @@ public extension Refresher {
 }
 
 private extension Refresher {
-    private func prepare() {
+    func prepare() {
         autoresizingMask = .flexibleWidth
         backgroundColor = .clear
         addSubview(animateView)
@@ -126,14 +126,14 @@ private extension Refresher {
         animateView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
     }
 
-    private func setupFrame() {
+    func setupFrame() {
         guard let scrollView = scrollView else { return }
         frame.size.width = scrollView.frame.width
         frame.origin.x = -scrollView.leftInset
         frame.origin.y = position == .top ? -frame.height : scrollView.contentHeight
     }
 
-    private func removeNoMoreDataView() {
+    func removeNoMoreDataView() {
         DispatchQueue.main.async {
             self.noMoreDataView?.removeFromSuperview()
             self.noMoreDataView = nil
@@ -141,7 +141,7 @@ private extension Refresher {
         }
     }
 
-    private func setupNoMoreDataView() {
+    func setupNoMoreDataView() {
         guard let noMoreDataView = noMoreDataView, position == .bottom else { return }
         isEnable = false
 
@@ -162,7 +162,7 @@ private extension Refresher {
         }
     }
 
-    private func resetInset() {
+    func resetInset() {
         guard let scrollView = scrollView else { return }
         let originalInsetTop = scrollViewOriginalInset.top
 
@@ -176,7 +176,7 @@ private extension Refresher {
         }
     }
 
-    private func addObservers() {
+    func addObservers() {
         contentOffsetObservation = scrollView?.observe(\.contentOffset, options: [.old, .new]) { [weak self] scrollView, change in
             guard scrollView.isUserInteractionEnabled else { return }
             self?.scrollViewContentOffsetDidChange(change)
@@ -192,7 +192,7 @@ private extension Refresher {
         }
     }
 
-    private func removeObservers() {
+    func removeObservers() {
         contentOffsetObservation?.invalidate()
         contentOffsetObservation = nil
         contentSizeObservation?.invalidate()
@@ -202,7 +202,7 @@ private extension Refresher {
         panGesture = nil
     }
 
-    private func topRefresherContentOffsetChangeAction() {
+    func topRefresherContentOffsetChangeAction() {
         guard let scrollView = scrollView else { return }
         if state == .refreshing {
             resetInset()
@@ -219,14 +219,14 @@ private extension Refresher {
         let pullingPercent = (appearOffsetY - offsetY) / frame.height
 
         if scrollView.isDragging {
-            if (state == .idle || state == .pulling(progress: -1)) && offsetY >= normal2pullingOffsetY {
+            if state == .idle || state == .pulling(progress: -1), offsetY >= normal2pullingOffsetY {
                 state = .pulling(progress: min(pullingPercent, 1.0))
-            } else if (state == .pulling(progress: 1.0) || state == .willRefresh(overOffset: -1)) && offsetY < normal2pullingOffsetY {
+            } else if state == .pulling(progress: 1.0) || state == .willRefresh(overOffset: -1), offsetY < normal2pullingOffsetY {
                 if state == .pulling(progress: 1.0) {
                     state = .pulling(progress: 1.0)
                 }
                 state = .willRefresh(overOffset: normal2pullingOffsetY - offsetY)
-            } else if state == .willRefresh(overOffset: -1) && offsetY >= normal2pullingOffsetY {
+            } else if state == .willRefresh(overOffset: -1), offsetY >= normal2pullingOffsetY {
                 state = .pulling(progress: min(pullingPercent, 1.0))
             }
         } else if state == .willRefresh(overOffset: -1) {
@@ -234,7 +234,7 @@ private extension Refresher {
         }
     }
 
-    private func bottomRefresherContentOffsetChangeAction() {
+    func bottomRefresherContentOffsetChangeAction() {
         guard let scrollView = scrollView else { return }
         if state == .refreshing {
             return
@@ -249,14 +249,14 @@ private extension Refresher {
         let pullingPercent = (offsetY - appearOffsetY) / frame.height
 
         if scrollView.isDragging {
-            if (state == .idle || state == .pulling(progress: -1)) && offsetY < normal2pullingOffsetY {
+            if state == .idle || state == .pulling(progress: -1), offsetY < normal2pullingOffsetY {
                 state = .pulling(progress: min(pullingPercent, 1.0))
-            } else if (state == .pulling(progress: 1.0) || state == .willRefresh(overOffset: -1)) && offsetY >= normal2pullingOffsetY {
+            } else if state == .pulling(progress: 1.0) || state == .willRefresh(overOffset: -1), offsetY >= normal2pullingOffsetY {
                 if state == .pulling(progress: 1.0) {
                     state = .pulling(progress: 1.0)
                 }
                 state = .willRefresh(overOffset: offsetY - normal2pullingOffsetY)
-            } else if state == .willRefresh(overOffset: -1) && offsetY < normal2pullingOffsetY {
+            } else if state == .willRefresh(overOffset: -1), offsetY < normal2pullingOffsetY {
                 state = .pulling(progress: min(pullingPercent, 1.0))
             }
         } else if state == .willRefresh(overOffset: -1) {
@@ -264,10 +264,10 @@ private extension Refresher {
         }
     }
 
-    private func refreshingAction() {
+    func refreshingAction() {
         guard let scrollView = scrollView else { return }
         guard scrollView.panGestureRecognizer.state != .cancelled else {
-            action()
+            action(self)
             return
         }
         UIView.animate(withDuration: 0.25) {
@@ -290,11 +290,11 @@ private extension Refresher {
                 scrollView.setContentOffset(offset, animated: false)
             }
         } completion: { _ in
-            self.action()
+            self.action(self)
         }
     }
 
-    private func endAction() {
+    func endAction() {
         guard let scrollView = scrollView else { return }
         UIView.animate(withDuration: 0.35) {
             if self.position == .top {
@@ -306,7 +306,7 @@ private extension Refresher {
         }
     }
 
-    private func scrollViewContentOffsetDidChange(_ change: NSKeyValueObservedChange<CGPoint>?) {
+    func scrollViewContentOffsetDidChange(_ change: NSKeyValueObservedChange<CGPoint>?) {
         if !isEnable { return }
         if position == .top {
             topRefresherContentOffsetChangeAction()
@@ -315,28 +315,25 @@ private extension Refresher {
         }
     }
 
-    private func scrollViewContentSizeDidChange(_ change: NSKeyValueObservedChange<CGSize>?) {
+    func scrollViewContentSizeDidChange(_ change: NSKeyValueObservedChange<CGSize>?) {
         guard let scrollView = scrollView else { return }
         guard position == .bottom else { return }
         frame.origin.y = scrollView.contentHeight
     }
 
-    private func scrollViewPanGestureStateDidChange(_ change: NSKeyValueObservedChange<UIPanGestureRecognizer.State>?) {
-        if position == .top,
-           panGesture?.state == .ended,
-           state == .pulling(progress: -1)
-        {
+    func scrollViewPanGestureStateDidChange(_ change: NSKeyValueObservedChange<UIPanGestureRecognizer.State>?) {
+        if position == .top, panGesture?.state == .ended, state == .pulling(progress: -1) {
             state = .idle
         }
     }
 
-    private func heightForContentBreakView() -> CGFloat {
+    func heightForContentBreakView() -> CGFloat {
         guard let scrollView = scrollView else { return 0 }
         let h = scrollView.frame.height - scrollViewOriginalInset.bottom - scrollViewOriginalInset.top
         return scrollView.contentSize.height - h
     }
 
-    private func getAppearOffsetY() -> CGFloat {
+    func getAppearOffsetY() -> CGFloat {
         if position == .bottom {
             let deltaHeight = heightForContentBreakView()
             if deltaHeight > 0 {

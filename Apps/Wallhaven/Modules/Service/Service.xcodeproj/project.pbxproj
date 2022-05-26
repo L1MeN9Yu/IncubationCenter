@@ -18,13 +18,13 @@
 		1E7F757528365FA80035A8E2 /* WeakDelegate in Frameworks */ = {isa = PBXBuildFile; productRef = 1E7F757428365FA80035A8E2 /* WeakDelegate */; };
 		1E7F762B2838869A0035A8E2 /* RestfulClient in Frameworks */ = {isa = PBXBuildFile; productRef = 1E7F762A2838869A0035A8E2 /* RestfulClient */; };
 		EB31AA0F7B2AC58AA81B16F4 /* ServiceModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB31ABDE456E7632DEA37A30 /* ServiceModule.swift */; };
-		EB31AF2A4C5C61EC79E2B829 /* _Exported.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB31A27E040CB9C074A4957A /* _Exported.swift */; };
+		EB31AF2A4C5C61EC79E2B829 /* Exported.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB31A27E040CB9C074A4957A /* Exported.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		1E7F74FA283628D30035A8E2 /* Service.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Service.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E7F74FE283628D30035A8E2 /* Service.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = Service.docc; sourceTree = "<group>"; };
-		EB31A27E040CB9C074A4957A /* _Exported.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = _Exported.swift; sourceTree = "<group>"; };
+		EB31A27E040CB9C074A4957A /* Exported.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Exported.swift; sourceTree = "<group>"; };
 		EB31ABDE456E7632DEA37A30 /* ServiceModule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceModule.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -77,7 +77,7 @@
 		1E7F751D2836297D0035A8E2 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				EB31A27E040CB9C074A4957A /* _Exported.swift */,
+				EB31A27E040CB9C074A4957A /* Exported.swift */,
 				EB31ABDE456E7632DEA37A30 /* ServiceModule.swift */,
 			);
 			path = Sources;
@@ -182,7 +182,7 @@
 			files = (
 				1E7F74FF283628D30035A8E2 /* Service.docc in Sources */,
 				EB31AA0F7B2AC58AA81B16F4 /* ServiceModule.swift in Sources */,
-				EB31AF2A4C5C61EC79E2B829 /* _Exported.swift in Sources */,
+				EB31AF2A4C5C61EC79E2B829 /* Exported.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

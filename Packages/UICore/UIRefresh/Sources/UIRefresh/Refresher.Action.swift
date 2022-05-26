@@ -6,7 +6,7 @@
 import UIKit
 
 public extension Refresher {
-    typealias Action = () -> Void
+    typealias Action = (_ self: Refresher) -> Void
 }
 
 #endif

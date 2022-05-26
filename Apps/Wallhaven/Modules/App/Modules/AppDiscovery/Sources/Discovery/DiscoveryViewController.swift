@@ -28,7 +28,24 @@ private extension DiscoveryViewController {
     func setup() {
         setupNavigationBar()
         contentView.x.add(to: view)
-        loadData()
+        contentView.headerRefreshDelegate.delegate(on: self) { (`self`, refresher: Refresher) in
+            Task { [weak refresher, weak self] in
+                guard let self = self else { return }
+                guard let refresher = refresher else { return }
+                await self.loadData(isRefresh: true)
+                refresher.endRefreshing()
+                self.contentView.reloadData(viewModel: self.viewModel)
+            }
+        }
+        contentView.footerRefreshDelegate.delegate(on: self) { (`self`, refresher: Refresher) in
+            Task { [weak refresher, weak self] in
+                guard let self = self else { return }
+                guard let refresher = refresher else { return }
+                await self.loadData(isRefresh: false)
+                refresher.endRefreshing()
+                self.contentView.reloadData(viewModel: self.viewModel)
+            }
+        }
     }
 
     func setupNavigationBar() {
@@ -45,15 +62,12 @@ private extension DiscoveryViewController {
         navigationItem.rightBarButtonItem = filterBarButtonItem
     }
 
-    func loadData() {
-        Task {
-            do {
-                let listResponse = try await provider.loadList()
-                viewModel.reload(wallpapers: listResponse.wallpapers)
-                contentView.reloadData(viewModel: viewModel)
-            } catch {
-                logger.error("\(error)")
-            }
+    func loadData(isRefresh: Bool) async {
+        do {
+            let listResponse = try await provider.loadList()
+            viewModel.update(response: listResponse, isRefresh: isRefresh)
+        } catch {
+            logger.error("\(error)")
         }
     }
 }

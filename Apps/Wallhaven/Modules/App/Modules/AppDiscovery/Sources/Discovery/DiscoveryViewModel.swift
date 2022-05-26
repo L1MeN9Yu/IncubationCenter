@@ -8,16 +8,18 @@ import UICore
 
 class DiscoveryViewModel: ViewModel {
     private(set) lazy var wallpaperListViewModels: [WallpaperListViewModel] = .init()
+    private(set) var index: UInt = 1
 }
 
 extension DiscoveryViewModel {
-    func reload(wallpapers: [Wallpaper]) {
-        let wallpaperListViewModels = wallpapers.map {
+    func update(response: ListResponse, isRefresh: Bool) {
+        let wallpaperListViewModels = response.wallpapers.map {
             WallpaperListViewModel(model: $0)
         }
-        self.wallpaperListViewModels.removeAll()
+        if isRefresh {
+            self.wallpaperListViewModels.removeAll()
+        }
+        index = response.meta.currentPage
         self.wallpaperListViewModels.append(contentsOf: wallpaperListViewModels)
     }
-
-    func append(wallpapers: [Wallpaper]) {}
 }

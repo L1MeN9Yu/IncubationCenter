@@ -2,10 +2,14 @@
 // Created by Mengyu Li on 2022/5/20.
 //
 
+import Service
 import UICore
 import UIKit
 
 class DiscoveryContentView: View {
+    let headerRefreshDelegate = WeakDelegate.Delegate<Refresher, Void>()
+    let footerRefreshDelegate = WeakDelegate.Delegate<Refresher, Void>()
+
     private lazy var collectionView: CollectionView = .init(
         frame: .zero,
         collectionViewLayout: DiscoveryCollectionViewLayout()
@@ -17,17 +21,15 @@ class DiscoveryContentView: View {
     .register(DiscoveryCollectionViewCell.self, forCellWithReuseIdentifier: DiscoveryCollectionViewCell.cellID)
     .delegate(self)
     .topRefresher(
-        Refresher { [weak self] in
-            DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
-                self?.collectionView.topRefresher?.endRefreshing()
-            }
+        Refresher { [weak self] refresher in
+            guard let self = self else { return }
+            self.headerRefreshDelegate(refresher)
         }
     )
     .bottomRefresher(
-        Refresher { [weak self] in
-            DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
-                self?.collectionView.bottomRefresher?.endRefreshing()
-            }
+        Refresher { [weak self] refresher in
+            guard let self = self else { return }
+            self.footerRefreshDelegate(refresher)
         }
     )
     .instance
@@ -49,6 +51,7 @@ private extension DiscoveryContentView {
     func setup() {
         backgroundColor = .systemWhite
         collectionView.x.add(to: self)
+        collectionView.topRefresher?.beginRefreshing()
     }
 }
 
