@@ -64,7 +64,8 @@ private extension DiscoveryViewController {
 
     func loadData(isRefresh: Bool) async {
         do {
-            let listResponse = try await provider.loadList()
+            let page: UInt = isRefresh.map(true: 1, false: viewModel.index + 1)
+            let listResponse = try await provider.loadList(page: page)
             viewModel.update(response: listResponse, isRefresh: isRefresh)
         } catch {
             logger.error("\(error)")

@@ -19,8 +19,8 @@ extension APICenter {
 }
 
 public extension APICenter {
-    static func loadList() async throws -> ListResponse {
-        let listRequest = ListRequest()
+    static func loadList(page: UInt) async throws -> ListResponse {
+        let listRequest = ListRequest(page: page)
         let response = try await client.execute(request: listRequest)
         let listResponse: ListResponse = try JSONCoder.decode(data: response.body)
         return listResponse

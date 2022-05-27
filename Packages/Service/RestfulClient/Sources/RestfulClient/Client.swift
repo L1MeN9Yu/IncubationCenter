@@ -37,6 +37,7 @@ open class Client {
 @available(macOS 10.15, iOS 13.0, watchOS 6.0, tvOS 13.0, *)
 public extension Client {
     func execute<Request: Requestable>(request: Request) async throws -> Response {
+        logger.debug("request => \(request.method.rawValue) \(request.url)")
         let httpResponse = try await httpClient.execute(
             request.export(),
             timeout: .seconds(10),
