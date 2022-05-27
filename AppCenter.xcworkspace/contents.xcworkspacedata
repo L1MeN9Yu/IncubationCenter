@@ -77,4 +77,10 @@
          </FileRef>
       </Group>
    </Group>
+   <FileRef
+      location = "group:Brewfile">
+   </FileRef>
+   <FileRef
+      location = "group:README.md">
+   </FileRef>
 </Workspace>
