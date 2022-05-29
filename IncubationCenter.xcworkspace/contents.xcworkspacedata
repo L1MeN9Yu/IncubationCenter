@@ -39,6 +39,9 @@
             location = "group:Packages/UICore/UIRefresh">
          </FileRef>
          <FileRef
+            location = "group:Packages/UICore/UIRoute">
+         </FileRef>
+         <FileRef
             location = "group:Packages/UICore/UIHierarchy">
          </FileRef>
       </Group>

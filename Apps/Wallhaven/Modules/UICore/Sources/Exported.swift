@@ -11,3 +11,4 @@
 @_exported import UILayout
 @_exported import UIRefresh
 @_exported import UIResource
+@_exported import UIRoute

@@ -3,5 +3,10 @@
 //
 
 import BaseUI
+import UIRoute
 
 public let meNavigationControllerType: NavigationController.Type = MeNavigationViewController.self
+
+public let routableViewControllers: [Routable.Type] = []
+
+public let actions: [Actable.Type] = []

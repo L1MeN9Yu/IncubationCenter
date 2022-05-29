@@ -10,6 +10,7 @@
 		1E100149283E1E4800D8057E /* UIRefresh in Frameworks */ = {isa = PBXBuildFile; productRef = 1E100148283E1E4800D8057E /* UIRefresh */; };
 		1E21A5C1283D215C00EEEEFC /* AsyncImageView in Frameworks */ = {isa = PBXBuildFile; productRef = 1E21A5C0283D215C00EEEEFC /* AsyncImageView */; };
 		1E42B801283D142E005D2247 /* UIHierarchy in Frameworks */ = {isa = PBXBuildFile; productRef = 1E42B800283D142E005D2247 /* UIHierarchy */; };
+		1E749B8B2841DF9B00EE079C /* UIRoute in Frameworks */ = {isa = PBXBuildFile; productRef = 1E749B8A2841DF9B00EE079C /* UIRoute */; };
 		1E7F752F283633B20035A8E2 /* UICore.docc in Sources */ = {isa = PBXBuildFile; fileRef = 1E7F752E283633B20035A8E2 /* UICore.docc */; };
 		1E7F75842836808E0035A8E2 /* AppLifecycle in Frameworks */ = {isa = PBXBuildFile; productRef = 1E7F75832836808E0035A8E2 /* AppLifecycle */; };
 		1E7F7587283680A30035A8E2 /* Chain in Frameworks */ = {isa = PBXBuildFile; productRef = 1E7F7586283680A30035A8E2 /* Chain */; };
@@ -40,6 +41,7 @@
 				1E42B801283D142E005D2247 /* UIHierarchy in Frameworks */,
 				1E7F759A28373B750035A8E2 /* Service.framework in Frameworks */,
 				1E7F758D283730230035A8E2 /* BaseUI in Frameworks */,
+				1E749B8B2841DF9B00EE079C /* UIRoute in Frameworks */,
 				1E7F758B283680AC0035A8E2 /* UILayout in Frameworks */,
 				1E21A5C1283D215C00EEEEFC /* AsyncImageView in Frameworks */,
 				1E7F7587283680A30035A8E2 /* Chain in Frameworks */,
@@ -133,6 +135,7 @@
 				1E42B800283D142E005D2247 /* UIHierarchy */,
 				1E21A5C0283D215C00EEEEFC /* AsyncImageView */,
 				1E100148283E1E4800D8057E /* UIRefresh */,
+				1E749B8A2841DF9B00EE079C /* UIRoute */,
 			);
 			productName = UICore;
 			productReference = 1E7F752A283633B20035A8E2 /* UICore.framework */;
@@ -407,6 +410,10 @@
 		1E42B800283D142E005D2247 /* UIHierarchy */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = UIHierarchy;
+		};
+		1E749B8A2841DF9B00EE079C /* UIRoute */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = UIRoute;
 		};
 		1E7F75832836808E0035A8E2 /* AppLifecycle */ = {
 			isa = XCSwiftPackageProductDependency;

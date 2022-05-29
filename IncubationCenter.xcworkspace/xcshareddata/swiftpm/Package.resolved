@@ -171,6 +171,15 @@
           "revision": "1a4692acb88156e3da1b0c6732a8a38b2a744166",
           "version": "1.12.0"
         }
+      },
+      {
+        "package": "URLRoute",
+        "repositoryURL": "https://github.com/L1MeN9Yu/URLRoute.git",
+        "state": {
+          "branch": null,
+          "revision": "418f8317aff021937eb0bc9eeab31e14b423b684",
+          "version": "1.0.1"
+        }
       }
     ]
   },

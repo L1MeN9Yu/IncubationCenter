@@ -2,10 +2,6 @@
 // Created by Mengyu Li on 2022/5/20.
 //
 
-import AppDiscovery
-import AppFavorite
-import AppMe
-import AppTabBar
 import Foundation
 import Service
 import UICore
@@ -35,7 +31,27 @@ public extension Application {
 
 private extension Application {
     static func setup() {
-        registerUI().enterUI()
+        registerRoute().registerUI().enterUI()
+    }
+
+    @discardableResult
+    static func registerRoute() -> Self.Type {
+        let routableList = AppTabBar.routableViewControllers +
+            AppDiscovery.routableViewControllers +
+            AppFavorite.routableViewControllers +
+            AppMe.routableViewControllers
+        routableList.forEach {
+            Router.register(routeName: $0.routeName, factory: $0.initialize)
+        }
+
+        let actionList = AppTabBar.actions +
+            AppDiscovery.actions +
+            AppFavorite.actions +
+            AppMe.actions
+        actionList.forEach {
+            Router.register(actName: $0.actName, action: $0.act)
+        }
+        return self
     }
 
     @discardableResult
