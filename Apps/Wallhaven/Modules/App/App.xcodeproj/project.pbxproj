@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1E290C3328436AF9005B1CBF /* libAppWallpaper.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E290C2B28436ABC005B1CBF /* libAppWallpaper.a */; };
 		1E7F74CD283625690035A8E2 /* App.docc in Sources */ = {isa = PBXBuildFile; fileRef = 1E7F74CC283625690035A8E2 /* App.docc */; };
 		1E7F759228373B670035A8E2 /* Center.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E7F758F28373B670035A8E2 /* Center.framework */; };
 		1E7F759428373B670035A8E2 /* Service.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E7F759028373B670035A8E2 /* Service.framework */; };
@@ -24,6 +25,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		1E290C2A28436ABC005B1CBF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1E290C2228436AB9005B1CBF /* AppWallpaper.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 1E290C1828436AB9005B1CBF;
+			remoteInfo = AppWallpaper;
+		};
 		1E7F75BB283742740035A8E2 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 1E7F75B7283742740035A8E2 /* AppTabBar.xcodeproj */;
@@ -55,6 +63,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1E290C2228436AB9005B1CBF /* AppWallpaper.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = AppWallpaper.xcodeproj; path = AppWallpaper/AppWallpaper.xcodeproj; sourceTree = "<group>"; };
 		1E7F74C8283625690035A8E2 /* App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E7F74CC283625690035A8E2 /* App.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = App.docc; sourceTree = "<group>"; };
 		1E7F758F28373B670035A8E2 /* Center.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Center.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -80,6 +89,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1E290C3328436AF9005B1CBF /* libAppWallpaper.a in Frameworks */,
 				1EDF08AE283B1CF800025E14 /* libAppFavorite.a in Frameworks */,
 				1E7F759428373B670035A8E2 /* Service.framework in Frameworks */,
 				1E7F75ED28377D9B0035A8E2 /* libAppDiscovery.a in Frameworks */,
@@ -93,6 +103,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1E290C2328436AB9005B1CBF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1E290C2B28436ABC005B1CBF /* libAppWallpaper.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		1E7F74BE283625690035A8E2 = {
 			isa = PBXGroup;
 			children = (
@@ -138,6 +156,7 @@
 				1E7F75E028377D670035A8E2 /* AppDiscovery.xcodeproj */,
 				1EDF0898283B197900025E14 /* AppFavorite.xcodeproj */,
 				1E7F760F2837BEB20035A8E2 /* AppMe.xcodeproj */,
+				1E290C2228436AB9005B1CBF /* AppWallpaper.xcodeproj */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -269,6 +288,10 @@
 					ProductGroup = 1E7F75B8283742740035A8E2 /* Products */;
 					ProjectRef = 1E7F75B7283742740035A8E2 /* AppTabBar.xcodeproj */;
 				},
+				{
+					ProductGroup = 1E290C2328436AB9005B1CBF /* Products */;
+					ProjectRef = 1E290C2228436AB9005B1CBF /* AppWallpaper.xcodeproj */;
+				},
 			);
 			projectRoot = "";
 			targets = (
@@ -278,6 +301,13 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
+		1E290C2B28436ABC005B1CBF /* libAppWallpaper.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libAppWallpaper.a;
+			remoteRef = 1E290C2A28436ABC005B1CBF /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 		1E7F75BC283742740035A8E2 /* libAppTabBar.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;

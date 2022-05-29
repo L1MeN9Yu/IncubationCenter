@@ -28,6 +28,29 @@ private extension DiscoveryViewController {
     func setup() {
         setupNavigationBar()
         contentView.x.add(to: view)
+        setupBinding()
+    }
+
+    func setupNavigationBar() {
+        title = DiscoveryModule.localizedString(key: "DiscoveryViewController.Title")
+        let filterBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "slider.horizontal.3"), style: .plain, target: nil, action: nil)
+        filterBarButtonItem
+            .tapPublisher
+            .receive(on: DispatchQueue.main)
+            .sink { [weak self] in
+                guard let self = self else { return }
+                self.filterBarButtonItemAction()
+            }
+            .store(in: &subscriptions)
+        navigationItem.rightBarButtonItem = filterBarButtonItem
+    }
+
+    func setupBinding() {
+        contentView.didSelectedDelegate.delegate(on: self) { `self`, indexPath in
+            guard let viewModel = self.viewModel.wallpaperListViewModels[safe: indexPath.row] else { return }
+            let id = viewModel.id
+            Router.push(to: "WallpaperViewController/\(id)")
+        }
         contentView.headerRefreshDelegate.delegate(on: self) { (`self`, refresher: Refresher) in
             Task { [weak refresher, weak self] in
                 guard let self = self else { return }
@@ -46,20 +69,6 @@ private extension DiscoveryViewController {
                 self.contentView.reloadData(viewModel: self.viewModel)
             }
         }
-    }
-
-    func setupNavigationBar() {
-        title = DiscoveryModule.localizedString(key: "DiscoveryViewController.Title")
-        let filterBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "slider.horizontal.3"), style: .plain, target: nil, action: nil)
-        filterBarButtonItem
-            .tapPublisher
-            .receive(on: DispatchQueue.main)
-            .sink { [weak self] in
-                guard let self = self else { return }
-                self.filterBarButtonItemAction()
-            }
-            .store(in: &subscriptions)
-        navigationItem.rightBarButtonItem = filterBarButtonItem
     }
 
     func loadData(isRefresh: Bool) async {

@@ -1,0 +1,52 @@
+//
+// Created by Mengyu Li on 2022/5/29.
+//
+
+import AppModular
+import ExtensionKit
+import UICore
+
+class WallpaperViewController: ViewController {
+    private let viewModel: WallpaperViewModel
+    private lazy var contentView = WallpaperContentView(frame: .zero)
+
+    init(id: String) {
+        viewModel = WallpaperViewModel(id: id)
+        super.init(nibName: nil, bundle: nil)
+    }
+
+    @available(*, unavailable)
+    required init?(coder: NSCoder) { fatalError("init(coder:) has not been implemented") }
+}
+
+// MARK: - Override
+
+extension WallpaperViewController {
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        setup()
+    }
+
+    override open func viewWillLayoutSubviews() {
+        super.viewWillLayoutSubviews()
+        contentView.pin.all(view.pin.safeArea)
+    }
+}
+
+private extension WallpaperViewController {
+    func setup() {
+        view.backgroundColor = .black
+        contentView.x.add(to: view)
+    }
+}
+
+extension WallpaperViewController: TypeNameable {}
+
+extension WallpaperViewController: Routable {
+    class func initialize(url: URLConvertible, values: [String: Any], context: Any?) -> UIViewController? {
+        guard let id = values["id"] as? String else { return nil }
+        return WallpaperViewController(id: id)
+    }
+
+    static let routeName: String = typeName + "/<string:id>"
+}

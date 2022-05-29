@@ -6,3 +6,4 @@
 @_exported import AppFavorite
 @_exported import AppMe
 @_exported import AppTabBar
+@_exported import AppWallpaper

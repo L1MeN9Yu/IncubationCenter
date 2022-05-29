@@ -1,0 +1,338 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1E290C2E28436AD8005B1CBF /* Center.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E290C2D28436AD8005B1CBF /* Center.framework */; };
+		1E290C3028436AD8005B1CBF /* Service.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E290C2F28436AD8005B1CBF /* Service.framework */; };
+		1E290C3228436AD9005B1CBF /* UICore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E290C3128436AD9005B1CBF /* UICore.framework */; };
+		EB31A14E12DCF6A50975C928 /* Exported.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB31A455BE389EB07F4EFA63 /* Exported.swift */; };
+		EB31A4C6F5498C6586D7D618 /* WallpaperViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB31AD065EE96D8F8111213C /* WallpaperViewController.swift */; };
+		EB31A5616AFB97178BBEDF1E /* WallpaperModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB31A5413AE64409221AFFAF /* WallpaperModule.swift */; };
+		EB31A945346253DBB3848FAF /* WallpaperContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB31ACFC9826DD5496107207 /* WallpaperContentView.swift */; };
+		EB31AABE9739F8CA046B8DBB /* WallpaperViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB31A6B68A33F286CF4ED850 /* WallpaperViewModel.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		1E290C1628436AB9005B1CBF /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		1E290C1828436AB9005B1CBF /* libAppWallpaper.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libAppWallpaper.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		1E290C2D28436AD8005B1CBF /* Center.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Center.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1E290C2F28436AD8005B1CBF /* Service.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Service.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1E290C3128436AD9005B1CBF /* UICore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = UICore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EB31A455BE389EB07F4EFA63 /* Exported.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Exported.swift; sourceTree = "<group>"; };
+		EB31A5413AE64409221AFFAF /* WallpaperModule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WallpaperModule.swift; sourceTree = "<group>"; };
+		EB31A6B68A33F286CF4ED850 /* WallpaperViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WallpaperViewModel.swift; sourceTree = "<group>"; };
+		EB31ACFC9826DD5496107207 /* WallpaperContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WallpaperContentView.swift; sourceTree = "<group>"; };
+		EB31AD065EE96D8F8111213C /* WallpaperViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WallpaperViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1E290C1528436AB9005B1CBF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1E290C2E28436AD8005B1CBF /* Center.framework in Frameworks */,
+				1E290C3028436AD8005B1CBF /* Service.framework in Frameworks */,
+				1E290C3228436AD9005B1CBF /* UICore.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1E290C0F28436AB9005B1CBF = {
+			isa = PBXGroup;
+			children = (
+				1E290C1A28436AB9005B1CBF /* Sources */,
+				1E290C1928436AB9005B1CBF /* Products */,
+				1E290C2C28436AD8005B1CBF /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		1E290C1928436AB9005B1CBF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1E290C1828436AB9005B1CBF /* libAppWallpaper.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1E290C1A28436AB9005B1CBF /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				EB31A455BE389EB07F4EFA63 /* Exported.swift */,
+				EB31A5413AE64409221AFFAF /* WallpaperModule.swift */,
+				EB31AEF27637260F375622AE /* Wallpaper */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		1E290C2C28436AD8005B1CBF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1E290C2D28436AD8005B1CBF /* Center.framework */,
+				1E290C2F28436AD8005B1CBF /* Service.framework */,
+				1E290C3128436AD9005B1CBF /* UICore.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EB31AEF27637260F375622AE /* Wallpaper */ = {
+			isa = PBXGroup;
+			children = (
+				EB31AD065EE96D8F8111213C /* WallpaperViewController.swift */,
+				EB31A6B68A33F286CF4ED850 /* WallpaperViewModel.swift */,
+				EB31ACFC9826DD5496107207 /* WallpaperContentView.swift */,
+			);
+			path = Wallpaper;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1E290C1728436AB9005B1CBF /* AppWallpaper */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1E290C1F28436AB9005B1CBF /* Build configuration list for PBXNativeTarget "AppWallpaper" */;
+			buildPhases = (
+				1E290C1428436AB9005B1CBF /* Sources */,
+				1E290C1528436AB9005B1CBF /* Frameworks */,
+				1E290C1628436AB9005B1CBF /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AppWallpaper;
+			productName = AppWallpaper;
+			productReference = 1E290C1828436AB9005B1CBF /* libAppWallpaper.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1E290C1028436AB9005B1CBF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1340;
+				LastUpgradeCheck = 1340;
+				TargetAttributes = {
+					1E290C1728436AB9005B1CBF = {
+						CreatedOnToolsVersion = 13.4;
+					};
+				};
+			};
+			buildConfigurationList = 1E290C1328436AB9005B1CBF /* Build configuration list for PBXProject "AppWallpaper" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 1E290C0F28436AB9005B1CBF;
+			productRefGroup = 1E290C1928436AB9005B1CBF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1E290C1728436AB9005B1CBF /* AppWallpaper */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1E290C1428436AB9005B1CBF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EB31A14E12DCF6A50975C928 /* Exported.swift in Sources */,
+				EB31A5616AFB97178BBEDF1E /* WallpaperModule.swift in Sources */,
+				EB31A4C6F5498C6586D7D618 /* WallpaperViewController.swift in Sources */,
+				EB31AABE9739F8CA046B8DBB /* WallpaperViewModel.swift in Sources */,
+				EB31A945346253DBB3848FAF /* WallpaperContentView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		1E290C1D28436AB9005B1CBF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		1E290C1E28436AB9005B1CBF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		1E290C2028436AB9005B1CBF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = PTP77VVZ46;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		1E290C2128436AB9005B1CBF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = PTP77VVZ46;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1E290C1328436AB9005B1CBF /* Build configuration list for PBXProject "AppWallpaper" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1E290C1D28436AB9005B1CBF /* Debug */,
+				1E290C1E28436AB9005B1CBF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1E290C1F28436AB9005B1CBF /* Build configuration list for PBXNativeTarget "AppWallpaper" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1E290C2028436AB9005B1CBF /* Debug */,
+				1E290C2128436AB9005B1CBF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1E290C1028436AB9005B1CBF /* Project object */;
+}

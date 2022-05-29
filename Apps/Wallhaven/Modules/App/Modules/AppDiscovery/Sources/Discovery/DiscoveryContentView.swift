@@ -9,6 +9,7 @@ import UIKit
 class DiscoveryContentView: View {
     let headerRefreshDelegate = WeakDelegate.Delegate<Refresher, Void>()
     let footerRefreshDelegate = WeakDelegate.Delegate<Refresher, Void>()
+    let didSelectedDelegate = WeakDelegate.Delegate<IndexPath, Void>()
 
     private lazy var collectionView: CollectionView = .init(
         frame: .zero,
@@ -68,7 +69,9 @@ extension DiscoveryContentView {
 // MARK: - UICollectionViewDelegate
 
 extension DiscoveryContentView: UICollectionViewDelegate {
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {}
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        didSelectedDelegate(indexPath)
+    }
 }
 
 // MARK: - Internal
