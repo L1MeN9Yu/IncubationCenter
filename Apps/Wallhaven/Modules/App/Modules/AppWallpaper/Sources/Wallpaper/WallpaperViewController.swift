@@ -31,7 +31,7 @@ extension WallpaperViewController {
 
     override open func viewWillLayoutSubviews() {
         super.viewWillLayoutSubviews()
-        contentView.pin.all(view.pin.safeArea)
+        contentView.pin.all()
     }
 }
 

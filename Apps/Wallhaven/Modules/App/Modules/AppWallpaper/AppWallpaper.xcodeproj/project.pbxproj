@@ -12,6 +12,7 @@
 		1E290C3228436AD9005B1CBF /* UICore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E290C3128436AD9005B1CBF /* UICore.framework */; };
 		EB31A1488027D76B25A902DE /* WallpaperProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB31A45CB9D16A8D8DE21EC8 /* WallpaperProvider.swift */; };
 		EB31A14E12DCF6A50975C928 /* Exported.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB31A455BE389EB07F4EFA63 /* Exported.swift */; };
+		EB31A464CD5011511C2F34C3 /* WallpaperView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB31AC37FD63B8BAAACBA07E /* WallpaperView.swift */; };
 		EB31A4C6F5498C6586D7D618 /* WallpaperViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB31AD065EE96D8F8111213C /* WallpaperViewController.swift */; };
 		EB31A5616AFB97178BBEDF1E /* WallpaperModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB31A5413AE64409221AFFAF /* WallpaperModule.swift */; };
 		EB31A945346253DBB3848FAF /* WallpaperContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB31ACFC9826DD5496107207 /* WallpaperContentView.swift */; };
@@ -39,6 +40,7 @@
 		EB31A45CB9D16A8D8DE21EC8 /* WallpaperProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WallpaperProvider.swift; sourceTree = "<group>"; };
 		EB31A5413AE64409221AFFAF /* WallpaperModule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WallpaperModule.swift; sourceTree = "<group>"; };
 		EB31A6B68A33F286CF4ED850 /* WallpaperViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WallpaperViewModel.swift; sourceTree = "<group>"; };
+		EB31AC37FD63B8BAAACBA07E /* WallpaperView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WallpaperView.swift; sourceTree = "<group>"; };
 		EB31ACFC9826DD5496107207 /* WallpaperContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WallpaperContentView.swift; sourceTree = "<group>"; };
 		EB31AD065EE96D8F8111213C /* WallpaperViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WallpaperViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -101,6 +103,7 @@
 				EB31A6B68A33F286CF4ED850 /* WallpaperViewModel.swift */,
 				EB31ACFC9826DD5496107207 /* WallpaperContentView.swift */,
 				EB31A45CB9D16A8D8DE21EC8 /* WallpaperProvider.swift */,
+				EB31AC37FD63B8BAAACBA07E /* WallpaperView.swift */,
 			);
 			path = Wallpaper;
 			sourceTree = "<group>";
@@ -169,6 +172,7 @@
 				EB31AABE9739F8CA046B8DBB /* WallpaperViewModel.swift in Sources */,
 				EB31A945346253DBB3848FAF /* WallpaperContentView.swift in Sources */,
 				EB31A1488027D76B25A902DE /* WallpaperProvider.swift in Sources */,
+				EB31A464CD5011511C2F34C3 /* WallpaperView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

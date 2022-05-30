@@ -10,6 +10,6 @@ class DetailRequest: BaseRequestable {
 
     init(id: String) {
         self.id = id
-        path = "api/v1/w/\(id)"
+        path = "/api/v1/w/\(id)"
     }
 }

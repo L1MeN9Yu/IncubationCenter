@@ -8,7 +8,7 @@ import Foundation
 
 class WallpaperViewModel: ViewModel {
     let id: String
-    private(set) var imageURL: URL?
+    private(set) var imageURL: URL? = .none
 
     init(id: String) {
         self.id = id
