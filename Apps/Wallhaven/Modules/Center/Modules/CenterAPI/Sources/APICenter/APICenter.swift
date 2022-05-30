@@ -25,4 +25,11 @@ public extension APICenter {
         let listResponse: ListResponse = try JSONCoder.decode(data: response.body)
         return listResponse
     }
+
+    static func loadDetail(id: String) async throws -> DetailResponse {
+        let detailRequest = DetailRequest(id: id)
+        let response = try await client.execute(request: detailRequest)
+        let detailResponse: DetailResponse = try JSONCoder.decode(data: response.body)
+        return detailResponse
+    }
 }

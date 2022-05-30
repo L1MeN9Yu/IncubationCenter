@@ -5,10 +5,12 @@
 import AppModular
 import ExtensionKit
 import UICore
+import UIKit
 
 class WallpaperViewController: ViewController {
     private let viewModel: WallpaperViewModel
     private lazy var contentView = WallpaperContentView(frame: .zero)
+    private lazy var provider = WallpaperProvider()
 
     init(id: String) {
         viewModel = WallpaperViewModel(id: id)
@@ -37,6 +39,19 @@ private extension WallpaperViewController {
     func setup() {
         view.backgroundColor = .black
         contentView.x.add(to: view)
+        Task {
+            await loadData()
+            contentView.reloadData(viewModel: viewModel)
+        }
+    }
+
+    func loadData() async {
+        do {
+            let detailResponse = try await provider.loadDetail(id: viewModel.id)
+            viewModel.update(model: detailResponse.wallpaper)
+        } catch {
+            logger.error("\(error)")
+        }
     }
 }
 

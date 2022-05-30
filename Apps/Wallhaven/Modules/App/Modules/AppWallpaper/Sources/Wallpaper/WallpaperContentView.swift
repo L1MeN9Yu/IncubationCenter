@@ -3,6 +3,7 @@
 //
 
 import UICore
+import UIKit
 
 class WallpaperContentView: View {
     override init(frame: CGRect) {
@@ -25,4 +26,8 @@ private extension WallpaperContentView {
     func setup() {
         backgroundColor = .black
     }
+}
+
+extension WallpaperContentView {
+    func reloadData(viewModel: WallpaperViewModel) {}
 }
