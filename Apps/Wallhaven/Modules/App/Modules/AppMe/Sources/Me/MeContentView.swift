@@ -3,6 +3,7 @@
 //
 
 import UICore
+import UIKit
 
 class MeContentView: View {
     override init(frame: CGRect) {

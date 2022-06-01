@@ -78,6 +78,9 @@
          <FileRef
             location = "group:Packages/Service/RestfulClient">
          </FileRef>
+         <FileRef
+            location = "group:Packages/Service/RubikCube">
+         </FileRef>
       </Group>
    </Group>
    <FileRef
