@@ -10,7 +10,7 @@ class DiscoveryCollectionViewDataSource: UICollectionViewDiffableDataSource<Stri
     }
 }
 
-extension DiscoveryCollectionViewDataSource {
+private extension DiscoveryCollectionViewDataSource {
     static func cellProvider(collectionView: UICollectionView, indexPath: IndexPath, itemIdentifier: WallpaperListViewModel) -> UICollectionViewCell? {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: DiscoveryCollectionViewCell.cellID, for: indexPath)
             as? DiscoveryCollectionViewCell

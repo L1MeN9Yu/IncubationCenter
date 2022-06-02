@@ -1,10 +1,10 @@
 //
-// Created by Mengyu Li on 2022/5/24.
+// Created by Mengyu Li on 2022/6/2.
 //
 
 import UIKit
 
-class DiscoveryCollectionViewLayout: UICollectionViewCompositionalLayout {
+class MeCollectionViewLayout: UICollectionViewCompositionalLayout {
     convenience init() {
         let itemSize = NSCollectionLayoutSize(
             widthDimension: .fractionalWidth(1.0),
@@ -13,12 +13,12 @@ class DiscoveryCollectionViewLayout: UICollectionViewCompositionalLayout {
         let item = NSCollectionLayoutItem(layoutSize: itemSize)
         let groupSize = NSCollectionLayoutSize(
             widthDimension: .fractionalWidth(1.0),
-            heightDimension: .fractionalWidth(9.0 / 16.0)
+            heightDimension: .absolute(60)
         )
         let group = NSCollectionLayoutGroup.horizontal(
             layoutSize: groupSize,
             subitem: item,
-            count: 3
+            count: 1
         )
         let section = NSCollectionLayoutSection(group: group)
         self.init(section: section)
