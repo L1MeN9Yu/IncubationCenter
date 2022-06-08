@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1E617ECA2850BBC500593180 /* Coder in Frameworks */ = {isa = PBXBuildFile; productRef = 1E617EC92850BBC500593180 /* Coder */; };
 		1E7F74FF283628D30035A8E2 /* Service.docc in Sources */ = {isa = PBXBuildFile; fileRef = 1E7F74FE283628D30035A8E2 /* Service.docc */; };
 		1E7F756528365FA80035A8E2 /* AppModular in Frameworks */ = {isa = PBXBuildFile; productRef = 1E7F756428365FA80035A8E2 /* AppModular */; };
 		1E7F756728365FA80035A8E2 /* Crypto in Frameworks */ = {isa = PBXBuildFile; productRef = 1E7F756628365FA80035A8E2 /* Crypto */; };
@@ -41,6 +42,7 @@
 				1E7F756D28365FA80035A8E2 /* Locks in Frameworks */,
 				1E7F757528365FA80035A8E2 /* WeakDelegate in Frameworks */,
 				1E7F756728365FA80035A8E2 /* Crypto in Frameworks */,
+				1E617ECA2850BBC500593180 /* Coder in Frameworks */,
 				1E7F756928365FA80035A8E2 /* ExtensionKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -127,6 +129,7 @@
 				1E7F757228365FA80035A8E2 /* PropertyWrappers */,
 				1E7F757428365FA80035A8E2 /* WeakDelegate */,
 				1E7F762A2838869A0035A8E2 /* RestfulClient */,
+				1E617EC92850BBC500593180 /* Coder */,
 			);
 			productName = Service;
 			productReference = 1E7F74FA283628D30035A8E2 /* Service.framework */;
@@ -391,6 +394,10 @@
 /* End XCConfigurationList section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		1E617EC92850BBC500593180 /* Coder */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Coder;
+		};
 		1E7F756428365FA80035A8E2 /* AppModular */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = AppModular;

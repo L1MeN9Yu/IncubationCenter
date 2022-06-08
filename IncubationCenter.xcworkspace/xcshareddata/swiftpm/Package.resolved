@@ -56,6 +56,15 @@
         }
       },
       {
+        "package": "grpc-swift",
+        "repositoryURL": "https://github.com/grpc/grpc-swift.git",
+        "state": {
+          "branch": null,
+          "revision": "593fe0fe931f7e838969243cd137be48e8055b1d",
+          "version": "1.7.3"
+        }
+      },
+      {
         "package": "Kingfisher",
         "repositoryURL": "https://github.com/onevcat/Kingfisher.git",
         "state": {
@@ -170,6 +179,15 @@
           "branch": null,
           "revision": "1a4692acb88156e3da1b0c6732a8a38b2a744166",
           "version": "1.12.0"
+        }
+      },
+      {
+        "package": "SwiftProtobuf",
+        "repositoryURL": "https://github.com/apple/swift-protobuf.git",
+        "state": {
+          "branch": null,
+          "revision": "e1499bc69b9040b29184f7f2996f7bab467c1639",
+          "version": "1.19.0"
         }
       },
       {

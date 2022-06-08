@@ -2,6 +2,7 @@
 // Created by Mengyu Li on 2021/3/10.
 //
 
+import Coder
 import Foundation
 
 public protocol JSONStorable: Storable, Codable {}
