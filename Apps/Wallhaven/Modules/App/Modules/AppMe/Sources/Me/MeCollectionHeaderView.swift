@@ -9,7 +9,7 @@ import UIKit
 class MeCollectionHeaderView: CollectionReusableView {
     private lazy var titleLabel: UILabel = .init(frame: .zero)
         .x
-        .font(.preferredFont(forTextStyle: .body))
+        .font(.preferredFont(forTextStyle: .caption1))
         .textColor(.systemBlack)
         .instance
 
@@ -42,6 +42,6 @@ private extension MeCollectionHeaderView {
 
 extension MeCollectionHeaderView {
     func config(section: MeSection) {
-        titleLabel.text = "\(section)".capitalized
+        titleLabel.text = section.localizedTitle
     }
 }

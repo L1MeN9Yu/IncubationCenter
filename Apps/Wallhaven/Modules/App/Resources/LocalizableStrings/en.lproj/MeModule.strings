@@ -7,3 +7,8 @@
 */
 
 "MeViewController.Title" = "Me";
+
+"MeViewController.Section.Wallhaven" = "Wallhaven";
+"MeViewController.Section.App" = "Application";
+"MeViewController.Section.Usage" = "Usage";
+"MeViewController.Section.About" = "About";

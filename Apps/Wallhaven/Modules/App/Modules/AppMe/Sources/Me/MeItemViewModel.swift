@@ -20,6 +20,12 @@ class MeItemViewModel: ViewModel {
         switch (sectionID, itemID) {
         case (0, 0):
             iconImageSystemName = "lock.shield"
+        case (1, 0):
+            iconImageSystemName = "gearshape"
+        case (2, 0):
+            iconImageSystemName = "folder"
+        case (3, 0):
+            iconImageSystemName = "info.circle"
         default:
             iconImageSystemName = .none
         }

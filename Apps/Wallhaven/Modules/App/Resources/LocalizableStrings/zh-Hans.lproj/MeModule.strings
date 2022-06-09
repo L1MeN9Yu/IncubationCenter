@@ -7,3 +7,8 @@
 */
 
 "MeViewController.Title" = "我的";
+
+"MeViewController.Section.Wallhaven" = "Wallhaven";
+"MeViewController.Section.App" = "应用";
+"MeViewController.Section.Usage" = "用量";
+"MeViewController.Section.About" = "关于";

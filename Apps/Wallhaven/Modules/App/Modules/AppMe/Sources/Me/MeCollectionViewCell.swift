@@ -10,6 +10,7 @@ class MeCollectionViewCell: CollectionViewCell {
     private lazy var iconImageView: UIImageView = .init(frame: .zero)
         .x
         .tintColor(.systemBlack)
+        .contentMode(.scaleAspectFit)
         .instance
 
     private lazy var titleLabel: UILabel = .init(frame: .zero)
@@ -50,7 +51,7 @@ private extension MeCollectionViewCell {
     }
 
     func layout() {
-        iconImageView.pin.top().left().bottom().margin(10).aspectRatio(1)
+        iconImageView.pin.top().left().bottom().margin(14).aspectRatio(1)
         titleLabel.pin.after(of: iconImageView, aligned: .top).marginLeft(20).right(10).sizeToFit()
         detailLabel.pin.after(of: iconImageView, aligned: .bottom).marginLeft(20).right(10).sizeToFit()
     }
@@ -60,8 +61,8 @@ extension MeCollectionViewCell {
     func config(viewModel: MeItemViewModel) {
         if let iconImageSystemName = viewModel.iconImageSystemName {
             iconImageView.image = UIImage(systemName: iconImageSystemName)
-            titleLabel.text = viewModel.title
-            detailLabel.text = viewModel.detailText
         }
+        titleLabel.text = viewModel.title
+        detailLabel.text = viewModel.detailText
     }
 }
