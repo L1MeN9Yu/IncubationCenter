@@ -20,9 +20,19 @@ private extension MeCollectionViewDataSource {
     }
 
     static func supplementaryViewProvider(collectionView: UICollectionView, elementKind: String, indexPath: IndexPath) -> UICollectionReusableView? {
-        let supplementaryView = collectionView.dequeueReusableSupplementaryView(ofKind: elementKind, withReuseIdentifier: MeCollectionHeaderView.cellID, for: indexPath)
-            as? MeCollectionHeaderView
-        supplementaryView?.config(section: MeSection.allCases[indexPath.section])
-        return supplementaryView
+        switch elementKind {
+        case UICollectionView.elementKindSectionHeader:
+            let supplementaryView = collectionView.dequeueReusableSupplementaryView(ofKind: elementKind, withReuseIdentifier: MeCollectionHeaderView.cellID, for: indexPath)
+                as? MeCollectionHeaderView
+            supplementaryView?.config(section: MeSection.allCases[indexPath.section])
+            return supplementaryView
+        case UICollectionView.elementKindSectionFooter:
+            let supplementaryView = collectionView.dequeueReusableSupplementaryView(ofKind: elementKind, withReuseIdentifier: MeCollectionFooterView.cellID, for: indexPath)
+                as? MeCollectionFooterView
+            supplementaryView?.config(section: MeSection.allCases[indexPath.section])
+            return supplementaryView
+        default:
+            return nil
+        }
     }
 }

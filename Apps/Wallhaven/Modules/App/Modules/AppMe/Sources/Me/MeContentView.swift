@@ -12,6 +12,7 @@ class MeContentView: View {
         .delegate(self)
         .register(MeCollectionViewCell.self, forCellWithReuseIdentifier: MeCollectionViewCell.cellID)
         .register(MeCollectionHeaderView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: MeCollectionHeaderView.cellID)
+        .register(MeCollectionFooterView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionFooter, withReuseIdentifier: MeCollectionFooterView.cellID)
         .instance
 
     private lazy var dataSource = MeCollectionViewDataSource(collectionView: collectionView)

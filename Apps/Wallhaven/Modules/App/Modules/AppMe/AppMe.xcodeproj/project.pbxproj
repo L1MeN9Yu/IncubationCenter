@@ -15,6 +15,7 @@
 		EB31A1638D84AFC8A586A03B /* MeItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB31A84E7C514749477362C1 /* MeItemViewModel.swift */; };
 		EB31A3208927DD5BD042FF3A /* MeCollectionViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB31A00390B52D01A34A2B12 /* MeCollectionViewDataSource.swift */; };
 		EB31A45A1ECDCC0269D2A8F3 /* MeCollectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB31A7D98388A22BFC9BD079 /* MeCollectionHeaderView.swift */; };
+		EB31A7AECE2A5D2A75F33B80 /* MeCollectionFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB31A3FF9F577F823035A9E9 /* MeCollectionFooterView.swift */; };
 		EB31A86DECF3F0CD8FB4C7CB /* MeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB31A455EA0BCDBEB06D0B1B /* MeViewModel.swift */; };
 		EB31AAD4299A296489459D8F /* MeContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB31AA62F3B365F7AD3881DF /* MeContentView.swift */; };
 		EB31AAF60FFCF5459880357C /* MeModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB31A8337C7376F1B9B41855 /* MeModule.swift */; };
@@ -44,6 +45,7 @@
 		EB31A00390B52D01A34A2B12 /* MeCollectionViewDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeCollectionViewDataSource.swift; sourceTree = "<group>"; };
 		EB31A0DC5408DD9E1637E7D9 /* MeCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeCollectionViewCell.swift; sourceTree = "<group>"; };
 		EB31A3E844DF3A113F92E31F /* MeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeViewController.swift; sourceTree = "<group>"; };
+		EB31A3FF9F577F823035A9E9 /* MeCollectionFooterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeCollectionFooterView.swift; sourceTree = "<group>"; };
 		EB31A455EA0BCDBEB06D0B1B /* MeViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeViewModel.swift; sourceTree = "<group>"; };
 		EB31A4A66F2BA37199B6F328 /* MeSection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeSection.swift; sourceTree = "<group>"; };
 		EB31A7D98388A22BFC9BD079 /* MeCollectionHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeCollectionHeaderView.swift; sourceTree = "<group>"; };
@@ -119,6 +121,7 @@
 				EB31A0DC5408DD9E1637E7D9 /* MeCollectionViewCell.swift */,
 				EB31A455EA0BCDBEB06D0B1B /* MeViewModel.swift */,
 				EB31A7D98388A22BFC9BD079 /* MeCollectionHeaderView.swift */,
+				EB31A3FF9F577F823035A9E9 /* MeCollectionFooterView.swift */,
 			);
 			path = Me;
 			sourceTree = "<group>";
@@ -193,6 +196,7 @@
 				EB31A00201E26D919F2F3349 /* MeCollectionViewCell.swift in Sources */,
 				EB31A86DECF3F0CD8FB4C7CB /* MeViewModel.swift in Sources */,
 				EB31A45A1ECDCC0269D2A8F3 /* MeCollectionHeaderView.swift in Sources */,
+				EB31A7AECE2A5D2A75F33B80 /* MeCollectionFooterView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
