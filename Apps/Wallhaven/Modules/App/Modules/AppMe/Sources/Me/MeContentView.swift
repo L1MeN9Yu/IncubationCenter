@@ -11,6 +11,7 @@ class MeContentView: View {
         .backgroundColor(.clear)
         .delegate(self)
         .register(MeCollectionViewCell.self, forCellWithReuseIdentifier: MeCollectionViewCell.cellID)
+        .register(MeCollectionHeaderView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: MeCollectionHeaderView.cellID)
         .instance
 
     private lazy var dataSource = MeCollectionViewDataSource(collectionView: collectionView)
