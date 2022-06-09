@@ -25,6 +25,9 @@ private extension MeViewController {
     func setup() {
         title = MeModule.localizedString(key: "MeViewController.Title")
         contentView.x.add(to: view)
+        Task { @MainActor in
+            contentView.reloadData(viewModel: viewModel)
+        }
     }
 
     func layout() {

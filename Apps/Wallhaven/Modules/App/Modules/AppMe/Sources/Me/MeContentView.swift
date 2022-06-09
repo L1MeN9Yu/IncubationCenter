@@ -8,6 +8,7 @@ import UIKit
 class MeContentView: View {
     private lazy var collectionView = CollectionView(frame: .zero, collectionViewLayout: MeCollectionViewLayout())
         .x
+        .backgroundColor(.clear)
         .delegate(self)
         .register(MeCollectionViewCell.self, forCellWithReuseIdentifier: MeCollectionViewCell.cellID)
         .instance
@@ -50,5 +51,14 @@ private extension MeContentView {
 extension MeContentView: UICollectionViewDelegate {}
 
 extension MeContentView {
-    func reloadData() {}
+    func reloadData(viewModel: MeViewModel) {
+        var snapshot = NSDiffableDataSourceSnapshot<MeSection, MeItemViewModel>()
+        let sections = MeSection.allCases
+        snapshot.appendSections(sections)
+        sections.forEach { section in
+            guard let itemViewModels = viewModel.items[section] else { return }
+            snapshot.appendItems(itemViewModels, toSection: section)
+        }
+        dataSource.apply(snapshot, animatingDifferences: false)
+    }
 }

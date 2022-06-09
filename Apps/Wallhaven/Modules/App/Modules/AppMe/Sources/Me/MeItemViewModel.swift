@@ -9,12 +9,21 @@ class MeItemViewModel: ViewModel {
     let itemID: Int
     let title: String
     let detailText: String
+    let iconImageSystemName: String?
 
     init(sectionID: Int, itemID: Int, title: String, detailText: String) {
         self.sectionID = sectionID
         self.itemID = itemID
         self.title = title
         self.detailText = detailText
+
+        switch (sectionID, itemID) {
+        case (0, 0):
+            iconImageSystemName = "lock.shield"
+        default:
+            iconImageSystemName = .none
+        }
+
         super.init()
     }
 }
