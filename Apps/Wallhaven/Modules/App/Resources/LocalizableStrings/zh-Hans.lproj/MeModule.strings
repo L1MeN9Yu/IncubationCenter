@@ -12,3 +12,14 @@
 "MeViewController.Section.App" = "应用";
 "MeViewController.Section.Usage" = "用量";
 "MeViewController.Section.About" = "关于";
+
+"MeViewController.Item.APIKey" = "API Key";
+"MeViewController.Item.General" = "通用";
+"MeViewController.Item.Usage" = "磁盘用量";
+"MeViewController.Item.About" = "关于";
+"MeViewController.Item.Version" = "版本";
+
+"MeViewController.Item.APIKey.Detail" = "Wallhaven.cc网站账号的 API Key";
+"MeViewController.Item.General.Detail" = "应用内设置";
+"MeViewController.Item.Usage.Detail" = "磁盘占用量";
+"MeViewController.Item.About.Detail" = "应用信息";

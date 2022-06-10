@@ -52,8 +52,8 @@ private extension MeCollectionViewCell {
 
     func layout() {
         iconImageView.pin.top().left().bottom().margin(14).aspectRatio(1)
-        titleLabel.pin.after(of: iconImageView, aligned: .top).marginLeft(20).right(10).sizeToFit()
-        detailLabel.pin.after(of: iconImageView, aligned: .bottom).marginLeft(20).right(10).sizeToFit()
+        titleLabel.pin.after(of: iconImageView).marginLeft(20).top(10).right(10).sizeToFit()
+        detailLabel.pin.after(of: iconImageView).marginLeft(20).bottom(10).right(10).sizeToFit()
     }
 }
 

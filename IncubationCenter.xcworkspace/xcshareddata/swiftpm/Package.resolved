@@ -69,8 +69,8 @@
         "repositoryURL": "https://github.com/onevcat/Kingfisher.git",
         "state": {
           "branch": null,
-          "revision": "59eb199fdb8dd47733624e8b0277822d0232579e",
-          "version": "7.2.2"
+          "revision": "2de32a15bdd640a30ee9972a40b031fc604fc880",
+          "version": "7.2.3"
         }
       },
       {
@@ -116,6 +116,15 @@
           "branch": null,
           "revision": "fb7f7b18cd626feab25e0303cca620cfad438311",
           "version": "3.1.0"
+        }
+      },
+      {
+        "package": "SwiftDocCPlugin",
+        "repositoryURL": "https://github.com/apple/swift-docc-plugin",
+        "state": {
+          "branch": null,
+          "revision": "3303b164430d9a7055ba484c8ead67a52f7b74f6",
+          "version": "1.0.0"
         }
       },
       {
