@@ -28,7 +28,7 @@ private extension DiscoveryViewController {
     func setup() {
         setupNavigationBar()
         contentView.x.add(to: view)
-        setupBinding()
+        bind()
     }
 
     func setupNavigationBar() {
@@ -45,7 +45,7 @@ private extension DiscoveryViewController {
         navigationItem.rightBarButtonItem = filterBarButtonItem
     }
 
-    func setupBinding() {
+    func bind() {
         contentView.didSelectedDelegate.delegate(on: self) { `self`, indexPath in
             guard let viewModel = self.viewModel.wallpaperListViewModels[safe: indexPath.row] else { return }
             let id = viewModel.id

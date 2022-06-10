@@ -28,9 +28,19 @@ private extension MeViewController {
         Task { @MainActor in
             contentView.reloadData(viewModel: viewModel)
         }
+        bind()
     }
 
     func layout() {
         contentView.pin.all(view.pin.safeArea)
+    }
+
+    func bind() {
+        contentView.didSelectedItemDelegate.delegate(on: self) { _, indexPath in
+            switch (indexPath.section, indexPath.row) {
+            case (0, 0): Router.push(to: "APIKeyViewController")
+            default: return
+            }
+        }
     }
 }

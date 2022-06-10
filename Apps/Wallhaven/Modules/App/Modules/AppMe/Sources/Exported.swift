@@ -7,6 +7,8 @@ import UIRoute
 
 public let meNavigationControllerType: NavigationController.Type = MeNavigationViewController.self
 
-public let routableViewControllers: [Routable.Type] = []
+public let routableViewControllers: [Routable.Type] = [
+    APIKeyViewController.self,
+]
 
 public let actions: [Actable.Type] = []

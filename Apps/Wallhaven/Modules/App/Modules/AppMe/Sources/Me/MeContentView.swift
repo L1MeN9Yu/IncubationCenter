@@ -4,6 +4,7 @@
 
 import UICore
 import UIKit
+import WeakDelegate
 
 class MeContentView: View {
     private lazy var collectionView = CollectionView(frame: .zero, collectionViewLayout: MeCollectionViewLayout())
@@ -16,6 +17,8 @@ class MeContentView: View {
         .instance
 
     private lazy var dataSource = MeCollectionViewDataSource(collectionView: collectionView)
+
+    private(set) lazy var didSelectedItemDelegate = WeakDelegate.Delegate<IndexPath, Void>()
 
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -50,7 +53,11 @@ private extension MeContentView {
 
 // MARK: - UICollectionViewDelegate
 
-extension MeContentView: UICollectionViewDelegate {}
+extension MeContentView: UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        didSelectedItemDelegate.call(indexPath)
+    }
+}
 
 extension MeContentView {
     func reloadData(viewModel: MeViewModel) {
