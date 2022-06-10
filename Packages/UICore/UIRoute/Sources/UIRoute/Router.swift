@@ -5,6 +5,7 @@
 #if canImport(UIKit)
 
 import UIKit
+import URLRoute
 
 public enum Router {}
 
@@ -17,11 +18,39 @@ private extension Router {
 }
 
 public extension Router {
+    typealias ViewControllerRegisterCallback = (_ urlPattern: String) -> Void
+    typealias URLHandleRegisterCallback = (_ urlPattern: String) -> Void
+    typealias ViewControllerNotFoundCallback = (_ urlPattern: String) -> Void
+
+    static func register(viewControllerRegisterCallback: @escaping ViewControllerRegisterCallback) -> Router.Type {
+        self.viewControllerRegisterCallback = viewControllerRegisterCallback
+        return self
+    }
+
+    static func register(urlHandleRegisterCallback: @escaping URLHandleRegisterCallback) -> Router.Type {
+        self.urlHandleRegisterCallback = urlHandleRegisterCallback
+        return self
+    }
+
+    static func register(viewControllerNotFoundCallback: @escaping ViewControllerNotFoundCallback) -> Router.Type {
+        self.viewControllerNotFoundCallback = viewControllerNotFoundCallback
+        return self
+    }
+}
+
+private extension Router {
+    static var viewControllerRegisterCallback: ViewControllerRegisterCallback?
+    static var urlHandleRegisterCallback: URLHandleRegisterCallback?
+    static var viewControllerNotFoundCallback: ViewControllerNotFoundCallback?
+}
+
+public extension Router {
     static func register(routeName: String, factory: @escaping ViewControllerFactory) {
         let urlPattern = scheme + routeName
         navigator.register(urlPattern) { url, values, context in
             factory(url, values, context)
         }
+        viewControllerRegisterCallback?(urlPattern)
     }
 
     static func register(actName: String, action: @escaping URLOpenHandlerFactory) {
@@ -29,6 +58,7 @@ public extension Router {
         navigator.handle(urlPattern) { url, values, context in
             action(url, values, context)
         }
+        urlHandleRegisterCallback?(urlPattern)
     }
 }
 
@@ -39,12 +69,18 @@ public extension Router {
 
     static func push(to pattern: String) {
         let urlPattern = scheme + pattern
-        navigator.push(urlPattern)
+        guard let _ = navigator.push(urlPattern) else {
+            viewControllerNotFoundCallback?(urlPattern)
+            return
+        }
     }
 
     static func present(pattern: String) {
         let urlPattern = scheme + pattern
-        navigator.present(urlPattern)
+        guard let _ = navigator.present(urlPattern) else {
+            viewControllerNotFoundCallback?(urlPattern)
+            return
+        }
     }
 }
 
