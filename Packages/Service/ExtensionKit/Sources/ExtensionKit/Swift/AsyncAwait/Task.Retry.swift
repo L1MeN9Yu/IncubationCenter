@@ -7,7 +7,6 @@ import typealias Foundation.TimeInterval
 
 @available(macOS 10.15, iOS 13.0, watchOS 6.0, tvOS 13.0, *)
 public extension Task where Failure == Error {
-
     @discardableResult
     static func retrying(priority: TaskPriority? = nil, maxRetryCount: Int = 3, retryDelay: TimeInterval = 1, operation: @Sendable @escaping () async throws -> Success) -> Task {
         Task(priority: priority) {

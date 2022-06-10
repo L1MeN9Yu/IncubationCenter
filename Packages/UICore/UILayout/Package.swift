@@ -9,7 +9,7 @@ let package = Package(
         .library(name: "UILayout", targets: ["UILayout"]),
     ],
     dependencies: [
-        .package(url: "https://github.com/layoutBox/PinLayout.git", from: "1.10.2"),
+        .package(url: "https://github.com/layoutBox/PinLayout.git", from: "1.10.3"),
     ],
     targets: [
         .target(name: "UILayout", dependencies: [

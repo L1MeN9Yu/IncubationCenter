@@ -5,6 +5,7 @@
 import UICore
 
 class MeViewController: ViewController {
+    private lazy var viewModel = MeViewModel()
     private lazy var contentView = MeContentView()
 }
 
@@ -13,15 +14,33 @@ extension MeViewController {
         super.viewDidLoad()
         setup()
     }
+
+    override func viewWillLayoutSubviews() {
+        super.viewWillLayoutSubviews()
+        layout()
+    }
 }
 
 private extension MeViewController {
     func setup() {
-        setupNavigationBar()
-        contentView.x.add(to: view).pin.all()
+        title = MeModule.localizedString(key: "MeViewController.Title")
+        contentView.x.add(to: view)
+        Task { @MainActor in
+            contentView.reloadData(viewModel: viewModel)
+        }
+        bind()
     }
 
-    func setupNavigationBar() {
-        title = MeModule.localizedString(key: "MeViewController.Title")
+    func layout() {
+        contentView.pin.all(view.pin.safeArea)
+    }
+
+    func bind() {
+        contentView.didSelectedItemDelegate.delegate(on: self) { _, indexPath in
+            switch (indexPath.section, indexPath.row) {
+            case (0, 0): Router.push(to: "APIKeyViewController")
+            default: return
+            }
+        }
     }
 }

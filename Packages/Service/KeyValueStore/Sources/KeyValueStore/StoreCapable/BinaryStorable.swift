@@ -2,7 +2,7 @@
 // Created by Mengyu Li on 2022/2/17.
 //
 
-import BinaryCodable
+import Coder
 import Foundation
 
 public protocol BinaryStorable: Storable, BinaryCodable {}

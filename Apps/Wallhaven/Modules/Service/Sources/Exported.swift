@@ -3,6 +3,7 @@
 //
 
 @_exported import AppModular
+@_exported import Coder
 @_exported import Crypto
 @_exported import ExtensionKit
 @_exported import KeyValueStore

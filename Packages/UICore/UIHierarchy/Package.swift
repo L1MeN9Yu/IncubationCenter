@@ -9,7 +9,7 @@ let package = Package(
         .library(name: "UIHierarchy", targets: ["UIHierarchy"]),
     ],
     dependencies: [
-        .package(url: "https://github.com/QMUI/LookinServer.git", from: "1.0.5"),
+        .package(url: "https://github.com/QMUI/LookinServer.git", from: "1.0.6"),
     ],
     targets: [
         .target(name: "UIHierarchy", dependencies: [

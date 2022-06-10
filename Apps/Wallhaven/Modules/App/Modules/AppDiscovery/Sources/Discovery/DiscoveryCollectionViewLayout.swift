@@ -10,14 +10,14 @@ class DiscoveryCollectionViewLayout: UICollectionViewCompositionalLayout {
             widthDimension: .fractionalWidth(1.0),
             heightDimension: .fractionalHeight(1.0)
         )
-        let fullPhotoItem = NSCollectionLayoutItem(layoutSize: itemSize)
+        let item = NSCollectionLayoutItem(layoutSize: itemSize)
         let groupSize = NSCollectionLayoutSize(
             widthDimension: .fractionalWidth(1.0),
             heightDimension: .fractionalWidth(9.0 / 16.0)
         )
         let group = NSCollectionLayoutGroup.horizontal(
             layoutSize: groupSize,
-            subitem: fullPhotoItem,
+            subitem: item,
             count: 3
         )
         let section = NSCollectionLayoutSection(group: group)

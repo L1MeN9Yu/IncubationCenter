@@ -4,6 +4,6 @@
 
 import UIKit
 
-open class CollectionViewHeaderFooterView: UICollectionReusableView {
+open class CollectionReusableView: UICollectionReusableView {
     public static var cellID: String { String(describing: self) }
 }

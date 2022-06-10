@@ -15,7 +15,7 @@ let package = Package(
         .library(name: "Crypto", targets: ["Crypto"]),
     ],
     dependencies: [
-        .package(url: "https://github.com/krzyzanowskim/CryptoSwift.git", from: "1.4.3"),
+        .package(url: "https://github.com/krzyzanowskim/CryptoSwift.git", from: "1.5.1"),
     ],
     targets: [
         .target(name: "Crypto", dependencies: [
