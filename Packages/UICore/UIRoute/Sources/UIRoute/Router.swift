@@ -22,16 +22,19 @@ public extension Router {
     typealias URLHandleRegisterCallback = (_ urlPattern: String) -> Void
     typealias ViewControllerNotFoundCallback = (_ urlPattern: String) -> Void
 
+    @discardableResult
     static func register(viewControllerRegisterCallback: @escaping ViewControllerRegisterCallback) -> Router.Type {
         self.viewControllerRegisterCallback = viewControllerRegisterCallback
         return self
     }
 
+    @discardableResult
     static func register(urlHandleRegisterCallback: @escaping URLHandleRegisterCallback) -> Router.Type {
         self.urlHandleRegisterCallback = urlHandleRegisterCallback
         return self
     }
 
+    @discardableResult
     static func register(viewControllerNotFoundCallback: @escaping ViewControllerNotFoundCallback) -> Router.Type {
         self.viewControllerNotFoundCallback = viewControllerNotFoundCallback
         return self

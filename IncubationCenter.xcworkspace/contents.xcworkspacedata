@@ -85,6 +85,9 @@
             location = "group:Packages/Service/GRPCClient">
          </FileRef>
          <FileRef
+            location = "group:Packages/Service/ProxyServer">
+         </FileRef>
+         <FileRef
             location = "group:Packages/Service/RubikCube">
          </FileRef>
       </Group>
