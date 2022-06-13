@@ -15,7 +15,7 @@ let package = Package(
         .library(name: "ORM", targets: ["ORM"]),
     ],
     dependencies: [
-        .package(url: "https://github.com/realm/realm-swift.git", from: "10.28.0"),
+        .package(url: "https://github.com/realm/realm-swift.git", from: "10.28.1"),
     ],
     targets: [
         .target(name: "ORM", dependencies: [
