@@ -91,6 +91,9 @@
             location = "group:Packages/Service/SwiftKit">
          </FileRef>
          <FileRef
+            location = "group:Packages/Service/SwiftAsyncKit">
+         </FileRef>
+         <FileRef
             location = "group:Packages/Service/RubikCube">
          </FileRef>
       </Group>

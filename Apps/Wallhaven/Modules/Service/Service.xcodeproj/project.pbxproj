@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1E265FEC2856EB6E0013E721 /* SwiftAsyncKit in Frameworks */ = {isa = PBXBuildFile; productRef = 1E265FEB2856EB6E0013E721 /* SwiftAsyncKit */; };
 		1E43C88B2853349E00945703 /* ProxyServer in Frameworks */ = {isa = PBXBuildFile; productRef = 1E43C88A2853349E00945703 /* ProxyServer */; };
 		1E617ECA2850BBC500593180 /* Coder in Frameworks */ = {isa = PBXBuildFile; productRef = 1E617EC92850BBC500593180 /* Coder */; };
 		1E7F74FF283628D30035A8E2 /* Service.docc in Sources */ = {isa = PBXBuildFile; fileRef = 1E7F74FE283628D30035A8E2 /* Service.docc */; };
@@ -39,6 +40,7 @@
 				1E7F756B28365FA80035A8E2 /* KeyValueStore in Frameworks */,
 				1E43C88B2853349E00945703 /* ProxyServer in Frameworks */,
 				1E7F762B2838869A0035A8E2 /* RestfulClient in Frameworks */,
+				1E265FEC2856EB6E0013E721 /* SwiftAsyncKit in Frameworks */,
 				1E7F757328365FA80035A8E2 /* PropertyWrappers in Frameworks */,
 				1E7F756528365FA80035A8E2 /* AppModular in Frameworks */,
 				1EAFD52B2856DE490085A591 /* SwiftKit in Frameworks */,
@@ -136,6 +138,7 @@
 				1E617EC92850BBC500593180 /* Coder */,
 				1E43C88A2853349E00945703 /* ProxyServer */,
 				1EAFD52A2856DE490085A591 /* SwiftKit */,
+				1E265FEB2856EB6E0013E721 /* SwiftAsyncKit */,
 			);
 			productName = Service;
 			productReference = 1E7F74FA283628D30035A8E2 /* Service.framework */;
@@ -400,6 +403,10 @@
 /* End XCConfigurationList section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		1E265FEB2856EB6E0013E721 /* SwiftAsyncKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = SwiftAsyncKit;
+		};
 		1E43C88A2853349E00945703 /* ProxyServer */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = ProxyServer;
