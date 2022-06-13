@@ -28,7 +28,16 @@ public extension AsyncImageManager {
         ]
         sessionConfiguration.connectionProxyDictionary = connectionProxyDictionary
         KingfisherManager.shared.downloader.sessionConfiguration = sessionConfiguration
-
+        KingfisherManager.shared.defaultOptions = [
+            .requestModifier(AnyModifier { request in
+                guard let url = request.url else { return request }
+                guard var urlComponents = URLComponents(url: url, resolvingAgainstBaseURL: false) else { return request }
+                urlComponents.scheme = "http"
+                var modifiedRequest = request
+                modifiedRequest.url = urlComponents.url
+                return modifiedRequest
+            }),
+        ]
         return self
     }
 
