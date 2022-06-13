@@ -19,6 +19,7 @@
 		1E7F757328365FA80035A8E2 /* PropertyWrappers in Frameworks */ = {isa = PBXBuildFile; productRef = 1E7F757228365FA80035A8E2 /* PropertyWrappers */; };
 		1E7F757528365FA80035A8E2 /* WeakDelegate in Frameworks */ = {isa = PBXBuildFile; productRef = 1E7F757428365FA80035A8E2 /* WeakDelegate */; };
 		1E7F762B2838869A0035A8E2 /* RestfulClient in Frameworks */ = {isa = PBXBuildFile; productRef = 1E7F762A2838869A0035A8E2 /* RestfulClient */; };
+		1EAFD52B2856DE490085A591 /* SwiftKit in Frameworks */ = {isa = PBXBuildFile; productRef = 1EAFD52A2856DE490085A591 /* SwiftKit */; };
 		EB31AA0F7B2AC58AA81B16F4 /* ServiceModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB31ABDE456E7632DEA37A30 /* ServiceModule.swift */; };
 		EB31AF2A4C5C61EC79E2B829 /* Exported.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB31A27E040CB9C074A4957A /* Exported.swift */; };
 /* End PBXBuildFile section */
@@ -40,6 +41,7 @@
 				1E7F762B2838869A0035A8E2 /* RestfulClient in Frameworks */,
 				1E7F757328365FA80035A8E2 /* PropertyWrappers in Frameworks */,
 				1E7F756528365FA80035A8E2 /* AppModular in Frameworks */,
+				1EAFD52B2856DE490085A591 /* SwiftKit in Frameworks */,
 				1E7F756F28365FA80035A8E2 /* LoggerPool in Frameworks */,
 				1E7F756D28365FA80035A8E2 /* Locks in Frameworks */,
 				1E7F757528365FA80035A8E2 /* WeakDelegate in Frameworks */,
@@ -133,6 +135,7 @@
 				1E7F762A2838869A0035A8E2 /* RestfulClient */,
 				1E617EC92850BBC500593180 /* Coder */,
 				1E43C88A2853349E00945703 /* ProxyServer */,
+				1EAFD52A2856DE490085A591 /* SwiftKit */,
 			);
 			productName = Service;
 			productReference = 1E7F74FA283628D30035A8E2 /* Service.framework */;
@@ -440,6 +443,10 @@
 		1E7F762A2838869A0035A8E2 /* RestfulClient */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = RestfulClient;
+		};
+		1EAFD52A2856DE490085A591 /* SwiftKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = SwiftKit;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

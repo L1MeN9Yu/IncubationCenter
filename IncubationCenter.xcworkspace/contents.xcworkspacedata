@@ -88,6 +88,9 @@
             location = "group:Packages/Service/ProxyServer">
          </FileRef>
          <FileRef
+            location = "group:Packages/Service/SwiftKit">
+         </FileRef>
+         <FileRef
             location = "group:Packages/Service/RubikCube">
          </FileRef>
       </Group>
