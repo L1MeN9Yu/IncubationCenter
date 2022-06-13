@@ -7,10 +7,13 @@ import Foundation
 
 public class Server {
     let httpServer: HTTPServer
+
+    private let rootHandler = RootHandler()
+
     private var task: Task<Void, Error>?
 
     public init(port: UInt16) {
-        httpServer = HTTPServer(port: port)
+        httpServer = HTTPServer(port: port, handler: rootHandler)
     }
 }
 
