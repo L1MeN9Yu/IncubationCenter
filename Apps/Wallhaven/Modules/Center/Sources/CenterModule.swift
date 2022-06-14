@@ -6,6 +6,10 @@ import Service
 
 public enum CenterModule {}
 
+private extension CenterModule {
+    static let logger = Loggers[String(describing: CenterModule.self)]
+}
+
 public extension CenterModule {
     static func bootstrap() {
         server.start()
@@ -13,5 +17,5 @@ public extension CenterModule {
 }
 
 private extension CenterModule {
-    static let server = Server(port: 9527)
+    static let server = Server(port: 9527, logger: logger)
 }

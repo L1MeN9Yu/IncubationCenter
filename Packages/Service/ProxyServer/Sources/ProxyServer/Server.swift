@@ -4,16 +4,48 @@
 
 import FlyingFox
 import Foundation
+import HummingbirdCore
+import HummingbirdTLS
+import Lifecycle
+import LifecycleNIOCompat
+import Logging
+import NIO
+import NIOTransportServices
 
 public class Server {
+    private let logger: Logger
+
     let httpServer: HTTPServer
-
     private let rootHandler = RootHandler()
-
     private var task: Task<Void, Error>?
 
-    public init(port: UInt16) {
+    private let queue = DispatchQueue(label: "Wallhaven.Server")
+    private let callbackQueue = DispatchQueue(label: "Wallhaven.Server.Callback")
+
+    private let lifeCycle: ServiceLifecycle
+    private let hbServer: HBHTTPServer
+    private let rootResponder: RootResponder
+
+    public init(port: UInt16, logger: Logger) {
+        self.logger = logger
+
+        lifeCycle = ServiceLifecycle(configuration: ServiceLifecycle.Configuration(label: "Wallhaven.Server", logger: logger, callbackQueue: callbackQueue))
         httpServer = HTTPServer(port: port, handler: rootHandler)
+        hbServer = HBHTTPServer(group: NIOTSEventLoopGroup(), configuration: HBHTTPServer.Configuration(address: .hostname("0.0.0.0", port: Int(port + 1)), serverName: "Wallhaven"))
+        rootResponder = RootResponder(logger: logger)
+
+        lifeCycle.register(
+            label: "Wallhaven.Server",
+            start: .eventLoopFuture { [self] in hbServer.start(responder: rootResponder) },
+            shutdown: .eventLoopFuture { [self] in hbServer.stop() }
+        )
+        /**
+         do {
+             try hbServer.addTLS(tlsConfiguration: .makeServerConfiguration(certificateChain: <#T##[NIOSSLCertificateSource]##[NIOSSL.NIOSSLCertificateSource]#>, privateKey: <#T##NIOSSLPrivateKeySource##NIOSSL.NIOSSLPrivateKeySource#>))
+         } catch {
+             fatalError("\(error)")
+         }
+          */
     }
 }
 
@@ -23,6 +55,15 @@ public extension Server {
             try await httpServer.start()
         }
         self.task = task
+
+        queue.async { [self] in
+            lifeCycle.start { [self] error in
+                if let error = error {
+                    logger.error("\(error)")
+                }
+            }
+            lifeCycle.wait()
+        }
     }
 
     func stop() {
