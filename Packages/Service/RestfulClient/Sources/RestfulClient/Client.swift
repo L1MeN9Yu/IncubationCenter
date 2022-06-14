@@ -50,3 +50,16 @@ public extension Client {
         return response
     }
 }
+
+public extension Client {
+    func execute<Request: Requestable>(request: Request, onComplete: @escaping (Result<Response, Error>) -> Void) {
+        logger.debug("request => \(request.method.rawValue) \(request.url)")
+        do {
+            try httpClient.execute(request: request.export()).whenComplete {
+                onComplete($0.map { Response.import(httpClientResponse: $0) })
+            }
+        } catch {
+            onComplete(.failure(error))
+        }
+    }
+}

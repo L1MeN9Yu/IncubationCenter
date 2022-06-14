@@ -25,14 +25,16 @@ public class Server {
     private let lifeCycle: ServiceLifecycle
     private let hbServer: HBHTTPServer
     private let rootResponder: RootResponder
+    private let clientHandler: ClientHandle
 
-    public init(port: UInt16, logger: Logger) {
+    public init(port: UInt16, logger: Logger, clientHandler: ClientHandle) {
         self.logger = logger
+        self.clientHandler = clientHandler
 
         lifeCycle = ServiceLifecycle(configuration: ServiceLifecycle.Configuration(label: "Wallhaven.Server", logger: logger, callbackQueue: callbackQueue))
         httpServer = HTTPServer(port: port, handler: rootHandler)
         hbServer = HBHTTPServer(group: NIOTSEventLoopGroup(), configuration: HBHTTPServer.Configuration(address: .hostname("0.0.0.0", port: Int(port + 1)), serverName: "Wallhaven"))
-        rootResponder = RootResponder(logger: logger)
+        rootResponder = RootResponder(logger: logger, clientHandler: clientHandler)
 
         lifeCycle.register(
             label: "Wallhaven.Server",

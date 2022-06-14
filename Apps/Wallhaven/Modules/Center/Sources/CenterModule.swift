@@ -8,6 +8,7 @@ public enum CenterModule {}
 
 private extension CenterModule {
     static let logger = Loggers[String(describing: CenterModule.self)]
+    static let clientHandler = ClientHandler(logger: logger)
 }
 
 public extension CenterModule {
@@ -17,5 +18,5 @@ public extension CenterModule {
 }
 
 private extension CenterModule {
-    static let server = Server(port: 9527, logger: logger)
+    static let server = Server(port: 9527, logger: logger, clientHandler: clientHandler)
 }
