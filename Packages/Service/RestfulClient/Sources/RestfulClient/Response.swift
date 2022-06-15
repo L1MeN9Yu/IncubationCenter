@@ -19,6 +19,13 @@ public struct Response {
         self.body = Data(buffer: body)
     }
 
+    public init(version: HTTPVersion, status: HTTPResponseStatus, headers: HTTPHeaders, body: Data) {
+        self.version = version
+        self.status = status
+        self.headers = headers
+        self.body = body
+    }
+
     @available(macOS 10.15, iOS 13.0, watchOS 6.0, tvOS 13.0, *)
     static func `import`(httpClientResponse: HTTPClientResponse, body: ByteBuffer) -> Response {
         Response(
@@ -26,6 +33,15 @@ public struct Response {
             status: httpClientResponse.status,
             headers: httpClientResponse.headers,
             body: body
+        )
+    }
+
+    static func `import`(httpClientResponse: HTTPClient.Response) -> Response {
+        Response(
+            version: httpClientResponse.version,
+            status: httpClientResponse.status,
+            headers: httpClientResponse.headers,
+            body: (httpClientResponse.body.map { Data(buffer: $0) }) ?? Data()
         )
     }
 }

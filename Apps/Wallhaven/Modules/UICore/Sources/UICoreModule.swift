@@ -18,6 +18,8 @@ public extension UICoreModule {
             .register(viewControllerNotFoundCallback: {
                 routerLogger.error("no view controller for \($0)")
             })
+
+        AsyncImageManager.setupProxy(host: "127.0.0.1", port: 9528).setupCache()
     }
 }
 
