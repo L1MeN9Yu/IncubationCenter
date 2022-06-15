@@ -14,13 +14,11 @@ let package = Package(
         .library(name: "ProxyServer", targets: ["ProxyServer"]),
     ],
     dependencies: [
-        .package(url: "https://github.com/swhitty/FlyingFox.git", from: "0.7.0"),
         .package(url: "https://github.com/hummingbird-project/hummingbird-core", from: "0.13.5"),
         .package(url: "https://github.com/swift-server/swift-service-lifecycle.git", branch: "main"),
     ],
     targets: [
         .target(name: "ProxyServer", dependencies: [
-            .product(name: "FlyingFox", package: "FlyingFox"),
             .product(name: "HummingbirdCore", package: "hummingbird-core"),
             .product(name: "HummingbirdTLS", package: "hummingbird-core"),
             .product(name: "Lifecycle", package: "swift-service-lifecycle"),

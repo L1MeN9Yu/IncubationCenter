@@ -63,3 +63,11 @@ public extension Client {
         }
     }
 }
+
+public extension Client {
+    func execute(request: HTTPClient.Request, onComplete: @escaping (Result<Response, Error>) -> Void) {
+        httpClient.execute(request: request).whenComplete {
+            onComplete($0.map { Response.import(httpClientResponse: $0) })
+        }
+    }
+}

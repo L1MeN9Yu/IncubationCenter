@@ -2,7 +2,6 @@
 // Created by Mengyu Li on 2022/6/10.
 //
 
-import FlyingFox
 import Foundation
 import HummingbirdCore
 import HummingbirdTLS
@@ -14,10 +13,6 @@ import NIOTransportServices
 
 public class Server {
     private let logger: Logger
-
-    let httpServer: HTTPServer
-    private let rootHandler = RootHandler()
-    private var task: Task<Void, Error>?
 
     private let queue = DispatchQueue(label: "Wallhaven.Server")
     private let callbackQueue = DispatchQueue(label: "Wallhaven.Server.Callback")
@@ -32,8 +27,7 @@ public class Server {
         self.clientHandler = clientHandler
 
         lifeCycle = ServiceLifecycle(configuration: ServiceLifecycle.Configuration(label: "Wallhaven.Server", logger: logger, callbackQueue: callbackQueue))
-        httpServer = HTTPServer(port: port, handler: rootHandler)
-        hbServer = HBHTTPServer(group: NIOTSEventLoopGroup(), configuration: HBHTTPServer.Configuration(address: .hostname("0.0.0.0", port: Int(port + 1)), serverName: "Wallhaven"))
+        hbServer = HBHTTPServer(group: NIOTSEventLoopGroup(), configuration: HBHTTPServer.Configuration(address: .hostname("0.0.0.0", port: Int(port)), serverName: "Wallhaven"))
         rootResponder = RootResponder(logger: logger, clientHandler: clientHandler)
 
         lifeCycle.register(
@@ -53,11 +47,6 @@ public class Server {
 
 public extension Server {
     func start() {
-        let task = Task {
-            try await httpServer.start()
-        }
-        self.task = task
-
         queue.async { [self] in
             lifeCycle.start { [self] error in
                 if let error = error {
@@ -69,20 +58,8 @@ public extension Server {
     }
 
     func stop() {
-        task?.cancel()
-    }
-}
-
-public extension Server {
-    @available(*, unavailable)
-    func enableSandboxBrowsing(pattern: String = "/browsing/sandbox/*") async throws {
-        let url = try FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: false).appendingPathComponent("../").standardized
-        await httpServer.appendRoute(HTTPRoute(method: .GET, path: pattern), to: DirectoryHTTPHandler(root: url, serverPath: pattern))
-    }
-
-    @available(*, unavailable)
-    func enableBundleBrowsing(pattern: String = "/browsing/bundle/*") async {
-        let url = Bundle.main.bundleURL
-        await httpServer.appendRoute(HTTPRoute(method: .GET, path: pattern), to: DirectoryHTTPHandler(root: url, serverPath: pattern))
+        queue.async { [self] in
+            lifeCycle.shutdown()
+        }
     }
 }

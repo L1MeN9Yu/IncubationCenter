@@ -19,7 +19,6 @@ public extension UICoreModule {
                 routerLogger.error("no view controller for \($0)")
             })
 
-//        AsyncImageManager.setupProxy(host: "localhost", port: 9527).setupCache()
         AsyncImageManager.setupProxy(host: "127.0.0.1", port: 9528).setupCache()
     }
 }

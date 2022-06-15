@@ -18,5 +18,5 @@ public extension CenterModule {
 }
 
 private extension CenterModule {
-    static let server = Server(port: 9527, logger: logger, clientHandler: clientHandler)
+    static let server = Server(port: 9528, logger: logger, clientHandler: clientHandler)
 }
