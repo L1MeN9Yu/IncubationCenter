@@ -7,6 +7,7 @@ import Foundation
 import HummingbirdCore
 import Logging
 import NIO
+import ProxyServer
 import RestfulClient
 import Service
 
@@ -17,7 +18,7 @@ class ClientHandler {
 
     init(logger: Logger) {
         self.logger = logger
-        client = Client(eventLoopGroupProvider: .shared(eventGroup), logger: logger)
+        client = Client(eventLoopGroupProvider: .shared(eventGroup), configuration: Configuration(readTimeout: 15), logger: logger)
     }
 }
 
@@ -30,11 +31,16 @@ extension ClientHandler: ClientHandle {
         }
 
         do {
+            guard let originalURLString = request.head.headers.first(name: HTTPHeaderField.originalURLForProxy) else { return onComplete(.success(forbidden())) }
+            guard let originalURL = URL(string: originalURLString) else { return onComplete(.success(forbidden())) }
+            var headers = request.head.headers
+            headers.remove(name: HTTPHeaderField.host)
+            headers.remove(name: HTTPHeaderField.originalURLForProxy)
             try client.execute(
                 request: HTTPClient.Request(
-                    url: request.head.uri,
+                    url: originalURL,
                     method: request.head.method,
-                    headers: request.head.headers,
+                    headers: headers,
                     body: request.body.buffer.map { HTTPClient.Body.byteBuffer($0) }
                 )
             ) {

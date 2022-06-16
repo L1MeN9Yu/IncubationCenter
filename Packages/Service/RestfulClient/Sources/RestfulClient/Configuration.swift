@@ -6,7 +6,13 @@ import AsyncHTTPClient
 import Foundation
 
 public class Configuration {
-    public init() {}
+    private let connectTimeout: Int64
+    private let readTimeout: Int64
+
+    public init(connectTimeout: Int64 = 5, readTimeout: Int64 = 5) {
+        self.connectTimeout = connectTimeout
+        self.readTimeout = readTimeout
+    }
 }
 
 extension Configuration {
@@ -14,7 +20,7 @@ extension Configuration {
         HTTPClient.Configuration(
             tlsConfiguration: .makeClientConfiguration(),
             redirectConfiguration: .follow(max: 5, allowCycles: false),
-            timeout: .init(connect: .seconds(5), read: .seconds(5)),
+            timeout: .init(connect: .seconds(connectTimeout), read: .seconds(readTimeout)),
             connectionPool: HTTPClient.Configuration.ConnectionPool(),
             proxy: nil,
             decompression: .enabled(limit: .size(10 * 1024 * 1024))
