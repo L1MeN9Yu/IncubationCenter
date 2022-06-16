@@ -73,3 +73,6 @@ iOSInjectionProject/
 
 # Brew
 Brewfile.lock.json
+
+# XCConfig
+*.override.xcconfig
