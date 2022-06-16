@@ -66,6 +66,7 @@ public extension Client {
 
 public extension Client {
     func execute(request: HTTPClient.Request, onComplete: @escaping (Result<Response, Error>) -> Void) {
+        logger.debug("request => \(request.method.rawValue) \(request.url)")
         httpClient.execute(request: request).whenComplete {
             onComplete($0.map { Response.import(httpClientResponse: $0) })
         }

@@ -2,6 +2,7 @@
 // Created by Mengyu Li on 2022/5/19.
 //
 
+import ProxyServer
 import Service
 
 public enum UICoreModule {}
@@ -19,7 +20,7 @@ public extension UICoreModule {
                 routerLogger.error("no view controller for \($0)")
             })
 
-        AsyncImageManager.setupProxy(host: "127.0.0.1", port: 9528).setupCache()
+        AsyncImageManager.setupProxy(host: "127.0.0.1", port: 9528, originalHeaderField: HTTPHeaderField.originalURLForProxy).setupCache()
     }
 }
 

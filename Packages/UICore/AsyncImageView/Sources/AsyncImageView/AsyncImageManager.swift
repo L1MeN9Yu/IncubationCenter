@@ -9,31 +9,16 @@ public enum AsyncImageManager {}
 
 public extension AsyncImageManager {
     @discardableResult
-    static func setupProxy(host: String, port: UInt16) -> Self.Type {
-        let httpProxyKey = kCFNetworkProxiesHTTPEnable as String
-        let httpHostKey = kCFNetworkProxiesHTTPProxy as String
-        let httpPortKey = kCFNetworkProxiesHTTPPort as String
-        let httpsProxyKey = "HTTPSEnable"
-        let httpsHostKey = "HTTPSProxy"
-        let httpsPortKey = "HTTPSPort"
-
-        let sessionConfiguration = URLSessionConfiguration.ephemeral
-        let connectionProxyDictionary: [AnyHashable: Any] = [
-            httpProxyKey: true,
-            httpHostKey: host,
-            httpPortKey: port,
-            httpsProxyKey: true,
-            httpsHostKey: host,
-            httpsPortKey: port,
-        ]
-        sessionConfiguration.connectionProxyDictionary = connectionProxyDictionary
-        KingfisherManager.shared.downloader.sessionConfiguration = sessionConfiguration
+    static func setupProxy(host: String, port: Int, originalHeaderField: String) -> Self.Type {
+        KingfisherManager.shared.downloader.trustedHosts = Set([host])
         KingfisherManager.shared.defaultOptions = [
             .requestModifier(AnyModifier { request in
                 guard let url = request.url else { return request }
                 guard var urlComponents = URLComponents(url: url, resolvingAgainstBaseURL: false) else { return request }
-                urlComponents.scheme = "http"
+                urlComponents.host = host
+                urlComponents.port = port
                 var modifiedRequest = request
+                modifiedRequest.addValue(url.absoluteString, forHTTPHeaderField: originalHeaderField)
                 modifiedRequest.url = urlComponents.url
                 return modifiedRequest
             }),

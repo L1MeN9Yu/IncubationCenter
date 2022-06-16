@@ -9,6 +9,7 @@ import Lifecycle
 import LifecycleNIOCompat
 import Logging
 import NIO
+import NIOSSL
 import NIOTransportServices
 
 public class Server {
@@ -22,12 +23,19 @@ public class Server {
     private let rootResponder: RootResponder
     private let clientHandler: ClientHandle
 
-    public init(port: UInt16, logger: Logger, clientHandler: ClientHandle) {
+    public init(port: Int, logger: Logger, clientHandler: ClientHandle) {
         self.logger = logger
         self.clientHandler = clientHandler
 
         lifeCycle = ServiceLifecycle(configuration: ServiceLifecycle.Configuration(label: "Wallhaven.Server", logger: logger, callbackQueue: callbackQueue))
-        hbServer = HBHTTPServer(group: NIOTSEventLoopGroup(), configuration: HBHTTPServer.Configuration(address: .hostname("0.0.0.0", port: Int(port)), serverName: "Wallhaven"))
+        hbServer = HBHTTPServer(
+            group: NIOTSEventLoopGroup(),
+            configuration: HBHTTPServer.Configuration(
+                address: .hostname("0.0.0.0", port: port),
+                serverName: "Wallhaven",
+                tlsOptions: .none
+            )
+        )
         rootResponder = RootResponder(logger: logger, clientHandler: clientHandler)
 
         lifeCycle.register(
@@ -35,13 +43,25 @@ public class Server {
             start: .eventLoopFuture { [self] in hbServer.start(responder: rootResponder) },
             shutdown: .eventLoopFuture { [self] in hbServer.stop() }
         )
-        /**
-         do {
-             try hbServer.addTLS(tlsConfiguration: .makeServerConfiguration(certificateChain: <#T##[NIOSSLCertificateSource]##[NIOSSL.NIOSSLCertificateSource]#>, privateKey: <#T##NIOSSLPrivateKeySource##NIOSSL.NIOSSLPrivateKeySource#>))
-         } catch {
-             fatalError("\(error)")
-         }
-          */
+        do {
+            let tlsConfiguration = try TLSConfiguration.makeServerConfiguration(
+                certificateChain: [
+                    .certificate(
+                        NIOSSLCertificate(
+                            bytes: [UInt8](Key.certificate.utf8),
+                            format: .pem
+                        )
+                    ),
+                ], privateKey: .privateKey(
+                    NIOSSLPrivateKey(
+                        bytes: [UInt8](Key.private.utf8),
+                        format: .pem
+                    ))
+            )
+            try hbServer.addTLS(tlsConfiguration: tlsConfiguration)
+        } catch {
+            fatalError("\(error)")
+        }
     }
 }
 
