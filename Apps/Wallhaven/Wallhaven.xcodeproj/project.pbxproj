@@ -81,6 +81,8 @@
 		1E7F7536283633B20035A8E2 /* UICore.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = UICore.xcodeproj; path = UICore/UICore.xcodeproj; sourceTree = "<group>"; };
 		1E7F7552283635880035A8E2 /* Center.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Center.xcodeproj; path = Center/Center.xcodeproj; sourceTree = "<group>"; };
 		1E7F75F62837BB8E0035A8E2 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		1EBAFEF2285AFFED00CFF89B /* Wallhaven.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Wallhaven.xcconfig; sourceTree = "<group>"; };
+		1EBAFEF3285B0C3200CFF89B /* Wallhaven.override.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Wallhaven.override.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +106,7 @@
 				1E7F74A7283620A60035A8E2 /* Sources */,
 				1E7F74BD283624EC0035A8E2 /* Modules */,
 				1E7F74BC2836212B0035A8E2 /* Resources */,
+				1EBAFEF1285AFFCA00CFF89B /* XCConfig */,
 				1E7F74EB283625BF0035A8E2 /* Frameworks */,
 				1E7F74A6283620A60035A8E2 /* Products */,
 			);
@@ -184,6 +187,15 @@
 				1E7F7557283635880035A8E2 /* Center.framework */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		1EBAFEF1285AFFCA00CFF89B /* XCConfig */ = {
+			isa = PBXGroup;
+			children = (
+				1EBAFEF2285AFFED00CFF89B /* Wallhaven.xcconfig */,
+				1EBAFEF3285B0C3200CFF89B /* Wallhaven.override.xcconfig */,
+			);
+			path = XCConfig;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -445,57 +457,15 @@
 		};
 		1E7F74BA283620A70035A8E2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1EBAFEF2285AFFED00CFF89B /* Wallhaven.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = PTP77VVZ46;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Resources/Info.plist;
-				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				MARKETING_VERSION = 1.0.0;
-				PRODUCT_BUNDLE_IDENTIFIER = top.limengyu.ios.Wallhaven;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
 		1E7F74BB283620A70035A8E2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1EBAFEF2285AFFED00CFF89B /* Wallhaven.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = PTP77VVZ46;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Resources/Info.plist;
-				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				MARKETING_VERSION = 1.0.0;
-				PRODUCT_BUNDLE_IDENTIFIER = top.limengyu.ios.Wallhaven;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
