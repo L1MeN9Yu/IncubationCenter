@@ -9,9 +9,9 @@ import UIKit
 import UIRoute
 
 class APIKeyViewController: ViewController {
-    init() {
-        super.init(nibName: nil, bundle: nil)
-    }
+    private lazy var contentView = APIKeyContentView(frame: .zero)
+
+    init() { super.init(nibName: nil, bundle: nil) }
 
     @available(*, unavailable)
     required init?(coder: NSCoder) { fatalError("init(coder:) has not been implemented") }
@@ -30,9 +30,14 @@ extension APIKeyViewController {
 }
 
 private extension APIKeyViewController {
-    func setup() {}
+    func setup() {
+        title = MeModule.localizedString(key: "APIKeyViewController.Title")
+        contentView.x.add(to: view)
+    }
 
-    func layout() {}
+    func layout() {
+        contentView.pin.all(view.pin.safeArea)
+    }
 }
 
 extension APIKeyViewController: TypeNameable {}

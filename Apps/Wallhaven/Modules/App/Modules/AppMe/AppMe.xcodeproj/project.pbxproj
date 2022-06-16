@@ -14,6 +14,7 @@
 		EB31A0AECBF322D92FC1FDEE /* Exported.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB31AD193238325187935DA5 /* Exported.swift */; };
 		EB31A1638D84AFC8A586A03B /* MeItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB31A84E7C514749477362C1 /* MeItemViewModel.swift */; };
 		EB31A3208927DD5BD042FF3A /* MeCollectionViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB31A00390B52D01A34A2B12 /* MeCollectionViewDataSource.swift */; };
+		EB31A378B624F94E9493D68F /* APIKeyContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB31A47E44AAE351D4D043C8 /* APIKeyContentView.swift */; };
 		EB31A45A1ECDCC0269D2A8F3 /* MeCollectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB31A7D98388A22BFC9BD079 /* MeCollectionHeaderView.swift */; };
 		EB31A7AECE2A5D2A75F33B80 /* MeCollectionFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB31A3FF9F577F823035A9E9 /* MeCollectionFooterView.swift */; };
 		EB31A86DECF3F0CD8FB4C7CB /* MeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB31A455EA0BCDBEB06D0B1B /* MeViewModel.swift */; };
@@ -48,6 +49,7 @@
 		EB31A3E844DF3A113F92E31F /* MeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeViewController.swift; sourceTree = "<group>"; };
 		EB31A3FF9F577F823035A9E9 /* MeCollectionFooterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeCollectionFooterView.swift; sourceTree = "<group>"; };
 		EB31A455EA0BCDBEB06D0B1B /* MeViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeViewModel.swift; sourceTree = "<group>"; };
+		EB31A47E44AAE351D4D043C8 /* APIKeyContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIKeyContentView.swift; sourceTree = "<group>"; };
 		EB31A4A66F2BA37199B6F328 /* MeSection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeSection.swift; sourceTree = "<group>"; };
 		EB31A554E8D6011F374F35C4 /* APIKeyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIKeyViewController.swift; sourceTree = "<group>"; };
 		EB31A7D98388A22BFC9BD079 /* MeCollectionHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeCollectionHeaderView.swift; sourceTree = "<group>"; };
@@ -133,6 +135,7 @@
 			isa = PBXGroup;
 			children = (
 				EB31A554E8D6011F374F35C4 /* APIKeyViewController.swift */,
+				EB31A47E44AAE351D4D043C8 /* APIKeyContentView.swift */,
 			);
 			path = APIKey;
 			sourceTree = "<group>";
@@ -209,6 +212,7 @@
 				EB31A45A1ECDCC0269D2A8F3 /* MeCollectionHeaderView.swift in Sources */,
 				EB31A7AECE2A5D2A75F33B80 /* MeCollectionFooterView.swift in Sources */,
 				EB31AC5516D40B85850055FB /* APIKeyViewController.swift in Sources */,
+				EB31A378B624F94E9493D68F /* APIKeyContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
