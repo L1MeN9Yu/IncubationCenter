@@ -3,15 +3,16 @@
 //
 
 import Foundation
+import SwiftKit
 import UICore
 
 class APIKeyViewModel: ViewModel {
-    private(set) lazy var items: [APIKeySection: [APIKeyItem]] = [
-        .input: [
-            .input(APIKeyInputViewModel()),
+    private(set) lazy var items: OrderedDictionary<APIKeySection, [APIKeyItem]> = [
+        APIKeySection.input: [
+            APIKeyItem.input(APIKeyInputViewModel()),
         ],
-        .about: [
-            .about(APIKeyAboutViewModel(titleText: MeModule.localizedString(key: "APIKeyViewController.About.Title"))),
+        APIKeySection.about: [
+            APIKeyItem.about(APIKeyAboutViewModel(titleText: MeModule.localizedString(key: "APIKeyViewController.About.Title"))),
         ],
     ]
 }

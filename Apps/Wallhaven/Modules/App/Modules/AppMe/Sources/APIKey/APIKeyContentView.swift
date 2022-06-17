@@ -63,12 +63,6 @@ extension APIKeyContentView {
             snapshot.appendSections([$0])
             snapshot.appendItems($1, toSection: $0)
         }
-//        let sections: [APIKeySection] = [APIKeySection](viewModel.items.keys)
-//        snapshot.appendSections(sections)
-//        sections.forEach { section in
-//            guard let itemViewModels = viewModel.items[section] else { return }
-//            snapshot.appendItems(itemViewModels, toSection: section)
-//        }
         dataSource.apply(snapshot, animatingDifferences: false)
     }
 }

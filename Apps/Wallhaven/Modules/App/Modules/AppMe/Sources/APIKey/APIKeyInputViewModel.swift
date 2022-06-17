@@ -7,6 +7,8 @@ import UICore
 
 class APIKeyInputViewModel: ViewModel {
     let section = APIKeySection.input
+
+    private(set) var apiKey: String? = .none
 }
 
 extension APIKeyInputViewModel: APIKeyItemViewModelable {}

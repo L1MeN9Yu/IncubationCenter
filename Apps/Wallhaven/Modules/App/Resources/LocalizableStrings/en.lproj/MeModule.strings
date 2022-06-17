@@ -29,4 +29,6 @@
 /* - APIKeyViewController - */
 
 "APIKeyViewController.Title" = "API Key";
+"APIKeyViewController.Input.ResetButton.Title" = "Reset";
+"APIKeyViewController.Input.SetButton.Title" = "Set";
 "APIKeyViewController.About.Title" = "View your API key from wallhaven.cc";

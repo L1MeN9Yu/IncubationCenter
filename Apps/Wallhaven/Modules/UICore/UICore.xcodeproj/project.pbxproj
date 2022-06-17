@@ -23,7 +23,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		1E7F752A283633B20035A8E2 /* .framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = .framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1E7F752A283633B20035A8E2 /* .framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = .framework; path = UICore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E7F75852836809D0035A8E2 /* Chain */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = Chain; path = ../../../../Packages/UICore/Chain; sourceTree = "<group>"; };
 		1E7F759928373B750035A8E2 /* Service.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Service.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E7F75A228373BC00035A8E2 /* Exported.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Exported.swift; sourceTree = "<group>"; };
@@ -59,7 +59,7 @@
 			isa = PBXGroup;
 			children = (
 				1E7F755C283636300035A8E2 /* Sources */,
-				1E7F752C283633B20035A8E2 /* Resources */,
+				1EED8C1C285C84DB00BA33F9 /* Resources */,
 				1EBAFEFC285B291600CFF89B /* XCConfig */,
 				1E7F75822836808E0035A8E2 /* Frameworks */,
 				1E7F752B283633B20035A8E2 /* Products */,
@@ -72,13 +72,6 @@
 				1E7F752A283633B20035A8E2 /* .framework */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		1E7F752C283633B20035A8E2 /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Resources;
 			sourceTree = "<group>";
 		};
 		1E7F755C283636300035A8E2 /* Sources */ = {
@@ -107,6 +100,13 @@
 				1EBAFF05285B320A00CFF89B /* UICore.Release.xcconfig */,
 			);
 			path = XCConfig;
+			sourceTree = "<group>";
+		};
+		1EED8C1C285C84DB00BA33F9 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
