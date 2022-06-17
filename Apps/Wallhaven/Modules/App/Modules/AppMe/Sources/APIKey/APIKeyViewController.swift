@@ -59,6 +59,16 @@ private extension APIKeyViewController {
     }
 }
 
+extension APIKeyViewController {
+    func resetButtonAction() {
+        logger.debug("reset")
+    }
+
+    func setButtonAction() {
+        logger.debug("set")
+    }
+}
+
 extension APIKeyViewController: TypeNameable {}
 
 extension APIKeyViewController: Routable {

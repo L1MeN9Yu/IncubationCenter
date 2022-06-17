@@ -2,7 +2,7 @@
 // Created by Mengyu Li on 2022/3/10.
 //
 
-public class Delegate<Input, Output> {
+public class Delegator<Input, Output> {
     private var block: ((Input) -> Output?)?
 
     public init() {}
@@ -10,7 +10,7 @@ public class Delegate<Input, Output> {
 
 // MARK: - Delegate On
 
-public extension Delegate {
+public extension Delegator {
     func delegate<T: AnyObject>(on target: T, block: ((T, Input) -> Output)?) {
         self.block = { [weak target] input in
             guard let target = target else { return nil }
@@ -19,25 +19,25 @@ public extension Delegate {
     }
 }
 
-public extension Delegate {
+public extension Delegator {
     func call(_ input: Input) -> Output? { block?(input) }
 
     func callAsFunction(_ input: Input) -> Output? { call(input) }
 }
 
-public extension Delegate where Input == Void {
+public extension Delegator where Input == Void {
     func call() -> Output? { call(()) }
 
     func callAsFunction() -> Output? { call() }
 }
 
-public extension Delegate where Input == Void, Output: OptionalProtocol {
+public extension Delegator where Input == Void, Output: OptionalProtocol {
     func call() -> Output { call(()) }
 
     func callAsFunction() -> Output { call() }
 }
 
-public extension Delegate where Output: OptionalProtocol {
+public extension Delegator where Output: OptionalProtocol {
     func call(_ input: Input) -> Output {
         switch block?(input) {
         case .none:

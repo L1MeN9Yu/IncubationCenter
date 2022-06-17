@@ -17,7 +17,20 @@ private extension APIKeyCollectionViewDataSource {
         switch itemIdentifier {
         case let .input(inputViewModel):
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: APIKeyInputCollectionViewCell.cellID, for: indexPath) as? APIKeyInputCollectionViewCell
-            cell.run { $0.config(viewModel: inputViewModel) }
+            cell.run {
+                $0.config(viewModel: inputViewModel)
+                if let viewController = collectionView.parentViewController as? APIKeyViewController {
+                    $0.resetButtonDelegator.delegate(on: viewController) {
+                        $0.resetButtonAction()
+                        $1
+                    }
+
+                    $0.setButtonDelegator.delegate(on: viewController) {
+                        $0.setButtonAction()
+                        $1
+                    }
+                }
+            }
             return cell
         case let .about(aboutViewModel):
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: APIKeyAboutCollectionViewCell.cellID, for: indexPath) as? APIKeyAboutCollectionViewCell
@@ -31,7 +44,7 @@ private extension APIKeyCollectionViewDataSource {
         case UICollectionView.elementKindSectionFooter:
             let supplementaryView = collectionView.dequeueReusableSupplementaryView(ofKind: elementKind, withReuseIdentifier: APIKeyCollectionFooterView.cellID, for: indexPath)
                 as? APIKeyCollectionFooterView
-            supplementaryView?.config(section: APIKeySection.allCases[indexPath.section])
+            supplementaryView.map { $0.config(section: APIKeySection.allCases[indexPath.section]) }
             return supplementaryView
         default:
             return nil

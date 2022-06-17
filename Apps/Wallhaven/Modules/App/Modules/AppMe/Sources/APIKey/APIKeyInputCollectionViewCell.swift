@@ -7,6 +7,7 @@ import UICombine
 import UICore
 import UIKit
 import UIResource
+import WeakDelegate
 
 class APIKeyInputCollectionViewCell: CollectionViewCell {
     private lazy var subscriptions = Set<AnyCancellable>()
@@ -33,6 +34,9 @@ class APIKeyInputCollectionViewCell: CollectionViewCell {
         .corners(radius: 8)
         .instance
 
+    private(set) lazy var resetButtonDelegator = Delegator<Void, Void>()
+    private(set) lazy var setButtonDelegator = Delegator<Void, Void>()
+
     override init(frame: CGRect) {
         super.init(frame: frame)
         setup()
@@ -55,8 +59,16 @@ private extension APIKeyInputCollectionViewCell {
         resetButton.x.add(to: contentView)
         setButton.x.add(to: contentView)
 
-        resetButton.tapPublisher.receive(on: DispatchQueue.main).sink {}.store(in: &subscriptions)
-        setButton.tapPublisher.receive(on: DispatchQueue.main).sink {}.store(in: &subscriptions)
+        resetButton.tapPublisher.receive(on: DispatchQueue.main).sink { [weak self] in
+            guard let self = self else { return }
+            self.resetButtonDelegator()
+        }
+        .store(in: &subscriptions)
+        setButton.tapPublisher.receive(on: DispatchQueue.main).sink { [weak self] in
+            guard let self = self else { return }
+            self.setButtonDelegator()
+        }
+        .store(in: &subscriptions)
     }
 
     func layout() {
@@ -67,7 +79,9 @@ private extension APIKeyInputCollectionViewCell {
 }
 
 extension APIKeyInputCollectionViewCell {
-    func config(viewModel: APIKeyInputViewModel) {
+    @discardableResult
+    func config(viewModel: APIKeyInputViewModel) -> Self {
         textField.x.text(viewModel.apiKey).done
+        return self
     }
 }

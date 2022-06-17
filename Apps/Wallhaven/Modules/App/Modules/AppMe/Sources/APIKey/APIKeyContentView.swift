@@ -19,7 +19,7 @@ class APIKeyContentView: View {
 
     private lazy var dataSource = APIKeyCollectionViewDataSource(collectionView: collectionView)
 
-    private(set) lazy var didSelectedItemDelegate = WeakDelegate.Delegate<IndexPath, Void>()
+    private(set) lazy var didSelectedItemDelegate = Delegator<IndexPath, Void>()
 
     override init(frame: CGRect) {
         super.init(frame: frame)

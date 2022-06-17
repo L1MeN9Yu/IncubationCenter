@@ -7,9 +7,9 @@ import UICore
 import UIKit
 
 class DiscoveryContentView: View {
-    let headerRefreshDelegate = WeakDelegate.Delegate<Refresher, Void>()
-    let footerRefreshDelegate = WeakDelegate.Delegate<Refresher, Void>()
-    let didSelectedDelegate = WeakDelegate.Delegate<IndexPath, Void>()
+    let headerRefreshDelegate = Delegator<Refresher, Void>()
+    let footerRefreshDelegate = Delegator<Refresher, Void>()
+    let didSelectedDelegate = Delegator<IndexPath, Void>()
 
     private lazy var collectionView: CollectionView = .init(
         frame: .zero,
