@@ -10,6 +10,8 @@ import UIRoute
 
 class APIKeyViewController: ViewController {
     private lazy var contentView = APIKeyContentView(frame: .zero)
+    private lazy var viewModel = APIKeyViewModel()
+    private lazy var provider = APIKeyProvider()
 
     init() { super.init(nibName: nil, bundle: nil) }
 
@@ -33,11 +35,14 @@ private extension APIKeyViewController {
     func setup() {
         title = MeModule.localizedString(key: "APIKeyViewController.Title")
         contentView.x.add(to: view)
+        bind()
     }
 
     func layout() {
         contentView.pin.all(view.pin.safeArea)
     }
+
+    func bind() {}
 }
 
 extension APIKeyViewController: TypeNameable {}

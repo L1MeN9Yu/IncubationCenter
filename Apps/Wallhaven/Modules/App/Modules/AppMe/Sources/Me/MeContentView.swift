@@ -7,7 +7,7 @@ import UIKit
 import WeakDelegate
 
 class MeContentView: View {
-    private lazy var collectionView = CollectionView(frame: .zero, collectionViewLayout: MeCollectionViewLayout())
+    private lazy var collectionView: CollectionView = .init(frame: .zero, collectionViewLayout: MeCollectionViewLayout())
         .x
         .backgroundColor(.clear)
         .delegate(self)
