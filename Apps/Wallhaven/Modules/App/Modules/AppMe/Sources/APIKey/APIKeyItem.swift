@@ -6,3 +6,5 @@ enum APIKeyItem {
     case input(APIKeyInputViewModel)
     case about(APIKeyAboutViewModel)
 }
+
+extension APIKeyItem: Hashable {}

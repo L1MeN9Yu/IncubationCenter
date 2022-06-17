@@ -28,3 +28,7 @@ private extension APIKeyContentView {
 
     func layout() {}
 }
+
+extension APIKeyContentView {
+    func reloadData(viewModel: APIKeyViewModel) {}
+}
