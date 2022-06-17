@@ -7,3 +7,7 @@ import UICore
 import UIKit
 
 class APIKeyInputCollectionViewCell: CollectionViewCell {}
+
+extension APIKeyInputCollectionViewCell {
+    func config(viewModel: APIKeyInputViewModel) {}
+}

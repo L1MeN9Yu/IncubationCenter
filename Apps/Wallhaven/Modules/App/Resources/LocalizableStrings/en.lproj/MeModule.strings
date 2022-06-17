@@ -29,3 +29,4 @@
 /* - APIKeyViewController - */
 
 "APIKeyViewController.Title" = "API Key";
+"APIKeyViewController.About.Title" = "View your API key from wallhaven.cc";

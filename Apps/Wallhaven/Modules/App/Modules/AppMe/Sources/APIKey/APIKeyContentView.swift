@@ -5,8 +5,22 @@
 import Foundation
 import UICore
 import UIKit
+import WeakDelegate
 
 class APIKeyContentView: View {
+    private lazy var collectionView: CollectionView = .init(frame: .zero, collectionViewLayout: APIKeyCollectionViewLayout())
+        .x
+        .backgroundColor(.clear)
+        .delegate(self)
+        .register(APIKeyInputCollectionViewCell.self, forCellWithReuseIdentifier: APIKeyInputCollectionViewCell.cellID)
+        .register(APIKeyAboutCollectionViewCell.self, forCellWithReuseIdentifier: APIKeyAboutCollectionViewCell.cellID)
+        .register(APIKeyCollectionFooterView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionFooter, withReuseIdentifier: APIKeyCollectionFooterView.cellID)
+        .instance
+
+    private lazy var dataSource = APIKeyCollectionViewDataSource(collectionView: collectionView)
+
+    private(set) lazy var didSelectedItemDelegate = WeakDelegate.Delegate<IndexPath, Void>()
+
     override init(frame: CGRect) {
         super.init(frame: frame)
         setup()
@@ -24,11 +38,37 @@ extension APIKeyContentView {
 }
 
 private extension APIKeyContentView {
-    func setup() {}
+    func setup() {
+        backgroundColor = .systemWhite
+        collectionView.x.add(to: self)
+    }
 
-    func layout() {}
+    func layout() {
+        collectionView.pin.all()
+    }
+}
+
+// MARK: - UICollectionViewDelegate
+
+extension APIKeyContentView: UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        didSelectedItemDelegate.call(indexPath)
+    }
 }
 
 extension APIKeyContentView {
-    func reloadData(viewModel: APIKeyViewModel) {}
+    func reloadData(viewModel: APIKeyViewModel) {
+        var snapshot = NSDiffableDataSourceSnapshot<APIKeySection, APIKeyItem>()
+        viewModel.items.forEach {
+            snapshot.appendSections([$0])
+            snapshot.appendItems($1, toSection: $0)
+        }
+//        let sections: [APIKeySection] = [APIKeySection](viewModel.items.keys)
+//        snapshot.appendSections(sections)
+//        sections.forEach { section in
+//            guard let itemViewModels = viewModel.items[section] else { return }
+//            snapshot.appendItems(itemViewModels, toSection: section)
+//        }
+        dataSource.apply(snapshot, animatingDifferences: false)
+    }
 }

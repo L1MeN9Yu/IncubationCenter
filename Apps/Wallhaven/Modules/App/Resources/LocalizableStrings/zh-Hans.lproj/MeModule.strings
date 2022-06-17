@@ -29,3 +29,4 @@
 /* - APIKeyViewController - */
 
 "APIKeyViewController.Title" = "API Key";
+"APIKeyViewController.About.Title" = "前往 wallhaven.cc 查看账号的API Key";

@@ -36,6 +36,10 @@ private extension APIKeyViewController {
         title = MeModule.localizedString(key: "APIKeyViewController.Title")
         contentView.x.add(to: view)
         bind()
+
+        Task { @MainActor in
+            contentView.reloadData(viewModel: viewModel)
+        }
     }
 
     func layout() {

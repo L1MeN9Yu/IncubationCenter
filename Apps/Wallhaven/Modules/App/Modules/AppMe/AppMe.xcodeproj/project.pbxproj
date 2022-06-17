@@ -21,8 +21,9 @@
 		EB31A45A1ECDCC0269D2A8F3 /* MeCollectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB31A7D98388A22BFC9BD079 /* MeCollectionHeaderView.swift */; };
 		EB31A6682B38FDF41CEA4AF1 /* APIKeyProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB31A1462A80359615B9DEFC /* APIKeyProvider.swift */; };
 		EB31A7AECE2A5D2A75F33B80 /* MeCollectionFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB31A3FF9F577F823035A9E9 /* MeCollectionFooterView.swift */; };
-		EB31A7BA2B43560A7E64FFF3 /* APIAboutCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB31AACB9241A1A3204C42CD /* APIAboutCollectionViewCell.swift */; };
+		EB31A7BA2B43560A7E64FFF3 /* APIKeyAboutCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB31AACB9241A1A3204C42CD /* APIKeyAboutCollectionViewCell.swift */; };
 		EB31A86DECF3F0CD8FB4C7CB /* MeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB31A455EA0BCDBEB06D0B1B /* MeViewModel.swift */; };
+		EB31AA21A753DA26DAB0F541 /* APIKeyCollectionFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB31AE6B26A5735BC7E3B5FB /* APIKeyCollectionFooterView.swift */; };
 		EB31AAD4299A296489459D8F /* MeContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB31AA62F3B365F7AD3881DF /* MeContentView.swift */; };
 		EB31AADBECE05D8F41A457E2 /* APIKeyItemViewModelable.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB31A13D9A1F91D26D9B65AC /* APIKeyItemViewModelable.swift */; };
 		EB31AAF60FFCF5459880357C /* MeModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB31A8337C7376F1B9B41855 /* MeModule.swift */; };
@@ -77,9 +78,10 @@
 		EB31A8806416FE9753365D5E /* APIKeyCollectionViewDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIKeyCollectionViewDataSource.swift; sourceTree = "<group>"; };
 		EB31A96B589E334A670747CD /* APIKeyCollectionViewLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIKeyCollectionViewLayout.swift; sourceTree = "<group>"; };
 		EB31AA62F3B365F7AD3881DF /* MeContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeContentView.swift; sourceTree = "<group>"; };
-		EB31AACB9241A1A3204C42CD /* APIAboutCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIAboutCollectionViewCell.swift; sourceTree = "<group>"; };
+		EB31AACB9241A1A3204C42CD /* APIKeyAboutCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIKeyAboutCollectionViewCell.swift; sourceTree = "<group>"; };
 		EB31AD0F0E09124A7C8AC4DA /* MeNavigationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeNavigationViewController.swift; sourceTree = "<group>"; };
 		EB31AD193238325187935DA5 /* Exported.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Exported.swift; sourceTree = "<group>"; };
+		EB31AE6B26A5735BC7E3B5FB /* APIKeyCollectionFooterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIKeyCollectionFooterView.swift; sourceTree = "<group>"; };
 		EB31AFDF60510C7AEA7A3C99 /* MeCollectionViewLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeCollectionViewLayout.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -168,7 +170,8 @@
 				EB31A96B589E334A670747CD /* APIKeyCollectionViewLayout.swift */,
 				EB31A8806416FE9753365D5E /* APIKeyCollectionViewDataSource.swift */,
 				EB31A058C9014B7741B39888 /* APIKeyInputCollectionViewCell.swift */,
-				EB31AACB9241A1A3204C42CD /* APIAboutCollectionViewCell.swift */,
+				EB31AACB9241A1A3204C42CD /* APIKeyAboutCollectionViewCell.swift */,
+				EB31AE6B26A5735BC7E3B5FB /* APIKeyCollectionFooterView.swift */,
 			);
 			path = APIKey;
 			sourceTree = "<group>";
@@ -256,7 +259,8 @@
 				EB31A1A30EC4AE49EA15F8EF /* APIKeyCollectionViewLayout.swift in Sources */,
 				EB31AE86B14F4029A0C2E2CA /* APIKeyCollectionViewDataSource.swift in Sources */,
 				EB31AF7A9390FF3B4C09C55A /* APIKeyInputCollectionViewCell.swift in Sources */,
-				EB31A7BA2B43560A7E64FFF3 /* APIAboutCollectionViewCell.swift in Sources */,
+				EB31A7BA2B43560A7E64FFF3 /* APIKeyAboutCollectionViewCell.swift in Sources */,
+				EB31AA21A753DA26DAB0F541 /* APIKeyCollectionFooterView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
