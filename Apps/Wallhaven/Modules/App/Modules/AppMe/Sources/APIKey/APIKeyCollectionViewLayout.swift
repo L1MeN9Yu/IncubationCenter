@@ -14,7 +14,7 @@ class APIKeyCollectionViewLayout: UICollectionViewCompositionalLayout {
         let item = NSCollectionLayoutItem(layoutSize: itemSize)
         let groupSize = NSCollectionLayoutSize(
             widthDimension: .fractionalWidth(1.0),
-            heightDimension: .absolute(60)
+            heightDimension: .absolute(120)
         )
         let group = NSCollectionLayoutGroup.horizontal(
             layoutSize: groupSize,

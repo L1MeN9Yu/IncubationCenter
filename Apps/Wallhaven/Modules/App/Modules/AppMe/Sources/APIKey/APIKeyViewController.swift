@@ -46,7 +46,17 @@ private extension APIKeyViewController {
         contentView.pin.all(view.pin.safeArea)
     }
 
-    func bind() {}
+    func bind() {
+        contentView.didSelectedItemDelegate.delegate(on: self) { (`self`, indexPath: IndexPath) in
+            guard let section = APIKeySection(section: indexPath.section) else { return }
+            guard let item = self.viewModel.items[section]?[safe: indexPath.row] else { return }
+            switch item {
+            case let .about(viewModel):
+                Router.push(to: viewModel.routePattern)
+            default: return
+            }
+        }
+    }
 }
 
 extension APIKeyViewController: TypeNameable {}

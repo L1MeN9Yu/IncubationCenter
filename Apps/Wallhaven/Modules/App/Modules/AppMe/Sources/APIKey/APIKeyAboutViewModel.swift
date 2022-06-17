@@ -8,6 +8,8 @@ import UICore
 class APIKeyAboutViewModel: ViewModel {
     let section = APIKeySection.about
 
+    let routePattern: String = "WebBrowserViewController/https%3A%2F%2Fwallhaven.cc%2Fsettings%2Faccount"
+
     let titleText: String
 
     init(titleText: String) {

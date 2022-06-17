@@ -34,7 +34,7 @@ private extension APIKeyAboutCollectionViewCell {
     }
 
     func layout() {
-        titleLabel.pin.center().sizeToFit()
+        titleLabel.pin.bottomCenter().sizeToFit()
     }
 }
 
