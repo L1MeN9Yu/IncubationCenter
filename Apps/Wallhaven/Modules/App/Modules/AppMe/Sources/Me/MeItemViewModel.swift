@@ -9,7 +9,7 @@ class MeItemViewModel: ViewModel {
     let itemID: Int
     let title: String
     let detailText: String
-    let iconImageSystemName: String?
+    let iconImageSystemName: Optional<String>
 
     init(sectionID: Int, itemID: Int, title: String, detailText: String) {
         self.sectionID = sectionID

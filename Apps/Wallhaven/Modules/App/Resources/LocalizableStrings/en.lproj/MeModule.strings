@@ -6,6 +6,8 @@
 
 */
 
+/* - MeViewController - */
+
 "MeViewController.Title" = "Me";
 
 "MeViewController.Section.Wallhaven" = "Wallhaven";
@@ -23,3 +25,11 @@
 "MeViewController.Item.General.Detail" = "Settings for Application";
 "MeViewController.Item.Usage.Detail" = "The usage of app in device";
 "MeViewController.Item.About.Detail" = "The app info";
+
+/* - APIKeyViewController - */
+
+"APIKeyViewController.Title" = "API Key";
+"APIKeyViewController.Input.TextField.Placeholder" = "Input API Key";
+"APIKeyViewController.Input.ResetButton.Title" = "Reset";
+"APIKeyViewController.Input.SetButton.Title" = "Set";
+"APIKeyViewController.About.Title" = "View your API key from wallhaven.cc";

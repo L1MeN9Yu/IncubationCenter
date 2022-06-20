@@ -29,6 +29,15 @@
         }
       },
       {
+        "package": "CodableBetter",
+        "repositoryURL": "https://github.com/L1MeN9Yu/CodableBetter.git",
+        "state": {
+          "branch": null,
+          "revision": "814e4b568ed4482f271ded681485206966f9652f",
+          "version": "1.0.1"
+        }
+      },
+      {
         "package": "CombineCocoa",
         "repositoryURL": "https://github.com/CombineCommunity/CombineCocoa.git",
         "state": {

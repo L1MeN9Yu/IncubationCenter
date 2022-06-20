@@ -19,4 +19,5 @@ public struct Box<T> {
 
 public extension Box {
     var instance: T { subject }
+    var done: Void { () }
 }
