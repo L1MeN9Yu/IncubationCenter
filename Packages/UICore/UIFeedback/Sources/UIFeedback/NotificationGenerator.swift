@@ -4,6 +4,7 @@
 
 import UIKit
 
+@available(iOS 10.0, *)
 public class NotificationGenerator {
     private lazy var generator: UINotificationFeedbackGenerator = {
         let generator = UINotificationFeedbackGenerator()
@@ -14,6 +15,7 @@ public class NotificationGenerator {
     public init() {}
 }
 
+@available(iOS 10.0, *)
 public extension NotificationGenerator {
     var shared: UINotificationFeedbackGenerator { generator }
 }

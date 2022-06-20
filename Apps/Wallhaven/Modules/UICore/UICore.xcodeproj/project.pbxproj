@@ -11,6 +11,7 @@
 		1E21A5C1283D215C00EEEEFC /* AsyncImageView in Frameworks */ = {isa = PBXBuildFile; productRef = 1E21A5C0283D215C00EEEEFC /* AsyncImageView */; };
 		1E42B801283D142E005D2247 /* UIHierarchy in Frameworks */ = {isa = PBXBuildFile; productRef = 1E42B800283D142E005D2247 /* UIHierarchy */; };
 		1E749B8B2841DF9B00EE079C /* UIRoute in Frameworks */ = {isa = PBXBuildFile; productRef = 1E749B8A2841DF9B00EE079C /* UIRoute */; };
+		1E7EBD18286084C50091CB57 /* UIFeedback in Frameworks */ = {isa = PBXBuildFile; productRef = 1E7EBD17286084C50091CB57 /* UIFeedback */; };
 		1E7F75842836808E0035A8E2 /* AppLifecycle in Frameworks */ = {isa = PBXBuildFile; productRef = 1E7F75832836808E0035A8E2 /* AppLifecycle */; };
 		1E7F7587283680A30035A8E2 /* Chain in Frameworks */ = {isa = PBXBuildFile; productRef = 1E7F7586283680A30035A8E2 /* Chain */; };
 		1E7F7589283680A70035A8E2 /* UICombine in Frameworks */ = {isa = PBXBuildFile; productRef = 1E7F7588283680A70035A8E2 /* UICombine */; };
@@ -19,11 +20,7 @@
 		1E7F759A28373B750035A8E2 /* Service.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E7F759928373B750035A8E2 /* Service.framework */; };
 		1E7F75A328373BC00035A8E2 /* Exported.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7F75A228373BC00035A8E2 /* Exported.swift */; };
 		1E7F75EF283782520035A8E2 /* UIResource in Frameworks */ = {isa = PBXBuildFile; productRef = 1E7F75EE283782520035A8E2 /* UIResource */; };
-		EB31A0B84118CF2B39880DE4 /* FeedbackGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB31A66891F4D7BAE2C46B89 /* FeedbackGenerator.swift */; };
-		EB31A460EC8DF2EDEF7BC938 /* SelectionGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB31AD9B1BE242EB2C203668 /* SelectionGenerator.swift */; };
-		EB31A7DD17019B931F8E2188 /* NotificationGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB31A0DCA8961CF32676543A /* NotificationGenerator.swift */; };
 		EB31AB0268EDB7096AE528EA /* UICoreModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB31A7CBEFA92D8BD0CE88F0 /* UICoreModule.swift */; };
-		EB31ACC2326E7EFDBFEB4CF8 /* ImpactGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB31A6106B124F4692E68B2A /* ImpactGenerator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,11 +31,7 @@
 		1EBAFEFD285B294300CFF89B /* UICore.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = UICore.xcconfig; sourceTree = "<group>"; };
 		1EBAFF04285B31FB00CFF89B /* UICore.Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = UICore.Debug.xcconfig; sourceTree = "<group>"; };
 		1EBAFF05285B320A00CFF89B /* UICore.Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = UICore.Release.xcconfig; sourceTree = "<group>"; };
-		EB31A0DCA8961CF32676543A /* NotificationGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationGenerator.swift; sourceTree = "<group>"; };
-		EB31A6106B124F4692E68B2A /* ImpactGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImpactGenerator.swift; sourceTree = "<group>"; };
-		EB31A66891F4D7BAE2C46B89 /* FeedbackGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedbackGenerator.swift; sourceTree = "<group>"; };
 		EB31A7CBEFA92D8BD0CE88F0 /* UICoreModule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UICoreModule.swift; sourceTree = "<group>"; };
-		EB31AD9B1BE242EB2C203668 /* SelectionGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectionGenerator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +40,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1E100149283E1E4800D8057E /* UIRefresh in Frameworks */,
+				1E7EBD18286084C50091CB57 /* UIFeedback in Frameworks */,
 				1E42B801283D142E005D2247 /* UIHierarchy in Frameworks */,
 				1E7F759A28373B750035A8E2 /* Service.framework in Frameworks */,
 				1E7F758D283730230035A8E2 /* BaseUI in Frameworks */,
@@ -87,10 +81,6 @@
 			children = (
 				1E7F75A228373BC00035A8E2 /* Exported.swift */,
 				EB31A7CBEFA92D8BD0CE88F0 /* UICoreModule.swift */,
-				EB31A66891F4D7BAE2C46B89 /* FeedbackGenerator.swift */,
-				EB31A6106B124F4692E68B2A /* ImpactGenerator.swift */,
-				EB31AD9B1BE242EB2C203668 /* SelectionGenerator.swift */,
-				EB31A0DCA8961CF32676543A /* NotificationGenerator.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -159,6 +149,7 @@
 				1E21A5C0283D215C00EEEEFC /* AsyncImageView */,
 				1E100148283E1E4800D8057E /* UIRefresh */,
 				1E749B8A2841DF9B00EE079C /* UIRoute */,
+				1E7EBD17286084C50091CB57 /* UIFeedback */,
 			);
 			productName = UICore;
 			productReference = 1E7F752A283633B20035A8E2 /* .framework */;
@@ -213,10 +204,6 @@
 			files = (
 				1E7F75A328373BC00035A8E2 /* Exported.swift in Sources */,
 				EB31AB0268EDB7096AE528EA /* UICoreModule.swift in Sources */,
-				EB31A0B84118CF2B39880DE4 /* FeedbackGenerator.swift in Sources */,
-				EB31ACC2326E7EFDBFEB4CF8 /* ImpactGenerator.swift in Sources */,
-				EB31A460EC8DF2EDEF7BC938 /* SelectionGenerator.swift in Sources */,
-				EB31A7DD17019B931F8E2188 /* NotificationGenerator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -288,6 +275,10 @@
 		1E749B8A2841DF9B00EE079C /* UIRoute */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = UIRoute;
+		};
+		1E7EBD17286084C50091CB57 /* UIFeedback */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = UIFeedback;
 		};
 		1E7F75832836808E0035A8E2 /* AppLifecycle */ = {
 			isa = XCSwiftPackageProductDependency;

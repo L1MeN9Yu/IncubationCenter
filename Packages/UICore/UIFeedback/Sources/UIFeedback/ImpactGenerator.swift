@@ -4,12 +4,14 @@
 
 import UIKit
 
+@available(iOS 10.0, *)
 public class ImpactGenerator {
     private lazy var generators = [UIImpactFeedbackGenerator.FeedbackStyle: UIImpactFeedbackGenerator]()
 
     init() {}
 }
 
+@available(iOS 10.0, *)
 public extension ImpactGenerator {
     subscript(style: UIImpactFeedbackGenerator.FeedbackStyle) -> UIImpactFeedbackGenerator {
         set { fatalError("") }
