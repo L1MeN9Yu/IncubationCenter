@@ -18,6 +18,7 @@ class APIKeyInputCollectionViewCell: CollectionViewCell {
         .borderStyle(.roundedRect)
         .textContentType(.name)
         .keyboardType(.asciiCapable)
+        .placeholder(MeModule.localizedString(key: "APIKeyViewController.Input.TextField.Placeholder"))
         .instance
 
     private lazy var resetButton = UIButton(type: .custom)
