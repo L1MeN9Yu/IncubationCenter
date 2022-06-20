@@ -8,7 +8,7 @@ import UICore
 class APIKeyInputViewModel: ViewModel {
     let section = APIKeySection.input
 
-    private(set) var apikey: String? = .none
+    private(set) var apikey: Optional<String> = .none
 
     init(apikey: String?) {
         self.apikey = apikey

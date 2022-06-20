@@ -15,9 +15,9 @@ public struct Meta: Codable {
     // "total": 392341,
     public let total: UInt
     // "query": null,
-    public let query: String?
+    public let query: Optional<String>
     // "seed": null
-    public let seed: String?
+    public let seed: Optional<String>
 
     enum CodingKeys: String, CodingKey {
         case currentPage = "current_page"

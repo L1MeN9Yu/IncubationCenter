@@ -7,3 +7,5 @@
 --acronyms
 
 --exclude **/*.generated.swift
+
+--shortoptionals except-properties

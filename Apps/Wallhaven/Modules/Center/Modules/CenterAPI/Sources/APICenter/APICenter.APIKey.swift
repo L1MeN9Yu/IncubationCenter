@@ -7,7 +7,7 @@ import Foundation
 import KeyValueStore
 
 public extension APICenter {
-    private(set) static var apikey: String?
+    private(set) static var apikey: Optional<String> = .none
 }
 
 extension APICenter {
