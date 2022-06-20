@@ -47,5 +47,5 @@ extension CollectionView: UIGestureRecognizerDelegate {
 }
 
 extension CollectionView {
-    open var isEnableTapToDismissKeyboard: Bool { true }
+    open var isEnableTapToDismissKeyboard: Bool { false }
 }
