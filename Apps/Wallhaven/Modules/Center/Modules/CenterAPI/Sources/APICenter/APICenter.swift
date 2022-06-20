@@ -33,4 +33,11 @@ public extension APICenter {
         let detailResponse: DetailResponse = try JSONCoder.decode(data: response.body)
         return detailResponse
     }
+
+    static func loadSettings(apikey: String) async throws -> SettingsResponse {
+        let settingsRequest = SettingsRequest(apikey: apikey)
+        let response = try await client.execute(request: settingsRequest)
+        let settingsResponse: SettingsResponse = try JSONCoder.decode(data: response.body)
+        return settingsResponse
+    }
 }
