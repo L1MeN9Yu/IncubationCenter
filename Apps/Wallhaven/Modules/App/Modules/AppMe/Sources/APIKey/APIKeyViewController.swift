@@ -13,6 +13,8 @@ class APIKeyViewController: ViewController {
     private lazy var viewModel = APIKeyViewModel()
     private lazy var provider = APIKeyProvider()
 
+    private var checkingAPIKeyTask: Task<Void, Never>? = .none
+
     init() { super.init(nibName: nil, bundle: nil) }
 
     @available(*, unavailable)
@@ -64,8 +66,21 @@ extension APIKeyViewController {
         logger.debug("reset")
     }
 
-    func setButtonAction() {
-        logger.debug("set")
+    func setButtonAction(apikey: String?) {
+        guard let apikey = apikey else { return }
+        guard !apikey.isEmpty else { return }
+        checkingAPIKeyTask.run { $0.cancel() }
+        let task = Task { @MainActor in
+            do {
+                logger.debug("checking apikey:\(apikey)")
+                let settings = try await provider.check(apikey: apikey)
+                logger.debug("\(settings)")
+            } catch {
+                // ToDo [L1MeN9Yu] Toast
+                logger.error("\(error)")
+            }
+        }
+        checkingAPIKeyTask = task
     }
 }
 

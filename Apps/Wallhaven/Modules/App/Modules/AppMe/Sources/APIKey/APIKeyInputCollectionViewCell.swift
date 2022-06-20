@@ -16,6 +16,8 @@ class APIKeyInputCollectionViewCell: CollectionViewCell {
         .x
         .backgroundColor(.systemGray6)
         .borderStyle(.roundedRect)
+        .textContentType(.name)
+        .keyboardType(.asciiCapable)
         .instance
 
     private lazy var resetButton = UIButton(type: .custom)
@@ -35,7 +37,7 @@ class APIKeyInputCollectionViewCell: CollectionViewCell {
         .instance
 
     private(set) lazy var resetButtonDelegator = Delegator<Void, Void>()
-    private(set) lazy var setButtonDelegator = Delegator<Void, Void>()
+    private(set) lazy var setButtonDelegator = Delegator<String?, Void>()
 
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -66,7 +68,7 @@ private extension APIKeyInputCollectionViewCell {
         .store(in: &subscriptions)
         setButton.tapPublisher.receive(on: DispatchQueue.main).sink { [weak self] in
             guard let self = self else { return }
-            self.setButtonDelegator()
+            self.setButtonDelegator(self.textField.text)
         }
         .store(in: &subscriptions)
     }

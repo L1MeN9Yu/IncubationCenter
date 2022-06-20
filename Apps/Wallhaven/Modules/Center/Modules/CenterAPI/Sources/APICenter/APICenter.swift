@@ -23,6 +23,7 @@ public extension APICenter {
     static func loadList(page: UInt) async throws -> ListResponse {
         let listRequest = ListRequest(page: page)
         let response = try await client.execute(request: listRequest)
+        guard response.status == .ok else { throw HTTPError(httpResponseStatus: response.status) }
         let listResponse: ListResponse = try JSONCoder.decode(data: response.body)
         return listResponse
     }
@@ -30,6 +31,7 @@ public extension APICenter {
     static func loadDetail(id: String) async throws -> DetailResponse {
         let detailRequest = DetailRequest(id: id)
         let response = try await client.execute(request: detailRequest)
+        guard response.status == .ok else { throw HTTPError(httpResponseStatus: response.status) }
         let detailResponse: DetailResponse = try JSONCoder.decode(data: response.body)
         return detailResponse
     }
@@ -37,6 +39,7 @@ public extension APICenter {
     static func loadSettings(apikey: String) async throws -> SettingsResponse {
         let settingsRequest = SettingsRequest(apikey: apikey)
         let response = try await client.execute(request: settingsRequest)
+        guard response.status == .ok else { throw HTTPError(httpResponseStatus: response.status) }
         let settingsResponse: SettingsResponse = try JSONCoder.decode(data: response.body)
         return settingsResponse
     }

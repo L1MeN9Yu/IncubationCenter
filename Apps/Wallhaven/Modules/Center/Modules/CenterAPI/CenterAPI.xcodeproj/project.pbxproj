@@ -20,6 +20,7 @@
 		EB31A46CD25E3448C219CFF9 /* BaseRequestable.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB31AC19DA9BE6F2F05C4560 /* BaseRequestable.swift */; };
 		EB31A4AC042A521C2332A6F9 /* ListResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB31A308F97D4AFED2BF6BAE /* ListResponse.swift */; };
 		EB31A75AB3960C16EEADDFF6 /* DetailRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB31A36A0CE94B0ECEE6C3D1 /* DetailRequest.swift */; };
+		EB31AA45DFD56841BCE87BA9 /* HTTPError.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB31ADFCBDB29B187AE0ABC4 /* HTTPError.swift */; };
 		EB31AB15CFA081A49F55D8E5 /* Tag.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB31A4D759933DA74F82ED39 /* Tag.swift */; };
 		EB31ADD0062CE6703862FACF /* DetailResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB31A3ED3F251737EA984B54 /* DetailResponse.swift */; };
 		EB31AEB80027FF39B8E2D6C6 /* SettingsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB31A3FE69CAB52276053978 /* SettingsRequest.swift */; };
@@ -54,6 +55,7 @@
 		EB31AAF2AE8BFCEBA5CA8FAA /* SettingsResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsResponse.swift; sourceTree = "<group>"; };
 		EB31AB29CDE66FB82C8AD8F4 /* Uploader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Uploader.swift; sourceTree = "<group>"; };
 		EB31AC19DA9BE6F2F05C4560 /* BaseRequestable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseRequestable.swift; sourceTree = "<group>"; };
+		EB31ADFCBDB29B187AE0ABC4 /* HTTPError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPError.swift; sourceTree = "<group>"; };
 		EB31AF579CA69FC8E43A68D0 /* ListRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListRequest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -92,6 +94,7 @@
 				1EDF08B4283B69FA00025E14 /* APICenter */,
 				EB31AB9B920EB960775FBDC2 /* Requests */,
 				EB31A208DD0D659D4282585F /* Models */,
+				EB31A3E23B032D70CE520042 /* Error */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -127,6 +130,14 @@
 				EB31A46666701A71FE600C48 /* Settings.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		EB31A3E23B032D70CE520042 /* Error */ = {
+			isa = PBXGroup;
+			children = (
+				EB31ADFCBDB29B187AE0ABC4 /* HTTPError.swift */,
+			);
+			path = Error;
 			sourceTree = "<group>";
 		};
 		EB31AB9B920EB960775FBDC2 /* Requests */ = {
@@ -213,6 +224,7 @@
 				EB31AEB80027FF39B8E2D6C6 /* SettingsRequest.swift in Sources */,
 				EB31A2C66D5EA67FA1863804 /* SettingsResponse.swift in Sources */,
 				EB31A3CACF3E85E02B684A4A /* Settings.swift in Sources */,
+				EB31AA45DFD56841BCE87BA9 /* HTTPError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

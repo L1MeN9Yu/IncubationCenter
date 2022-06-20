@@ -26,8 +26,7 @@ private extension APIKeyCollectionViewDataSource {
                     }
 
                     $0.setButtonDelegator.delegate(on: viewController) {
-                        $0.setButtonAction()
-                        $1
+                        $0.setButtonAction(apikey: $1)
                     }
                 }
             }
