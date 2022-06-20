@@ -11,6 +11,7 @@ class APIKeyContentView: View {
     private lazy var collectionView: CollectionView = .init(frame: .zero, collectionViewLayout: APIKeyCollectionViewLayout())
         .x
         .backgroundColor(.clear)
+        .keyboardDismissMode(.onDrag)
         .delegate(self)
         .register(APIKeyInputCollectionViewCell.self, forCellWithReuseIdentifier: APIKeyInputCollectionViewCell.cellID)
         .register(APIKeyAboutCollectionViewCell.self, forCellWithReuseIdentifier: APIKeyAboutCollectionViewCell.cellID)

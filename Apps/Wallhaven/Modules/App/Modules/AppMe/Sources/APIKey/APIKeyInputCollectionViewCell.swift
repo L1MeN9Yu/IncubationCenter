@@ -16,7 +16,6 @@ class APIKeyInputCollectionViewCell: CollectionViewCell {
         .x
         .backgroundColor(.systemGray6)
         .borderStyle(.roundedRect)
-        .textContentType(.name)
         .keyboardType(.asciiCapable)
         .placeholder(MeModule.localizedString(key: "APIKeyViewController.Input.TextField.Placeholder"))
         .instance
