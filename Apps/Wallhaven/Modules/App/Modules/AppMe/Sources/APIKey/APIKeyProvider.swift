@@ -14,4 +14,12 @@ extension APIKeyProvider {
         let settings = settingsResponse.settings
         return settings
     }
+
+    func setAPIKey(_ apikey: String) {
+        APICenter.setAPIKey(apikey)
+    }
+
+    func resetAPIKey() {
+        APICenter.resetAPIKey()
+    }
 }

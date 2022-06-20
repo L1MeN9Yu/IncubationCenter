@@ -63,7 +63,9 @@ private extension APIKeyViewController {
 
 extension APIKeyViewController {
     func resetButtonAction() {
-        logger.debug("reset")
+        provider.resetAPIKey()
+        viewModel.resetAPIKey()
+        contentView.reloadData(viewModel: viewModel)
     }
 
     func setButtonAction(apikey: String?) {
@@ -75,6 +77,9 @@ extension APIKeyViewController {
                 logger.debug("checking apikey:\(apikey)")
                 let settings = try await provider.check(apikey: apikey)
                 logger.debug("\(settings)")
+                provider.setAPIKey(apikey)
+                viewModel.setAPIKey(apikey)
+                contentView.reloadData(viewModel: viewModel)
             } catch {
                 // ToDo [L1MeN9Yu] Toast
                 logger.error("\(error)")

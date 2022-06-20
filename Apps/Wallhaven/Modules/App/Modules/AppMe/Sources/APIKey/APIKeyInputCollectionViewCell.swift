@@ -83,7 +83,7 @@ private extension APIKeyInputCollectionViewCell {
 extension APIKeyInputCollectionViewCell {
     @discardableResult
     func config(viewModel: APIKeyInputViewModel) -> Self {
-        textField.x.text(viewModel.apiKey).done
+        textField.x.text(viewModel.apikey).done
         return self
     }
 }

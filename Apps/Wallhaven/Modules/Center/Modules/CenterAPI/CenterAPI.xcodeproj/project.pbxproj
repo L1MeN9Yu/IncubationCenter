@@ -20,7 +20,9 @@
 		EB31A46CD25E3448C219CFF9 /* BaseRequestable.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB31AC19DA9BE6F2F05C4560 /* BaseRequestable.swift */; };
 		EB31A4AC042A521C2332A6F9 /* ListResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB31A308F97D4AFED2BF6BAE /* ListResponse.swift */; };
 		EB31A75AB3960C16EEADDFF6 /* DetailRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB31A36A0CE94B0ECEE6C3D1 /* DetailRequest.swift */; };
+		EB31A9DA825316712FADB024 /* APICenter.APIKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB31A3D70C70EFA2D2AA819C /* APICenter.APIKey.swift */; };
 		EB31AA45DFD56841BCE87BA9 /* HTTPError.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB31ADFCBDB29B187AE0ABC4 /* HTTPError.swift */; };
+		EB31AA6EBA53FFEFEAF31AAB /* APICenter.API.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB31A0D60AE4827247A3D0C9 /* APICenter.API.swift */; };
 		EB31AB15CFA081A49F55D8E5 /* Tag.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB31A4D759933DA74F82ED39 /* Tag.swift */; };
 		EB31ADD0062CE6703862FACF /* DetailResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB31A3ED3F251737EA984B54 /* DetailResponse.swift */; };
 		EB31AEB80027FF39B8E2D6C6 /* SettingsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB31A3FE69CAB52276053978 /* SettingsRequest.swift */; };
@@ -41,9 +43,11 @@
 /* Begin PBXFileReference section */
 		1E7F76412838D0340035A8E2 /* libCenterAPI.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libCenterAPI.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E7F76522838D04C0035A8E2 /* Service.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Service.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EB31A0D60AE4827247A3D0C9 /* APICenter.API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APICenter.API.swift; sourceTree = "<group>"; };
 		EB31A1AC0809D2A983D41A6B /* WallpaperDetail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WallpaperDetail.swift; sourceTree = "<group>"; };
 		EB31A308F97D4AFED2BF6BAE /* ListResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListResponse.swift; sourceTree = "<group>"; };
 		EB31A36A0CE94B0ECEE6C3D1 /* DetailRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailRequest.swift; sourceTree = "<group>"; };
+		EB31A3D70C70EFA2D2AA819C /* APICenter.APIKey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APICenter.APIKey.swift; sourceTree = "<group>"; };
 		EB31A3ED3F251737EA984B54 /* DetailResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailResponse.swift; sourceTree = "<group>"; };
 		EB31A3FE69CAB52276053978 /* SettingsRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsRequest.swift; sourceTree = "<group>"; };
 		EB31A46666701A71FE600C48 /* Settings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
@@ -111,6 +115,8 @@
 			isa = PBXGroup;
 			children = (
 				EB31A82AA4508911EAE23FFB /* APICenter.swift */,
+				EB31A0D60AE4827247A3D0C9 /* APICenter.API.swift */,
+				EB31A3D70C70EFA2D2AA819C /* APICenter.APIKey.swift */,
 			);
 			path = APICenter;
 			sourceTree = "<group>";
@@ -225,6 +231,8 @@
 				EB31A2C66D5EA67FA1863804 /* SettingsResponse.swift in Sources */,
 				EB31A3CACF3E85E02B684A4A /* Settings.swift in Sources */,
 				EB31AA45DFD56841BCE87BA9 /* HTTPError.swift in Sources */,
+				EB31AA6EBA53FFEFEAF31AAB /* APICenter.API.swift in Sources */,
+				EB31A9DA825316712FADB024 /* APICenter.APIKey.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

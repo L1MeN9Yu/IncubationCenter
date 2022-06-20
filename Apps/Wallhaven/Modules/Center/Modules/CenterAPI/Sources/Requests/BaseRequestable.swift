@@ -31,7 +31,7 @@ extension BaseRequestable {
     public var method: HTTPMethod { .GET }
 
     public var headers: HTTPHeaders {
-        switch APICenter.apiKey {
+        switch APICenter.apikey {
         case .none: return [:]
         case let .some(apiKey): return ["X-API-Key": apiKey]
         }

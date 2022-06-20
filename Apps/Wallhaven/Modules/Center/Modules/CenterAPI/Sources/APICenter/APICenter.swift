@@ -2,7 +2,8 @@
 // Created by Mengyu Li on 2022/5/22.
 //
 
-import RestfulClient
+import Foundation
+import KeyValueStore
 import Service
 
 public enum APICenter {}
@@ -10,37 +11,24 @@ public enum APICenter {}
 extension APICenter: TypeNameable {}
 
 public extension APICenter {
-    private(set) static var apiKey: String?
+    static func bootstrap() {
+        bootstrapAPIKey()
+    }
 }
 
 extension APICenter {
     static let logger = Loggers[typeName]
-    static let eventGroup = MultiThreadedEventLoopGroup(numberOfThreads: 1)
-    static let client: Client = .init(eventLoopGroupProvider: .shared(eventGroup), logger: logger)
-}
-
-public extension APICenter {
-    static func loadList(page: UInt) async throws -> ListResponse {
-        let listRequest = ListRequest(page: page)
-        let response = try await client.execute(request: listRequest)
-        guard response.status == .ok else { throw HTTPError(httpResponseStatus: response.status) }
-        let listResponse: ListResponse = try JSONCoder.decode(data: response.body)
-        return listResponse
-    }
-
-    static func loadDetail(id: String) async throws -> DetailResponse {
-        let detailRequest = DetailRequest(id: id)
-        let response = try await client.execute(request: detailRequest)
-        guard response.status == .ok else { throw HTTPError(httpResponseStatus: response.status) }
-        let detailResponse: DetailResponse = try JSONCoder.decode(data: response.body)
-        return detailResponse
-    }
-
-    static func loadSettings(apikey: String) async throws -> SettingsResponse {
-        let settingsRequest = SettingsRequest(apikey: apikey)
-        let response = try await client.execute(request: settingsRequest)
-        guard response.status == .ok else { throw HTTPError(httpResponseStatus: response.status) }
-        let settingsResponse: SettingsResponse = try JSONCoder.decode(data: response.body)
-        return settingsResponse
-    }
+    static let container: Container = {
+        do {
+            let containerDirectoryURL = try FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: true).appendingPathComponent("KeyValueStores")
+            let containerURL = containerDirectoryURL.appendingPathComponent(typeName)
+            if !FileManager.default.fileExists(atPath: containerURL.path) {
+                try FileManager.default.createDirectory(at: containerURL, withIntermediateDirectories: true)
+            }
+            let container = try Container(path: containerURL.path, maxStore: 256)
+            return container
+        } catch {
+            fatalError("\(error)")
+        }
+    }()
 }
