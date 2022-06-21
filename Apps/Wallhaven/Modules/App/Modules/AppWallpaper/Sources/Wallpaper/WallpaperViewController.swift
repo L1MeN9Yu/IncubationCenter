@@ -37,7 +37,6 @@ extension WallpaperViewController {
 
 private extension WallpaperViewController {
     func setup() {
-        view.backgroundColor = .black
         contentView.x.add(to: view)
         Task {
             await loadData()

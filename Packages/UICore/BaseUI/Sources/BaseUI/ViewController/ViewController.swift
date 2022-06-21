@@ -102,6 +102,22 @@ extension ViewController {
     @objc
     open var isEnableScreenEdgePanGestureRecognizer: Bool { true }
 
+    @objc
+    open var backBarButtonItemImage: UIImage? {
+        if #available(iOS 13.0, *) {
+            return UIImage(systemName: "arrow.left")
+        }
+        return nil
+    }
+
+    @objc
+    open var itemTintColor: UIColor? {
+        if #available(iOS 13.0, *) {
+            return .label
+        }
+        return nil
+    }
+
     override open var preferredStatusBarStyle: UIStatusBarStyle { .default }
 
     override open var hidesBottomBarWhenPushed: Bool {
@@ -133,6 +149,12 @@ private extension ViewController {
         }
         if #available(iOS 11.0, *) {
             navigationItem.largeTitleDisplayMode = largeTitleDisplayMode
+        }
+
+        if navigationController?.viewControllers.count ?? 0 > 1 {
+            if let backBarButtonItemImage = backBarButtonItemImage {
+                addDefaultLeftBarButtonItem(image: backBarButtonItemImage, tintColor: itemTintColor)
+            }
         }
     }
 }
