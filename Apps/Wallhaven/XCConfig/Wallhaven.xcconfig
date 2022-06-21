@@ -1,3 +1,7 @@
+// Build Options
+
+ENABLE_BITCODE = NO
+
 // Deployment
 
 TARGETED_DEVICE_FAMILY = 1,2

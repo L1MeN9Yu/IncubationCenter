@@ -2,6 +2,10 @@
 
 SDKROOT = iphoneos
 
+// Build Options
+
+ENABLE_BITCODE = NO
+
 // Deployment
 
 INSTALL_PATH = $(LOCAL_LIBRARY_DIR)/Frameworks
