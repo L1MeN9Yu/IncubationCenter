@@ -10,7 +10,6 @@
 		1E265FEC2856EB6E0013E721 /* SwiftAsyncKit in Frameworks */ = {isa = PBXBuildFile; productRef = 1E265FEB2856EB6E0013E721 /* SwiftAsyncKit */; };
 		1E43C88B2853349E00945703 /* ProxyServer in Frameworks */ = {isa = PBXBuildFile; productRef = 1E43C88A2853349E00945703 /* ProxyServer */; };
 		1E617ECA2850BBC500593180 /* Coder in Frameworks */ = {isa = PBXBuildFile; productRef = 1E617EC92850BBC500593180 /* Coder */; };
-		1E7F74FF283628D30035A8E2 /* Service.docc in Sources */ = {isa = PBXBuildFile; fileRef = 1E7F74FE283628D30035A8E2 /* Service.docc */; };
 		1E7F756528365FA80035A8E2 /* AppModular in Frameworks */ = {isa = PBXBuildFile; productRef = 1E7F756428365FA80035A8E2 /* AppModular */; };
 		1E7F756728365FA80035A8E2 /* Crypto in Frameworks */ = {isa = PBXBuildFile; productRef = 1E7F756628365FA80035A8E2 /* Crypto */; };
 		1E7F756928365FA80035A8E2 /* ExtensionKit in Frameworks */ = {isa = PBXBuildFile; productRef = 1E7F756828365FA80035A8E2 /* ExtensionKit */; };
@@ -27,7 +26,6 @@
 
 /* Begin PBXFileReference section */
 		1E7F74FA283628D30035A8E2 /* Service.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Service.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		1E7F74FE283628D30035A8E2 /* Service.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = Service.docc; sourceTree = "<group>"; };
 		1EBAFEFB285B0DA500CFF89B /* Service.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Service.xcconfig; sourceTree = "<group>"; };
 		1EBAFF00285B2E5C00CFF89B /* Service.Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Service.Debug.xcconfig; sourceTree = "<group>"; };
 		1EBAFF01285B2E7900CFF89B /* Service.Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Service.Release.xcconfig; sourceTree = "<group>"; };
@@ -81,7 +79,6 @@
 		1E7F74FC283628D30035A8E2 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				1E7F74FE283628D30035A8E2 /* Service.docc */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -206,7 +203,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1E7F74FF283628D30035A8E2 /* Service.docc in Sources */,
 				EB31AA0F7B2AC58AA81B16F4 /* ServiceModule.swift in Sources */,
 				EB31AF2A4C5C61EC79E2B829 /* Exported.swift in Sources */,
 			);

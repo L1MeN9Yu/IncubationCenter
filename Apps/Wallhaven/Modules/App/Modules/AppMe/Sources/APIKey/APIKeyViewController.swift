@@ -80,8 +80,11 @@ extension APIKeyViewController {
                 provider.setAPIKey(apikey)
                 viewModel.setAPIKey(apikey)
                 contentView.reloadData(viewModel: viewModel)
+                Toast.text("Success", subtitle: nil, config: ToastConfiguration(view: self.view)).show()
+                FeedbackGenerator.notification.shared.notificationOccurred(.success)
             } catch {
-                // ToDo [L1MeN9Yu] Toast
+                Toast.text("Error", subtitle: "\(error)", config: ToastConfiguration(view: self.view)).show()
+                FeedbackGenerator.notification.shared.notificationOccurred(.error)
                 logger.error("\(error)")
             }
         }

@@ -9,6 +9,7 @@ disabled_rules:
   - type_name
   - todo
   - large_tuple
+  - syntactic_sugar
 
 line_length: 240
 
@@ -20,6 +21,10 @@ function_body_length:
 function_parameter_count:
   warning: 8
   error: 8
+
+inclusive_language:
+  override_allowed_terms:
+    - blacklist
 
 excluded:
   - "**/*.generated.swift"

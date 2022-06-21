@@ -72,16 +72,20 @@ public extension Router {
 
     static func push(to pattern: String) {
         let urlPattern = scheme + pattern
-        guard let _ = navigator.push(urlPattern) else {
+        switch navigator.push(urlPattern) {
+        case .none:
             viewControllerNotFoundCallback?(urlPattern)
+        case .some:
             return
         }
     }
 
     static func present(pattern: String) {
         let urlPattern = scheme + pattern
-        guard let _ = navigator.present(urlPattern) else {
+        switch navigator.present(urlPattern) {
+        case .none:
             viewControllerNotFoundCallback?(urlPattern)
+        case .some:
             return
         }
     }

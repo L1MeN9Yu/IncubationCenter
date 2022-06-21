@@ -14,7 +14,6 @@ public class ImpactGenerator {
 @available(iOS 10.0, *)
 public extension ImpactGenerator {
     subscript(style: UIImpactFeedbackGenerator.FeedbackStyle) -> UIImpactFeedbackGenerator {
-        set { fatalError("") }
         get {
             switch generators[style] {
             case let .some(impactFeedbackGenerator):
@@ -26,5 +25,6 @@ public extension ImpactGenerator {
                 return impactFeedbackGenerator
             }
         }
+        set { fatalError("Unavailable") }
     }
 }
