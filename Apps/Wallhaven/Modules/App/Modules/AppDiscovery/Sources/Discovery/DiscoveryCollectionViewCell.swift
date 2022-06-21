@@ -12,6 +12,8 @@ class DiscoveryCollectionViewCell: CollectionViewCell {
         .clipsToBounds(true)
         .instance
 
+    private lazy var blurEffectView = UIVisualEffectView(effect: UIBlurEffect(style: .regular))
+
     override init(frame: CGRect) {
         super.init(frame: frame)
         setup()
@@ -24,6 +26,7 @@ class DiscoveryCollectionViewCell: CollectionViewCell {
 private extension DiscoveryCollectionViewCell {
     func setup() {
         imageView.x.add(to: contentView)
+        blurEffectView.x.add(to: contentView)
     }
 }
 
@@ -31,11 +34,16 @@ extension DiscoveryCollectionViewCell {
     override open func layoutSubviews() {
         super.layoutSubviews()
         imageView.pin.all(contentView.pin.safeArea)
+        blurEffectView.pin.all(contentView.pin.safeArea)
     }
 }
 
 extension DiscoveryCollectionViewCell {
     func config(viewModel: WallpaperListViewModel) {
         imageView.kf.setImage(with: viewModel.imageURL)
+        switch viewModel.purity {
+        case "nsfw": blurEffectView.x.isHidden(false).done
+        default: blurEffectView.x.isHidden(true).done
+        }
     }
 }

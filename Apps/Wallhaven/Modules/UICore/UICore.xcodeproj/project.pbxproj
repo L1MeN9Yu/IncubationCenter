@@ -11,6 +11,7 @@
 		1E21A5C1283D215C00EEEEFC /* AsyncImageView in Frameworks */ = {isa = PBXBuildFile; productRef = 1E21A5C0283D215C00EEEEFC /* AsyncImageView */; };
 		1E42B801283D142E005D2247 /* UIHierarchy in Frameworks */ = {isa = PBXBuildFile; productRef = 1E42B800283D142E005D2247 /* UIHierarchy */; };
 		1E749B8B2841DF9B00EE079C /* UIRoute in Frameworks */ = {isa = PBXBuildFile; productRef = 1E749B8A2841DF9B00EE079C /* UIRoute */; };
+		1E7EBD18286084C50091CB57 /* UIFeedback in Frameworks */ = {isa = PBXBuildFile; productRef = 1E7EBD17286084C50091CB57 /* UIFeedback */; };
 		1E7F75842836808E0035A8E2 /* AppLifecycle in Frameworks */ = {isa = PBXBuildFile; productRef = 1E7F75832836808E0035A8E2 /* AppLifecycle */; };
 		1E7F7587283680A30035A8E2 /* Chain in Frameworks */ = {isa = PBXBuildFile; productRef = 1E7F7586283680A30035A8E2 /* Chain */; };
 		1E7F7589283680A70035A8E2 /* UICombine in Frameworks */ = {isa = PBXBuildFile; productRef = 1E7F7588283680A70035A8E2 /* UICombine */; };
@@ -39,6 +40,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1E100149283E1E4800D8057E /* UIRefresh in Frameworks */,
+				1E7EBD18286084C50091CB57 /* UIFeedback in Frameworks */,
 				1E42B801283D142E005D2247 /* UIHierarchy in Frameworks */,
 				1E7F759A28373B750035A8E2 /* Service.framework in Frameworks */,
 				1E7F758D283730230035A8E2 /* BaseUI in Frameworks */,
@@ -147,6 +149,7 @@
 				1E21A5C0283D215C00EEEEFC /* AsyncImageView */,
 				1E100148283E1E4800D8057E /* UIRefresh */,
 				1E749B8A2841DF9B00EE079C /* UIRoute */,
+				1E7EBD17286084C50091CB57 /* UIFeedback */,
 			);
 			productName = UICore;
 			productReference = 1E7F752A283633B20035A8E2 /* .framework */;
@@ -272,6 +275,10 @@
 		1E749B8A2841DF9B00EE079C /* UIRoute */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = UIRoute;
+		};
+		1E7EBD17286084C50091CB57 /* UIFeedback */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = UIFeedback;
 		};
 		1E7F75832836808E0035A8E2 /* AppLifecycle */ = {
 			isa = XCSwiftPackageProductDependency;

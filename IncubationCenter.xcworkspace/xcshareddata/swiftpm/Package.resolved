@@ -15,8 +15,8 @@
         "repositoryURL": "https://github.com/swift-server/async-http-client.git",
         "state": {
           "branch": null,
-          "revision": "24425989dadab6d6e4167174791a23d4e2a6d0c3",
-          "version": "1.10.0"
+          "revision": "794dc9d42720af97cedd395e8cd2add9173ffd9a",
+          "version": "1.11.1"
         }
       },
       {
@@ -87,8 +87,8 @@
         "repositoryURL": "https://github.com/onevcat/Kingfisher.git",
         "state": {
           "branch": null,
-          "revision": "2de32a15bdd640a30ee9972a40b031fc604fc880",
-          "version": "7.2.3"
+          "revision": "022e4eeb79f817748544b318b991d9a70036bbf8",
+          "version": "7.2.4"
         }
       },
       {
@@ -179,15 +179,6 @@
           "branch": null,
           "revision": "48254824bb4248676bf7ce56014ff57b142b77eb",
           "version": "1.0.2"
-        }
-      },
-      {
-        "package": "SwiftDocCPlugin",
-        "repositoryURL": "https://github.com/apple/swift-docc-plugin",
-        "state": {
-          "branch": null,
-          "revision": "3303b164430d9a7055ba484c8ead67a52f7b74f6",
-          "version": "1.0.0"
         }
       },
       {

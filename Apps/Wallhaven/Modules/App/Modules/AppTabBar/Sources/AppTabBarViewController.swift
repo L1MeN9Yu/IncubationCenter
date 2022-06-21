@@ -17,5 +17,12 @@ private extension AppTabBarViewController {
     func setup() {
         tabBar.tintColor = .systemBlack
         tabBar.isTranslucent = false
+        delegate = self
+    }
+}
+
+extension AppTabBarViewController: UITabBarControllerDelegate {
+    func tabBarController(_ tabBarController: UITabBarController, didSelect viewController: UIViewController) {
+        FeedbackGenerator.selection.shared.selectionChanged()
     }
 }

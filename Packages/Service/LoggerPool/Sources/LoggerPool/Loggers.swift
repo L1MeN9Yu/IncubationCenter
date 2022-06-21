@@ -18,17 +18,20 @@ extension Loggers {
 
 public extension Loggers {
     static subscript(name: String) -> Logging.Logger {
-        let logger =
-            lock.withReaderLock {
-                loggers[name]
-            }
-            ??
-            lock.withWriterLock {
-                let logger = make(name: name)
-                loggers[name] = logger
-                return logger
-            }
-        return logger
+        set { fatalError("Unavailable") }
+        get {
+            let logger =
+                lock.withReaderLock {
+                    loggers[name]
+                }
+                ??
+                lock.withWriterLock {
+                    let logger = make(name: name)
+                    loggers[name] = logger
+                    return logger
+                }
+            return logger
+        }
     }
 }
 

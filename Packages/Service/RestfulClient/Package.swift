@@ -9,7 +9,7 @@ let package = Package(
         .library(name: "RestfulClient", targets: ["RestfulClient"]),
     ],
     dependencies: [
-        .package(url: "https://github.com/swift-server/async-http-client.git", from: "1.10.0"),
+        .package(url: "https://github.com/swift-server/async-http-client.git", from: "1.11.1"),
     ],
     targets: [
         .target(name: "RestfulClient", dependencies: [

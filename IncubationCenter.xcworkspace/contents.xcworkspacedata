@@ -42,6 +42,9 @@
             location = "group:Packages/UICore/UIRoute">
          </FileRef>
          <FileRef
+            location = "group:Packages/UICore/UIFeedback">
+         </FileRef>
+         <FileRef
             location = "group:Packages/UICore/UIHierarchy">
          </FileRef>
       </Group>

@@ -10,7 +10,7 @@ let package = Package(
         .library(name: "AsyncImageView", targets: ["AsyncImageView"]),
     ],
     dependencies: [
-        .package(url: "https://github.com/onevcat/Kingfisher.git", from: "7.2.3"),
+        .package(url: "https://github.com/onevcat/Kingfisher.git", from: "7.2.4"),
     ],
     targets: [
         .target(name: "AsyncImageView", dependencies: [
