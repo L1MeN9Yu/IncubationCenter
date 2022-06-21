@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1E7F754B283635880035A8E2 /* Center.docc in Sources */ = {isa = PBXBuildFile; fileRef = 1E7F754A283635880035A8E2 /* Center.docc */; };
 		1E7F759F28373B7E0035A8E2 /* Service.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E7F759E28373B7E0035A8E2 /* Service.framework */; };
 		1E7F76542838D05D0035A8E2 /* libCenterAPI.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E7F76502838D0340035A8E2 /* libCenterAPI.a */; };
 		EB31A29FD83CE63F9DEFBA76 /* Exported.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB31A39EEF2E4941A946D0F4 /* Exported.swift */; };
@@ -27,7 +26,6 @@
 
 /* Begin PBXFileReference section */
 		1E7F7546283635880035A8E2 /* Center.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Center.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		1E7F754A283635880035A8E2 /* Center.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = Center.docc; sourceTree = "<group>"; };
 		1E7F759E28373B7E0035A8E2 /* Service.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Service.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E7F764B2838D0340035A8E2 /* CenterAPI.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = CenterAPI.xcodeproj; path = CenterAPI/CenterAPI.xcodeproj; sourceTree = "<group>"; };
 		1EBAFF02285B312100CFF89B /* Center.Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Center.Debug.xcconfig; sourceTree = "<group>"; };
@@ -74,7 +72,6 @@
 		1E7F7548283635880035A8E2 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				1E7F754A283635880035A8E2 /* Center.docc */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -217,7 +214,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1E7F754B283635880035A8E2 /* Center.docc in Sources */,
 				EB31A58D2C6B518D045DB363 /* CenterModule.swift in Sources */,
 				EB31A29FD83CE63F9DEFBA76 /* Exported.swift in Sources */,
 				EB31A8E1826C3F8CB2B16C1D /* ClientHandler.swift in Sources */,

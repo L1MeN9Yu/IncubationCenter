@@ -18,7 +18,6 @@ extension Loggers {
 
 public extension Loggers {
     static subscript(name: String) -> Logging.Logger {
-        set { fatalError("Unavailable") }
         get {
             let logger =
                 lock.withReaderLock {
@@ -32,6 +31,7 @@ public extension Loggers {
                 }
             return logger
         }
+        set { fatalError("Unavailable") }
     }
 }
 
