@@ -18,7 +18,7 @@ class MeContentView: View {
 
     private lazy var dataSource = MeCollectionViewDataSource(collectionView: collectionView)
 
-    private(set) lazy var didSelectedItemDelegate = Delegator<IndexPath, Void>()
+    private(set) lazy var didSelectedItemDelegator = Delegator<IndexPath, Void>()
 
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -55,7 +55,7 @@ private extension MeContentView {
 
 extension MeContentView: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        didSelectedItemDelegate.call(indexPath)
+        didSelectedItemDelegator.call(indexPath)
     }
 }
 

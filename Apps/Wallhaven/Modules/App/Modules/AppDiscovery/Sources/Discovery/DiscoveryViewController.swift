@@ -46,12 +46,12 @@ private extension DiscoveryViewController {
     }
 
     func bind() {
-        contentView.didSelectedDelegate.delegate(on: self) { `self`, indexPath in
+        contentView.didSelectedDelegator.delegate(on: self) { `self`, indexPath in
             guard let viewModel = self.viewModel.wallpaperListViewModels[safe: indexPath.row] else { return }
             let id = viewModel.id
             Router.push(to: "WallpaperViewController/\(id)")
         }
-        contentView.headerRefreshDelegate.delegate(on: self) { (`self`, refresher: Refresher) in
+        contentView.headerRefreshDelegator.delegate(on: self) { (`self`, refresher: Refresher) in
             Task { [weak refresher, weak self] in
                 guard let self = self else { return }
                 guard let refresher = refresher else { return }
@@ -60,7 +60,7 @@ private extension DiscoveryViewController {
                 self.contentView.reloadData(viewModel: self.viewModel)
             }
         }
-        contentView.footerRefreshDelegate.delegate(on: self) { (`self`, refresher: Refresher) in
+        contentView.footerRefreshDelegator.delegate(on: self) { (`self`, refresher: Refresher) in
             Task { [weak refresher, weak self] in
                 guard let self = self else { return }
                 guard let refresher = refresher else { return }
