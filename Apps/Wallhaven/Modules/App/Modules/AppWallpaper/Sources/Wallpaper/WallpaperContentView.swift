@@ -28,7 +28,6 @@ extension WallpaperContentView {
 
 private extension WallpaperContentView {
     func setup() {
-        backgroundColor = .black
         wallpaperView.x.add(to: self)
     }
 

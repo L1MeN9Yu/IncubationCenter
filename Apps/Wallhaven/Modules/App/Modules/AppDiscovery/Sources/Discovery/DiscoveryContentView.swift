@@ -7,9 +7,9 @@ import UICore
 import UIKit
 
 class DiscoveryContentView: View {
-    let headerRefreshDelegate = Delegator<Refresher, Void>()
-    let footerRefreshDelegate = Delegator<Refresher, Void>()
-    let didSelectedDelegate = Delegator<IndexPath, Void>()
+    let headerRefreshDelegator = Delegator<Refresher, Void>()
+    let footerRefreshDelegator = Delegator<Refresher, Void>()
+    let didSelectedDelegator = Delegator<IndexPath, Void>()
 
     private lazy var collectionView: CollectionView = .init(
         frame: .zero,
@@ -24,13 +24,13 @@ class DiscoveryContentView: View {
     .topRefresher(
         Refresher { [weak self] refresher in
             guard let self = self else { return }
-            self.headerRefreshDelegate(refresher)
+            self.headerRefreshDelegator(refresher)
         }
     )
     .bottomRefresher(
         Refresher { [weak self] refresher in
             guard let self = self else { return }
-            self.footerRefreshDelegate(refresher)
+            self.footerRefreshDelegator(refresher)
         }
     )
     .instance
@@ -70,7 +70,7 @@ extension DiscoveryContentView {
 
 extension DiscoveryContentView: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        didSelectedDelegate(indexPath)
+        didSelectedDelegator(indexPath)
     }
 }
 

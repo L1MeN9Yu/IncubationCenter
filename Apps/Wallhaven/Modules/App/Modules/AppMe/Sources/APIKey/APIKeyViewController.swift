@@ -49,7 +49,7 @@ private extension APIKeyViewController {
     }
 
     func bind() {
-        contentView.didSelectedItemDelegate.delegate(on: self) { (`self`, indexPath: IndexPath) in
+        contentView.didSelectedItemDelegator.delegate(on: self) { (`self`, indexPath: IndexPath) in
             guard let section = APIKeySection(section: indexPath.section) else { return }
             guard let item = self.viewModel.items[section]?[safe: indexPath.row] else { return }
             switch item {

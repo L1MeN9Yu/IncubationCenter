@@ -20,7 +20,7 @@ class APIKeyContentView: View {
 
     private lazy var dataSource = APIKeyCollectionViewDataSource(collectionView: collectionView)
 
-    private(set) lazy var didSelectedItemDelegate = Delegator<IndexPath, Void>()
+    private(set) lazy var didSelectedItemDelegator = Delegator<IndexPath, Void>()
 
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -53,7 +53,7 @@ private extension APIKeyContentView {
 
 extension APIKeyContentView: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        didSelectedItemDelegate.call(indexPath)
+        didSelectedItemDelegator.call(indexPath)
     }
 }
 

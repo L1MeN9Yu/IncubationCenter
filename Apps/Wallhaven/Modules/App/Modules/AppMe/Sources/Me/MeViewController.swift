@@ -36,7 +36,7 @@ private extension MeViewController {
     }
 
     func bind() {
-        contentView.didSelectedItemDelegate.delegate(on: self) { _, indexPath in
+        contentView.didSelectedItemDelegator.delegate(on: self) { _, indexPath in
             switch (indexPath.section, indexPath.row) {
             case (0, 0): Router.push(to: "APIKeyViewController")
             case (3, 0): Router.push(to: "AboutViewController")
