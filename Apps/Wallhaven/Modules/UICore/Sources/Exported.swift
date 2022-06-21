@@ -13,3 +13,4 @@
 @_exported import UIRefresh
 @_exported import UIResource
 @_exported import UIRoute
+@_exported import UIToast
