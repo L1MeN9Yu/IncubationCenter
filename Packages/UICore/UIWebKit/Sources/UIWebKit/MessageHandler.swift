@@ -15,11 +15,17 @@ class MessageHandler: NSObject {
 
 extension MessageHandler: WKScriptMessageHandler {
     func userContentController(_ userContentController: WKUserContentController, didReceive message: WKScriptMessage) {
-        if message.name == PipeType.console.rawValue {
-            bridger.map { $0.console(data: message.body) }
-        } else if message.name == PipeType.normal.rawValue {
+        guard let pipeType = PipeType(rawValue: message.name) else {
+            bridger.map { $0.handle(error: .unknown(message: message)) }
+            return
+        }
+
+        switch pipeType {
+        case .normal:
             guard let body = message.body as? String else { return }
             bridger.map { $0.flush(messageQueueString: body) }
+        case .console:
+            bridger.map { $0.console(data: message.body) }
         }
     }
 }

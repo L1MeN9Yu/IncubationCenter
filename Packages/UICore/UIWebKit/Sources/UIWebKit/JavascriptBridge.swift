@@ -21,13 +21,6 @@ public class JavascriptBridge {
     }
 }
 
-public extension JavascriptBridge {
-    typealias Callback = (_ responseData: Optional<Any>) -> Void
-    typealias Handler = (_ parameters: Optional<[String: Any]>, _ callback: Optional<Callback>) -> Void
-    typealias Message = [String: Any]
-    typealias ConsoleCallback = (Any) -> Void
-}
-
 extension JavascriptBridge: Bridger.Delegate {
     func evaluateJavascript(javascript: String, completion: Optional<CompletionHandler>) {
         webView.map { $0.evaluateJavaScript(javascript, completionHandler: completion) }
@@ -35,14 +28,19 @@ extension JavascriptBridge: Bridger.Delegate {
 }
 
 public extension JavascriptBridge {
-    func register(handlerName: String, handler: @escaping Handler) {
-        bridger.messageHandlers[handlerName] = handler
-    }
-
     func register(consoleCallback: Optional<ConsoleCallback>) {
         bridger.register(consoleCallback: consoleCallback)
     }
 
+    func register(onErrorCallback: Optional<OnErrorCallback>) {
+        bridger.register(onErrorCallback: onErrorCallback)
+    }
+
+    func add(handlerName: String, handler: @escaping Handler) {
+        bridger.messageHandlers[handlerName] = handler
+    }
+
+    @discardableResult
     func remove(handlerName: String) -> Optional<Handler> {
         bridger.messageHandlers.removeValue(forKey: handlerName)
     }
