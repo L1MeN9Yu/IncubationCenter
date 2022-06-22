@@ -54,7 +54,6 @@
 			children = (
 				1E7F755D283636390035A8E2 /* Sources */,
 				1E7F76372838CFE60035A8E2 /* Modules */,
-				1E7F7548283635880035A8E2 /* Resources */,
 				1EDF08B1283B273E00025E14 /* XCConfig */,
 				1E7F759D28373B7E0035A8E2 /* Frameworks */,
 				1E7F7547283635880035A8E2 /* Products */,
@@ -67,13 +66,6 @@
 				1E7F7546283635880035A8E2 /* Center.framework */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		1E7F7548283635880035A8E2 /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Resources;
 			sourceTree = "<group>";
 		};
 		1E7F755D283636390035A8E2 /* Sources */ = {

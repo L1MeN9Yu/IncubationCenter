@@ -45,6 +45,9 @@
             location = "group:Packages/UICore/UIFeedback">
          </FileRef>
          <FileRef
+            location = "group:Packages/UICore/UIHUD">
+         </FileRef>
+         <FileRef
             location = "group:Packages/UICore/UIToast">
          </FileRef>
          <FileRef
