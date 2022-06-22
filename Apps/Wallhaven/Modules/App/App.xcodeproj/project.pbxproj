@@ -52,6 +52,13 @@
 			remoteGlobalIDString = 1E7F76052837BEB20035A8E2;
 			remoteInfo = AppMe;
 		};
+		1EB5CCDD2862C69B00119589 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1EB5CCD42862C69B00119589 /* AppWebBrowser.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 1EB5CCCA2862C69B00119589;
+			remoteInfo = AppWebBrowser;
+		};
 		1EDF089D283B197A00025E14 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 1EDF0898283B197900025E14 /* AppFavorite.xcodeproj */;
@@ -74,6 +81,7 @@
 		1E7F760F2837BEB20035A8E2 /* AppMe.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = AppMe.xcodeproj; path = AppMe/AppMe.xcodeproj; sourceTree = "<group>"; };
 		1E7F76202837C0C90035A8E2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/MeModule.strings; sourceTree = "<group>"; };
 		1E7F76222837C0CA0035A8E2 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/MeModule.strings"; sourceTree = "<group>"; };
+		1EB5CCD42862C69B00119589 /* AppWebBrowser.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = AppWebBrowser.xcodeproj; path = AppWebBrowser/AppWebBrowser.xcodeproj; sourceTree = "<group>"; };
 		1EBAFEFF285B2B8400CFF89B /* App.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = App.xcconfig; sourceTree = "<group>"; };
 		1EBAFF06285B32C400CFF89B /* App.Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = App.Debug.xcconfig; sourceTree = "<group>"; };
 		1EBAFF07285B32D000CFF89B /* App.Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = App.Release.xcconfig; sourceTree = "<group>"; };
@@ -153,6 +161,7 @@
 		1E7F755E283641220035A8E2 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				1EB5CCD42862C69B00119589 /* AppWebBrowser.xcodeproj */,
 				1E7F75B7283742740035A8E2 /* AppTabBar.xcodeproj */,
 				1E7F75E028377D670035A8E2 /* AppDiscovery.xcodeproj */,
 				1EDF0898283B197900025E14 /* AppFavorite.xcodeproj */,
@@ -202,6 +211,14 @@
 			isa = PBXGroup;
 			children = (
 				1E7F76142837BEB30035A8E2 /* libAppMe.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1EB5CCD52862C69B00119589 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1EB5CCDE2862C69B00119589 /* libAppWebBrowser.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -303,6 +320,10 @@
 					ProductGroup = 1E290C2328436AB9005B1CBF /* Products */;
 					ProjectRef = 1E290C2228436AB9005B1CBF /* AppWallpaper.xcodeproj */;
 				},
+				{
+					ProductGroup = 1EB5CCD52862C69B00119589 /* Products */;
+					ProjectRef = 1EB5CCD42862C69B00119589 /* AppWebBrowser.xcodeproj */;
+				},
 			);
 			projectRoot = "";
 			targets = (
@@ -338,6 +359,13 @@
 			fileType = archive.ar;
 			path = libAppMe.a;
 			remoteRef = 1E7F76132837BEB30035A8E2 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		1EB5CCDE2862C69B00119589 /* libAppWebBrowser.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libAppWebBrowser.a;
+			remoteRef = 1EB5CCDD2862C69B00119589 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 		1EDF089E283B197A00025E14 /* libAppFavorite.a */ = {

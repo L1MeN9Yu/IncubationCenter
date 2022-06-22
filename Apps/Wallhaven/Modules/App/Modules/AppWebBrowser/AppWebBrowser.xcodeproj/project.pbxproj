@@ -1,0 +1,194 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1EB5CCCE2862C69B00119589 /* AppWebBrowser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EB5CCCD2862C69B00119589 /* AppWebBrowser.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		1EB5CCC82862C69B00119589 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		1EB5CCCA2862C69B00119589 /* libAppWebBrowser.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libAppWebBrowser.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		1EB5CCCD2862C69B00119589 /* AppWebBrowser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppWebBrowser.swift; sourceTree = "<group>"; };
+		1EB5CCDF2862C6BF00119589 /* AppWebBrowser.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = AppWebBrowser.xcconfig; sourceTree = "<group>"; };
+		1EB5CCE12862C6E000119589 /* AppWebBrowser.Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = AppWebBrowser.Debug.xcconfig; sourceTree = "<group>"; };
+		1EB5CCE22862C6EC00119589 /* AppWebBrowser.Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = AppWebBrowser.Release.xcconfig; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1EB5CCC72862C69B00119589 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1EB5CCC12862C69B00119589 = {
+			isa = PBXGroup;
+			children = (
+				1EB5CCCC2862C69B00119589 /* Sources */,
+				1EB5CCE02862C6C500119589 /* XCConfig */,
+				1EB5CCCB2862C69B00119589 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		1EB5CCCB2862C69B00119589 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1EB5CCCA2862C69B00119589 /* libAppWebBrowser.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1EB5CCCC2862C69B00119589 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				1EB5CCCD2862C69B00119589 /* AppWebBrowser.swift */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		1EB5CCE02862C6C500119589 /* XCConfig */ = {
+			isa = PBXGroup;
+			children = (
+				1EB5CCDF2862C6BF00119589 /* AppWebBrowser.xcconfig */,
+				1EB5CCE12862C6E000119589 /* AppWebBrowser.Debug.xcconfig */,
+				1EB5CCE22862C6EC00119589 /* AppWebBrowser.Release.xcconfig */,
+			);
+			path = XCConfig;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1EB5CCC92862C69B00119589 /* AppWebBrowser */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1EB5CCD12862C69B00119589 /* Build configuration list for PBXNativeTarget "AppWebBrowser" */;
+			buildPhases = (
+				1EB5CCC62862C69B00119589 /* Sources */,
+				1EB5CCC72862C69B00119589 /* Frameworks */,
+				1EB5CCC82862C69B00119589 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AppWebBrowser;
+			productName = AppWebBrowser;
+			productReference = 1EB5CCCA2862C69B00119589 /* libAppWebBrowser.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1EB5CCC22862C69B00119589 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1340;
+				LastUpgradeCheck = 1340;
+				TargetAttributes = {
+					1EB5CCC92862C69B00119589 = {
+						CreatedOnToolsVersion = 13.4.1;
+					};
+				};
+			};
+			buildConfigurationList = 1EB5CCC52862C69B00119589 /* Build configuration list for PBXProject "AppWebBrowser" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 1EB5CCC12862C69B00119589;
+			productRefGroup = 1EB5CCCB2862C69B00119589 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1EB5CCC92862C69B00119589 /* AppWebBrowser */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1EB5CCC62862C69B00119589 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1EB5CCCE2862C69B00119589 /* AppWebBrowser.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		1EB5CCCF2862C69B00119589 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Debug;
+		};
+		1EB5CCD02862C69B00119589 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Release;
+		};
+		1EB5CCD22862C69B00119589 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1EB5CCE12862C6E000119589 /* AppWebBrowser.Debug.xcconfig */;
+			buildSettings = {
+			};
+			name = Debug;
+		};
+		1EB5CCD32862C69B00119589 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1EB5CCE22862C6EC00119589 /* AppWebBrowser.Release.xcconfig */;
+			buildSettings = {
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1EB5CCC52862C69B00119589 /* Build configuration list for PBXProject "AppWebBrowser" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1EB5CCCF2862C69B00119589 /* Debug */,
+				1EB5CCD02862C69B00119589 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1EB5CCD12862C69B00119589 /* Build configuration list for PBXNativeTarget "AppWebBrowser" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1EB5CCD22862C69B00119589 /* Debug */,
+				1EB5CCD32862C69B00119589 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1EB5CCC22862C69B00119589 /* Project object */;
+}
