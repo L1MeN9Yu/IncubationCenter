@@ -2,6 +2,7 @@
 // Created by Mengyu Li on 2022/5/20.
 //
 
+import AppWebBrowser
 import Foundation
 import Service
 import UICore
@@ -40,7 +41,8 @@ private extension Application {
             AppDiscovery.routableViewControllers +
             AppFavorite.routableViewControllers +
             AppMe.routableViewControllers +
-            AppWallpaper.routableViewControllers
+            AppWallpaper.routableViewControllers +
+            AppWebBrowser.routableViewControllers
         routableList.forEach {
             Router.register(routeName: $0.routeName, factory: $0.initialize)
         }

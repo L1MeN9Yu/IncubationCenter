@@ -7,7 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1EB5CCCE2862C69B00119589 /* AppWebBrowser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EB5CCCD2862C69B00119589 /* AppWebBrowser.swift */; };
+		1E75BBE22863219C00029EA3 /* WebBrowserModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E75BBE12863219C00029EA3 /* WebBrowserModule.swift */; };
+		1EC9410A286323A900F23094 /* Center.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1EC94109286323A900F23094 /* Center.framework */; };
+		1EC9410C286323A900F23094 /* Service.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1EC9410B286323A900F23094 /* Service.framework */; };
+		1EC9410E286323A900F23094 /* UICore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1EC9410D286323A900F23094 /* UICore.framework */; };
+		EB31A3930DC6F5F34EEBABAB /* WebBrowserContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB31A5FD006EFA9C3C1AC2D7 /* WebBrowserContentView.swift */; };
+		EB31A505BFF6D4C86C263AA4 /* Exported.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB31AC644BD46147CBB77D97 /* Exported.swift */; };
+		EB31A708DB3A02A1DBA5EFBA /* WebBrowserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB31AA0EEC1B26159787837A /* WebBrowserViewModel.swift */; };
+		EB31A95B558BE00B01D7141A /* WebBrowserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB31AF8DA5B58E5000D8113E /* WebBrowserViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -23,11 +30,18 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		1E75BBE12863219C00029EA3 /* WebBrowserModule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebBrowserModule.swift; sourceTree = "<group>"; };
 		1EB5CCCA2862C69B00119589 /* libAppWebBrowser.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libAppWebBrowser.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		1EB5CCCD2862C69B00119589 /* AppWebBrowser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppWebBrowser.swift; sourceTree = "<group>"; };
 		1EB5CCDF2862C6BF00119589 /* AppWebBrowser.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = AppWebBrowser.xcconfig; sourceTree = "<group>"; };
 		1EB5CCE12862C6E000119589 /* AppWebBrowser.Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = AppWebBrowser.Debug.xcconfig; sourceTree = "<group>"; };
 		1EB5CCE22862C6EC00119589 /* AppWebBrowser.Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = AppWebBrowser.Release.xcconfig; sourceTree = "<group>"; };
+		1EC94109286323A900F23094 /* Center.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Center.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1EC9410B286323A900F23094 /* Service.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Service.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1EC9410D286323A900F23094 /* UICore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = UICore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EB31A5FD006EFA9C3C1AC2D7 /* WebBrowserContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebBrowserContentView.swift; sourceTree = "<group>"; };
+		EB31AA0EEC1B26159787837A /* WebBrowserViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebBrowserViewModel.swift; sourceTree = "<group>"; };
+		EB31AC644BD46147CBB77D97 /* Exported.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Exported.swift; sourceTree = "<group>"; };
+		EB31AF8DA5B58E5000D8113E /* WebBrowserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebBrowserViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +49,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1EC9410A286323A900F23094 /* Center.framework in Frameworks */,
+				1EC9410C286323A900F23094 /* Service.framework in Frameworks */,
+				1EC9410E286323A900F23094 /* UICore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -47,6 +64,7 @@
 				1EB5CCCC2862C69B00119589 /* Sources */,
 				1EB5CCE02862C6C500119589 /* XCConfig */,
 				1EB5CCCB2862C69B00119589 /* Products */,
+				1EC94108286323A900F23094 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -61,7 +79,9 @@
 		1EB5CCCC2862C69B00119589 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				1EB5CCCD2862C69B00119589 /* AppWebBrowser.swift */,
+				EB31AC644BD46147CBB77D97 /* Exported.swift */,
+				1E75BBE12863219C00029EA3 /* WebBrowserModule.swift */,
+				EB31A83EE8DDD64A6CF26D22 /* WebBrowser */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -74,6 +94,26 @@
 				1EB5CCE22862C6EC00119589 /* AppWebBrowser.Release.xcconfig */,
 			);
 			path = XCConfig;
+			sourceTree = "<group>";
+		};
+		1EC94108286323A900F23094 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1EC94109286323A900F23094 /* Center.framework */,
+				1EC9410B286323A900F23094 /* Service.framework */,
+				1EC9410D286323A900F23094 /* UICore.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EB31A83EE8DDD64A6CF26D22 /* WebBrowser */ = {
+			isa = PBXGroup;
+			children = (
+				EB31AF8DA5B58E5000D8113E /* WebBrowserViewController.swift */,
+				EB31AA0EEC1B26159787837A /* WebBrowserViewModel.swift */,
+				EB31A5FD006EFA9C3C1AC2D7 /* WebBrowserContentView.swift */,
+			);
+			path = WebBrowser;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -134,7 +174,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1EB5CCCE2862C69B00119589 /* AppWebBrowser.swift in Sources */,
+				EB31A505BFF6D4C86C263AA4 /* Exported.swift in Sources */,
+				1E75BBE22863219C00029EA3 /* WebBrowserModule.swift in Sources */,
+				EB31A95B558BE00B01D7141A /* WebBrowserViewController.swift in Sources */,
+				EB31A708DB3A02A1DBA5EFBA /* WebBrowserViewModel.swift in Sources */,
+				EB31A3930DC6F5F34EEBABAB /* WebBrowserContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
