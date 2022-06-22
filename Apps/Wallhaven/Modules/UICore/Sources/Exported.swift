@@ -8,6 +8,7 @@
 @_exported import Chain
 @_exported import UICombine
 @_exported import UIFeedback
+@_exported import UIHUD
 @_exported import UIKit
 @_exported import UILayout
 @_exported import UIRefresh

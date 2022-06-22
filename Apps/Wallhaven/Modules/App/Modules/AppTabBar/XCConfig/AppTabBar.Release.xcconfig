@@ -2,7 +2,7 @@
 
 // Architectures
 
-ONLY_ACTIVE_ARCH = NOs
+ONLY_ACTIVE_ARCH = NO
 
 // Build Options
 
