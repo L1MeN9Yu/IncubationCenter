@@ -36,10 +36,17 @@ private extension WebBrowserViewController {
     func setup() {
         contentView.x.add(to: view)
         contentView.reloadData(viewModel: viewModel)
+        bind()
     }
 
     func layout() {
         contentView.pin.all(view.pin.safeArea)
+    }
+
+    func bind() {
+        contentView.titleChangeDelegator.delegate(on: self) {
+            $0.navigationItem.title = $1
+        }
     }
 }
 

@@ -11,9 +11,11 @@
 		1EC9410A286323A900F23094 /* Center.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1EC94109286323A900F23094 /* Center.framework */; };
 		1EC9410C286323A900F23094 /* Service.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1EC9410B286323A900F23094 /* Service.framework */; };
 		1EC9410E286323A900F23094 /* UICore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1EC9410D286323A900F23094 /* UICore.framework */; };
+		EB31A28AFA3FF65D6CE750D7 /* WebBrowserUIDelegator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB31AA0DC4A79E5C8360AC72 /* WebBrowserUIDelegator.swift */; };
 		EB31A3930DC6F5F34EEBABAB /* WebBrowserContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB31A5FD006EFA9C3C1AC2D7 /* WebBrowserContentView.swift */; };
 		EB31A505BFF6D4C86C263AA4 /* Exported.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB31AC644BD46147CBB77D97 /* Exported.swift */; };
 		EB31A708DB3A02A1DBA5EFBA /* WebBrowserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB31AA0EEC1B26159787837A /* WebBrowserViewModel.swift */; };
+		EB31A8B67877C7A77A8FC3CA /* WebBrowserNavigationDelegator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB31AE9E6BF22887E0E3E172 /* WebBrowserNavigationDelegator.swift */; };
 		EB31A95B558BE00B01D7141A /* WebBrowserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB31AF8DA5B58E5000D8113E /* WebBrowserViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -39,8 +41,10 @@
 		1EC9410B286323A900F23094 /* Service.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Service.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1EC9410D286323A900F23094 /* UICore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = UICore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB31A5FD006EFA9C3C1AC2D7 /* WebBrowserContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebBrowserContentView.swift; sourceTree = "<group>"; };
+		EB31AA0DC4A79E5C8360AC72 /* WebBrowserUIDelegator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebBrowserUIDelegator.swift; sourceTree = "<group>"; };
 		EB31AA0EEC1B26159787837A /* WebBrowserViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebBrowserViewModel.swift; sourceTree = "<group>"; };
 		EB31AC644BD46147CBB77D97 /* Exported.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Exported.swift; sourceTree = "<group>"; };
+		EB31AE9E6BF22887E0E3E172 /* WebBrowserNavigationDelegator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebBrowserNavigationDelegator.swift; sourceTree = "<group>"; };
 		EB31AF8DA5B58E5000D8113E /* WebBrowserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebBrowserViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -112,6 +116,8 @@
 				EB31AF8DA5B58E5000D8113E /* WebBrowserViewController.swift */,
 				EB31AA0EEC1B26159787837A /* WebBrowserViewModel.swift */,
 				EB31A5FD006EFA9C3C1AC2D7 /* WebBrowserContentView.swift */,
+				EB31AA0DC4A79E5C8360AC72 /* WebBrowserUIDelegator.swift */,
+				EB31AE9E6BF22887E0E3E172 /* WebBrowserNavigationDelegator.swift */,
 			);
 			path = WebBrowser;
 			sourceTree = "<group>";
@@ -179,6 +185,8 @@
 				EB31A95B558BE00B01D7141A /* WebBrowserViewController.swift in Sources */,
 				EB31A708DB3A02A1DBA5EFBA /* WebBrowserViewModel.swift in Sources */,
 				EB31A3930DC6F5F34EEBABAB /* WebBrowserContentView.swift in Sources */,
+				EB31A28AFA3FF65D6CE750D7 /* WebBrowserUIDelegator.swift in Sources */,
+				EB31A8B67877C7A77A8FC3CA /* WebBrowserNavigationDelegator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
