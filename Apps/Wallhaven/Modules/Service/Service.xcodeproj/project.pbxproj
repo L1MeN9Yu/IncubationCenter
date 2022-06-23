@@ -61,7 +61,6 @@
 			isa = PBXGroup;
 			children = (
 				1E7F751D2836297D0035A8E2 /* Sources */,
-				1E7F74FC283628D30035A8E2 /* Resources */,
 				1EBAFEFA285B0D8800CFF89B /* XCConfig */,
 				1E7F756328365FA80035A8E2 /* Frameworks */,
 				1E7F74FB283628D30035A8E2 /* Products */,
@@ -74,13 +73,6 @@
 				1E7F74FA283628D30035A8E2 /* Service.framework */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		1E7F74FC283628D30035A8E2 /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Resources;
 			sourceTree = "<group>";
 		};
 		1E7F751D2836297D0035A8E2 /* Sources */ = {

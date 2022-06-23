@@ -53,6 +53,9 @@
          <FileRef
             location = "group:Packages/UICore/UIHierarchy">
          </FileRef>
+         <FileRef
+            location = "group:Packages/UICore/UIWebKit">
+         </FileRef>
       </Group>
       <Group
          location = "container:"

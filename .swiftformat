@@ -8,4 +8,4 @@
 
 --exclude **/*.generated.swift
 
---shortoptionals except-properties
+--disable typeSugar

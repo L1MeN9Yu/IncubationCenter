@@ -7,4 +7,6 @@ import UIKit
 
 extension UIView: Compatible {}
 
+extension UIBarItem: Compatible {}
+
 #endif
