@@ -29,9 +29,9 @@ extension WallpaperViewController {
         setup()
     }
 
-    override open func viewWillLayoutSubviews() {
+    override func viewWillLayoutSubviews() {
         super.viewWillLayoutSubviews()
-        contentView.pin.all()
+        layout()
     }
 }
 
@@ -42,6 +42,10 @@ private extension WallpaperViewController {
             await loadData()
             contentView.reloadData(viewModel: viewModel)
         }
+    }
+
+    func layout() {
+        contentView.pin.all(view.pin.safeArea)
     }
 
     func loadData() async {

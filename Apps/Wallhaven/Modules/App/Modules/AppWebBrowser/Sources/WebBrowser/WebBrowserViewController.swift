@@ -20,12 +20,36 @@ class WebBrowserViewController: ViewController {
     required init?(coder: NSCoder) { fatalError("init(coder:) has not been implemented") }
 }
 
+extension WebBrowserViewController {
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        setup()
+    }
+
+    override open func viewWillLayoutSubviews() {
+        super.viewWillLayoutSubviews()
+        layout()
+    }
+}
+
+private extension WebBrowserViewController {
+    func setup() {
+        contentView.x.add(to: view)
+        contentView.reloadData(viewModel: viewModel)
+    }
+
+    func layout() {
+        contentView.pin.all(view.pin.safeArea)
+    }
+}
+
 extension WebBrowserViewController: TypeNameable {}
 
 extension WebBrowserViewController: Routable {
     class func initialize(url: URLConvertible, values: [String: Any], context: Any?) -> UIViewController? {
-        guard let urlString = values["urlString"] as? String else { return nil }
-        guard let url = URL(string: urlString) else { return nil }
+        guard let urlStringEncoded = values["urlString"] as? String else { return nil }
+        guard let urlStringDecoded = urlStringEncoded.removingPercentEncoding else { return nil }
+        guard let url = URL(string: urlStringDecoded) else { return nil }
         return WebBrowserViewController(url: url)
     }
 

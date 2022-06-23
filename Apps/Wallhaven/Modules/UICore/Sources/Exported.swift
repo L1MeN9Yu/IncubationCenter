@@ -15,3 +15,4 @@
 @_exported import UIResource
 @_exported import UIRoute
 @_exported import UIToast
+@_exported import UIWebKit
