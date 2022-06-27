@@ -78,7 +78,7 @@ extension DiscoveryContentView: UICollectionViewDelegate {
 
 extension DiscoveryContentView {
     func reloadData(viewModel: DiscoveryViewModel) {
-        var snapshot = NSDiffableDataSourceSnapshot<String, WallpaperListViewModel>()
+        var snapshot = NSDiffableDataSourceSnapshot<String, DiscoveryItemViewModel>()
         snapshot.appendSections(["main"])
         snapshot.appendItems(viewModel.wallpaperListViewModels)
         dataSource.apply(snapshot, animatingDifferences: false)

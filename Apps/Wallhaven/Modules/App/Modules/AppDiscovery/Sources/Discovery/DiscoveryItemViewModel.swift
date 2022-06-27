@@ -6,7 +6,7 @@ import Center
 import Foundation
 import UICore
 
-class WallpaperListViewModel: ViewModel {
+class DiscoveryItemViewModel: ViewModel {
     let id: String
     let purity: String
     let imageURL: URL?
@@ -18,12 +18,12 @@ class WallpaperListViewModel: ViewModel {
     }
 }
 
-extension WallpaperListViewModel: Hashable {
+extension DiscoveryItemViewModel: Hashable {
     public func hash(into hasher: inout Hasher) {
         hasher.combine(id)
     }
 
-    public static func == (lhs: WallpaperListViewModel, rhs: WallpaperListViewModel) -> Bool {
+    public static func == (lhs: DiscoveryItemViewModel, rhs: DiscoveryItemViewModel) -> Bool {
         lhs.id == rhs.id
     }
 }

@@ -15,7 +15,7 @@
 		EB31A1F6B0394F353ECADFB0 /* FilterCollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB31AF209E8EEF19E337C4EE /* FilterCollectionViewLayout.swift */; };
 		EB31A31AA47B4C6E75AA5E43 /* DiscoveryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB31ADA853BB44581D9DC2DA /* DiscoveryCollectionViewCell.swift */; };
 		EB31A37FE8ECD44181E2EF31 /* DiscoveryModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB31AB6CD314C8DAB63E8F0D /* DiscoveryModule.swift */; };
-		EB31A3F6C71C10B46695106B /* WallpaperListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB31A6ECFB7D16EB47E5CA85 /* WallpaperListViewModel.swift */; };
+		EB31A3F6C71C10B46695106B /* DiscoveryItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB31A6ECFB7D16EB47E5CA85 /* DiscoveryItemViewModel.swift */; };
 		EB31A4A5E7F7E6B536E204D5 /* Exported.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB31AC662118840152C2DD86 /* Exported.swift */; };
 		EB31A4E9D3D1C905AB25CA03 /* FilterCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB31A4D3745CEC61CC136E12 /* FilterCollectionView.swift */; };
 		EB31A50F4612AC6BC3B86DDE /* FilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB31A4215E1A582B03FFAD7D /* FilterViewController.swift */; };
@@ -60,7 +60,7 @@
 		EB31A5593CCF06F0F1CEAE17 /* DiscoveryContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiscoveryContentView.swift; sourceTree = "<group>"; };
 		EB31A57A5C819D5D6B789B1C /* FilterItemViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilterItemViewModel.swift; sourceTree = "<group>"; };
 		EB31A5D1922C19ABFD35E292 /* DiscoveryNavigationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiscoveryNavigationViewController.swift; sourceTree = "<group>"; };
-		EB31A6ECFB7D16EB47E5CA85 /* WallpaperListViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WallpaperListViewModel.swift; sourceTree = "<group>"; };
+		EB31A6ECFB7D16EB47E5CA85 /* DiscoveryItemViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiscoveryItemViewModel.swift; sourceTree = "<group>"; };
 		EB31A780DA493C144DC5A807 /* FilterSection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilterSection.swift; sourceTree = "<group>"; };
 		EB31A7CFE479339916866065 /* FilterViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilterViewModel.swift; sourceTree = "<group>"; };
 		EB31A7E7DD57D0D621B324C9 /* FilterCollectionViewCategoriesCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilterCollectionViewCategoriesCell.swift; sourceTree = "<group>"; };
@@ -147,7 +147,7 @@
 				EB31A5593CCF06F0F1CEAE17 /* DiscoveryContentView.swift */,
 				EB31AC41BE1A930A128F050A /* DiscoveryProvider.swift */,
 				EB31AD4306F803DF3A3161A7 /* DiscoveryViewModel.swift */,
-				EB31A6ECFB7D16EB47E5CA85 /* WallpaperListViewModel.swift */,
+				EB31A6ECFB7D16EB47E5CA85 /* DiscoveryItemViewModel.swift */,
 				EB31ADA4CEB967221F2FBF41 /* DiscoveryCollectionViewLayout.swift */,
 				EB31A50C005BBB5452E76E7B /* DiscoveryCollectionViewDataSource.swift */,
 				EB31ADA853BB44581D9DC2DA /* DiscoveryCollectionViewCell.swift */,
@@ -238,7 +238,7 @@
 				EB31AE61A48B0E67226D825A /* DiscoveryProvider.swift in Sources */,
 				EB31A31AA47B4C6E75AA5E43 /* DiscoveryCollectionViewCell.swift in Sources */,
 				EB31AA93EA0AB0DEB313A3F2 /* DiscoveryViewModel.swift in Sources */,
-				EB31A3F6C71C10B46695106B /* WallpaperListViewModel.swift in Sources */,
+				EB31A3F6C71C10B46695106B /* DiscoveryItemViewModel.swift in Sources */,
 				EB31ACB100858D5870A39FF8 /* DiscoveryCollectionViewDataSource.swift in Sources */,
 				EB31A0724F2823329936D6AF /* DiscoveryCollectionViewLayout.swift in Sources */,
 				EB31A50F4612AC6BC3B86DDE /* FilterViewController.swift in Sources */,
