@@ -83,5 +83,7 @@ private extension DiscoveryViewController {
 }
 
 private extension DiscoveryViewController {
-    func filterBarButtonItemAction() {}
+    func filterBarButtonItemAction() {
+        Router.push(to: "FilterViewController")
+    }
 }

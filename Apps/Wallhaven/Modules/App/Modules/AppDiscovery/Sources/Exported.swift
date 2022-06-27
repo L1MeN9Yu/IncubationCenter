@@ -7,6 +7,8 @@ import UIRoute
 
 public let discoveryNavigationControllerType: NavigationController.Type = DiscoveryNavigationViewController.self
 
-public let routableViewControllers: [Routable.Type] = []
+public let routableViewControllers: [Routable.Type] = [
+    FilterViewController.self,
+]
 
 public let actions: [Actable.Type] = []
