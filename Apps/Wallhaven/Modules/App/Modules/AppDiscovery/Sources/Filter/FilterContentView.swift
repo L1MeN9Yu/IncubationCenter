@@ -7,10 +7,12 @@ import UICore
 import UIKit
 
 class FilterContentView: View {
-    private lazy var collectionView = FilterCollectionView()
+    private lazy var collectionView: FilterCollectionView = .init()
         .x
         .delegate(self)
         .instance
+
+    private lazy var dataSource = FilterCollectionView.DataSource(collectionView: collectionView)
 
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -39,6 +41,15 @@ private extension FilterContentView {
     }
 }
 
-extension FilterContentView: UICollectionViewDelegate {
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {}
+extension FilterContentView {
+    func reloadData(viewModel: FilterViewModel) {
+        var snapshot = FilterCollectionView.Snapshot()
+        viewModel.items.forEach {
+            snapshot.appendSections([$0])
+            snapshot.appendItems($1, toSection: $0)
+        }
+        dataSource.apply(snapshot)
+    }
 }
+
+extension FilterContentView: UICollectionViewDelegate {}

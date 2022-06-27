@@ -5,4 +5,10 @@
 import Foundation
 import UICore
 
-class FilterViewModel: ViewModel {}
+class FilterViewModel: ViewModel {
+    private(set) lazy var items: [FilterSection: [FilterItemViewModel]] = [
+        .categories: [
+            FilterItemViewModel(section: .categories),
+        ],
+    ]
+}

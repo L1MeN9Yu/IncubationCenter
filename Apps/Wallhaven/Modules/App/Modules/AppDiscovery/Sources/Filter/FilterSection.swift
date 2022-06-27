@@ -9,4 +9,6 @@ enum FilterSection {
     case order
 }
 
+extension FilterSection: CaseIterable {}
+
 extension FilterSection: Hashable {}

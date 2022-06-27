@@ -33,7 +33,11 @@ extension FilterViewController {
 
 private extension FilterViewController {
     func setup() {
+        title = DiscoveryModule.localizedString(key: "FilterViewController.Title")
         contentView.x.add(to: view)
+        Task { @MainActor in
+            contentView.reloadData(viewModel: viewModel)
+        }
     }
 
     func layout() {

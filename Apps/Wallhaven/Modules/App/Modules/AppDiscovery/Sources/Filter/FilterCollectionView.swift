@@ -9,5 +9,15 @@ import UIKit
 class FilterCollectionView: CollectionView {
     init() {
         super.init(frame: .zero, collectionViewLayout: FilterCollectionViewLayout())
+        x
+            .backgroundColor(.clear)
+            .register(FilterCollectionViewCategoriesCell.self, forCellWithReuseIdentifier: FilterCollectionViewCategoriesCell.cellID)
+            .register(FilterCollectionViewFooter.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionFooter, withReuseIdentifier: FilterCollectionViewFooter.cellID)
+            .done
     }
+}
+
+extension FilterCollectionView {
+    typealias DataSource = FilterCollectionViewDataSource
+    typealias Snapshot = NSDiffableDataSourceSnapshot<FilterSection, FilterItemViewModel>
 }

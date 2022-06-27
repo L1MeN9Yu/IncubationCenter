@@ -6,7 +6,7 @@ import Foundation
 import UICore
 import UIKit
 
-class FilterCollectionViewCategoriesCell: CollectionViewCell {
+class FilterCollectionViewFooter: CollectionReusableView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         setup()
@@ -16,19 +16,21 @@ class FilterCollectionViewCategoriesCell: CollectionViewCell {
     required init?(coder: NSCoder) { fatalError("init(coder:) has not been implemented") }
 }
 
-extension FilterCollectionViewCategoriesCell {
-    override open func layoutSubviews() {
+extension FilterCollectionViewFooter {
+    override func layoutSubviews() {
         super.layoutSubviews()
         layout()
     }
 }
 
-private extension FilterCollectionViewCategoriesCell {
-    func setup() {}
+private extension FilterCollectionViewFooter {
+    func setup() {
+        backgroundColor = .systemGray6
+    }
 
     func layout() {}
 }
 
-extension FilterCollectionViewCategoriesCell {
-    func config(viewModel: FilterItemViewModel) {}
+extension FilterCollectionViewFooter {
+    func config(section: FilterSection) {}
 }
