@@ -7,6 +7,8 @@ import UICore
 import UIKit
 
 class FilterViewController: ViewController {
+    private lazy var subscriptions = Set<AnyCancellable>()
+
     private lazy var contentView = FilterContentView()
     private lazy var viewModel = FilterViewModel()
     private lazy var provider = FilterProvider()
@@ -38,11 +40,28 @@ private extension FilterViewController {
         Task { @MainActor in
             contentView.reloadData(viewModel: viewModel)
         }
+
+        let okButton = UIBarButtonItem(title: Module.localizedString(key: "FilterViewController.OKButton.Title"), style: .plain, target: nil, action: nil)
+        okButton
+            .tapPublisher
+            .receive(on: DispatchQueue.main)
+            .sink { [weak self] in
+                guard let self = self else { return }
+                self.okButtonAction()
+            }
+            .store(in: &subscriptions)
+        navigationItem.rightBarButtonItems = [
+            okButton,
+        ]
     }
 
     func layout() {
         contentView.pin.all(view.pin.safeArea)
     }
+}
+
+private extension FilterViewController {
+    func okButtonAction() {}
 }
 
 extension FilterViewController: Routable {

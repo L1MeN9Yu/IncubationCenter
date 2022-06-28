@@ -13,3 +13,4 @@
 // FilterViewController
 
 "FilterViewController.Title" = "Filter";
+"FilterViewController.OKButton.Title" = "OK";

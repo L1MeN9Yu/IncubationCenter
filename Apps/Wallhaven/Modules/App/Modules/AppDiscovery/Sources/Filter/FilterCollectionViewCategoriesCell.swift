@@ -7,7 +7,7 @@ import UICore
 import UIKit
 
 class FilterCollectionViewCategoriesCell: CollectionViewCell {
-    private lazy var segmentControl = MultiSelectSegmentedControl()
+    private lazy var segmentControl: MultiSelectSegmentedControl = .init()
         .x
         .tintColor(.systemBlack)
         .instance
