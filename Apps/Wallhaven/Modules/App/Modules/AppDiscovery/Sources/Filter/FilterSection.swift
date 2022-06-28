@@ -21,11 +21,11 @@ extension FilterSection {
         case .categories:
             return Categories.title
         case .purity:
-            return "purity"
+            return Purity.title
         case .sorting:
-            return "sorting"
+            return Sorting.title
         case .order:
-            return "order"
+            return Order.title
         }
     }
 }

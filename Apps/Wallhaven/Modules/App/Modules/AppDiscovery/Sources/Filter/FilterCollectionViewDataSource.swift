@@ -20,11 +20,17 @@ extension FilterCollectionViewDataSource {
             cell.map { $0.config(viewModel: viewModel) }
             return cell
         case .purity:
-            return nil
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: FilterCollectionViewPurityCell.cellID, for: indexPath) as? FilterCollectionViewPurityCell
+            cell.map { $0.config(viewModel: viewModel) }
+            return cell
         case .sorting:
-            return nil
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: FilterCollectionViewSortingCell.cellID, for: indexPath) as? FilterCollectionViewSortingCell
+            cell.map { $0.config(viewModel: viewModel) }
+            return cell
         case .order:
-            return nil
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: FilterCollectionViewOrderCell.cellID, for: indexPath) as? FilterCollectionViewOrderCell
+            cell.map { $0.config(viewModel: viewModel) }
+            return cell
         }
     }
 

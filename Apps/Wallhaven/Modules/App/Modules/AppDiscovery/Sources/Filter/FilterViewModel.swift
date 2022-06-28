@@ -10,5 +10,14 @@ class FilterViewModel: ViewModel {
         .categories: [
             FilterItemViewModel(section: .categories),
         ],
+        .purity: [
+            FilterItemViewModel(section: .purity),
+        ],
+        .sorting: [
+            FilterItemViewModel(section: .sorting),
+        ],
+        .order: [
+            FilterItemViewModel(section: .order),
+        ],
     ]
 }
