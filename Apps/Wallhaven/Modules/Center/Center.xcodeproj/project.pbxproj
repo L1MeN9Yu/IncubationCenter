@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		1E7F759F28373B7E0035A8E2 /* Service.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E7F759E28373B7E0035A8E2 /* Service.framework */; };
 		1E7F76542838D05D0035A8E2 /* libCenterAPI.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E7F76502838D0340035A8E2 /* libCenterAPI.a */; };
+		1EF1F3F9286A9E48000460E6 /* APICenterModule.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1EF1F3FB286A9E48000460E6 /* APICenterModule.strings */; };
 		EB31A29FD83CE63F9DEFBA76 /* Exported.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB31A39EEF2E4941A946D0F4 /* Exported.swift */; };
 		EB31A58D2C6B518D045DB363 /* CenterModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB31AA23E1DD77A2EAA89297 /* CenterModule.swift */; };
 		EB31A8E1826C3F8CB2B16C1D /* ClientHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB31A1303E828354EF4EA6A2 /* ClientHandler.swift */; };
@@ -30,6 +31,8 @@
 		1E7F764B2838D0340035A8E2 /* CenterAPI.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = CenterAPI.xcodeproj; path = CenterAPI/CenterAPI.xcodeproj; sourceTree = "<group>"; };
 		1EBAFF02285B312100CFF89B /* Center.Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Center.Debug.xcconfig; sourceTree = "<group>"; };
 		1EBAFF03285B312D00CFF89B /* Center.Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Center.Release.xcconfig; sourceTree = "<group>"; };
+		1EF1F3FA286A9E48000460E6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/APICenterModule.strings; sourceTree = "<group>"; };
+		1EF1F3FC286A9E65000460E6 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/APICenterModule.strings"; sourceTree = "<group>"; };
 		EB31A1303E828354EF4EA6A2 /* ClientHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClientHandler.swift; sourceTree = "<group>"; };
 		EB31A39EEF2E4941A946D0F4 /* Exported.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Exported.swift; sourceTree = "<group>"; };
 		EB31A74475C6EF4572AB671B /* Center.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Center.xcconfig; sourceTree = "<group>"; };
@@ -55,6 +58,7 @@
 				1E7F755D283636390035A8E2 /* Sources */,
 				1E7F76372838CFE60035A8E2 /* Modules */,
 				1EDF08B1283B273E00025E14 /* XCConfig */,
+				EB31A6E1D552688A6CB7C7D8 /* Resources */,
 				1E7F759D28373B7E0035A8E2 /* Frameworks */,
 				1E7F7547283635880035A8E2 /* Products */,
 			);
@@ -112,6 +116,22 @@
 			path = XCConfig;
 			sourceTree = "<group>";
 		};
+		1EF1F3F6286A9E2B000460E6 /* LocalizableStrings */ = {
+			isa = PBXGroup;
+			children = (
+				1EF1F3FB286A9E48000460E6 /* APICenterModule.strings */,
+			);
+			path = LocalizableStrings;
+			sourceTree = "<group>";
+		};
+		EB31A6E1D552688A6CB7C7D8 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				1EF1F3F6286A9E2B000460E6 /* LocalizableStrings */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -164,6 +184,7 @@
 			knownRegions = (
 				en,
 				Base,
+				"zh-Hans",
 			);
 			mainGroup = 1E7F753C283635880035A8E2;
 			productRefGroup = 1E7F7547283635880035A8E2 /* Products */;
@@ -196,6 +217,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1EF1F3F9286A9E48000460E6 /* APICenterModule.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -214,16 +236,30 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXVariantGroup section */
+		1EF1F3FB286A9E48000460E6 /* APICenterModule.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1EF1F3FA286A9E48000460E6 /* en */,
+				1EF1F3FC286A9E65000460E6 /* zh-Hans */,
+			);
+			name = APICenterModule.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
 /* Begin XCBuildConfiguration section */
 		1E7F754D283635880035A8E2 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 			};
 			name = Debug;
 		};
 		1E7F754E283635880035A8E2 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 			};
 			name = Release;
 		};

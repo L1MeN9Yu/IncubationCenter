@@ -14,13 +14,17 @@
 		EB31A2602E3215F10C638DFB /* APICenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB31A82AA4508911EAE23FFB /* APICenter.swift */; };
 		EB31A264165DD94FFBD8E837 /* Wallpaper.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB31A888DD1F249CF8F7DC3C /* Wallpaper.swift */; };
 		EB31A2C66D5EA67FA1863804 /* SettingsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB31AAF2AE8BFCEBA5CA8FAA /* SettingsResponse.swift */; };
+		EB31A2D60372386C2CE96854 /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB31AE0A546FD98A9E51AF41 /* Order.swift */; };
 		EB31A2DEA0A1DA5946D30CF3 /* Uploader.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB31AB29CDE66FB82C8AD8F4 /* Uploader.swift */; };
+		EB31A35558498B9186D6C3A2 /* Sorting.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB31AEA835B1A9CF8E038FF8 /* Sorting.swift */; };
 		EB31A35D1BFAE516044ED643 /* ListRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB31AF579CA69FC8E43A68D0 /* ListRequest.swift */; };
 		EB31A3CACF3E85E02B684A4A /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB31A46666701A71FE600C48 /* Settings.swift */; };
 		EB31A46CD25E3448C219CFF9 /* BaseRequestable.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB31AC19DA9BE6F2F05C4560 /* BaseRequestable.swift */; };
 		EB31A4AC042A521C2332A6F9 /* ListResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB31A308F97D4AFED2BF6BAE /* ListResponse.swift */; };
 		EB31A75AB3960C16EEADDFF6 /* DetailRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB31A36A0CE94B0ECEE6C3D1 /* DetailRequest.swift */; };
+		EB31A78A2275C0A256AB0524 /* Purity.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB31AF3DA3B0C763D601E612 /* Purity.swift */; };
 		EB31A9DA825316712FADB024 /* APICenter.APIKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB31A3D70C70EFA2D2AA819C /* APICenter.APIKey.swift */; };
+		EB31AA2BBA30C2FB98C2D1F9 /* Categories.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB31A3B4555855D3C553823F /* Categories.swift */; };
 		EB31AA45DFD56841BCE87BA9 /* HTTPError.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB31ADFCBDB29B187AE0ABC4 /* HTTPError.swift */; };
 		EB31AA6EBA53FFEFEAF31AAB /* APICenter.API.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB31A0D60AE4827247A3D0C9 /* APICenter.API.swift */; };
 		EB31AB15CFA081A49F55D8E5 /* Tag.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB31A4D759933DA74F82ED39 /* Tag.swift */; };
@@ -52,6 +56,7 @@
 		EB31A2888C342D1F6099FA39 /* APICenterModule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APICenterModule.swift; sourceTree = "<group>"; };
 		EB31A308F97D4AFED2BF6BAE /* ListResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListResponse.swift; sourceTree = "<group>"; };
 		EB31A36A0CE94B0ECEE6C3D1 /* DetailRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailRequest.swift; sourceTree = "<group>"; };
+		EB31A3B4555855D3C553823F /* Categories.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Categories.swift; sourceTree = "<group>"; };
 		EB31A3D70C70EFA2D2AA819C /* APICenter.APIKey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APICenter.APIKey.swift; sourceTree = "<group>"; };
 		EB31A3ED3F251737EA984B54 /* DetailResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailResponse.swift; sourceTree = "<group>"; };
 		EB31A3FE69CAB52276053978 /* SettingsRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsRequest.swift; sourceTree = "<group>"; };
@@ -65,6 +70,9 @@
 		EB31AB29CDE66FB82C8AD8F4 /* Uploader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Uploader.swift; sourceTree = "<group>"; };
 		EB31AC19DA9BE6F2F05C4560 /* BaseRequestable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseRequestable.swift; sourceTree = "<group>"; };
 		EB31ADFCBDB29B187AE0ABC4 /* HTTPError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPError.swift; sourceTree = "<group>"; };
+		EB31AE0A546FD98A9E51AF41 /* Order.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
+		EB31AEA835B1A9CF8E038FF8 /* Sorting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sorting.swift; sourceTree = "<group>"; };
+		EB31AF3DA3B0C763D601E612 /* Purity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Purity.swift; sourceTree = "<group>"; };
 		EB31AF579CA69FC8E43A68D0 /* ListRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListRequest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -116,6 +124,7 @@
 				EB31AB9B920EB960775FBDC2 /* Requests */,
 				EB31A208DD0D659D4282585F /* Models */,
 				EB31A3E23B032D70CE520042 /* Error */,
+				EB31A37BF2565FCE49B1B2EE /* TypeDefine */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -153,6 +162,17 @@
 				EB31A46666701A71FE600C48 /* Settings.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		EB31A37BF2565FCE49B1B2EE /* TypeDefine */ = {
+			isa = PBXGroup;
+			children = (
+				EB31A3B4555855D3C553823F /* Categories.swift */,
+				EB31AF3DA3B0C763D601E612 /* Purity.swift */,
+				EB31AEA835B1A9CF8E038FF8 /* Sorting.swift */,
+				EB31AE0A546FD98A9E51AF41 /* Order.swift */,
+			);
+			path = TypeDefine;
 			sourceTree = "<group>";
 		};
 		EB31A3E23B032D70CE520042 /* Error */ = {
@@ -251,6 +271,10 @@
 				EB31AA6EBA53FFEFEAF31AAB /* APICenter.API.swift in Sources */,
 				EB31A9DA825316712FADB024 /* APICenter.APIKey.swift in Sources */,
 				EB31AE1992B0948FDECF4C9A /* APICenterModule.swift in Sources */,
+				EB31AA2BBA30C2FB98C2D1F9 /* Categories.swift in Sources */,
+				EB31A78A2275C0A256AB0524 /* Purity.swift in Sources */,
+				EB31A35558498B9186D6C3A2 /* Sorting.swift in Sources */,
+				EB31A2D60372386C2CE96854 /* Order.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

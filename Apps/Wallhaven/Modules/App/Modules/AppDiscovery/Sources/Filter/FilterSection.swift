@@ -2,6 +2,8 @@
 // Created by Mengyu Li on 2022/6/27.
 //
 
+import CenterAPI
+
 enum FilterSection {
     case categories
     case purity
@@ -17,7 +19,7 @@ extension FilterSection {
     var localizedTitle: String {
         switch self {
         case .categories:
-            return "categories"
+            return Categories.title
         case .purity:
             return "purity"
         case .sorting:

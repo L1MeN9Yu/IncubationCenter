@@ -10,4 +10,6 @@ class APICenterModule: Modular {
     static let logger = Loggers[typeName]
 }
 
-let logger = APICenterModule.logger
+typealias Module = APICenterModule
+
+let logger = Module.logger
