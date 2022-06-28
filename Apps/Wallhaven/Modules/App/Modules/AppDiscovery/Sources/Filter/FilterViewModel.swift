@@ -3,20 +3,21 @@
 //
 
 import Foundation
+import OrderedCollections
 import UICore
 
 class FilterViewModel: ViewModel {
-    private(set) lazy var items: [FilterSection: [FilterItemViewModel]] = [
-        .categories: [
+    private(set) lazy var items: OrderedDictionary<FilterSection, [FilterItemViewModel]> = [
+        FilterSection.categories: [
             FilterItemViewModel(section: .categories),
         ],
-        .purity: [
+        FilterSection.purity: [
             FilterItemViewModel(section: .purity),
         ],
-        .sorting: [
+        FilterSection.sorting: [
             FilterItemViewModel(section: .sorting),
         ],
-        .order: [
+        FilterSection.order: [
             FilterItemViewModel(section: .order),
         ],
     ]

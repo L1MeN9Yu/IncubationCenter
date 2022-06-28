@@ -10,6 +10,10 @@ public enum Categories {
 
 extension Categories: CaseIterable {}
 
+extension Categories: Comparable {}
+
+extension Categories: Codable {}
+
 public extension Categories {
     static let title: String = Module.localizedString(key: "Categories.Title")
 

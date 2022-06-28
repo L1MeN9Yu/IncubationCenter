@@ -13,6 +13,8 @@ public enum Sorting {
 
 extension Sorting: CaseIterable {}
 
+extension Sorting: Codable {}
+
 public extension Sorting {
     static let title: String = Module.localizedString(key: "Sorting.Title")
     var title: String {
@@ -35,4 +37,17 @@ public extension Sorting {
 
 public extension Sorting {
     static let isMulti: Bool = false
+}
+
+extension Sorting {
+    var queryValue: String {
+        switch self {
+        case .dateAdded: return "date_added"
+        case .relevance: return "relevance"
+        case .random: return "random"
+        case .views: return "views"
+        case .favorites: return "favorites"
+        case .topList: return "toplist"
+        }
+    }
 }

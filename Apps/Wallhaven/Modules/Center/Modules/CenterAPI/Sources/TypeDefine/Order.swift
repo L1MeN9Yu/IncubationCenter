@@ -3,20 +3,22 @@
 //
 
 public enum Order {
-    case desc
-    case asc
+    case descending
+    case ascending
 }
 
 extension Order: CaseIterable {}
+
+extension Order: Codable {}
 
 public extension Order {
     static let title: String = Module.localizedString(key: "Order.Title")
 
     var title: String {
         switch self {
-        case .desc:
+        case .descending:
             return Module.localizedString(key: "Order.Desc.Title")
-        case .asc:
+        case .ascending:
             return Module.localizedString(key: "Order.Asc.Title")
         }
     }
@@ -24,4 +26,13 @@ public extension Order {
 
 public extension Order {
     static let isMulti: Bool = false
+}
+
+extension Order {
+    var queryValue: String {
+        switch self {
+        case .descending: return "desc"
+        case .ascending: return "asc"
+        }
+    }
 }

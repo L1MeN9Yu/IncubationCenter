@@ -10,6 +10,10 @@ public enum Purity {
 
 extension Purity: CaseIterable {}
 
+extension Purity: Comparable {}
+
+extension Purity: Codable {}
+
 public extension Purity {
     static let title: String = Module.localizedString(key: "Purity.Title")
     var title: String {

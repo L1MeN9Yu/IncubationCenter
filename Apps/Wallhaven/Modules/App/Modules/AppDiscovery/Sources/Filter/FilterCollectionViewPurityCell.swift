@@ -40,6 +40,10 @@ private extension FilterCollectionViewPurityCell {
 
 extension FilterCollectionViewPurityCell {
     func config(viewModel: FilterItemViewModel) {
-        segmentControl.x.items(viewModel.items).done
+        segmentControl
+            .x
+            .items(viewModel.items)
+            .allowsMultipleSelection(viewModel.isMultiSelect)
+            .done
     }
 }

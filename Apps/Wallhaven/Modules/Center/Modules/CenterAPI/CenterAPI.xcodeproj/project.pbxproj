@@ -19,8 +19,10 @@
 		EB31A35558498B9186D6C3A2 /* Sorting.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB31AEA835B1A9CF8E038FF8 /* Sorting.swift */; };
 		EB31A35D1BFAE516044ED643 /* ListRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB31AF579CA69FC8E43A68D0 /* ListRequest.swift */; };
 		EB31A3CACF3E85E02B684A4A /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB31A46666701A71FE600C48 /* Settings.swift */; };
+		EB31A439523B8A988946DB9C /* Filter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB31AEAD35D93664C1A87066 /* Filter.swift */; };
 		EB31A46CD25E3448C219CFF9 /* BaseRequestable.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB31AC19DA9BE6F2F05C4560 /* BaseRequestable.swift */; };
 		EB31A4AC042A521C2332A6F9 /* ListResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB31A308F97D4AFED2BF6BAE /* ListResponse.swift */; };
+		EB31A74811D3FF435E608F1A /* APICenter.Filter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB31ABC517F01C4CEC1D6750 /* APICenter.Filter.swift */; };
 		EB31A75AB3960C16EEADDFF6 /* DetailRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB31A36A0CE94B0ECEE6C3D1 /* DetailRequest.swift */; };
 		EB31A78A2275C0A256AB0524 /* Purity.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB31AF3DA3B0C763D601E612 /* Purity.swift */; };
 		EB31A9DA825316712FADB024 /* APICenter.APIKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB31A3D70C70EFA2D2AA819C /* APICenter.APIKey.swift */; };
@@ -68,10 +70,12 @@
 		EB31AA517367479CDF792CA9 /* Meta.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Meta.swift; sourceTree = "<group>"; };
 		EB31AAF2AE8BFCEBA5CA8FAA /* SettingsResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsResponse.swift; sourceTree = "<group>"; };
 		EB31AB29CDE66FB82C8AD8F4 /* Uploader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Uploader.swift; sourceTree = "<group>"; };
+		EB31ABC517F01C4CEC1D6750 /* APICenter.Filter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APICenter.Filter.swift; sourceTree = "<group>"; };
 		EB31AC19DA9BE6F2F05C4560 /* BaseRequestable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseRequestable.swift; sourceTree = "<group>"; };
 		EB31ADFCBDB29B187AE0ABC4 /* HTTPError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPError.swift; sourceTree = "<group>"; };
 		EB31AE0A546FD98A9E51AF41 /* Order.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
 		EB31AEA835B1A9CF8E038FF8 /* Sorting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sorting.swift; sourceTree = "<group>"; };
+		EB31AEAD35D93664C1A87066 /* Filter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Filter.swift; sourceTree = "<group>"; };
 		EB31AF3DA3B0C763D601E612 /* Purity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Purity.swift; sourceTree = "<group>"; };
 		EB31AF579CA69FC8E43A68D0 /* ListRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListRequest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -143,6 +147,7 @@
 				EB31A82AA4508911EAE23FFB /* APICenter.swift */,
 				EB31A0D60AE4827247A3D0C9 /* APICenter.API.swift */,
 				EB31A3D70C70EFA2D2AA819C /* APICenter.APIKey.swift */,
+				EB31ABC517F01C4CEC1D6750 /* APICenter.Filter.swift */,
 			);
 			path = APICenter;
 			sourceTree = "<group>";
@@ -171,6 +176,7 @@
 				EB31AF3DA3B0C763D601E612 /* Purity.swift */,
 				EB31AEA835B1A9CF8E038FF8 /* Sorting.swift */,
 				EB31AE0A546FD98A9E51AF41 /* Order.swift */,
+				EB31AEAD35D93664C1A87066 /* Filter.swift */,
 			);
 			path = TypeDefine;
 			sourceTree = "<group>";
@@ -275,6 +281,8 @@
 				EB31A78A2275C0A256AB0524 /* Purity.swift in Sources */,
 				EB31A35558498B9186D6C3A2 /* Sorting.swift in Sources */,
 				EB31A2D60372386C2CE96854 /* Order.swift in Sources */,
+				EB31A74811D3FF435E608F1A /* APICenter.Filter.swift in Sources */,
+				EB31A439523B8A988946DB9C /* Filter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
