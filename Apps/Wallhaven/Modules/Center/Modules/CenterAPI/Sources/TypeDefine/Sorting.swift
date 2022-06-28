@@ -11,6 +11,8 @@ public enum Sorting {
     case topList
 }
 
+extension Sorting: CaseIterable {}
+
 public extension Sorting {
     static let title: String = Module.localizedString(key: "Sorting.Title")
     var title: String {
@@ -29,4 +31,8 @@ public extension Sorting {
             return Module.localizedString(key: "Sorting.TopList.Title")
         }
     }
+}
+
+public extension Sorting {
+    static let isMulti: Bool = false
 }

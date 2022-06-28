@@ -7,6 +7,8 @@ public enum Order {
     case asc
 }
 
+extension Order: CaseIterable {}
+
 public extension Order {
     static let title: String = Module.localizedString(key: "Order.Title")
 
@@ -18,4 +20,8 @@ public extension Order {
             return Module.localizedString(key: "Order.Asc.Title")
         }
     }
+}
+
+public extension Order {
+    static let isMulti: Bool = false
 }

@@ -7,16 +7,10 @@ import UICore
 import UIKit
 
 class FilterCollectionViewPurityCell: CollectionViewCell {
-    private lazy var segmentControl = MultiSelectSegmentedControl(
-        items: [
-            "general",
-            "anime",
-            "people",
-        ]
-    )
-    .x
-    .tintColor(.systemBlack)
-    .instance
+    private lazy var segmentControl = MultiSelectSegmentedControl()
+        .x
+        .tintColor(.systemBlack)
+        .instance
 
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -45,5 +39,7 @@ private extension FilterCollectionViewPurityCell {
 }
 
 extension FilterCollectionViewPurityCell {
-    func config(viewModel: FilterItemViewModel) {}
+    func config(viewModel: FilterItemViewModel) {
+        segmentControl.x.items(viewModel.items).done
+    }
 }

@@ -8,6 +8,8 @@ public enum Categories {
     case people
 }
 
+extension Categories: CaseIterable {}
+
 public extension Categories {
     static let title: String = Module.localizedString(key: "Categories.Title")
 
@@ -21,4 +23,8 @@ public extension Categories {
             return Module.localizedString(key: "Categories.People.Title")
         }
     }
+}
+
+public extension Categories {
+    static let isMulti: Bool = true
 }

@@ -8,6 +8,8 @@ public enum Purity {
     case nsfw
 }
 
+extension Purity: CaseIterable {}
+
 public extension Purity {
     static let title: String = Module.localizedString(key: "Purity.Title")
     var title: String {
@@ -20,4 +22,8 @@ public extension Purity {
             return Module.localizedString(key: "Purity.NSFW.Title")
         }
     }
+}
+
+public extension Purity {
+    static let isMulti: Bool = true
 }
