@@ -12,3 +12,18 @@ enum FilterSection {
 extension FilterSection: CaseIterable {}
 
 extension FilterSection: Hashable {}
+
+extension FilterSection {
+    var localizedTitle: String {
+        switch self {
+        case .categories:
+            return "categories"
+        case .purity:
+            return "purity"
+        case .sorting:
+            return "sorting"
+        case .order:
+            return "order"
+        }
+    }
+}

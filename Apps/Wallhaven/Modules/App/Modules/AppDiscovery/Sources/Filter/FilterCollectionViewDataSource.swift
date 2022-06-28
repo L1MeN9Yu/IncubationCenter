@@ -30,6 +30,11 @@ extension FilterCollectionViewDataSource {
 
     static func supplementaryViewProvider(collectionView: UICollectionView, elementKind: String, indexPath: IndexPath) -> UICollectionReusableView? {
         switch elementKind {
+        case UICollectionView.elementKindSectionHeader:
+            let supplementaryView = collectionView.dequeueReusableSupplementaryView(ofKind: elementKind, withReuseIdentifier: FilterCollectionViewHeader.cellID, for: indexPath)
+                as? FilterCollectionViewHeader
+            supplementaryView.map { $0.config(section: FilterSection.allCases[indexPath.section]) }
+            return supplementaryView
         case UICollectionView.elementKindSectionFooter:
             let supplementaryView = collectionView.dequeueReusableSupplementaryView(ofKind: elementKind, withReuseIdentifier: FilterCollectionViewFooter.cellID, for: indexPath)
                 as? FilterCollectionViewFooter

@@ -15,6 +15,8 @@ class ListRequest: BaseRequestable {
 
         queryItems = [
             URLQueryItem(name: "page", value: "\(page)"),
+            URLQueryItem(name: "categories", value: "111"),
+            URLQueryItem(name: "purity", value: "111"),
         ]
     }
 }

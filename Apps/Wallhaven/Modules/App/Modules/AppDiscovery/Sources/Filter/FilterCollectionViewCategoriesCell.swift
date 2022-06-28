@@ -7,6 +7,11 @@ import UICore
 import UIKit
 
 class FilterCollectionViewCategoriesCell: CollectionViewCell {
+    private lazy var segmentControl = MultiSelectSegmentedControl(items: ["general", "anime", "people"])
+        .x
+        .tintColor(.systemBlack)
+        .instance
+
     override init(frame: CGRect) {
         super.init(frame: frame)
         setup()
@@ -24,9 +29,13 @@ extension FilterCollectionViewCategoriesCell {
 }
 
 private extension FilterCollectionViewCategoriesCell {
-    func setup() {}
+    func setup() {
+        segmentControl.x.add(to: contentView)
+    }
 
-    func layout() {}
+    func layout() {
+        segmentControl.pin.all(16)
+    }
 }
 
 extension FilterCollectionViewCategoriesCell {

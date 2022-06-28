@@ -1,12 +1,12 @@
 //
-// Created by Mengyu Li on 2022/6/9.
+// Created by Mengyu Li on 2022/6/27.
 //
 
 import Foundation
 import UICore
 import UIKit
 
-class MeCollectionHeaderView: CollectionReusableView {
+class FilterCollectionViewHeader: CollectionReusableView {
     private lazy var titleLabel: UILabel = .init(frame: .zero)
         .x
         .font(.preferredFont(forTextStyle: .caption1))
@@ -22,26 +22,26 @@ class MeCollectionHeaderView: CollectionReusableView {
     required init?(coder: NSCoder) { fatalError("init(coder:) has not been implemented") }
 }
 
-extension MeCollectionHeaderView {
+extension FilterCollectionViewHeader {
     override func layoutSubviews() {
         super.layoutSubviews()
         layout()
     }
 }
 
-private extension MeCollectionHeaderView {
+private extension FilterCollectionViewHeader {
     func setup() {
-        backgroundColor = .systemGray6
+        backgroundColor = .clear
         titleLabel.x.add(to: self)
     }
 
     func layout() {
-        titleLabel.pin.all(8)
+        titleLabel.pin.all(10)
     }
 }
 
-extension MeCollectionHeaderView {
-    func config(section: MeSection) {
-        titleLabel.text = section.localizedTitle
+extension FilterCollectionViewHeader {
+    func config(section: FilterSection) {
+        titleLabel.x.text(section.localizedTitle).done
     }
 }

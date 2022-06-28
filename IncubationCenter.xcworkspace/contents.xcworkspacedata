@@ -27,19 +27,16 @@
             location = "group:Packages/UICore/Chain">
          </FileRef>
          <FileRef
+            location = "group:Packages/UICore/UIRoute">
+         </FileRef>
+         <FileRef
             location = "group:Packages/UICore/UICombine">
          </FileRef>
          <FileRef
             location = "group:Packages/UICore/UILayout">
          </FileRef>
          <FileRef
-            location = "group:Packages/UICore/UIResource">
-         </FileRef>
-         <FileRef
             location = "group:Packages/UICore/UIRefresh">
-         </FileRef>
-         <FileRef
-            location = "group:Packages/UICore/UIRoute">
          </FileRef>
          <FileRef
             location = "group:Packages/UICore/UIFeedback">
@@ -49,6 +46,12 @@
          </FileRef>
          <FileRef
             location = "group:Packages/UICore/UIToast">
+         </FileRef>
+         <FileRef
+            location = "group:Packages/UICore/UISegment">
+         </FileRef>
+         <FileRef
+            location = "group:Packages/UICore/UIExtensionsKit">
          </FileRef>
          <FileRef
             location = "group:Packages/UICore/UIHierarchy">

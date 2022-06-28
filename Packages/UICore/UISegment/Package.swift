@@ -4,14 +4,14 @@
 import PackageDescription
 
 let package = Package(
-    name: "UIResource",
+    name: "UISegment",
     products: [
-        .library(name: "UIResource", targets: ["UIResource"]),
+        .library(name: "UISegment", targets: ["UISegment"]),
     ],
     targets: [
-        .target(name: "UIResource"),
-        .testTarget(name: "UIResourceTests", dependencies: [
-            .target(name: "UIResource"),
+        .target(name: "UISegment"),
+        .testTarget(name: "UISegmentTests", dependencies: [
+            .target(name: "UISegment"),
         ]),
     ]
 )

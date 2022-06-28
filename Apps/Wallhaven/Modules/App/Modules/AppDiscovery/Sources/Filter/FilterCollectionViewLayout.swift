@@ -16,10 +16,14 @@ class FilterCollectionViewLayout: UICollectionViewCompositionalLayout {
         )
         let section = NSCollectionLayoutSection(group: group)
 
+        let headerSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .absolute(35.0))
+        let header = NSCollectionLayoutBoundarySupplementaryItem(layoutSize: headerSize, elementKind: UICollectionView.elementKindSectionHeader, alignment: .top)
+
         let footerSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .absolute(1.0))
         let footer = NSCollectionLayoutBoundarySupplementaryItem(layoutSize: footerSize, elementKind: UICollectionView.elementKindSectionFooter, alignment: .bottom)
 
         section.boundarySupplementaryItems = [
+            header,
             footer,
         ]
         self.init(section: section)

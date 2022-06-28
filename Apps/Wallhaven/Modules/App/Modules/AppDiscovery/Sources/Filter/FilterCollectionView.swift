@@ -12,6 +12,7 @@ class FilterCollectionView: CollectionView {
         x
             .backgroundColor(.clear)
             .register(FilterCollectionViewCategoriesCell.self, forCellWithReuseIdentifier: FilterCollectionViewCategoriesCell.cellID)
+            .register(FilterCollectionViewHeader.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: FilterCollectionViewHeader.cellID)
             .register(FilterCollectionViewFooter.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionFooter, withReuseIdentifier: FilterCollectionViewFooter.cellID)
             .done
     }
