@@ -309,8 +309,10 @@ import UIKit
         constrain(stackView, at: .right, to: borderView, diff: -1)
         clipsToBounds = true
         stackView.distribution = .fillEqually
-        borderWidth = borderWidth
-        borderRadius = borderRadius
+        let setBorderWidth = borderWidth
+        borderWidth = setBorderWidth
+        let setBorderRadius = borderRadius
+        borderRadius = setBorderRadius
         tintColorDidChange()
         borderView.isUserInteractionEnabled = false
         addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(didTap)))
