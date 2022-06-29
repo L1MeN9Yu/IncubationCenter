@@ -4,12 +4,9 @@
 
 import UIKit
 
-@objc public protocol MultiSelectSegmentedControlDelegate {
-    func multiSelect(_ multiSelectSegmentedControl: MultiSelectSegmentedControl, didChange value: Bool, at index: Int)
-}
-
-@IBDesignable open class MultiSelectSegmentedControl: UIControl {
-    @objc public weak var delegate: MultiSelectSegmentedControlDelegate?
+@IBDesignable
+open class MultiSelectSegmentedControl: UIControl {
+    public weak var delegate: MultiSelectSegmentedControlDelegate?
 
     // MARK: - UISegmentedControl Enhancements
 
@@ -256,8 +253,6 @@ import UIKit
         return segments[index].isEnabled
     }
 
-    // MARK: - Overrides
-
     override public init(frame: CGRect) {
         super.init(frame: frame)
         setup()
@@ -268,6 +263,18 @@ import UIKit
         setup()
     }
 
+    public var segments: [MultiSelectSegment] {
+        stackView.arrangedSubviews.compactMap { $0 as? MultiSelectSegment }
+    }
+
+    let stackView = UIStackView()
+    let borderView = UIView()
+    var dividers: [UIView] = []
+}
+
+// MARK: - Override
+
+extension MultiSelectSegmentedControl {
     override open var backgroundColor: UIColor? {
         didSet {
             segments.forEach { $0.updateColors() }
@@ -291,16 +298,12 @@ import UIKit
         let stackViewSize = stackView.systemLayoutSizeFitting(UIView.layoutFittingCompressedSize)
         return CGRect(origin: .zero, size: stackViewSize).insetBy(dx: -borderWidth, dy: -borderWidth).size
     }
+}
 
-    // MARK: - Internals
+// MARK: - Private
 
-    public var segments: [MultiSelectSegment] {
-        stackView.arrangedSubviews.compactMap { $0 as? MultiSelectSegment }
-    }
-
-    let stackView = UIStackView()
-    let borderView = UIView()
-    var dividers: [UIView] = []
+private extension MultiSelectSegmentedControl {
+    // MARK: Setup
 
     private func setup() {
         addConstrainedSubview(borderView, constrain: .top, .bottom, .left, .right)
@@ -319,24 +322,7 @@ import UIKit
         accessibilityIdentifier = "MultiSelectSegmentedControl"
     }
 
-    @objc open func didTap(gesture: UITapGestureRecognizer) {
-        let location = gesture.location(in: self)
-        guard let segment = hitTest(location, with: nil) as? MultiSelectSegment else { return }
-        guard let index = segments.firstIndex(of: segment) else { return }
-        perform(animated: true) {
-            if self.allowsMultipleSelection {
-                segment.isSelected.toggle()
-                self.showDividersBetweenSelectedSegments()
-            } else {
-                if segment.isSelected { return }
-                self.selectedSegmentIndex = index
-            }
-            self.sendActions(for: [.valueChanged, .primaryActionTriggered])
-            self.delegate?.multiSelect(self, didChange: segment.isSelected, at: index)
-        }
-    }
-
-    // MARK: - Dividers
+    // MARK: Dividers
 
     private func showDividersBetweenSelectedSegments() {
         for i in 0..<dividers.count {
@@ -388,6 +374,26 @@ import UIKit
         } else {
             constrain(divider, at: .top, diff: borderWidth)
             constrain(divider, at: .bottom, diff: -borderWidth)
+        }
+    }
+
+    // MARK: Tap Gesture
+
+    @objc
+    func didTap(gesture: UITapGestureRecognizer) {
+        let location = gesture.location(in: self)
+        guard let segment = hitTest(location, with: nil) as? MultiSelectSegment else { return }
+        guard let index = segments.firstIndex(of: segment) else { return }
+        perform(animated: true) {
+            if self.allowsMultipleSelection {
+                segment.isSelected.toggle()
+                self.showDividersBetweenSelectedSegments()
+            } else {
+                if segment.isSelected { return }
+                self.selectedSegmentIndex = index
+            }
+            self.sendActions(for: [.valueChanged, .primaryActionTriggered])
+            self.delegate?.multiSelect(self, didChange: segment.isSelected, at: index)
         }
     }
 }
