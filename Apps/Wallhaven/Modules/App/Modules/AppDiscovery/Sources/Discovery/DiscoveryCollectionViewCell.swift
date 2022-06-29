@@ -39,7 +39,7 @@ extension DiscoveryCollectionViewCell {
 }
 
 extension DiscoveryCollectionViewCell {
-    func config(viewModel: WallpaperListViewModel) {
+    func config(viewModel: DiscoveryItemViewModel) {
         imageView.kf.setImage(with: viewModel.imageURL)
         switch viewModel.purity {
         case "nsfw": blurEffectView.x.isHidden(false).done

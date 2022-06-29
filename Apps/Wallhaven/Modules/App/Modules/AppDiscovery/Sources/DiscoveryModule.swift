@@ -11,4 +11,6 @@ extension DiscoveryModule {
     static let logger = Loggers[typeName]
 }
 
-let logger = DiscoveryModule.logger
+typealias Module = DiscoveryModule
+
+let logger = Module.logger

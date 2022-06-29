@@ -2,8 +2,10 @@
 // Created by Mengyu Li on 2022/5/20.
 //
 
+import CenterAPI
 import Foundation
 import UICore
+import WeakDelegate
 
 class DiscoveryViewController: ViewController {
     private lazy var subscriptions = Set<AnyCancellable>()
@@ -29,6 +31,7 @@ private extension DiscoveryViewController {
         setupNavigationBar()
         contentView.x.add(to: view)
         bind()
+        contentView.beginHeaderRefresh()
     }
 
     func setupNavigationBar() {
@@ -69,6 +72,10 @@ private extension DiscoveryViewController {
                 self.contentView.reloadData(viewModel: self.viewModel)
             }
         }
+        APICenter.filterUpdateDelegator.delegate(on: self) {
+            $1
+            $0.contentView.beginHeaderRefresh()
+        }
     }
 
     func loadData(isRefresh: Bool) async {
@@ -83,5 +90,7 @@ private extension DiscoveryViewController {
 }
 
 private extension DiscoveryViewController {
-    func filterBarButtonItemAction() {}
+    func filterBarButtonItemAction() {
+        Router.push(to: "FilterViewController")
+    }
 }

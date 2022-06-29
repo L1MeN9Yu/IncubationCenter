@@ -13,11 +13,11 @@ extension APICenter: TypeNameable {}
 public extension APICenter {
     static func bootstrap() {
         bootstrapAPIKey()
+        bootstrapFilter()
     }
 }
 
 extension APICenter {
-    static let logger = Loggers[typeName]
     static let container: Container = {
         do {
             let containerDirectoryURL = try FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: true).appendingPathComponent("KeyValueStores")

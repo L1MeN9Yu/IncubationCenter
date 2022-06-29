@@ -6,4 +6,11 @@
 
 */
 
+// DiscoveryViewController
+
 "DiscoveryViewController.Title" = "探索";
+
+// FilterViewController
+
+"FilterViewController.Title" = "筛选";
+"FilterViewController.OKButton.Title" = "确认";

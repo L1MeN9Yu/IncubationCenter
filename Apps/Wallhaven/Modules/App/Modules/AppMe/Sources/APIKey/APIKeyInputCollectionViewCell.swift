@@ -6,7 +6,6 @@ import Foundation
 import UICombine
 import UICore
 import UIKit
-import UIResource
 import WeakDelegate
 
 class APIKeyInputCollectionViewCell: CollectionViewCell {

@@ -18,7 +18,7 @@ class WallpaperViewModel: ViewModel {
 
 extension WallpaperViewModel {
     func update(model: WallpaperDetail) {
-        let imageURL = URL(string: model.path)
+        let imageURL = URL(string: model.thumbnail.large)
         self.imageURL = imageURL
     }
 }

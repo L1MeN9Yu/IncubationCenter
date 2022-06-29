@@ -1,0 +1,27 @@
+// APICenter
+
+/// Categories
+"Categories.Title" = "类别";
+"Categories.General.Title" = "一般";
+"Categories.Anime.Title" = "动画";
+"Categories.People.Title" = "真人";
+
+/// Purity
+"Purity.Title" = "纯度";
+"Purity.SFW.Title" = "工作安全";
+"Purity.Sketchy.Title" = "粗略";
+"Purity.NSFW.Title" = "工作危险";
+
+/// Sorting
+"Sorting.Title" = "种类";
+"Sorting.DateAdded.Title" = "最新";
+"Sorting.Relevance.Title" = "关联";
+"Sorting.Random.Title" = "随机";
+"Sorting.Views.Title" = "查看次数";
+"Sorting.Favorites.Title" = "喜爱次数";
+"Sorting.TopList.Title" = "排名";
+
+/// Order
+"Order.Title" = "排序";
+"Order.Desc.Title" = "降序";
+"Order.Asc.Title" = "升序";

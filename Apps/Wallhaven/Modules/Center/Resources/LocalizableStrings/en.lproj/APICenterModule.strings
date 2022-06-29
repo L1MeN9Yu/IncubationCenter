@@ -1,0 +1,27 @@
+// APICenter
+
+/// Categories
+"Categories.Title" = "Categories";
+"Categories.General.Title" = "General";
+"Categories.Anime.Title" = "Anime";
+"Categories.People.Title" = "People";
+
+/// Purity
+"Purity.Title" = "Purity";
+"Purity.SFW.Title" = "SFW";
+"Purity.Sketchy.Title" = "Sketchy";
+"Purity.NSFW.Title" = "NSFW";
+
+/// Sorting
+"Sorting.Title" = "Sorting";
+"Sorting.DateAdded.Title" = "New";
+"Sorting.Relevance.Title" = "Relevance";
+"Sorting.Random.Title" = "Random";
+"Sorting.Views.Title" = "Views";
+"Sorting.Favorites.Title" = "Favorites";
+"Sorting.TopList.Title" = "Top";
+
+/// Order
+"Order.Title" = "Order";
+"Order.Desc.Title" = "Descending";
+"Order.Asc.Title" = "Ascending";

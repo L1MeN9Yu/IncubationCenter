@@ -12,7 +12,7 @@ extension APICenter {
 
 public extension APICenter {
     static func loadList(page: UInt) async throws -> ListResponse {
-        let listRequest = ListRequest(page: page)
+        let listRequest = ListRequest(page: page, categories: filter.categories, purity: filter.purity, sorting: filter.sorting, order: filter.order)
         let response = try await client.execute(request: listRequest)
         guard response.status == .ok else { throw HTTPError(httpResponseStatus: response.status) }
         let listResponse: ListResponse = try JSONCoder.decode(data: response.body)

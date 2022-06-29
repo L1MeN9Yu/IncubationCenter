@@ -36,7 +36,7 @@ private extension MeCollectionHeaderView {
     }
 
     func layout() {
-        titleLabel.pin.all(10)
+        titleLabel.pin.all(8)
     }
 }
 

@@ -6,4 +6,11 @@
 
 */
 
+// DiscoveryViewController
+
 "DiscoveryViewController.Title" = "Discovery";
+
+// FilterViewController
+
+"FilterViewController.Title" = "Filter";
+"FilterViewController.OKButton.Title" = "OK";
