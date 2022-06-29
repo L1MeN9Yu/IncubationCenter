@@ -11,6 +11,7 @@ class FilterCollectionViewCategoriesCell: CollectionViewCell {
     private lazy var segmentControl: MultiSelectSegmentedControl = .init()
         .x
         .tintColor(.systemBlack)
+        .atLeastSelected(1)
         .delegate(self)
         .instance
 

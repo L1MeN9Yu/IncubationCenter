@@ -4,7 +4,6 @@
 
 import UIKit
 
-@IBDesignable
 open class MultiSelectSegmentedControl: UIControl {
     public weak var delegate: MultiSelectSegmentedControlDelegate?
 
@@ -42,13 +41,15 @@ open class MultiSelectSegmentedControl: UIControl {
     }
 
     /// Allow use to select multiple segments (default: `true`).
-    @IBInspectable open dynamic var allowsMultipleSelection: Bool = true {
+    open dynamic var allowsMultipleSelection: Bool = true {
         didSet {
             if !allowsMultipleSelection {
                 selectedSegmentIndex = selectedSegmentIndex
             }
         }
     }
+
+    public var atLeastSelected: Int = 0
 
     /// Select or deselect all segments
     /// - Parameter selected: `true` to select (default), `false` to deselect.
@@ -80,10 +81,8 @@ open class MultiSelectSegmentedControl: UIControl {
         }
     }
 
-    // MARK: - Appearance
-
     /// Width of the dividers between segments and the border around the view.
-    @IBInspectable open dynamic var borderWidth: CGFloat = 1 {
+    open dynamic var borderWidth: CGFloat = 1 {
         didSet {
             stackView.spacing = borderWidth
             borderView.layer.borderWidth = borderWidth
@@ -97,7 +96,7 @@ open class MultiSelectSegmentedControl: UIControl {
     }
 
     /// Corner radius of the view.
-    @IBInspectable open dynamic var borderRadius: CGFloat = 4 {
+    open dynamic var borderRadius: CGFloat = 4 {
         didSet {
             layer.cornerRadius = borderRadius
             borderView.layer.cornerRadius = borderRadius
@@ -105,7 +104,7 @@ open class MultiSelectSegmentedControl: UIControl {
     }
 
     /// Stack the segments vertically. (default: `false`)
-    @IBInspectable open dynamic var isVertical: Bool {
+    open dynamic var isVertical: Bool {
         get { stackView.axis == .vertical }
         set {
             removeAllDividers()
@@ -118,7 +117,7 @@ open class MultiSelectSegmentedControl: UIControl {
     }
 
     /// Stack each segment contents vertically when it contains both text and image. (default: `false`)
-    @IBInspectable open dynamic var isVerticalSegmentContents: Bool = false {
+    open dynamic var isVerticalSegmentContents: Bool = false {
         didSet {
             segments.forEach { $0.updateContentsAxis() }
             invalidateIntrinsicContentSize()
@@ -143,7 +142,7 @@ open class MultiSelectSegmentedControl: UIControl {
     }
 
     /// Optional selected background color, if different than tintColor
-    @IBInspectable open dynamic var selectedBackgroundColor: UIColor? {
+    open dynamic var selectedBackgroundColor: UIColor? {
         didSet {
             segments.forEach { $0.updateColors() }
         }
@@ -170,7 +169,7 @@ open class MultiSelectSegmentedControl: UIControl {
     }
 
     /// Use different size for each segment, depending on its content size. (default: `false`)
-    @IBInspectable public dynamic var apportionsSegmentWidthsByContent: Bool {
+    public dynamic var apportionsSegmentWidthsByContent: Bool {
         get { stackView.distribution != .fillEqually }
         set {
             stackView.distribution = newValue ? .fill : .fillEqually
@@ -382,16 +381,19 @@ private extension MultiSelectSegmentedControl {
         let location = gesture.location(in: self)
         guard let segment = hitTest(location, with: nil) as? MultiSelectSegment else { return }
         guard let index = segments.firstIndex(of: segment) else { return }
-        perform(animated: true) {
-            if self.allowsMultipleSelection {
+        perform(animated: true) { [self] in
+            if allowsMultipleSelection {
+                if segment.isSelected {
+                    if selectedSegmentIndexes.count <= atLeastSelected { return }
+                }
                 segment.isSelected.toggle()
-                self.showDividersBetweenSelectedSegments()
+                showDividersBetweenSelectedSegments()
             } else {
                 if segment.isSelected { return }
-                self.selectedSegmentIndex = index
+                selectedSegmentIndex = index
             }
-            self.sendActions(for: [.valueChanged, .primaryActionTriggered])
-            self.delegate?.multiSelect(self, didChange: segment.isSelected, at: index)
+            sendActions(for: [.valueChanged, .primaryActionTriggered])
+            delegate?.multiSelect(self, didChange: segment.isSelected, at: index)
         }
     }
 }
