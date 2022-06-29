@@ -182,77 +182,6 @@ open class MultiSelectSegmentedControl: UIControl {
         }
     }
 
-    @objc public func setImage(_ image: UIImage?, forSegmentAt index: Int) {
-        guard index >= 0, index < segments.count else { return }
-        segments[index].image = image
-        invalidateIntrinsicContentSize()
-    }
-
-    @objc public func imageForSegment(at index: Int) -> UIImage? {
-        guard index >= 0, index < segments.count else { return nil }
-        return segments[index].image
-    }
-
-    @objc public func setTitle(_ title: String?, forSegmentAt index: Int) {
-        guard index >= 0, index < segments.count else { return }
-        segments[index].title = title
-        invalidateIntrinsicContentSize()
-    }
-
-    @objc public func titleForSegment(at index: Int) -> String? {
-        guard index >= 0, index < segments.count else { return nil }
-        return segments[index].title
-    }
-
-    @objc public func setTitleTextAttributes(_ attributes: [NSAttributedString.Key: Any]?, for state: UIControl.State) {
-        titleTextAttributes[state] = attributes
-        invalidateIntrinsicContentSize()
-    }
-
-    @objc public func titleTextAttributes(for state: UIControl.State) -> [NSAttributedString.Key: Any]? {
-        titleTextAttributes[state]
-    }
-
-    @objc public func insertSegment(with image: UIImage, at index: Int = UISegmentedControl.noSegment, animated: Bool = false) {
-        insertSegment(contents: [image], at: index, animated: animated)
-    }
-
-    @objc public func insertSegment(withTitle title: String, at index: Int = UISegmentedControl.noSegment, animated: Bool = false) {
-        insertSegment(contents: [title], at: index, animated: animated)
-    }
-
-    @objc public func removeAllSegments() {
-        removeAllDividers()
-        stackView.removeAllArrangedSubviewsCompletely()
-        invalidateIntrinsicContentSize()
-    }
-
-    @objc public func removeSegment(at index: Int, animated: Bool) {
-        guard index >= 0, index < segments.count else { return }
-        let segment = segments[index]
-        perform(animated: animated) {
-            segment.isHidden = true
-            self.removeDivider(at: index) // after removed segment
-            self.removeDivider(at: index - 1) // before removed segment
-        }
-        perform(animated: animated) {
-            self.stackView.removeArrangedSubviewCompletely(segment)
-            self.insertDivider(afterSegment: index - 1) // before removed segment
-            self.showDividersBetweenSelectedSegments()
-            self.invalidateIntrinsicContentSize()
-        }
-    }
-
-    @objc public func setEnabled(_ enabled: Bool, forSegmentAt index: Int) {
-        guard index >= 0, index < segments.count else { return }
-        segments[index].isEnabled = enabled
-    }
-
-    @objc public func isEnabledForSegment(at index: Int) -> Bool {
-        guard index >= 0, index < segments.count else { return false }
-        return segments[index].isEnabled
-    }
-
     override public init(frame: CGRect) {
         super.init(frame: frame)
         setup()
@@ -270,6 +199,81 @@ open class MultiSelectSegmentedControl: UIControl {
     let stackView = UIStackView()
     let borderView = UIView()
     var dividers: [UIView] = []
+}
+
+// MARK: - Public
+
+public extension MultiSelectSegmentedControl {
+    func setImage(_ image: UIImage?, forSegmentAt index: Int) {
+        guard index >= 0, index < segments.count else { return }
+        segments[index].image = image
+        invalidateIntrinsicContentSize()
+    }
+
+    func imageForSegment(at index: Int) -> UIImage? {
+        guard index >= 0, index < segments.count else { return nil }
+        return segments[index].image
+    }
+
+    func setTitle(_ title: String?, forSegmentAt index: Int) {
+        guard index >= 0, index < segments.count else { return }
+        segments[index].title = title
+        invalidateIntrinsicContentSize()
+    }
+
+    func titleForSegment(at index: Int) -> String? {
+        guard index >= 0, index < segments.count else { return nil }
+        return segments[index].title
+    }
+
+    func setTitleTextAttributes(_ attributes: [NSAttributedString.Key: Any]?, for state: UIControl.State) {
+        titleTextAttributes[state] = attributes
+        invalidateIntrinsicContentSize()
+    }
+
+    func titleTextAttributes(for state: UIControl.State) -> [NSAttributedString.Key: Any]? {
+        titleTextAttributes[state]
+    }
+
+    func insertSegment(with image: UIImage, at index: Int = UISegmentedControl.noSegment, animated: Bool = false) {
+        insertSegment(contents: [image], at: index, animated: animated)
+    }
+
+    func insertSegment(withTitle title: String, at index: Int = UISegmentedControl.noSegment, animated: Bool = false) {
+        insertSegment(contents: [title], at: index, animated: animated)
+    }
+
+    func removeAllSegments() {
+        removeAllDividers()
+        stackView.removeAllArrangedSubviewsCompletely()
+        invalidateIntrinsicContentSize()
+    }
+
+    func removeSegment(at index: Int, animated: Bool) {
+        guard index >= 0, index < segments.count else { return }
+        let segment = segments[index]
+        perform(animated: animated) {
+            segment.isHidden = true
+            self.removeDivider(at: index) // after removed segment
+            self.removeDivider(at: index - 1) // before removed segment
+        }
+        perform(animated: animated) {
+            self.stackView.removeArrangedSubviewCompletely(segment)
+            self.insertDivider(afterSegment: index - 1) // before removed segment
+            self.showDividersBetweenSelectedSegments()
+            self.invalidateIntrinsicContentSize()
+        }
+    }
+
+    func setEnabled(_ enabled: Bool, forSegmentAt index: Int) {
+        guard index >= 0, index < segments.count else { return }
+        segments[index].isEnabled = enabled
+    }
+
+    func isEnabledForSegment(at index: Int) -> Bool {
+        guard index >= 0, index < segments.count else { return false }
+        return segments[index].isEnabled
+    }
 }
 
 // MARK: - Override

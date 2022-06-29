@@ -5,12 +5,16 @@
 import Foundation
 import UICore
 import UIKit
+import WeakDelegate
 
 class FilterCollectionViewCategoriesCell: CollectionViewCell {
     private lazy var segmentControl: MultiSelectSegmentedControl = .init()
         .x
         .tintColor(.systemBlack)
+        .delegate(self)
         .instance
+
+    private let valueUpdateDelegator = Delegator<(Int, Bool), Void>()
 
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -51,5 +55,13 @@ extension FilterCollectionViewCategoriesCell {
             .allowsMultipleSelection(viewModel.isMultiSelect)
             .selectedSegmentIndexes(IndexSet(indexes))
             .done
+
+        viewModel.register(valueUpdateDelegator: valueUpdateDelegator)
+    }
+}
+
+extension FilterCollectionViewCategoriesCell: MultiSelectSegmentedControlDelegate {
+    func multiSelect(_ multiSelectSegmentedControl: MultiSelectSegmentedControl, didChange value: Bool, at index: Int) {
+        valueUpdateDelegator((index, value))
     }
 }

@@ -11,6 +11,13 @@ public struct Filter {
     public let purity: [Purity]
     public let sorting: Sorting
     public let order: Order
+
+    public init(categories: [Categories], purity: [Purity], sorting: Sorting, order: Order) {
+        self.categories = categories
+        self.purity = purity
+        self.sorting = sorting
+        self.order = order
+    }
 }
 
 extension Filter: Codable {}

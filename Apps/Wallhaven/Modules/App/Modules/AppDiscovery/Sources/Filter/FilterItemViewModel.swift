@@ -4,7 +4,9 @@
 
 import BaseUI
 import CenterAPI
+import ExtensionKit
 import Foundation
+import WeakDelegate
 
 class FilterItemViewModel: ViewModel {
     let section: FilterSection
@@ -64,6 +66,16 @@ extension FilterItemViewModel {
                 }
                 return (name, selected)
             }
+        }
+    }
+}
+
+extension FilterItemViewModel {
+    func register(valueUpdateDelegator: Delegator<(Int, Bool), Void>) {
+        valueUpdateDelegator.delegate(on: self) {
+            guard var item = $0.items[safe: $1.0] else { return }
+            item.1 = $1.1
+            $0.items[$1.0] = item
         }
     }
 }

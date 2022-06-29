@@ -9,19 +9,19 @@
 /// Purity
 "Purity.Title" = "Purity";
 "Purity.SFW.Title" = "SFW";
-"Purity.Sketchy.Title" = "sketchy";
+"Purity.Sketchy.Title" = "Sketchy";
 "Purity.NSFW.Title" = "NSFW";
 
 /// Sorting
 "Sorting.Title" = "Sorting";
-"Sorting.DateAdded.Title" = "DateAdded";
+"Sorting.DateAdded.Title" = "New";
 "Sorting.Relevance.Title" = "Relevance";
 "Sorting.Random.Title" = "Random";
 "Sorting.Views.Title" = "Views";
 "Sorting.Favorites.Title" = "Favorites";
-"Sorting.TopList.Title" = "TopList";
+"Sorting.TopList.Title" = "Top";
 
 /// Order
 "Order.Title" = "Order";
-"Order.Desc.Title" = "Desc";
-"Order.Asc.Title" = "Asc";
+"Order.Desc.Title" = "Descending";
+"Order.Asc.Title" = "Ascending";
