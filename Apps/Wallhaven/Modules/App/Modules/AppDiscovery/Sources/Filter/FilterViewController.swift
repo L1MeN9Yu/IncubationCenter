@@ -38,6 +38,8 @@ private extension FilterViewController {
         title = DiscoveryModule.localizedString(key: "FilterViewController.Title")
         contentView.x.add(to: view)
         Task { @MainActor in
+            let filter = await provider.loadFilter()
+            viewModel.updateFilter(filter)
             contentView.reloadData(viewModel: viewModel)
         }
 
@@ -61,7 +63,11 @@ private extension FilterViewController {
 }
 
 private extension FilterViewController {
-    func okButtonAction() {}
+    func okButtonAction() {
+        let filter = viewModel.exportFilter()
+        provider.saveFilter(filter)
+        navigationController.run { $0.popViewController(animated: true) }
+    }
 }
 
 extension FilterViewController: Routable {

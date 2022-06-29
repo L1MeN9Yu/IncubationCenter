@@ -40,10 +40,16 @@ private extension FilterCollectionViewPurityCell {
 
 extension FilterCollectionViewPurityCell {
     func config(viewModel: FilterItemViewModel) {
+        let indexes: [Int] = viewModel.items.map(\.1).enumerated().compactMap { (offset: Int, element: Bool) -> Int? in
+            if element { return offset }
+            return nil
+        }
+
         segmentControl
             .x
-            .items(viewModel.items)
+            .items(viewModel.items.map(\.0))
             .allowsMultipleSelection(viewModel.isMultiSelect)
+            .selectedSegmentIndexes(IndexSet(indexes))
             .done
     }
 }

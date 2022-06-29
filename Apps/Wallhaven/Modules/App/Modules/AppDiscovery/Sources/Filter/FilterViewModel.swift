@@ -2,6 +2,7 @@
 // Created by Mengyu Li on 2022/6/27.
 //
 
+import CenterAPI
 import Foundation
 import OrderedCollections
 import UICore
@@ -21,4 +22,16 @@ class FilterViewModel: ViewModel {
             FilterItemViewModel(section: .order),
         ],
     ]
+}
+
+extension FilterViewModel {
+    func updateFilter(_ filter: CenterAPI.Filter) {
+        items.forEach { _, value in
+            value.forEach { $0.update(filter: filter) }
+        }
+    }
+
+    func exportFilter() -> CenterAPI.Filter {
+        fatalError()
+    }
 }
