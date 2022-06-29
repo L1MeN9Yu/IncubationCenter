@@ -37,6 +37,7 @@ class ListRequest: BaseRequestable {
             URLQueryItem(name: "categories", value: categoriesValue),
             URLQueryItem(name: "purity", value: purityValue),
             URLQueryItem(name: "sorting", value: sorting.queryValue),
+            URLQueryItem(name: "order", value: order.queryValue),
         ]
     }
 }

@@ -73,9 +73,17 @@ extension FilterItemViewModel {
 extension FilterItemViewModel {
     func register(valueUpdateDelegator: Delegator<(Int, Bool), Void>) {
         valueUpdateDelegator.delegate(on: self) {
-            guard var item = $0.items[safe: $1.0] else { return }
-            item.1 = $1.1
-            $0.items[$1.0] = item
+            switch $0.isMultiSelect {
+            case true:
+                guard var item = $0.items[safe: $1.0] else { return }
+                item.1 = $1.1
+                $0.items[$1.0] = item
+            case false:
+                guard var item = $0.items[safe: $1.0] else { return }
+                item.1 = $1.1
+                $0.items = $0.items.map { name, _ in (name, false) }
+                $0.items[$1.0] = item
+            }
         }
     }
 }

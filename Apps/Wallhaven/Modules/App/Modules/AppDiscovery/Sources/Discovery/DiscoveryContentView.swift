@@ -52,7 +52,6 @@ private extension DiscoveryContentView {
     func setup() {
         backgroundColor = .systemWhite
         collectionView.x.add(to: self)
-        collectionView.topRefresher?.beginRefreshing()
     }
 }
 
@@ -82,5 +81,9 @@ extension DiscoveryContentView {
         snapshot.appendSections(["main"])
         snapshot.appendItems(viewModel.wallpaperListViewModels)
         dataSource.apply(snapshot, animatingDifferences: false)
+    }
+
+    func beginHeaderRefresh() {
+        collectionView.topRefresher?.beginRefreshing()
     }
 }

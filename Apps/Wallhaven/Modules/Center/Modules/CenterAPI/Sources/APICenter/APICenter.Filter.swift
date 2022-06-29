@@ -5,9 +5,11 @@
 import Dispatch
 import Foundation
 import KeyValueStore
+import WeakDelegate
 
 public extension APICenter {
     private(set) static var filter: Filter = .default
+    static let filterUpdateDelegator = Delegator<Void, Void>()
 }
 
 extension APICenter {
@@ -39,6 +41,8 @@ private extension APICenter {
 
 public extension APICenter {
     static func setFilter(_ filter: Filter) {
+        self.filter = filter
+        filterUpdateDelegator.call()
         store.async.put(key: key, value: filter) { result in
             switch result {
             case .success: logger.info("set filter \(filter) success")

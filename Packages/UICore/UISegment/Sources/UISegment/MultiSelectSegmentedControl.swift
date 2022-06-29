@@ -8,10 +8,8 @@ import UIKit
 open class MultiSelectSegmentedControl: UIControl {
     public weak var delegate: MultiSelectSegmentedControlDelegate?
 
-    // MARK: - UISegmentedControl Enhancements
-
     /// Items shown in segments. Each item can be a `String`, a `UIImage`, or an array of strings and images.
-    @objc public var items: [Any] {
+    public var items: [Any] {
         get {
             segments
                 .map(\.contents)
@@ -27,7 +25,7 @@ open class MultiSelectSegmentedControl: UIControl {
     }
 
     /// Indexes of selected segments (can be more than one if `allowsMultipleSelection` is `true`.
-    @objc public var selectedSegmentIndexes: IndexSet {
+    public var selectedSegmentIndexes: IndexSet {
         get {
             IndexSet(segments.enumerated().filter { $1.isSelected }.map(\.offset))
         }
@@ -39,7 +37,7 @@ open class MultiSelectSegmentedControl: UIControl {
         }
     }
 
-    @objc public var selectedSegmentTitles: [String] {
+    public var selectedSegmentTitles: [String] {
         segments.filter(\.isSelected).compactMap(\.title)
     }
 
@@ -54,7 +52,7 @@ open class MultiSelectSegmentedControl: UIControl {
 
     /// Select or deselect all segments
     /// - Parameter selected: `true` to select (default), `false` to deselect.
-    @objc public func selectAllSegments(_ selected: Bool = true) {
+    public func selectAllSegments(_ selected: Bool = true) {
         selectedSegmentIndexes = selected ? IndexSet(0..<segments.count) : []
     }
 
@@ -62,7 +60,7 @@ open class MultiSelectSegmentedControl: UIControl {
     /// - Parameter contents: An array of 1 or more strings and images
     /// - Parameter index: Where to insert the segment (default: at the end)
     /// - Parameter animated: Animate the insertion (default: false)
-    @objc open func insertSegment(contents: [Any], at index: Int = UISegmentedControl.noSegment, animated: Bool = false) {
+    open func insertSegment(contents: [Any], at index: Int = UISegmentedControl.noSegment, animated: Bool = false) {
         let segment = MultiSelectSegment(contents: contents, parent: self)
         segment.tintColor = tintColor
         segment.isHidden = true
@@ -135,7 +133,7 @@ open class MultiSelectSegmentedControl: UIControl {
     }
 
     /// Configure additional properties of segments titles. For example: `multiSegment.titleConfigurationHandler = { $0.numberOfLines = 0 }`
-    @objc open dynamic var titleConfigurationHandler: ((UILabel) -> Void)? {
+    open dynamic var titleConfigurationHandler: ((UILabel) -> Void)? {
         didSet {
             for segment in segments {
                 segment.updateLabelConfiguration()
@@ -151,16 +149,14 @@ open class MultiSelectSegmentedControl: UIControl {
         }
     }
 
-    // MARK: - UISegmentedControl Compatibility
-
-    @objc public convenience init(items: [Any]? = nil) {
+    public convenience init(items: [Any]? = nil) {
         self.init(frame: .zero)
         if let items = items {
             self.items = items
         }
     }
 
-    @objc public var selectedSegmentIndex: Int {
+    public var selectedSegmentIndex: Int {
         get {
             selectedSegmentIndexes.first ?? UISegmentedControl.noSegment
         }
@@ -169,7 +165,7 @@ open class MultiSelectSegmentedControl: UIControl {
         }
     }
 
-    @objc public var numberOfSegments: Int {
+    public var numberOfSegments: Int {
         segments.count
     }
 
@@ -187,10 +183,8 @@ open class MultiSelectSegmentedControl: UIControl {
         setup()
     }
 
-    public required init?(coder: NSCoder) {
-        super.init(coder: coder)
-        setup()
-    }
+    @available(*, unavailable)
+    public required init?(coder: NSCoder) { fatalError("init(coder:) has not been implemented") }
 
     public var segments: [MultiSelectSegment] {
         stackView.arrangedSubviews.compactMap { $0 as? MultiSelectSegment }

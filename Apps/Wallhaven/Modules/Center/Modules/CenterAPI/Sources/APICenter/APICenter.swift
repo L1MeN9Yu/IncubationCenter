@@ -13,6 +13,7 @@ extension APICenter: TypeNameable {}
 public extension APICenter {
     static func bootstrap() {
         bootstrapAPIKey()
+        bootstrapFilter()
     }
 }
 
