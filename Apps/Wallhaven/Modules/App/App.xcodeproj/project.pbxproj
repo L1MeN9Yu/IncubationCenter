@@ -17,11 +17,11 @@
 		1E7F761C2837BEE40035A8E2 /* libAppMe.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E7F76142837BEB30035A8E2 /* libAppMe.a */; };
 		1E7F761F2837C0C90035A8E2 /* MeModule.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1E7F76212837C0C90035A8E2 /* MeModule.strings */; };
 		1E91B6A62863224800F8ED22 /* libAppWebBrowser.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1EB5CCDE2862C69B00119589 /* libAppWebBrowser.a */; };
+		1ECF159E286C603000B9D090 /* libAppBootstrap.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1ECF1593286C5F9200B9D090 /* libAppBootstrap.a */; };
 		1EDF08AA283B19C900025E14 /* FavoriteModule.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1EDF08AC283B19C900025E14 /* FavoriteModule.strings */; };
 		1EDF08AE283B1CF800025E14 /* libAppFavorite.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1EDF089E283B197A00025E14 /* libAppFavorite.a */; };
 		EB31A416AE6608AAF157CB65 /* Application.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB31A638C3265616F9781C04 /* Application.swift */; };
 		EB31ACCD7EA8B2A9F2E8BEDD /* Exported.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB31ACBBC0376D55C7D7E762 /* Exported.swift */; };
-		EB31AE5EFB17E3D66F9B98E2 /* AppModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB31ACCF3F107CD66FECD44C /* AppModule.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +60,13 @@
 			remoteGlobalIDString = 1EB5CCCA2862C69B00119589;
 			remoteInfo = AppWebBrowser;
 		};
+		1ECF1592286C5F9200B9D090 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1ECF158E286C5F9100B9D090 /* AppBootstrap.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 1ECF1584286C5F9100B9D090;
+			remoteInfo = AppBootstrap;
+		};
 		1EDF089D283B197A00025E14 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 1EDF0898283B197900025E14 /* AppFavorite.xcodeproj */;
@@ -86,12 +93,12 @@
 		1EBAFEFF285B2B8400CFF89B /* App.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = App.xcconfig; sourceTree = "<group>"; };
 		1EBAFF06285B32C400CFF89B /* App.Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = App.Debug.xcconfig; sourceTree = "<group>"; };
 		1EBAFF07285B32D000CFF89B /* App.Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = App.Release.xcconfig; sourceTree = "<group>"; };
+		1ECF158E286C5F9100B9D090 /* AppBootstrap.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = AppBootstrap.xcodeproj; path = AppBootstrap/AppBootstrap.xcodeproj; sourceTree = "<group>"; };
 		1EDF0898283B197900025E14 /* AppFavorite.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = AppFavorite.xcodeproj; path = AppFavorite/AppFavorite.xcodeproj; sourceTree = "<group>"; };
 		1EDF08AB283B19C900025E14 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/FavoriteModule.strings; sourceTree = "<group>"; };
 		1EDF08AD283B19CA00025E14 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/FavoriteModule.strings"; sourceTree = "<group>"; };
 		EB31A638C3265616F9781C04 /* Application.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Application.swift; sourceTree = "<group>"; };
 		EB31ACBBC0376D55C7D7E762 /* Exported.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Exported.swift; sourceTree = "<group>"; };
-		EB31ACCF3F107CD66FECD44C /* AppModule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppModule.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +106,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1ECF159E286C603000B9D090 /* libAppBootstrap.a in Frameworks */,
 				1E290C3328436AF9005B1CBF /* libAppWallpaper.a in Frameworks */,
 				1EDF08AE283B1CF800025E14 /* libAppFavorite.a in Frameworks */,
 				1E7F759428373B670035A8E2 /* Service.framework in Frameworks */,
@@ -145,7 +153,6 @@
 		1E7F74CA283625690035A8E2 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				EB31ACCF3F107CD66FECD44C /* AppModule.swift */,
 				EB31A638C3265616F9781C04 /* Application.swift */,
 				EB31ACBBC0376D55C7D7E762 /* Exported.swift */,
 			);
@@ -163,6 +170,7 @@
 		1E7F755E283641220035A8E2 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				1ECF158E286C5F9100B9D090 /* AppBootstrap.xcodeproj */,
 				1E7F75B7283742740035A8E2 /* AppTabBar.xcodeproj */,
 				1E7F75E028377D670035A8E2 /* AppDiscovery.xcodeproj */,
 				1EDF0898283B197900025E14 /* AppFavorite.xcodeproj */,
@@ -235,6 +243,14 @@
 			path = XCConfig;
 			sourceTree = "<group>";
 		};
+		1ECF158F286C5F9100B9D090 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1ECF1593286C5F9200B9D090 /* libAppBootstrap.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		1EDF0899283B197900025E14 /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -303,6 +319,10 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
+					ProductGroup = 1ECF158F286C5F9100B9D090 /* Products */;
+					ProjectRef = 1ECF158E286C5F9100B9D090 /* AppBootstrap.xcodeproj */;
+				},
+				{
 					ProductGroup = 1E7F75E128377D670035A8E2 /* Products */;
 					ProjectRef = 1E7F75E028377D670035A8E2 /* AppDiscovery.xcodeproj */;
 				},
@@ -370,6 +390,13 @@
 			remoteRef = 1EB5CCDD2862C69B00119589 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
+		1ECF1593286C5F9200B9D090 /* libAppBootstrap.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libAppBootstrap.a;
+			remoteRef = 1ECF1592286C5F9200B9D090 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 		1EDF089E283B197A00025E14 /* libAppFavorite.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
@@ -397,7 +424,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EB31AE5EFB17E3D66F9B98E2 /* AppModule.swift in Sources */,
 				EB31A416AE6608AAF157CB65 /* Application.swift in Sources */,
 				EB31ACCD7EA8B2A9F2E8BEDD /* Exported.swift in Sources */,
 			);

@@ -11,4 +11,6 @@ extension TabBarModule {
     static let logger = Loggers[typeName]
 }
 
-let logger = TabBarModule.logger
+typealias Module = TabBarModule
+
+let logger = Module.logger

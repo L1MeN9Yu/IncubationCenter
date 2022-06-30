@@ -2,7 +2,6 @@
 // Created by Mengyu Li on 2022/5/20.
 //
 
-import AppWebBrowser
 import Foundation
 import Service
 import UICore
@@ -32,7 +31,32 @@ public extension Application {
 
 private extension Application {
     static func setup() {
-        registerRoute().registerUI().enterUI()
+        switch diagnose() {
+        case true:
+            enterDiagnose()
+        case false:
+            enterBoot()
+        }
+    }
+
+    static func diagnose() -> Bool {
+        false
+    }
+
+    static func enterBoot() {
+        AppBootstrap.register(bootComplete: bootComplete)
+        window.rootViewController = AppBootstrap.bootViewControllerType.init()
+    }
+
+    static func enterDiagnose() {}
+
+    static func bootComplete(result: Result<Void, Error>) {
+        switch result {
+        case .success:
+            registerRoute().registerUI().enterUI()
+        case let .failure(error):
+            logger.error("\(error)")
+        }
     }
 
     @discardableResult

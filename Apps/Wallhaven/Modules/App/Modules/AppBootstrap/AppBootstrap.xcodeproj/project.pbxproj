@@ -1,0 +1,234 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1ECF15A1286C604900B9D090 /* Center.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1ECF15A0286C604900B9D090 /* Center.framework */; };
+		1ECF15A3286C604900B9D090 /* Service.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1ECF15A2286C604900B9D090 /* Service.framework */; };
+		1ECF15A5286C604900B9D090 /* UICore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1ECF15A4286C604900B9D090 /* UICore.framework */; };
+		EB31A89D5059727BED9EC850 /* Exported.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB31A91A4549CBE64A860D79 /* Exported.swift */; };
+		EB31A9182715311572FD6277 /* BootContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB31A84B8AA210492D75E82F /* BootContentView.swift */; };
+		EB31ACC4242EBBC35AA59D20 /* BootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB31ABB22268BA1CA90E2101 /* BootViewController.swift */; };
+		EB31AFE3C963684CC81E3521 /* BootstrapModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB31AE404E98F9A0FDD7C2A9 /* BootstrapModule.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		1ECF1582286C5F9100B9D090 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		1ECF1584286C5F9100B9D090 /* libAppBootstrap.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libAppBootstrap.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		1ECF159B286C5FEA00B9D090 /* AppBootstrap.Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = AppBootstrap.Debug.xcconfig; sourceTree = "<group>"; };
+		1ECF159C286C5FEA00B9D090 /* AppBootstrap.Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = AppBootstrap.Release.xcconfig; sourceTree = "<group>"; };
+		1ECF159D286C5FEA00B9D090 /* AppBootstrap.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = AppBootstrap.xcconfig; sourceTree = "<group>"; };
+		1ECF15A0286C604900B9D090 /* Center.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Center.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1ECF15A2286C604900B9D090 /* Service.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Service.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1ECF15A4286C604900B9D090 /* UICore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = UICore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EB31A84B8AA210492D75E82F /* BootContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BootContentView.swift; sourceTree = "<group>"; };
+		EB31A91A4549CBE64A860D79 /* Exported.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Exported.swift; sourceTree = "<group>"; };
+		EB31ABB22268BA1CA90E2101 /* BootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BootViewController.swift; sourceTree = "<group>"; };
+		EB31AE404E98F9A0FDD7C2A9 /* BootstrapModule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BootstrapModule.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1ECF1581286C5F9100B9D090 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1ECF15A1286C604900B9D090 /* Center.framework in Frameworks */,
+				1ECF15A3286C604900B9D090 /* Service.framework in Frameworks */,
+				1ECF15A5286C604900B9D090 /* UICore.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1ECF157B286C5F9100B9D090 = {
+			isa = PBXGroup;
+			children = (
+				1ECF1586286C5F9100B9D090 /* Sources */,
+				1ECF159A286C5FEA00B9D090 /* XCConfig */,
+				1ECF1585286C5F9100B9D090 /* Products */,
+				1ECF159F286C604900B9D090 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		1ECF1585286C5F9100B9D090 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1ECF1584286C5F9100B9D090 /* libAppBootstrap.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1ECF1586286C5F9100B9D090 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				EB31A91A4549CBE64A860D79 /* Exported.swift */,
+				EB31AE404E98F9A0FDD7C2A9 /* BootstrapModule.swift */,
+				EB31A0F91C2E50958A0011FF /* Boot */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		1ECF159A286C5FEA00B9D090 /* XCConfig */ = {
+			isa = PBXGroup;
+			children = (
+				1ECF159B286C5FEA00B9D090 /* AppBootstrap.Debug.xcconfig */,
+				1ECF159C286C5FEA00B9D090 /* AppBootstrap.Release.xcconfig */,
+				1ECF159D286C5FEA00B9D090 /* AppBootstrap.xcconfig */,
+			);
+			path = XCConfig;
+			sourceTree = "<group>";
+		};
+		1ECF159F286C604900B9D090 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1ECF15A0286C604900B9D090 /* Center.framework */,
+				1ECF15A2286C604900B9D090 /* Service.framework */,
+				1ECF15A4286C604900B9D090 /* UICore.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EB31A0F91C2E50958A0011FF /* Boot */ = {
+			isa = PBXGroup;
+			children = (
+				EB31ABB22268BA1CA90E2101 /* BootViewController.swift */,
+				EB31A84B8AA210492D75E82F /* BootContentView.swift */,
+			);
+			path = Boot;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1ECF1583286C5F9100B9D090 /* AppBootstrap */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1ECF158B286C5F9100B9D090 /* Build configuration list for PBXNativeTarget "AppBootstrap" */;
+			buildPhases = (
+				1ECF1580286C5F9100B9D090 /* Sources */,
+				1ECF1581286C5F9100B9D090 /* Frameworks */,
+				1ECF1582286C5F9100B9D090 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AppBootstrap;
+			productName = AppBootstrap;
+			productReference = 1ECF1584286C5F9100B9D090 /* libAppBootstrap.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1ECF157C286C5F9100B9D090 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1340;
+				LastUpgradeCheck = 1340;
+				TargetAttributes = {
+					1ECF1583286C5F9100B9D090 = {
+						CreatedOnToolsVersion = 13.4.1;
+					};
+				};
+			};
+			buildConfigurationList = 1ECF157F286C5F9100B9D090 /* Build configuration list for PBXProject "AppBootstrap" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 1ECF157B286C5F9100B9D090;
+			productRefGroup = 1ECF1585286C5F9100B9D090 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1ECF1583286C5F9100B9D090 /* AppBootstrap */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1ECF1580286C5F9100B9D090 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EB31A89D5059727BED9EC850 /* Exported.swift in Sources */,
+				EB31AFE3C963684CC81E3521 /* BootstrapModule.swift in Sources */,
+				EB31ACC4242EBBC35AA59D20 /* BootViewController.swift in Sources */,
+				EB31A9182715311572FD6277 /* BootContentView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		1ECF1589286C5F9100B9D090 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Debug;
+		};
+		1ECF158A286C5F9100B9D090 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Release;
+		};
+		1ECF158C286C5F9100B9D090 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1ECF159B286C5FEA00B9D090 /* AppBootstrap.Debug.xcconfig */;
+			buildSettings = {
+			};
+			name = Debug;
+		};
+		1ECF158D286C5F9100B9D090 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1ECF159C286C5FEA00B9D090 /* AppBootstrap.Release.xcconfig */;
+			buildSettings = {
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1ECF157F286C5F9100B9D090 /* Build configuration list for PBXProject "AppBootstrap" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1ECF1589286C5F9100B9D090 /* Debug */,
+				1ECF158A286C5F9100B9D090 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1ECF158B286C5F9100B9D090 /* Build configuration list for PBXNativeTarget "AppBootstrap" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1ECF158C286C5F9100B9D090 /* Debug */,
+				1ECF158D286C5F9100B9D090 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1ECF157C286C5F9100B9D090 /* Project object */;
+}
