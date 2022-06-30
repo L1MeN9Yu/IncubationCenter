@@ -47,9 +47,9 @@ private extension BootViewController {
 
     func bootstrap() {
         bootQueue.async {
-            Thread.sleep(forTimeInterval: 1)
+            let result = Module.boot()
             DispatchQueue.main.async {
-                Module.bootComplete.run { $0(.success) }
+                Module.bootComplete.run { $0(result) }
             }
         }
     }

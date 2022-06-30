@@ -3,7 +3,14 @@
 //
 
 import AppModular
+import Center
 import LoggerPool
+import Service
+import UICore
+
+typealias Module = BootstrapModule
+
+let logger = Module.logger
 
 class BootstrapModule: Modular {}
 
@@ -15,6 +22,11 @@ extension BootstrapModule {
     static var bootComplete: Optional<BootComplete> = .none
 }
 
-typealias Module = BootstrapModule
-
-let logger = Module.logger
+extension BootstrapModule {
+    static func boot() -> Result<Void, Error> {
+        ServiceModule.bootstrap()
+        CenterModule.bootstrap()
+        UICoreModule.bootstrap()
+        return .success
+    }
+}
