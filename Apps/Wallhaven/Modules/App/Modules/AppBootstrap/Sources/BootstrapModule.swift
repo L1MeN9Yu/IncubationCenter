@@ -11,6 +11,10 @@ extension BootstrapModule {
     static let logger = Loggers[typeName]
 }
 
+extension BootstrapModule {
+    static var bootComplete: Optional<BootComplete> = .none
+}
+
 typealias Module = BootstrapModule
 
 let logger = Module.logger

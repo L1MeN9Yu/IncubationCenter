@@ -3,9 +3,17 @@
 //
 
 import BaseUI
+import Chain
+import ExtensionKit
 import Foundation
+import UILayout
 
 class BootViewController: ViewController {
+    private lazy var contentView = BootContentView(frame: .zero)
+    private lazy var bootQueue = DispatchQueue(label: Module.typeName)
+
+    init() { super.init(nibName: nil, bundle: nil) }
+
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
     }
@@ -17,15 +25,32 @@ class BootViewController: ViewController {
 extension BootViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
+        setup()
     }
 
     override open func viewWillLayoutSubviews() {
         super.viewWillLayoutSubviews()
+        layout()
     }
 }
 
 private extension BootViewController {
-    func setup() {}
+    func setup() {
+        contentView.x.add(to: view)
 
-    func layout() {}
+        bootstrap()
+    }
+
+    func layout() {
+        contentView.pin.all(view.pin.safeArea)
+    }
+
+    func bootstrap() {
+        bootQueue.async {
+            Thread.sleep(forTimeInterval: 1)
+            DispatchQueue.main.async {
+                Module.bootComplete.run { $0(.success) }
+            }
+        }
+    }
 }
