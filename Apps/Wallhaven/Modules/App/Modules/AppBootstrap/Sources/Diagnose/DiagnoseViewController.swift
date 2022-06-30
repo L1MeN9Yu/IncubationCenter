@@ -1,5 +1,5 @@
 //
-// Created by Mengyu Li on 2022/6/29.
+// Created by Mengyu Li on 2022/6/30.
 //
 
 import BaseUI
@@ -8,9 +8,8 @@ import ExtensionKit
 import Foundation
 import UILayout
 
-class BootViewController: ViewController {
-    private lazy var contentView = BootContentView(frame: .zero)
-    private lazy var bootQueue = DispatchQueue(label: Module.typeName)
+class DiagnoseViewController: ViewController {
+    private lazy var contentView = DiagnoseContentView(frame: .zero)
 
     init() {
         super.init(nibName: nil, bundle: nil)
@@ -20,7 +19,7 @@ class BootViewController: ViewController {
     required init?(coder: NSCoder) { fatalError("init(coder:) has not been implemented") }
 }
 
-extension BootViewController {
+extension DiagnoseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setup()
@@ -32,23 +31,12 @@ extension BootViewController {
     }
 }
 
-private extension BootViewController {
+private extension DiagnoseViewController {
     func setup() {
         contentView.x.add(to: view)
-
-        bootstrap()
     }
 
     func layout() {
         contentView.pin.all(view.pin.safeArea)
-    }
-
-    func bootstrap() {
-        bootQueue.async {
-            let result = Module.boot()
-            DispatchQueue.main.async {
-                Module.bootComplete.run { $0(result) }
-            }
-        }
     }
 }

@@ -6,6 +6,7 @@ import BaseUI
 import UIRoute
 
 public let bootViewControllerType: ViewController.Type = BootViewController.self
+public let diagnoseViewControllerType: ViewController.Type = DiagnoseViewController.self
 
 public let routableViewControllers: [Routable.Type] = []
 
