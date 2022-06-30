@@ -48,7 +48,9 @@ private extension Application {
         window.rootViewController = AppBootstrap.bootViewControllerType.init()
     }
 
-    static func enterDiagnose() {}
+    static func enterDiagnose() {
+        window.rootViewController = AppBootstrap.diagnoseViewControllerType.init()
+    }
 
     static func bootComplete(result: Result<Void, Error>) {
         switch result {
