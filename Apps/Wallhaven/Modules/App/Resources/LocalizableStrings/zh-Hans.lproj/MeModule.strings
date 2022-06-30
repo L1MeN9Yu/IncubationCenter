@@ -33,3 +33,7 @@
 "APIKeyViewController.Input.ResetButton.Title" = "重置";
 "APIKeyViewController.Input.SetButton.Title" = "设置";
 "APIKeyViewController.About.Title" = "前往 wallhaven.cc 查看账号的API Key";
+
+/* - DiskUsageViewController - */
+
+"DiskUsageViewController.Title" = "存储空间";

@@ -9,6 +9,7 @@ public let meNavigationControllerType: NavigationController.Type = MeNavigationV
 
 public let routableViewControllers: [Routable.Type] = [
     APIKeyViewController.self,
+    DiskUsageViewController.self,
 ]
 
 public let actions: [Actable.Type] = []
