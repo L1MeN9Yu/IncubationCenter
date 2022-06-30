@@ -9,6 +9,8 @@ import UIRoute
 
 class DiskUsageViewController: ViewController {
     private lazy var contentView = DiskUsageContentView(frame: .zero)
+    private lazy var provider = DiskUsageProvider()
+    private lazy var viewModel = DiskUsageViewModel()
 
     init() { super.init(nibName: nil, bundle: nil) }
 
@@ -32,10 +34,24 @@ private extension DiskUsageViewController {
     func setup() {
         title = MeModule.localizedString(key: "DiskUsageViewController.Title")
         contentView.x.add(to: view)
+
+        loadData()
     }
 
     func layout() {
         contentView.pin.all(view.pin.safeArea)
+    }
+
+    func loadData() {
+        Task {
+            do {
+                let diskUsageInfo = try await provider.loadDiskUsageInfo()
+                viewModel.update(diskUsageInfo: diskUsageInfo)
+                logger.info("\(diskUsageInfo)")
+            } catch {
+                logger.error("\(error)")
+            }
+        }
     }
 }
 
