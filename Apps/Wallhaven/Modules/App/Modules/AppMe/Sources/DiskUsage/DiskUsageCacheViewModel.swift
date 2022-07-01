@@ -7,6 +7,10 @@ import Foundation
 
 class DiskUsageCacheViewModel: ViewModel {
     let section = DiskUsageSection.cache
+
+    let titleText: String = Module.localizedString(key: "DiskUsageViewController.Cache.Cell.Title")
+    let descriptionText: String = Module.localizedString(key: "DiskUsageViewController.Cache.Cell.Description")
+    private(set) var valueText: Optional<String> = .none
 }
 
 extension DiskUsageCacheViewModel {
