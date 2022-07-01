@@ -9,6 +9,10 @@ class DiskUsageAppViewModel: ViewModel {
     let section = DiskUsageSection.app
 }
 
+extension DiskUsageAppViewModel {
+    func update(diskUsageInfo: DiskUsageInfo) {}
+}
+
 extension DiskUsageAppViewModel: Hashable {
     func hash(into hasher: inout Hasher) {
         hasher.combine(section)

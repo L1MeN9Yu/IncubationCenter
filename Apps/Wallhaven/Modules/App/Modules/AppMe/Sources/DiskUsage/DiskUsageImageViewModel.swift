@@ -9,6 +9,10 @@ class DiskUsageImageViewModel: ViewModel {
     let section = DiskUsageSection.image
 }
 
+extension DiskUsageImageViewModel {
+    func update(diskUsageInfo: DiskUsageInfo) {}
+}
+
 extension DiskUsageImageViewModel: Hashable {
     func hash(into hasher: inout Hasher) {
         hasher.combine(section)

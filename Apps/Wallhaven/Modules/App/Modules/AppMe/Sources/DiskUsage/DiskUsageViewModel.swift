@@ -24,5 +24,20 @@ class DiskUsageViewModel: ViewModel {
 }
 
 extension DiskUsageViewModel {
-    func update(diskUsageInfo: DiskUsageInfo) {}
+    func update(diskUsageInfo: DiskUsageInfo) {
+        items.forEach { _, items in
+            items.forEach { item in
+                switch item {
+                case let .device(viewModel):
+                    viewModel.update(diskUsageInfo: diskUsageInfo)
+                case let .app(viewModel):
+                    viewModel.update(diskUsageInfo: diskUsageInfo)
+                case let .image(viewModel):
+                    viewModel.update(diskUsageInfo: diskUsageInfo)
+                case let .bundle(viewModel):
+                    viewModel.update(diskUsageInfo: diskUsageInfo)
+                }
+            }
+        }
+    }
 }
