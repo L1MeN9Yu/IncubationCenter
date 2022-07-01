@@ -5,7 +5,7 @@
 enum DiskUsageSection {
     case device
     case app
-    case image
+    case cache
     case bundle
 }
 

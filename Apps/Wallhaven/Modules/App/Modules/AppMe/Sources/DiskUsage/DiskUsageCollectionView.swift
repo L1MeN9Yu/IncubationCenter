@@ -24,7 +24,7 @@ private extension DiskUsageCollectionView {
             .backgroundColor(.clear)
             .register(DiskUsageDeviceCollectionViewCell.self, forCellWithReuseIdentifier: DiskUsageDeviceCollectionViewCell.cellID)
             .register(DiskUsageAppCollectionViewCell.self, forCellWithReuseIdentifier: DiskUsageAppCollectionViewCell.cellID)
-            .register(DiskUsageImageCollectionViewCell.self, forCellWithReuseIdentifier: DiskUsageImageCollectionViewCell.cellID)
+            .register(DiskUsageCacheCollectionViewCell.self, forCellWithReuseIdentifier: DiskUsageCacheCollectionViewCell.cellID)
             .register(DiskUsageBundleCollectionViewCell.self, forCellWithReuseIdentifier: DiskUsageBundleCollectionViewCell.cellID)
             .register(DiskUsageCollectionViewFooter.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionFooter, withReuseIdentifier: DiskUsageCollectionViewFooter.cellID)
             .done

@@ -6,7 +6,7 @@ import BaseUI
 import Foundation
 import UIKit
 
-class DiskUsageImageCollectionViewCell: CollectionViewCell {
+class DiskUsageCacheCollectionViewCell: CollectionViewCell {
     override init(frame: CGRect) {
         super.init(frame: frame)
         setup()
@@ -16,19 +16,19 @@ class DiskUsageImageCollectionViewCell: CollectionViewCell {
     required init?(coder: NSCoder) { fatalError("init(coder:) has not been implemented") }
 }
 
-extension DiskUsageImageCollectionViewCell {
+extension DiskUsageCacheCollectionViewCell {
     override open func layoutSubviews() {
         super.layoutSubviews()
         layout()
     }
 }
 
-private extension DiskUsageImageCollectionViewCell {
+private extension DiskUsageCacheCollectionViewCell {
     func setup() {}
 
     func layout() {}
 }
 
-extension DiskUsageImageCollectionViewCell {
-    func config(viewModel: DiskUsageImageViewModel) {}
+extension DiskUsageCacheCollectionViewCell {
+    func config(viewModel: DiskUsageCacheViewModel) {}
 }

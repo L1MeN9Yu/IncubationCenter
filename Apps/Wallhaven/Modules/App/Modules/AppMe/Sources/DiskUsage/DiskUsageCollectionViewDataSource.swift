@@ -24,8 +24,8 @@ extension DiskUsageCollectionViewDataSource {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: DiskUsageAppCollectionViewCell.cellID, for: indexPath) as? DiskUsageAppCollectionViewCell
             cell.run { $0.config(viewModel: viewModel) }
             return cell
-        case let .image(viewModel):
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: DiskUsageImageCollectionViewCell.cellID, for: indexPath) as? DiskUsageImageCollectionViewCell
+        case let .cache(viewModel):
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: DiskUsageCacheCollectionViewCell.cellID, for: indexPath) as? DiskUsageCacheCollectionViewCell
             cell.run { $0.config(viewModel: viewModel) }
             return cell
         case let .bundle(viewModel):

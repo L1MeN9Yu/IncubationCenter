@@ -14,8 +14,8 @@ class DiskUsageViewModel: ViewModel {
         DiskUsageSection.app: [
             DiskUsageItem.app(viewModel: DiskUsageAppViewModel()),
         ],
-        DiskUsageSection.image: [
-            DiskUsageItem.image(viewModel: DiskUsageImageViewModel()),
+        DiskUsageSection.cache: [
+            DiskUsageItem.cache(viewModel: DiskUsageCacheViewModel()),
         ],
         DiskUsageSection.bundle: [
             DiskUsageItem.bundle(viewModel: DiskUsageBundleViewModel()),
@@ -32,7 +32,7 @@ extension DiskUsageViewModel {
                     viewModel.update(diskUsageInfo: diskUsageInfo)
                 case let .app(viewModel):
                     viewModel.update(diskUsageInfo: diskUsageInfo)
-                case let .image(viewModel):
+                case let .cache(viewModel):
                     viewModel.update(diskUsageInfo: diskUsageInfo)
                 case let .bundle(viewModel):
                     viewModel.update(diskUsageInfo: diskUsageInfo)

@@ -5,7 +5,7 @@
 enum DiskUsageItem {
     case device(viewModel: DiskUsageDeviceViewModel)
     case app(viewModel: DiskUsageAppViewModel)
-    case image(viewModel: DiskUsageImageViewModel)
+    case cache(viewModel: DiskUsageCacheViewModel)
     case bundle(viewModel: DiskUsageBundleViewModel)
 }
 

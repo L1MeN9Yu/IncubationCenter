@@ -5,20 +5,20 @@
 import BaseUI
 import Foundation
 
-class DiskUsageImageViewModel: ViewModel {
-    let section = DiskUsageSection.image
+class DiskUsageCacheViewModel: ViewModel {
+    let section = DiskUsageSection.cache
 }
 
-extension DiskUsageImageViewModel {
+extension DiskUsageCacheViewModel {
     func update(diskUsageInfo: DiskUsageInfo) {}
 }
 
-extension DiskUsageImageViewModel: Hashable {
+extension DiskUsageCacheViewModel: Hashable {
     func hash(into hasher: inout Hasher) {
         hasher.combine(section)
     }
 
-    static func == (lhs: DiskUsageImageViewModel, rhs: DiskUsageImageViewModel) -> Bool {
+    static func == (lhs: DiskUsageCacheViewModel, rhs: DiskUsageCacheViewModel) -> Bool {
         lhs.section == rhs.section
     }
 }
