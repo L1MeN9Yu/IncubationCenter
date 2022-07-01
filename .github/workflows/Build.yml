@@ -41,4 +41,4 @@ jobs:
           security list-keychain -d user -s $KEYCHAIN_PATH
       - name: Build
         run: |
-          xcodebuild -workspace IncubationCenter.xcworkspace -scheme Wallhaven -configuration Debug -destination "generic/platform=iOS Simulator" -allowProvisioningUpdates
+          xcodebuild -workspace IncubationCenter.xcworkspace -scheme Wallhaven -configuration Debug -destination "generic/platform=iOS"
