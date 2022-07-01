@@ -11,6 +11,10 @@
 		1E7F76192837BECE0035A8E2 /* Service.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E7F76182837BECE0035A8E2 /* Service.framework */; };
 		1E7F761B2837BECE0035A8E2 /* UICore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E7F761A2837BECE0035A8E2 /* UICore.framework */; };
 		EB31A00201E26D919F2F3349 /* MeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB31A0DC5408DD9E1637E7D9 /* MeCollectionViewCell.swift */; };
+		EB31A00B1B68E29E4B4D95E4 /* DiskUsageAppViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB31A18DEC7A326B6647175B /* DiskUsageAppViewModel.swift */; };
+		EB31A085CE505975527F78FC /* DiskUsageImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB31A562D4CBFD01786818FF /* DiskUsageImageCollectionViewCell.swift */; };
+		EB31A09F98D31B4B8D01831D /* DiskUsageBundleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB31A4C83D0609E83A958D79 /* DiskUsageBundleViewModel.swift */; };
+		EB31A0AAC000F2807E30B41E /* DiskUsageDeviceViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB31AFF249F82C2BAE69BE5F /* DiskUsageDeviceViewModel.swift */; };
 		EB31A0AECBF322D92FC1FDEE /* Exported.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB31AD193238325187935DA5 /* Exported.swift */; };
 		EB31A0BC6FB5DC2E6ECE4AB0 /* DiskUsageInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB31A73D61192AEF434404D1 /* DiskUsageInfo.swift */; };
 		EB31A101F1F680C09E4FA587 /* APIKeySection.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB31A62CE15EAA20BFA00C01 /* APIKeySection.swift */; };
@@ -19,20 +23,29 @@
 		EB31A1CE2C03B3F66554FEE0 /* APIKeyItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB31A62487C960A6B8DD4669 /* APIKeyItem.swift */; };
 		EB31A3208927DD5BD042FF3A /* MeCollectionViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB31A00390B52D01A34A2B12 /* MeCollectionViewDataSource.swift */; };
 		EB31A378B624F94E9493D68F /* APIKeyContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB31A47E44AAE351D4D043C8 /* APIKeyContentView.swift */; };
+		EB31A37E34F4F98FFDD0AA1D /* DiskUsageSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB31A6CA789C988A69764F56 /* DiskUsageSection.swift */; };
 		EB31A45A1ECDCC0269D2A8F3 /* MeCollectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB31A7D98388A22BFC9BD079 /* MeCollectionHeaderView.swift */; };
+		EB31A5D1BE53D4BB87E085EB /* DiskUsageBundleCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB31A871BA9A182EF95AE4A0 /* DiskUsageBundleCollectionViewCell.swift */; };
 		EB31A6682B38FDF41CEA4AF1 /* APIKeyProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB31A1462A80359615B9DEFC /* APIKeyProvider.swift */; };
 		EB31A7AECE2A5D2A75F33B80 /* MeCollectionFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB31A3FF9F577F823035A9E9 /* MeCollectionFooterView.swift */; };
 		EB31A7B1AD3DAE2B40CCF747 /* DiskUsageProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB31A3F6C523BD8EE078C947 /* DiskUsageProvider.swift */; };
 		EB31A7BA2B43560A7E64FFF3 /* APIKeyAboutCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB31AACB9241A1A3204C42CD /* APIKeyAboutCollectionViewCell.swift */; };
 		EB31A86DECF3F0CD8FB4C7CB /* MeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB31A455EA0BCDBEB06D0B1B /* MeViewModel.swift */; };
+		EB31A8793464AC806F8425A1 /* DiskUsageDeviceCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB31AB78B07C279ECE8D4E96 /* DiskUsageDeviceCollectionViewCell.swift */; };
+		EB31A90BFAD3F1C041577E58 /* DiskUsageImageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB31AA558D033B8F7D5EA232 /* DiskUsageImageViewModel.swift */; };
 		EB31A98246860491AA6FFC76 /* DiskUsageContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB31A1A9D6B43A0DE3680C6D /* DiskUsageContentView.swift */; };
 		EB31A99F9538E9E7313A359D /* DiskUsageError.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB31A3CDC3C9237764399088 /* DiskUsageError.swift */; };
 		EB31AA21A753DA26DAB0F541 /* APIKeyCollectionFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB31AE6B26A5735BC7E3B5FB /* APIKeyCollectionFooterView.swift */; };
+		EB31AA3DCB30EDC5FE227146 /* DiskUsageAppCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB31A17DBC7984C4705A52B6 /* DiskUsageAppCollectionViewCell.swift */; };
+		EB31AA73007BF522931E7423 /* DiskUsageCollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB31A4AA26CA3E15567B6E8A /* DiskUsageCollectionViewLayout.swift */; };
+		EB31AAC41BE52A3B4CE377AD /* DiskUsageCollectionViewFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB31A57A40D748768AA615D7 /* DiskUsageCollectionViewFooter.swift */; };
 		EB31AAD4299A296489459D8F /* MeContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB31AA62F3B365F7AD3881DF /* MeContentView.swift */; };
 		EB31AADBECE05D8F41A457E2 /* APIKeyItemViewModelable.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB31A13D9A1F91D26D9B65AC /* APIKeyItemViewModelable.swift */; };
 		EB31AAF60FFCF5459880357C /* MeModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB31A8337C7376F1B9B41855 /* MeModule.swift */; };
+		EB31ABD509764E41401A4903 /* DiskUsageCollectionViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB31A930F1C3E1057593D838 /* DiskUsageCollectionViewDataSource.swift */; };
 		EB31AC5516D40B85850055FB /* APIKeyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB31A554E8D6011F374F35C4 /* APIKeyViewController.swift */; };
 		EB31AE245AFA52A06E0F51B7 /* MeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB31A3E844DF3A113F92E31F /* MeViewController.swift */; };
+		EB31AE290988310D727E7B61 /* DiskUsageCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB31ADA96020FA1ACAD5C769 /* DiskUsageCollectionView.swift */; };
 		EB31AE4F0D468B8E0145C6BF /* APIKeyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB31A03FFC39BAD4F57F53A9 /* APIKeyViewModel.swift */; };
 		EB31AE634046D23FAC6E6F2B /* MeSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB31A4A66F2BA37199B6F328 /* MeSection.swift */; };
 		EB31AE78642C092283FC8B44 /* DiskUsageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB31A80646F5FA67736F71A0 /* DiskUsageViewModel.swift */; };
@@ -43,6 +56,7 @@
 		EB31AFAA8C37424027236137 /* MeNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB31AD0F0E09124A7C8AC4DA /* MeNavigationViewController.swift */; };
 		EB31AFB4D98F63CD0DDC1D0F /* DiskUsageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB31A48AE55B4402E8E597FA /* DiskUsageViewController.swift */; };
 		EB31AFC31B11B5FD47780BAB /* APIKeyAboutViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB31A0CD2084C80D8F566908 /* APIKeyAboutViewModel.swift */; };
+		EB31AFFEFA4638007431621C /* DiskUsageItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB31A4FB4951F6D49C293B34 /* DiskUsageItem.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -73,6 +87,8 @@
 		EB31A13D9A1F91D26D9B65AC /* APIKeyItemViewModelable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIKeyItemViewModelable.swift; sourceTree = "<group>"; };
 		EB31A14618766E631D241D22 /* APIKeyInputViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIKeyInputViewModel.swift; sourceTree = "<group>"; };
 		EB31A1462A80359615B9DEFC /* APIKeyProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIKeyProvider.swift; sourceTree = "<group>"; };
+		EB31A17DBC7984C4705A52B6 /* DiskUsageAppCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiskUsageAppCollectionViewCell.swift; sourceTree = "<group>"; };
+		EB31A18DEC7A326B6647175B /* DiskUsageAppViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiskUsageAppViewModel.swift; sourceTree = "<group>"; };
 		EB31A1A9D6B43A0DE3680C6D /* DiskUsageContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiskUsageContentView.swift; sourceTree = "<group>"; };
 		EB31A3CDC3C9237764399088 /* DiskUsageError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiskUsageError.swift; sourceTree = "<group>"; };
 		EB31A3E844DF3A113F92E31F /* MeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeViewController.swift; sourceTree = "<group>"; };
@@ -82,22 +98,34 @@
 		EB31A47E44AAE351D4D043C8 /* APIKeyContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIKeyContentView.swift; sourceTree = "<group>"; };
 		EB31A48AE55B4402E8E597FA /* DiskUsageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiskUsageViewController.swift; sourceTree = "<group>"; };
 		EB31A4A66F2BA37199B6F328 /* MeSection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeSection.swift; sourceTree = "<group>"; };
+		EB31A4AA26CA3E15567B6E8A /* DiskUsageCollectionViewLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiskUsageCollectionViewLayout.swift; sourceTree = "<group>"; };
+		EB31A4C83D0609E83A958D79 /* DiskUsageBundleViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiskUsageBundleViewModel.swift; sourceTree = "<group>"; };
+		EB31A4FB4951F6D49C293B34 /* DiskUsageItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiskUsageItem.swift; sourceTree = "<group>"; };
 		EB31A554E8D6011F374F35C4 /* APIKeyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIKeyViewController.swift; sourceTree = "<group>"; };
+		EB31A562D4CBFD01786818FF /* DiskUsageImageCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiskUsageImageCollectionViewCell.swift; sourceTree = "<group>"; };
+		EB31A57A40D748768AA615D7 /* DiskUsageCollectionViewFooter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiskUsageCollectionViewFooter.swift; sourceTree = "<group>"; };
 		EB31A62487C960A6B8DD4669 /* APIKeyItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIKeyItem.swift; sourceTree = "<group>"; };
 		EB31A62CE15EAA20BFA00C01 /* APIKeySection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIKeySection.swift; sourceTree = "<group>"; };
+		EB31A6CA789C988A69764F56 /* DiskUsageSection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiskUsageSection.swift; sourceTree = "<group>"; };
 		EB31A73D61192AEF434404D1 /* DiskUsageInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiskUsageInfo.swift; sourceTree = "<group>"; };
 		EB31A7D98388A22BFC9BD079 /* MeCollectionHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeCollectionHeaderView.swift; sourceTree = "<group>"; };
 		EB31A80646F5FA67736F71A0 /* DiskUsageViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiskUsageViewModel.swift; sourceTree = "<group>"; };
 		EB31A8337C7376F1B9B41855 /* MeModule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeModule.swift; sourceTree = "<group>"; };
 		EB31A84E7C514749477362C1 /* MeItemViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeItemViewModel.swift; sourceTree = "<group>"; };
+		EB31A871BA9A182EF95AE4A0 /* DiskUsageBundleCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiskUsageBundleCollectionViewCell.swift; sourceTree = "<group>"; };
 		EB31A8806416FE9753365D5E /* APIKeyCollectionViewDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIKeyCollectionViewDataSource.swift; sourceTree = "<group>"; };
+		EB31A930F1C3E1057593D838 /* DiskUsageCollectionViewDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiskUsageCollectionViewDataSource.swift; sourceTree = "<group>"; };
 		EB31A96B589E334A670747CD /* APIKeyCollectionViewLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIKeyCollectionViewLayout.swift; sourceTree = "<group>"; };
+		EB31AA558D033B8F7D5EA232 /* DiskUsageImageViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiskUsageImageViewModel.swift; sourceTree = "<group>"; };
 		EB31AA62F3B365F7AD3881DF /* MeContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeContentView.swift; sourceTree = "<group>"; };
 		EB31AACB9241A1A3204C42CD /* APIKeyAboutCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIKeyAboutCollectionViewCell.swift; sourceTree = "<group>"; };
+		EB31AB78B07C279ECE8D4E96 /* DiskUsageDeviceCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiskUsageDeviceCollectionViewCell.swift; sourceTree = "<group>"; };
 		EB31AD0F0E09124A7C8AC4DA /* MeNavigationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeNavigationViewController.swift; sourceTree = "<group>"; };
 		EB31AD193238325187935DA5 /* Exported.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Exported.swift; sourceTree = "<group>"; };
+		EB31ADA96020FA1ACAD5C769 /* DiskUsageCollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiskUsageCollectionView.swift; sourceTree = "<group>"; };
 		EB31AE6B26A5735BC7E3B5FB /* APIKeyCollectionFooterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIKeyCollectionFooterView.swift; sourceTree = "<group>"; };
 		EB31AFDF60510C7AEA7A3C99 /* MeCollectionViewLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeCollectionViewLayout.swift; sourceTree = "<group>"; };
+		EB31AFF249F82C2BAE69BE5F /* DiskUsageDeviceViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiskUsageDeviceViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -191,6 +219,20 @@
 				EB31A3CDC3C9237764399088 /* DiskUsageError.swift */,
 				EB31A73D61192AEF434404D1 /* DiskUsageInfo.swift */,
 				EB31A80646F5FA67736F71A0 /* DiskUsageViewModel.swift */,
+				EB31ADA96020FA1ACAD5C769 /* DiskUsageCollectionView.swift */,
+				EB31A4AA26CA3E15567B6E8A /* DiskUsageCollectionViewLayout.swift */,
+				EB31A930F1C3E1057593D838 /* DiskUsageCollectionViewDataSource.swift */,
+				EB31A6CA789C988A69764F56 /* DiskUsageSection.swift */,
+				EB31A4FB4951F6D49C293B34 /* DiskUsageItem.swift */,
+				EB31AFF249F82C2BAE69BE5F /* DiskUsageDeviceViewModel.swift */,
+				EB31A18DEC7A326B6647175B /* DiskUsageAppViewModel.swift */,
+				EB31AA558D033B8F7D5EA232 /* DiskUsageImageViewModel.swift */,
+				EB31A4C83D0609E83A958D79 /* DiskUsageBundleViewModel.swift */,
+				EB31AB78B07C279ECE8D4E96 /* DiskUsageDeviceCollectionViewCell.swift */,
+				EB31A17DBC7984C4705A52B6 /* DiskUsageAppCollectionViewCell.swift */,
+				EB31A562D4CBFD01786818FF /* DiskUsageImageCollectionViewCell.swift */,
+				EB31A871BA9A182EF95AE4A0 /* DiskUsageBundleCollectionViewCell.swift */,
+				EB31A57A40D748768AA615D7 /* DiskUsageCollectionViewFooter.swift */,
 			);
 			path = DiskUsage;
 			sourceTree = "<group>";
@@ -307,6 +349,20 @@
 				EB31A99F9538E9E7313A359D /* DiskUsageError.swift in Sources */,
 				EB31A0BC6FB5DC2E6ECE4AB0 /* DiskUsageInfo.swift in Sources */,
 				EB31AE78642C092283FC8B44 /* DiskUsageViewModel.swift in Sources */,
+				EB31AE290988310D727E7B61 /* DiskUsageCollectionView.swift in Sources */,
+				EB31AA73007BF522931E7423 /* DiskUsageCollectionViewLayout.swift in Sources */,
+				EB31ABD509764E41401A4903 /* DiskUsageCollectionViewDataSource.swift in Sources */,
+				EB31A37E34F4F98FFDD0AA1D /* DiskUsageSection.swift in Sources */,
+				EB31AFFEFA4638007431621C /* DiskUsageItem.swift in Sources */,
+				EB31A0AAC000F2807E30B41E /* DiskUsageDeviceViewModel.swift in Sources */,
+				EB31A00B1B68E29E4B4D95E4 /* DiskUsageAppViewModel.swift in Sources */,
+				EB31A90BFAD3F1C041577E58 /* DiskUsageImageViewModel.swift in Sources */,
+				EB31A09F98D31B4B8D01831D /* DiskUsageBundleViewModel.swift in Sources */,
+				EB31A8793464AC806F8425A1 /* DiskUsageDeviceCollectionViewCell.swift in Sources */,
+				EB31AA3DCB30EDC5FE227146 /* DiskUsageAppCollectionViewCell.swift in Sources */,
+				EB31A085CE505975527F78FC /* DiskUsageImageCollectionViewCell.swift in Sources */,
+				EB31A5D1BE53D4BB87E085EB /* DiskUsageBundleCollectionViewCell.swift in Sources */,
+				EB31AAC41BE52A3B4CE377AD /* DiskUsageCollectionViewFooter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

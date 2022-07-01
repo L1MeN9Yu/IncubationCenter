@@ -9,6 +9,12 @@ import UIKit
 class FilterCollectionView: CollectionView {
     init() {
         super.init(frame: .zero, collectionViewLayout: FilterCollectionViewLayout())
+        setup()
+    }
+}
+
+private extension FilterCollectionView {
+    func setup() {
         x
             .backgroundColor(.clear)
             .register(FilterCollectionViewCategoriesCell.self, forCellWithReuseIdentifier: FilterCollectionViewCategoriesCell.cellID)

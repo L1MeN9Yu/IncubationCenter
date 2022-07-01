@@ -8,6 +8,11 @@ import UIExtensionsKit
 import UIKit
 
 class DiskUsageContentView: View {
+    private lazy var collectionView: DiskUsageCollectionView = .init()
+        .x
+        .delegate(self)
+        .instance
+
     override init(frame: CGRect) {
         super.init(frame: frame)
         setup()
@@ -27,7 +32,12 @@ extension DiskUsageContentView {
 private extension DiskUsageContentView {
     func setup() {
         backgroundColor = .systemWhite
+        collectionView.x.add(to: self)
     }
 
-    func layout() {}
+    func layout() {
+        collectionView.pin.all(pin.safeArea)
+    }
 }
+
+extension DiskUsageContentView: UICollectionViewDelegate {}
