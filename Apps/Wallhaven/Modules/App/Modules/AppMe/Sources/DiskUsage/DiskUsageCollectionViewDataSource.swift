@@ -40,7 +40,8 @@ extension DiskUsageCollectionViewDataSource {
         case UICollectionView.elementKindSectionHeader:
             return nil
         case UICollectionView.elementKindSectionFooter:
-            return nil
+            let view = collectionView.dequeueReusableSupplementaryView(ofKind: elementKind, withReuseIdentifier: DiskUsageCollectionViewFooter.cellID, for: indexPath) as? DiskUsageCollectionViewFooter
+            return view
         default:
             return nil
         }

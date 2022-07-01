@@ -47,6 +47,7 @@ private extension DiskUsageViewController {
             do {
                 let diskUsageInfo = try await provider.loadDiskUsageInfo()
                 viewModel.update(diskUsageInfo: diskUsageInfo)
+                contentView.reloadData(viewModel: viewModel)
                 logger.info("\(diskUsageInfo)")
             } catch {
                 logger.error("\(error)")

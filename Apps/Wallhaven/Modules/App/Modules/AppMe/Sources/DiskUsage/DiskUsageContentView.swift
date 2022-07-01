@@ -13,6 +13,8 @@ class DiskUsageContentView: View {
         .delegate(self)
         .instance
 
+    private lazy var dataSource = DiskUsageCollectionView.DataSource(collectionView: collectionView)
+
     override init(frame: CGRect) {
         super.init(frame: frame)
         setup()
@@ -37,6 +39,17 @@ private extension DiskUsageContentView {
 
     func layout() {
         collectionView.pin.all(pin.safeArea)
+    }
+}
+
+extension DiskUsageContentView {
+    func reloadData(viewModel: DiskUsageViewModel) {
+        var snapshot = DiskUsageCollectionView.Snapshot()
+        viewModel.items.forEach {
+            snapshot.appendSections([$0])
+            snapshot.appendItems($1, toSection: $0)
+        }
+        dataSource.apply(snapshot)
     }
 }
 

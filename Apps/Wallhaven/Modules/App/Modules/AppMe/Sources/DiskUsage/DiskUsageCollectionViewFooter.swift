@@ -24,7 +24,9 @@ extension DiskUsageCollectionViewFooter {
 }
 
 private extension DiskUsageCollectionViewFooter {
-    func setup() {}
+    func setup() {
+        backgroundColor = .systemGray6
+    }
 
     func layout() {}
 }
