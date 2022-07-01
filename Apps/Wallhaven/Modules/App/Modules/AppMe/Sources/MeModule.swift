@@ -5,10 +5,12 @@
 import AppModular
 import LoggerPool
 
+typealias Module = MeModule
+
+let logger = Module.logger
+
 class MeModule: Modular {}
 
 extension MeModule {
     static let logger = Loggers[typeName]
 }
-
-let logger = MeModule.logger

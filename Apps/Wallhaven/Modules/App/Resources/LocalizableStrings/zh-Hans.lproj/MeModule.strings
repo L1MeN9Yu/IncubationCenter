@@ -37,3 +37,5 @@
 /* - DiskUsageViewController - */
 
 "DiskUsageViewController.Title" = "存储空间";
+"DiskUsageViewController.Bundle.Cell.Title" = "应用大小";
+"DiskUsageViewController.Bundle.Cell.Description" = "应用大小是指应用的执行文件占用的只读区大小。";

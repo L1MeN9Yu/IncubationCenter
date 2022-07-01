@@ -37,3 +37,5 @@
 /* - DiskUsageViewController - */
 
 "DiskUsageViewController.Title" = "Disk Usage";
+"DiskUsageViewController.Bundle.Cell.Title" = "App Size";
+"DiskUsageViewController.Bundle.Cell.Description" = "App Size means the readonly app files in your device.";
