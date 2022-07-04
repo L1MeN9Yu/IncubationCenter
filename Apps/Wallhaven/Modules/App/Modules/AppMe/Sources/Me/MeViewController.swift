@@ -39,6 +39,7 @@ private extension MeViewController {
         contentView.didSelectedItemDelegator.delegate(on: self) { _, indexPath in
             switch (indexPath.section, indexPath.row) {
             case (0, 0): Router.push(to: "APIKeyViewController")
+            case (2, 0): Router.push(to: "DiskUsageViewController")
             case (3, 0): Router.push(to: "AboutViewController")
             default: return
             }

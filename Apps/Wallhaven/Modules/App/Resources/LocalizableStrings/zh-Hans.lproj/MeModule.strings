@@ -33,3 +33,16 @@
 "APIKeyViewController.Input.ResetButton.Title" = "重置";
 "APIKeyViewController.Input.SetButton.Title" = "设置";
 "APIKeyViewController.About.Title" = "前往 wallhaven.cc 查看账号的API Key";
+
+/* - DiskUsageViewController - */
+
+"DiskUsageViewController.Title" = "存储空间";
+"DiskUsageViewController.Device.Cell.TotalIconText" = "设备可用空间";
+"DiskUsageViewController.Device.Cell.UsedIconText" = "设备已用空间";
+"DiskUsageViewController.Device.Cell.AppIconText" = "App占用空间";
+"DiskUsageViewController.Bundle.Cell.Title" = "应用大小";
+"DiskUsageViewController.Bundle.Cell.Description" = "应用大小是指应用的执行文件占用的只读区大小。";
+"DiskUsageViewController.Cache.Cell.Title" = "缓存";
+"DiskUsageViewController.Cache.Cell.Description" = "临时文件";
+"DiskUsageViewController.App.Cell.Title" = "%@已用空间";
+"DiskUsageViewController.App.Cell.Description" = "占用 %@ 存储空间";
