@@ -27,12 +27,13 @@ jobs:
           rm Payload/Wallhaven.app/Frameworks/libswift_Concurrency.dylib
           zip -r Wallhaven.Unsigned.ipa ./Payload
           cp -r Wallhaven.xcarchive/dSYMs dSYMs
+          zip -r Wallhaven.dSYMs dSYMs
           popd
       - name: Release
         uses: softprops/action-gh-release@v1
         with:
           files: |
-            Archives/Wallhaven.ipa
+            Archives/Wallhaven.Unsigned.ipa
             Archives/Wallhaven.dSYMs
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
