@@ -25,7 +25,7 @@ jobs:
           mkdir Payload
           cp -r Wallhaven.xcarchive/Products/Applications/Wallhaven.app Payload/
           rm Payload/Wallhaven.app/Frameworks/libswift_Concurrency.dylib
-          zip -r Wallhaven.ipa ./Payload
+          zip -r Wallhaven.Unsigned.ipa ./Payload
           cp -r Wallhaven.xcarchive/dSYMs dSYMs
           popd
       - name: Release
