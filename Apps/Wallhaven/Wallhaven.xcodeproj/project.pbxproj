@@ -19,6 +19,7 @@
 		1E7F7559283635F60035A8E2 /* Center.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1E7F7557283635880035A8E2 /* Center.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		1E7F755A283635F60035A8E2 /* UICore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E7F753B283633B30035A8E2 /* UICore.framework */; };
 		1E7F755B283635F60035A8E2 /* UICore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1E7F753B283633B30035A8E2 /* UICore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		1EE3641F2872BC9300141E21 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1EE364212872BC9300141E21 /* InfoPlist.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,7 +76,6 @@
 		1E7F74AA283620A60035A8E2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		1E7F74B1283620A70035A8E2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1E7F74B4283620A70035A8E2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		1E7F74B6283620A70035A8E2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1E7F74E2283625690035A8E2 /* App.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = App.xcodeproj; path = App/App.xcodeproj; sourceTree = "<group>"; };
 		1E7F7514283628D30035A8E2 /* Service.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Service.xcodeproj; path = Service/Service.xcodeproj; sourceTree = "<group>"; };
 		1E7F7536283633B20035A8E2 /* UICore.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = UICore.xcodeproj; path = UICore/UICore.xcodeproj; sourceTree = "<group>"; };
@@ -83,6 +83,9 @@
 		1E7F75F62837BB8E0035A8E2 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
 		1EBAFEF2285AFFED00CFF89B /* Wallhaven.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Wallhaven.xcconfig; sourceTree = "<group>"; };
 		1EBAFEF3285B0C3200CFF89B /* Wallhaven.override.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Wallhaven.override.xcconfig; sourceTree = "<group>"; };
+		1EE364202872BC9300141E21 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		1EE364222872BC9400141E21 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		1EE364232872BE4900141E21 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,7 +137,8 @@
 			children = (
 				1E7F74B3283620A70035A8E2 /* LaunchScreen.storyboard */,
 				1E7F74B1283620A70035A8E2 /* Assets.xcassets */,
-				1E7F74B6283620A70035A8E2 /* Info.plist */,
+				1EE364232872BE4900141E21 /* Info.plist */,
+				1EE364212872BC9300141E21 /* InfoPlist.strings */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -308,6 +312,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1E7F74B5283620A70035A8E2 /* LaunchScreen.storyboard in Resources */,
+				1EE3641F2872BC9300141E21 /* InfoPlist.strings in Resources */,
 				1E7F74B2283620A70035A8E2 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -334,6 +339,15 @@
 				1E7F75F62837BB8E0035A8E2 /* zh-Hans */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		1EE364212872BC9300141E21 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1EE364202872BC9300141E21 /* en */,
+				1EE364222872BC9400141E21 /* zh-Hans */,
+			);
+			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -459,6 +473,12 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 1EBAFEF2285AFFED00CFF89B /* Wallhaven.xcconfig */;
 			buildSettings = {
+				INFOPLIST_KEY_CFBundleDisplayName = "$(CFBundleDisplayName)";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.entertainment";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 			};
 			name = Debug;
 		};
@@ -466,6 +486,12 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 1EBAFEF2285AFFED00CFF89B /* Wallhaven.xcconfig */;
 			buildSettings = {
+				INFOPLIST_KEY_CFBundleDisplayName = "$(CFBundleDisplayName)";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.entertainment";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 			};
 			name = Release;
 		};

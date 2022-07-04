@@ -44,3 +44,5 @@
 "DiskUsageViewController.Bundle.Cell.Description" = "App Size means the readonly app files in your device.";
 "DiskUsageViewController.Cache.Cell.Title" = "Cache";
 "DiskUsageViewController.Cache.Cell.Description" = "The temporary files";
+"DiskUsageViewController.App.Cell.Title" = "%@ Used";
+"DiskUsageViewController.App.Cell.Description" = "Take up %@ of phone's storage space";
