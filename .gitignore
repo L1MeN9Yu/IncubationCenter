@@ -76,3 +76,6 @@ Brewfile.lock.json
 
 # XCConfig
 *.override.xcconfig
+
+# Archives
+Archives
