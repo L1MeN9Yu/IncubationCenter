@@ -37,6 +37,9 @@
 /* - DiskUsageViewController - */
 
 "DiskUsageViewController.Title" = "Disk Usage";
+"DiskUsageViewController.Device.Cell.TotalIconText" = "Device Disk Free Space";
+"DiskUsageViewController.Device.Cell.UsedIconText" = "Device  Used Space";
+"DiskUsageViewController.Device.Cell.AppIconText" = "App Used Space";
 "DiskUsageViewController.Bundle.Cell.Title" = "App Size";
 "DiskUsageViewController.Bundle.Cell.Description" = "App Size means the readonly app files in your device.";
 "DiskUsageViewController.Cache.Cell.Title" = "Cache";
