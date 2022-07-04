@@ -7,4 +7,5 @@ struct DiskUsageInfo {
     let deviceAvailable: UInt64
     let bundle: UInt64
     let container: UInt64
+    let imageCache: UInt64
 }

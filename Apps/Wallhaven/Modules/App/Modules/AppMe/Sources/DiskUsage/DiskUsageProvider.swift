@@ -5,6 +5,7 @@
 import BaseUI
 import Darwin
 import Foundation
+import Kingfisher
 
 class DiskUsageProvider: Provider {}
 
@@ -27,7 +28,9 @@ extension DiskUsageProvider {
             let bundleSize = try size(of: bundleURL)
             let containerSize = try size(of: containerURL)
 
-            return DiskUsageInfo(deviceTotal: total, deviceAvailable: available, bundle: bundleSize, container: containerSize)
+            let imageCache = try size(of: KingfisherManager.shared.cache.diskStorage.directoryURL)
+
+            return DiskUsageInfo(deviceTotal: total, deviceAvailable: available, bundle: bundleSize, container: containerSize, imageCache: imageCache)
         }
         .value
     }
