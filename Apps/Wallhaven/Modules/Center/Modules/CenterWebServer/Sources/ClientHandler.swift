@@ -9,7 +9,6 @@ import Logging
 import NIO
 import ProxyServer
 import RestfulClient
-import Service
 
 class ClientHandler {
     let eventGroup = MultiThreadedEventLoopGroup(numberOfThreads: 1)
