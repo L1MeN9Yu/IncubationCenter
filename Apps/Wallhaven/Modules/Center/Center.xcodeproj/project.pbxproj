@@ -13,7 +13,6 @@
 		1EF1F3F9286A9E48000460E6 /* APICenterModule.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1EF1F3FB286A9E48000460E6 /* APICenterModule.strings */; };
 		EB31A29FD83CE63F9DEFBA76 /* Exported.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB31A39EEF2E4941A946D0F4 /* Exported.swift */; };
 		EB31A58D2C6B518D045DB363 /* CenterModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB31AA23E1DD77A2EAA89297 /* CenterModule.swift */; };
-		EB31A8E1826C3F8CB2B16C1D /* ClientHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB31A1303E828354EF4EA6A2 /* ClientHandler.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,7 +41,6 @@
 		1EBF47C82872F9D700039FBF /* CenterWebServer.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = CenterWebServer.xcodeproj; path = CenterWebServer/CenterWebServer.xcodeproj; sourceTree = "<group>"; };
 		1EF1F3FA286A9E48000460E6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/APICenterModule.strings; sourceTree = "<group>"; };
 		1EF1F3FC286A9E65000460E6 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/APICenterModule.strings"; sourceTree = "<group>"; };
-		EB31A1303E828354EF4EA6A2 /* ClientHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClientHandler.swift; sourceTree = "<group>"; };
 		EB31A39EEF2E4941A946D0F4 /* Exported.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Exported.swift; sourceTree = "<group>"; };
 		EB31A74475C6EF4572AB671B /* Center.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Center.xcconfig; sourceTree = "<group>"; };
 		EB31AA23E1DD77A2EAA89297 /* CenterModule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CenterModule.swift; sourceTree = "<group>"; };
@@ -87,7 +85,6 @@
 			children = (
 				EB31A39EEF2E4941A946D0F4 /* Exported.swift */,
 				EB31AA23E1DD77A2EAA89297 /* CenterModule.swift */,
-				EB31A1303E828354EF4EA6A2 /* ClientHandler.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -260,7 +257,6 @@
 			files = (
 				EB31A58D2C6B518D045DB363 /* CenterModule.swift in Sources */,
 				EB31A29FD83CE63F9DEFBA76 /* Exported.swift in Sources */,
-				EB31A8E1826C3F8CB2B16C1D /* ClientHandler.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

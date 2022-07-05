@@ -7,7 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1EBF47C22872F9D700039FBF /* CenterWebServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EBF47C12872F9D700039FBF /* CenterWebServer.swift */; };
+		1EEE0C732873D909008B38EE /* Service.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1EEE0C722873D909008B38EE /* Service.framework */; };
+		EB31A261A3F380FD621EDA47 /* WebServerCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB31ACC38C5378E89EFF8FDB /* WebServerCenter.swift */; };
+		EB31A2CD751646D23C6285FC /* ClientHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB31A9C244F4B378AF8ADCDB /* ClientHandler.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -24,10 +26,12 @@
 
 /* Begin PBXFileReference section */
 		1EBF47BE2872F9D700039FBF /* libCenterWebServer.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libCenterWebServer.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		1EBF47C12872F9D700039FBF /* CenterWebServer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CenterWebServer.swift; sourceTree = "<group>"; };
 		1EBF47CF2872FA3800039FBF /* CenterWebServer.Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = CenterWebServer.Debug.xcconfig; sourceTree = "<group>"; };
 		1EBF47D02872FA3800039FBF /* CenterWebServer.Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = CenterWebServer.Release.xcconfig; sourceTree = "<group>"; };
 		1EBF47D12872FA3800039FBF /* CenterWebServer.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = CenterWebServer.xcconfig; sourceTree = "<group>"; };
+		1EEE0C722873D909008B38EE /* Service.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Service.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EB31A9C244F4B378AF8ADCDB /* ClientHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClientHandler.swift; sourceTree = "<group>"; };
+		EB31ACC38C5378E89EFF8FDB /* WebServerCenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebServerCenter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +39,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1EEE0C732873D909008B38EE /* Service.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -47,6 +52,7 @@
 				1EBF47C02872F9D700039FBF /* Sources */,
 				1EBF47CE2872FA3800039FBF /* XCConfig */,
 				1EBF47BF2872F9D700039FBF /* Products */,
+				1EEE0C712873D908008B38EE /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -61,7 +67,8 @@
 		1EBF47C02872F9D700039FBF /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				1EBF47C12872F9D700039FBF /* CenterWebServer.swift */,
+				EB31ACC38C5378E89EFF8FDB /* WebServerCenter.swift */,
+				EB31A9C244F4B378AF8ADCDB /* ClientHandler.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -74,6 +81,14 @@
 				1EBF47D12872FA3800039FBF /* CenterWebServer.xcconfig */,
 			);
 			path = XCConfig;
+			sourceTree = "<group>";
+		};
+		1EEE0C712873D908008B38EE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1EEE0C722873D909008B38EE /* Service.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -134,7 +149,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1EBF47C22872F9D700039FBF /* CenterWebServer.swift in Sources */,
+				EB31A261A3F380FD621EDA47 /* WebServerCenter.swift in Sources */,
+				EB31A2CD751646D23C6285FC /* ClientHandler.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

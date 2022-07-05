@@ -8,16 +8,11 @@ public enum CenterModule {}
 
 private extension CenterModule {
     static let logger = Loggers[String(describing: CenterModule.self)]
-    static let clientHandler = ClientHandler(logger: logger)
 }
 
 public extension CenterModule {
     static func bootstrap() {
-        server.start()
         APICenter.bootstrap()
+        WebServerCenter.bootstrap()
     }
-}
-
-private extension CenterModule {
-    static let server = Server(port: 9528, logger: logger, clientHandler: clientHandler)
 }
