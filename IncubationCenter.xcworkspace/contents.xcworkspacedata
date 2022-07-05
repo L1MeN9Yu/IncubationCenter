@@ -111,6 +111,9 @@
          <FileRef
             location = "group:Packages/Service/RubikCube">
          </FileRef>
+         <FileRef
+            location = "group:Packages/Service/Relic">
+         </FileRef>
       </Group>
    </Group>
    <FileRef
