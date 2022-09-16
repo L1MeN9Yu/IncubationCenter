@@ -7,6 +7,9 @@
       <FileRef
          location = "group:Apps/Wallhaven/Wallhaven.xcodeproj">
       </FileRef>
+      <FileRef
+         location = "group:Apps/Radahn/Radahn.xcodeproj">
+      </FileRef>
    </Group>
    <Group
       location = "container:"
