@@ -3,13 +3,12 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 55;
+	objectVersion = 56;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		1E100149283E1E4800D8057E /* UIRefresh in Frameworks */ = {isa = PBXBuildFile; productRef = 1E100148283E1E4800D8057E /* UIRefresh */; };
 		1E1AEB69286177490031C454 /* UIToast in Frameworks */ = {isa = PBXBuildFile; productRef = 1E1AEB68286177490031C454 /* UIToast */; };
-		1E21A5C1283D215C00EEEEFC /* AsyncImageView in Frameworks */ = {isa = PBXBuildFile; productRef = 1E21A5C0283D215C00EEEEFC /* AsyncImageView */; };
 		1E340DFE28699D3E003C751A /* UIExtensionsKit in Frameworks */ = {isa = PBXBuildFile; productRef = 1E340DFD28699D3E003C751A /* UIExtensionsKit */; };
 		1E340E0028699D46003C751A /* UISegment in Frameworks */ = {isa = PBXBuildFile; productRef = 1E340DFF28699D46003C751A /* UISegment */; };
 		1E42B801283D142E005D2247 /* UIHierarchy in Frameworks */ = {isa = PBXBuildFile; productRef = 1E42B800283D142E005D2247 /* UIHierarchy */; };
@@ -19,11 +18,12 @@
 		1E7F75842836808E0035A8E2 /* AppLifecycle in Frameworks */ = {isa = PBXBuildFile; productRef = 1E7F75832836808E0035A8E2 /* AppLifecycle */; };
 		1E7F7589283680A70035A8E2 /* UICombine in Frameworks */ = {isa = PBXBuildFile; productRef = 1E7F7588283680A70035A8E2 /* UICombine */; };
 		1E7F758B283680AC0035A8E2 /* UILayout in Frameworks */ = {isa = PBXBuildFile; productRef = 1E7F758A283680AC0035A8E2 /* UILayout */; };
-		1E7F758D283730230035A8E2 /* BaseUI in Frameworks */ = {isa = PBXBuildFile; productRef = 1E7F758C283730230035A8E2 /* BaseUI */; };
 		1E7F759A28373B750035A8E2 /* Service.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E7F759928373B750035A8E2 /* Service.framework */; };
 		1E7F75A328373BC00035A8E2 /* Exported.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7F75A228373BC00035A8E2 /* Exported.swift */; };
 		1EB5CCC02862C63A00119589 /* UIWebKit in Frameworks */ = {isa = PBXBuildFile; productRef = 1EB5CCBF2862C63A00119589 /* UIWebKit */; };
 		1EC9411B2863247800F23094 /* Chain in Frameworks */ = {isa = PBXBuildFile; productRef = 1EC9411A2863247800F23094 /* Chain */; };
+		857FFE192953F1CD0026BA77 /* UIBase in Frameworks */ = {isa = PBXBuildFile; productRef = 857FFE182953F1CD0026BA77 /* UIBase */; };
+		857FFE1B2953F62C0026BA77 /* UIWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 857FFE1A2953F62C0026BA77 /* UIWebImage */; };
 		EB31AB0268EDB7096AE528EA /* UICoreModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB31A7CBEFA92D8BD0CE88F0 /* UICoreModule.swift */; };
 /* End PBXBuildFile section */
 
@@ -47,17 +47,17 @@
 				1E7EBD18286084C50091CB57 /* UIFeedback in Frameworks */,
 				1E42B801283D142E005D2247 /* UIHierarchy in Frameworks */,
 				1E7F759A28373B750035A8E2 /* Service.framework in Frameworks */,
-				1E7F758D283730230035A8E2 /* BaseUI in Frameworks */,
 				1E1AEB69286177490031C454 /* UIToast in Frameworks */,
 				1EC9411B2863247800F23094 /* Chain in Frameworks */,
 				1E749B8B2841DF9B00EE079C /* UIRoute in Frameworks */,
 				1E7F758B283680AC0035A8E2 /* UILayout in Frameworks */,
+				857FFE1B2953F62C0026BA77 /* UIWebImage in Frameworks */,
 				1E340E0028699D46003C751A /* UISegment in Frameworks */,
-				1E21A5C1283D215C00EEEEFC /* AsyncImageView in Frameworks */,
 				1E652D162861D1820026AD2B /* UIHUD in Frameworks */,
 				1E7F75842836808E0035A8E2 /* AppLifecycle in Frameworks */,
 				1E7F7589283680A70035A8E2 /* UICombine in Frameworks */,
 				1EB5CCC02862C63A00119589 /* UIWebKit in Frameworks */,
+				857FFE192953F1CD0026BA77 /* UIBase in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -140,9 +140,7 @@
 				1E7F75832836808E0035A8E2 /* AppLifecycle */,
 				1E7F7588283680A70035A8E2 /* UICombine */,
 				1E7F758A283680AC0035A8E2 /* UILayout */,
-				1E7F758C283730230035A8E2 /* BaseUI */,
 				1E42B800283D142E005D2247 /* UIHierarchy */,
-				1E21A5C0283D215C00EEEEFC /* AsyncImageView */,
 				1E100148283E1E4800D8057E /* UIRefresh */,
 				1E749B8A2841DF9B00EE079C /* UIRoute */,
 				1E7EBD17286084C50091CB57 /* UIFeedback */,
@@ -152,6 +150,8 @@
 				1EC9411A2863247800F23094 /* Chain */,
 				1E340DFD28699D3E003C751A /* UIExtensionsKit */,
 				1E340DFF28699D46003C751A /* UISegment */,
+				857FFE182953F1CD0026BA77 /* UIBase */,
+				857FFE1A2953F62C0026BA77 /* UIWebImage */,
 			);
 			productName = UICore;
 			productReference = 1E7F752A283633B20035A8E2 /* UICore.framework */;
@@ -164,7 +164,7 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastUpgradeCheck = 1340;
+				LastUpgradeCheck = 1410;
 				TargetAttributes = {
 					1E7F7529283633B20035A8E2 = {
 						CreatedOnToolsVersion = 13.4;
@@ -172,7 +172,7 @@
 				};
 			};
 			buildConfigurationList = 1E7F7524283633B20035A8E2 /* Build configuration list for PBXProject "UICore" */;
-			compatibilityVersion = "Xcode 13.0";
+			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -214,26 +214,26 @@
 /* Begin XCBuildConfiguration section */
 		1E7F7531283633B20035A8E2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1EBAFF04285B31FB00CFF89B /* UICore.Debug.xcconfig */;
 			buildSettings = {
 			};
 			name = Debug;
 		};
 		1E7F7532283633B20035A8E2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1EBAFF05285B320A00CFF89B /* UICore.Release.xcconfig */;
 			buildSettings = {
 			};
 			name = Release;
 		};
 		1E7F7534283633B20035A8E2 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1EBAFF04285B31FB00CFF89B /* UICore.Debug.xcconfig */;
 			buildSettings = {
 			};
 			name = Debug;
 		};
 		1E7F7535283633B20035A8E2 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1EBAFF05285B320A00CFF89B /* UICore.Release.xcconfig */;
 			buildSettings = {
 			};
 			name = Release;
@@ -269,10 +269,6 @@
 		1E1AEB68286177490031C454 /* UIToast */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = UIToast;
-		};
-		1E21A5C0283D215C00EEEEFC /* AsyncImageView */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = AsyncImageView;
 		};
 		1E340DFD28699D3E003C751A /* UIExtensionsKit */ = {
 			isa = XCSwiftPackageProductDependency;
@@ -310,10 +306,6 @@
 			isa = XCSwiftPackageProductDependency;
 			productName = UILayout;
 		};
-		1E7F758C283730230035A8E2 /* BaseUI */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = BaseUI;
-		};
 		1EB5CCBF2862C63A00119589 /* UIWebKit */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = UIWebKit;
@@ -321,6 +313,14 @@
 		1EC9411A2863247800F23094 /* Chain */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = Chain;
+		};
+		857FFE182953F1CD0026BA77 /* UIBase */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = UIBase;
+		};
+		857FFE1A2953F62C0026BA77 /* UIWebImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = UIWebImage;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

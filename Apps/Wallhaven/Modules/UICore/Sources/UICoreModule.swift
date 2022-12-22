@@ -20,7 +20,7 @@ public extension UICoreModule {
                 routerLogger.error("no view controller for \($0)")
             })
 
-        AsyncImageManager.setupProxy(host: "127.0.0.1", port: 9528, originalHeaderField: HTTPHeaderField.originalURLForProxy).setupCache()
+        UIWebImageManager.setupProxy(host: "127.0.0.1", port: 9528, originalHeaderField: HTTPHeaderField.originalURLForProxy).setupCache()
     }
 }
 

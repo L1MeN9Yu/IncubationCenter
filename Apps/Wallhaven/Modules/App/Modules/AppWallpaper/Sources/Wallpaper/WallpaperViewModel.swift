@@ -2,7 +2,7 @@
 // Created by Mengyu Li on 2022/5/29.
 //
 
-import BaseUI
+import UIBase
 import Center
 import Foundation
 

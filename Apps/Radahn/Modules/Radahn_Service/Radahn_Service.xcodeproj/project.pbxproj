@@ -1,0 +1,245 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		855318BD2954447B00728465 /* Exported.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855318BC2954447B00728465 /* Exported.swift */; };
+		855318C5295444C000728465 /* AppModular in Frameworks */ = {isa = PBXBuildFile; productRef = 855318C4295444C000728465 /* AppModular */; };
+		855318C7295444CB00728465 /* ExtensionKit in Frameworks */ = {isa = PBXBuildFile; productRef = 855318C6295444CB00728465 /* ExtensionKit */; };
+		855318C9295444CF00728465 /* LoggerPool in Frameworks */ = {isa = PBXBuildFile; productRef = 855318C8295444CF00728465 /* LoggerPool */; };
+		855318ED2954457B00728465 /* PropertyWrappers in Frameworks */ = {isa = PBXBuildFile; productRef = 855318EC2954457B00728465 /* PropertyWrappers */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		855318AB2954442200728465 /* Radahn_Service.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Radahn_Service.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		855318BC2954447B00728465 /* Exported.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Exported.swift; sourceTree = "<group>"; };
+		855318BF2954448200728465 /* Service.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Service.xcconfig; sourceTree = "<group>"; };
+		855318C02954448200728465 /* Service.Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Service.Release.xcconfig; sourceTree = "<group>"; };
+		855318C12954448200728465 /* Service.Debug.Override.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Service.Debug.Override.xcconfig; sourceTree = "<group>"; };
+		855318C22954448200728465 /* Service.Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Service.Debug.xcconfig; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		855318A82954442200728465 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				855318C5295444C000728465 /* AppModular in Frameworks */,
+				855318ED2954457B00728465 /* PropertyWrappers in Frameworks */,
+				855318C7295444CB00728465 /* ExtensionKit in Frameworks */,
+				855318C9295444CF00728465 /* LoggerPool in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		855318A12954442200728465 = {
+			isa = PBXGroup;
+			children = (
+				855318BB2954447B00728465 /* Sources */,
+				855318BE2954448200728465 /* XCConfig */,
+				855318AC2954442200728465 /* Products */,
+				855318C3295444C000728465 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		855318AC2954442200728465 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				855318AB2954442200728465 /* Radahn_Service.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		855318BB2954447B00728465 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				855318BC2954447B00728465 /* Exported.swift */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		855318BE2954448200728465 /* XCConfig */ = {
+			isa = PBXGroup;
+			children = (
+				855318BF2954448200728465 /* Service.xcconfig */,
+				855318C02954448200728465 /* Service.Release.xcconfig */,
+				855318C12954448200728465 /* Service.Debug.Override.xcconfig */,
+				855318C22954448200728465 /* Service.Debug.xcconfig */,
+			);
+			path = XCConfig;
+			sourceTree = "<group>";
+		};
+		855318C3295444C000728465 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		855318A62954442200728465 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		855318AA2954442200728465 /* Radahn_Service */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 855318B22954442200728465 /* Build configuration list for PBXNativeTarget "Radahn_Service" */;
+			buildPhases = (
+				855318A62954442200728465 /* Headers */,
+				855318A72954442200728465 /* Sources */,
+				855318A82954442200728465 /* Frameworks */,
+				855318A92954442200728465 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Radahn_Service;
+			packageProductDependencies = (
+				855318C4295444C000728465 /* AppModular */,
+				855318C6295444CB00728465 /* ExtensionKit */,
+				855318C8295444CF00728465 /* LoggerPool */,
+				855318EC2954457B00728465 /* PropertyWrappers */,
+			);
+			productName = Radahn_Service;
+			productReference = 855318AB2954442200728465 /* Radahn_Service.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		855318A22954442200728465 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastUpgradeCheck = 1410;
+				TargetAttributes = {
+					855318AA2954442200728465 = {
+						CreatedOnToolsVersion = 14.1;
+					};
+				};
+			};
+			buildConfigurationList = 855318A52954442200728465 /* Build configuration list for PBXProject "Radahn_Service" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 855318A12954442200728465;
+			productRefGroup = 855318AC2954442200728465 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				855318AA2954442200728465 /* Radahn_Service */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		855318A92954442200728465 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		855318A72954442200728465 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				855318BD2954447B00728465 /* Exported.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		855318B02954442200728465 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 855318C22954448200728465 /* Service.Debug.xcconfig */;
+			buildSettings = {
+			};
+			name = Debug;
+		};
+		855318B12954442200728465 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 855318C02954448200728465 /* Service.Release.xcconfig */;
+			buildSettings = {
+			};
+			name = Release;
+		};
+		855318B32954442200728465 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Debug;
+		};
+		855318B42954442200728465 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		855318A52954442200728465 /* Build configuration list for PBXProject "Radahn_Service" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				855318B02954442200728465 /* Debug */,
+				855318B12954442200728465 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		855318B22954442200728465 /* Build configuration list for PBXNativeTarget "Radahn_Service" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				855318B32954442200728465 /* Debug */,
+				855318B42954442200728465 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		855318C4295444C000728465 /* AppModular */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = AppModular;
+		};
+		855318C6295444CB00728465 /* ExtensionKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = ExtensionKit;
+		};
+		855318C8295444CF00728465 /* LoggerPool */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = LoggerPool;
+		};
+		855318EC2954457B00728465 /* PropertyWrappers */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = PropertyWrappers;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 855318A22954442200728465 /* Project object */;
+}

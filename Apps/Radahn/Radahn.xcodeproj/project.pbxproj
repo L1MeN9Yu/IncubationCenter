@@ -7,18 +7,83 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		855318EE295445A200728465 /* Radahn_Service.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 855318BA2954442200728465 /* Radahn_Service.framework */; };
+		855318EF295445A200728465 /* Radahn_Service.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 855318BA2954442200728465 /* Radahn_Service.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		85B96F70295440EE007972E2 /* Radahn_Apps.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85B96F6C295440EE007972E2 /* Radahn_Apps.framework */; };
+		85B96F71295440EE007972E2 /* Radahn_Apps.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 85B96F6C295440EE007972E2 /* Radahn_Apps.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		85B96F72295440EE007972E2 /* Radahn_Center.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85B96F6D295440EE007972E2 /* Radahn_Center.framework */; };
+		85B96F73295440EE007972E2 /* Radahn_Center.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 85B96F6D295440EE007972E2 /* Radahn_Center.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		85B96F76295440EE007972E2 /* Radahn_UICore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85B96F6F295440EE007972E2 /* Radahn_UICore.framework */; };
+		85B96F77295440EE007972E2 /* Radahn_UICore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 85B96F6F295440EE007972E2 /* Radahn_UICore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		85DC38DF28D44F4E00BE31EC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85DC38DE28D44F4E00BE31EC /* AppDelegate.swift */; };
 		85DC38E128D44F4E00BE31EC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85DC38E028D44F4E00BE31EC /* SceneDelegate.swift */; };
-		85DC38E328D44F4E00BE31EC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85DC38E228D44F4E00BE31EC /* ViewController.swift */; };
 		85DC38E828D44F4F00BE31EC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 85DC38E728D44F4F00BE31EC /* Assets.xcassets */; };
 		85DC38EB28D44F4F00BE31EC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85DC38E928D44F4F00BE31EC /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		85531891295443F400728465 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8553188D295443F400728465 /* Radahn_UICore.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 85BAB86F29532F050070A505;
+			remoteInfo = Radahn_UICore;
+		};
+		85531897295443F400728465 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 85531893295443F400728465 /* Radahn_Center.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 85BAB88929532F1F0070A505;
+			remoteInfo = Radahn_Center;
+		};
+		8553189F295443F400728465 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 85531899295443F400728465 /* Radahn_Apps.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 85AA97CE2953521300794447;
+			remoteInfo = Radahn_Apps;
+		};
+		855318B92954442200728465 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 855318B52954442200728465 /* Radahn_Service.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 855318AB2954442200728465;
+			remoteInfo = Radahn_Service;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		85BAB93C295348050070A505 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				85B96F71295440EE007972E2 /* Radahn_Apps.framework in Embed Frameworks */,
+				85B96F73295440EE007972E2 /* Radahn_Center.framework in Embed Frameworks */,
+				855318EF295445A200728465 /* Radahn_Service.framework in Embed Frameworks */,
+				85B96F77295440EE007972E2 /* Radahn_UICore.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		852882C329540495005267B4 /* Radahn.Release.Override.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Radahn.Release.Override.xcconfig; sourceTree = "<group>"; };
+		8553188D295443F400728465 /* Radahn_UICore.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Radahn_UICore.xcodeproj; path = Radahn_UICore/Radahn_UICore.xcodeproj; sourceTree = "<group>"; };
+		85531893295443F400728465 /* Radahn_Center.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Radahn_Center.xcodeproj; path = Radahn_Center/Radahn_Center.xcodeproj; sourceTree = "<group>"; };
+		85531899295443F400728465 /* Radahn_Apps.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Radahn_Apps.xcodeproj; path = Radahn_Apps/Radahn_Apps.xcodeproj; sourceTree = "<group>"; };
+		855318B52954442200728465 /* Radahn_Service.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Radahn_Service.xcodeproj; path = Radahn_Service/Radahn_Service.xcodeproj; sourceTree = "<group>"; };
+		85B96F6C295440EE007972E2 /* Radahn_Apps.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Radahn_Apps.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		85B96F6D295440EE007972E2 /* Radahn_Center.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Radahn_Center.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		85B96F6E295440EE007972E2 /* Radahn.Service.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Radahn.Service.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		85B96F6F295440EE007972E2 /* Radahn_UICore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Radahn_UICore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		85BAB8FD2953394C0070A505 /* Radahn.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Radahn.entitlements; sourceTree = "<group>"; };
+		85BAB92D295344A30070A505 /* Radahn.App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Radahn.App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		85DC38DB28D44F4E00BE31EC /* Radahn.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Radahn.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		85DC38DE28D44F4E00BE31EC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		85DC38E028D44F4E00BE31EC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		85DC38E228D44F4E00BE31EC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		85DC38E728D44F4F00BE31EC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		85DC38EA28D44F4F00BE31EC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		85DC38EC28D44F4F00BE31EC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -26,7 +91,6 @@
 		85DC390328D454F200BE31EC /* Radahn.Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Radahn.Debug.xcconfig; sourceTree = "<group>"; };
 		85DC390428D4550500BE31EC /* Radahn.Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Radahn.Release.xcconfig; sourceTree = "<group>"; };
 		85DC390928D45B0600BE31EC /* Radahn.Debug.Override.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Radahn.Debug.Override.xcconfig; sourceTree = "<group>"; };
-		85DC391728D45FB000BE31EC /* Radahn.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Radahn.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -34,19 +98,80 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				85B96F70295440EE007972E2 /* Radahn_Apps.framework in Frameworks */,
+				85B96F72295440EE007972E2 /* Radahn_Center.framework in Frameworks */,
+				855318EE295445A200728465 /* Radahn_Service.framework in Frameworks */,
+				85B96F76295440EE007972E2 /* Radahn_UICore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		852E5D3A29516BFD002234F4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				85B96F6C295440EE007972E2 /* Radahn_Apps.framework */,
+				85B96F6D295440EE007972E2 /* Radahn_Center.framework */,
+				85B96F6E295440EE007972E2 /* Radahn.Service.framework */,
+				85B96F6F295440EE007972E2 /* Radahn_UICore.framework */,
+				85BAB92D295344A30070A505 /* Radahn.App.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8553188E295443F400728465 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				85531892295443F400728465 /* Radahn_UICore.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		85531894295443F400728465 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				85531898295443F400728465 /* Radahn_Center.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8553189A295443F400728465 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				855318A0295443F400728465 /* Radahn_Apps.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		855318B62954442200728465 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				855318BA2954442200728465 /* Radahn_Service.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		85BAB84A29532E250070A505 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				85531899295443F400728465 /* Radahn_Apps.xcodeproj */,
+				85531893295443F400728465 /* Radahn_Center.xcodeproj */,
+				8553188D295443F400728465 /* Radahn_UICore.xcodeproj */,
+				855318B52954442200728465 /* Radahn_Service.xcodeproj */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
 		85DC38D228D44F4E00BE31EC = {
 			isa = PBXGroup;
 			children = (
 				85DC38DD28D44F4E00BE31EC /* Sources */,
+				85BAB84A29532E250070A505 /* Modules */,
 				85DC38F428D450C500BE31EC /* XCConfig */,
 				85DC38F328D44FE300BE31EC /* Resources */,
 				85DC38DC28D44F4E00BE31EC /* Products */,
+				852E5D3A29516BFD002234F4 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -63,7 +188,6 @@
 			children = (
 				85DC38DE28D44F4E00BE31EC /* AppDelegate.swift */,
 				85DC38E028D44F4E00BE31EC /* SceneDelegate.swift */,
-				85DC38E228D44F4E00BE31EC /* ViewController.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -71,7 +195,7 @@
 		85DC38F328D44FE300BE31EC /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				85DC391728D45FB000BE31EC /* Radahn.entitlements */,
+				85BAB8FD2953394C0070A505 /* Radahn.entitlements */,
 				85DC38EC28D44F4F00BE31EC /* Info.plist */,
 				85DC38E728D44F4F00BE31EC /* Assets.xcassets */,
 				85DC38E928D44F4F00BE31EC /* LaunchScreen.storyboard */,
@@ -86,6 +210,7 @@
 				85DC390328D454F200BE31EC /* Radahn.Debug.xcconfig */,
 				85DC390428D4550500BE31EC /* Radahn.Release.xcconfig */,
 				85DC390928D45B0600BE31EC /* Radahn.Debug.Override.xcconfig */,
+				852882C329540495005267B4 /* Radahn.Release.Override.xcconfig */,
 			);
 			path = XCConfig;
 			sourceTree = "<group>";
@@ -100,12 +225,15 @@
 				85DC38D728D44F4E00BE31EC /* Sources */,
 				85DC38D828D44F4E00BE31EC /* Frameworks */,
 				85DC38D928D44F4E00BE31EC /* Resources */,
+				85BAB93C295348050070A505 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = Radahn;
+			packageProductDependencies = (
+			);
 			productName = Radahn;
 			productReference = 85DC38DB28D44F4E00BE31EC /* Radahn.app */;
 			productType = "com.apple.product-type.application";
@@ -136,12 +264,61 @@
 			mainGroup = 85DC38D228D44F4E00BE31EC;
 			productRefGroup = 85DC38DC28D44F4E00BE31EC /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 8553189A295443F400728465 /* Products */;
+					ProjectRef = 85531899295443F400728465 /* Radahn_Apps.xcodeproj */;
+				},
+				{
+					ProductGroup = 85531894295443F400728465 /* Products */;
+					ProjectRef = 85531893295443F400728465 /* Radahn_Center.xcodeproj */;
+				},
+				{
+					ProductGroup = 855318B62954442200728465 /* Products */;
+					ProjectRef = 855318B52954442200728465 /* Radahn_Service.xcodeproj */;
+				},
+				{
+					ProductGroup = 8553188E295443F400728465 /* Products */;
+					ProjectRef = 8553188D295443F400728465 /* Radahn_UICore.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				85DC38DA28D44F4E00BE31EC /* Radahn */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		85531892295443F400728465 /* Radahn_UICore.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Radahn_UICore.framework;
+			remoteRef = 85531891295443F400728465 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		85531898295443F400728465 /* Radahn_Center.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Radahn_Center.framework;
+			remoteRef = 85531897295443F400728465 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		855318A0295443F400728465 /* Radahn_Apps.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Radahn_Apps.framework;
+			remoteRef = 8553189F295443F400728465 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		855318BA2954442200728465 /* Radahn_Service.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Radahn_Service.framework;
+			remoteRef = 855318B92954442200728465 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		85DC38D928D44F4E00BE31EC /* Resources */ = {
@@ -160,7 +337,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				85DC38E328D44F4E00BE31EC /* ViewController.swift in Sources */,
 				85DC38DF28D44F4E00BE31EC /* AppDelegate.swift in Sources */,
 				85DC38E128D44F4E00BE31EC /* SceneDelegate.swift in Sources */,
 			);
@@ -197,13 +373,18 @@
 		85DC38F028D44F4F00BE31EC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_ENTITLEMENTS = RadahnDebug.entitlements;
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
 		85DC38F128D44F4F00BE31EC /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};

@@ -1,0 +1,276 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		852882BB2953FCAC005267B4 /* UIBase in Frameworks */ = {isa = PBXBuildFile; productRef = 852882BA2953FCAC005267B4 /* UIBase */; };
+		852882BD2953FCC0005267B4 /* UIHierarchy in Frameworks */ = {isa = PBXBuildFile; productRef = 852882BC2953FCC0005267B4 /* UIHierarchy */; };
+		855318CB295444D900728465 /* Radahn_Service.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 855318CA295444D900728465 /* Radahn_Service.framework */; };
+		858A3AFE2954327200819398 /* UIRoute in Frameworks */ = {isa = PBXBuildFile; productRef = 858A3AFD2954327200819398 /* UIRoute */; };
+		858A3B0A2954351100819398 /* UIFeedback in Frameworks */ = {isa = PBXBuildFile; productRef = 858A3B092954351100819398 /* UIFeedback */; };
+		858A3B0C2954370000819398 /* UIExtensionsKit in Frameworks */ = {isa = PBXBuildFile; productRef = 858A3B0B2954370000819398 /* UIExtensionsKit */; };
+		858A3B0E2954376300819398 /* Chain in Frameworks */ = {isa = PBXBuildFile; productRef = 858A3B0D2954376300819398 /* Chain */; };
+		85BAB909295340720070A505 /* UILayout in Frameworks */ = {isa = PBXBuildFile; productRef = 85BAB908295340720070A505 /* UILayout */; };
+		8E899BEDD28A4B8692C407AB /* Exported.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E8992E1006A15CEE7CCEBA8 /* Exported.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		855318CA295444D900728465 /* Radahn_Service.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Radahn_Service.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		858A3AC129542C7D00819398 /* UICore.Debug.Override.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = UICore.Debug.Override.xcconfig; sourceTree = "<group>"; };
+		85AA97F2295352DB00794447 /* Radahn.Service.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Radahn.Service.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		85BAB86F29532F050070A505 /* Radahn_UICore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Radahn_UICore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		85BAB8DD295333820070A505 /* UICore.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = UICore.xcconfig; sourceTree = "<group>"; };
+		85BAB8DE295333820070A505 /* UICore.Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = UICore.Debug.xcconfig; sourceTree = "<group>"; };
+		85BAB8DF295333820070A505 /* UICore.Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = UICore.Release.xcconfig; sourceTree = "<group>"; };
+		85BAB916295341EC0070A505 /* Service.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Service.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8E8992E1006A15CEE7CCEBA8 /* Exported.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Exported.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		85BAB86C29532F050070A505 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				858A3B0E2954376300819398 /* Chain in Frameworks */,
+				852882BD2953FCC0005267B4 /* UIHierarchy in Frameworks */,
+				855318CB295444D900728465 /* Radahn_Service.framework in Frameworks */,
+				858A3B0A2954351100819398 /* UIFeedback in Frameworks */,
+				85BAB909295340720070A505 /* UILayout in Frameworks */,
+				852882BB2953FCAC005267B4 /* UIBase in Frameworks */,
+				858A3B0C2954370000819398 /* UIExtensionsKit in Frameworks */,
+				858A3AFE2954327200819398 /* UIRoute in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		85BAB86529532F050070A505 = {
+			isa = PBXGroup;
+			children = (
+				85BAB87129532F050070A505 /* Sources */,
+				85BAB8DC295333820070A505 /* XCConfig */,
+				85BAB87029532F050070A505 /* Products */,
+				85BAB907295340720070A505 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		85BAB87029532F050070A505 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				85BAB86F29532F050070A505 /* Radahn_UICore.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		85BAB87129532F050070A505 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				8E8992E1006A15CEE7CCEBA8 /* Exported.swift */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		85BAB8DC295333820070A505 /* XCConfig */ = {
+			isa = PBXGroup;
+			children = (
+				85BAB8DD295333820070A505 /* UICore.xcconfig */,
+				85BAB8DE295333820070A505 /* UICore.Debug.xcconfig */,
+				85BAB8DF295333820070A505 /* UICore.Release.xcconfig */,
+				858A3AC129542C7D00819398 /* UICore.Debug.Override.xcconfig */,
+			);
+			path = XCConfig;
+			sourceTree = "<group>";
+		};
+		85BAB907295340720070A505 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				855318CA295444D900728465 /* Radahn_Service.framework */,
+				85AA97F2295352DB00794447 /* Radahn.Service.framework */,
+				85BAB916295341EC0070A505 /* Service.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		85BAB86A29532F050070A505 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		85BAB86E29532F050070A505 /* Radahn_UICore */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 85BAB87629532F050070A505 /* Build configuration list for PBXNativeTarget "Radahn_UICore" */;
+			buildPhases = (
+				85BAB86A29532F050070A505 /* Headers */,
+				85BAB86B29532F050070A505 /* Sources */,
+				85BAB86C29532F050070A505 /* Frameworks */,
+				85BAB86D29532F050070A505 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Radahn_UICore;
+			packageProductDependencies = (
+				85BAB908295340720070A505 /* UILayout */,
+				852882BA2953FCAC005267B4 /* UIBase */,
+				852882BC2953FCC0005267B4 /* UIHierarchy */,
+				858A3AFD2954327200819398 /* UIRoute */,
+				858A3B092954351100819398 /* UIFeedback */,
+				858A3B0B2954370000819398 /* UIExtensionsKit */,
+				858A3B0D2954376300819398 /* Chain */,
+			);
+			productName = UICore;
+			productReference = 85BAB86F29532F050070A505 /* Radahn_UICore.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		85BAB86629532F050070A505 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastUpgradeCheck = 1410;
+				TargetAttributes = {
+					85BAB86E29532F050070A505 = {
+						CreatedOnToolsVersion = 14.1;
+					};
+				};
+			};
+			buildConfigurationList = 85BAB86929532F050070A505 /* Build configuration list for PBXProject "Radahn_UICore" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 85BAB86529532F050070A505;
+			productRefGroup = 85BAB87029532F050070A505 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				85BAB86E29532F050070A505 /* Radahn_UICore */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		85BAB86D29532F050070A505 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		85BAB86B29532F050070A505 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8E899BEDD28A4B8692C407AB /* Exported.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		85BAB87429532F050070A505 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 85BAB8DE295333820070A505 /* UICore.Debug.xcconfig */;
+			buildSettings = {
+			};
+			name = Debug;
+		};
+		85BAB87529532F050070A505 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 85BAB8DF295333820070A505 /* UICore.Release.xcconfig */;
+			buildSettings = {
+			};
+			name = Release;
+		};
+		85BAB87729532F050070A505 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = Radahn_UICore;
+			};
+			name = Debug;
+		};
+		85BAB87829532F050070A505 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = Radahn_UICore;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		85BAB86929532F050070A505 /* Build configuration list for PBXProject "Radahn_UICore" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				85BAB87429532F050070A505 /* Debug */,
+				85BAB87529532F050070A505 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		85BAB87629532F050070A505 /* Build configuration list for PBXNativeTarget "Radahn_UICore" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				85BAB87729532F050070A505 /* Debug */,
+				85BAB87829532F050070A505 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		852882BA2953FCAC005267B4 /* UIBase */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = UIBase;
+		};
+		852882BC2953FCC0005267B4 /* UIHierarchy */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = UIHierarchy;
+		};
+		858A3AFD2954327200819398 /* UIRoute */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = UIRoute;
+		};
+		858A3B092954351100819398 /* UIFeedback */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = UIFeedback;
+		};
+		858A3B0B2954370000819398 /* UIExtensionsKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = UIExtensionsKit;
+		};
+		858A3B0D2954376300819398 /* Chain */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Chain;
+		};
+		85BAB908295340720070A505 /* UILayout */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = UILayout;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 85BAB86629532F050070A505 /* Project object */;
+}

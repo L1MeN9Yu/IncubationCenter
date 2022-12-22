@@ -1,6 +1,7 @@
 // Architechures
 
-SDKROOT = iphoneos
+SDKROOT = auto
+SUPPORTED_PLATFORMS = iphoneos iphonesimulator macosx
 
 // Build Options
 
@@ -45,6 +46,7 @@ PUBLIC_HEADERS_FOLDER_PATH =
 CODE_SIGN_IDENTITY =
 CODE_SIGN_STYLE = Manual
 DEVELOPMENT_TEAM =
+CODE_SIGN_ENTITLEMENTS = Resources/Radahn.entitlements
 
 // Versioning
 

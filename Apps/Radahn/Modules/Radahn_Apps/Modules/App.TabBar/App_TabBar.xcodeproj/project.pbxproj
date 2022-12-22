@@ -1,0 +1,241 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		855318E52954455D00728465 /* Radahn_Center.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 855318E22954455D00728465 /* Radahn_Center.framework */; };
+		855318E72954455D00728465 /* Radahn_Service.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 855318E32954455D00728465 /* Radahn_Service.framework */; };
+		855318E92954455D00728465 /* Radahn_UICore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 855318E42954455D00728465 /* Radahn_UICore.framework */; };
+		858A3B06295434E900819398 /* AppTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858A3B03295434E800819398 /* AppTabBarViewController.swift */; };
+		858A3B07295434E900819398 /* Exported.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858A3B04295434E800819398 /* Exported.swift */; };
+		858A3B08295434E900819398 /* TabBarModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858A3B05295434E800819398 /* TabBarModule.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		8528829B2953FAE8005267B4 /* App_TabBar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = App_TabBar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		852882AC2953FB52005267B4 /* TabBar.Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = TabBar.Debug.xcconfig; sourceTree = "<group>"; };
+		852882AD2953FB52005267B4 /* TabBar.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = TabBar.xcconfig; sourceTree = "<group>"; };
+		852882AE2953FB52005267B4 /* TabBar.Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = TabBar.Release.xcconfig; sourceTree = "<group>"; };
+		852882B32953FC1C005267B4 /* Radahn.Center.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Radahn.Center.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		852882B52953FC1C005267B4 /* Radahn.Service.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Radahn.Service.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		852882B72953FC1C005267B4 /* Radahn.UICore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Radahn.UICore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		855318E22954455D00728465 /* Radahn_Center.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Radahn_Center.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		855318E32954455D00728465 /* Radahn_Service.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Radahn_Service.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		855318E42954455D00728465 /* Radahn_UICore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Radahn_UICore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		858A3AC429542CE600819398 /* TabBar.Debug.Override.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = TabBar.Debug.Override.xcconfig; sourceTree = "<group>"; };
+		858A3B03295434E800819398 /* AppTabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppTabBarViewController.swift; sourceTree = "<group>"; };
+		858A3B04295434E800819398 /* Exported.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Exported.swift; sourceTree = "<group>"; };
+		858A3B05295434E800819398 /* TabBarModule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarModule.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		852882982953FAE8005267B4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				855318E72954455D00728465 /* Radahn_Service.framework in Frameworks */,
+				855318E92954455D00728465 /* Radahn_UICore.framework in Frameworks */,
+				855318E52954455D00728465 /* Radahn_Center.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		852882912953FAE8005267B4 = {
+			isa = PBXGroup;
+			children = (
+				8528829D2953FAE8005267B4 /* Sources */,
+				852882AB2953FB52005267B4 /* XCConfig */,
+				8528829C2953FAE8005267B4 /* Products */,
+				852882B22953FC1C005267B4 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		8528829C2953FAE8005267B4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8528829B2953FAE8005267B4 /* App_TabBar.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8528829D2953FAE8005267B4 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				858A3B04295434E800819398 /* Exported.swift */,
+				858A3B05295434E800819398 /* TabBarModule.swift */,
+				858A3B03295434E800819398 /* AppTabBarViewController.swift */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		852882AB2953FB52005267B4 /* XCConfig */ = {
+			isa = PBXGroup;
+			children = (
+				852882AD2953FB52005267B4 /* TabBar.xcconfig */,
+				852882AC2953FB52005267B4 /* TabBar.Debug.xcconfig */,
+				852882AE2953FB52005267B4 /* TabBar.Release.xcconfig */,
+				858A3AC429542CE600819398 /* TabBar.Debug.Override.xcconfig */,
+			);
+			path = XCConfig;
+			sourceTree = "<group>";
+		};
+		852882B22953FC1C005267B4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				855318E22954455D00728465 /* Radahn_Center.framework */,
+				855318E32954455D00728465 /* Radahn_Service.framework */,
+				855318E42954455D00728465 /* Radahn_UICore.framework */,
+				852882B32953FC1C005267B4 /* Radahn.Center.framework */,
+				852882B52953FC1C005267B4 /* Radahn.Service.framework */,
+				852882B72953FC1C005267B4 /* Radahn.UICore.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		852882962953FAE8005267B4 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		8528829A2953FAE8005267B4 /* App_TabBar */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 852882A22953FAE8005267B4 /* Build configuration list for PBXNativeTarget "App_TabBar" */;
+			buildPhases = (
+				852882962953FAE8005267B4 /* Headers */,
+				852882972953FAE8005267B4 /* Sources */,
+				852882982953FAE8005267B4 /* Frameworks */,
+				852882992953FAE8005267B4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = App_TabBar;
+			productName = App.TabBar;
+			productReference = 8528829B2953FAE8005267B4 /* App_TabBar.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		852882922953FAE8005267B4 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastUpgradeCheck = 1410;
+				TargetAttributes = {
+					8528829A2953FAE8005267B4 = {
+						CreatedOnToolsVersion = 14.1;
+						LastSwiftMigration = 1410;
+					};
+				};
+			};
+			buildConfigurationList = 852882952953FAE8005267B4 /* Build configuration list for PBXProject "App_TabBar" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 852882912953FAE8005267B4;
+			productRefGroup = 8528829C2953FAE8005267B4 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8528829A2953FAE8005267B4 /* App_TabBar */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		852882992953FAE8005267B4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		852882972953FAE8005267B4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				858A3B08295434E900819398 /* TabBarModule.swift in Sources */,
+				858A3B07295434E900819398 /* Exported.swift in Sources */,
+				858A3B06295434E900819398 /* AppTabBarViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		852882A02953FAE8005267B4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 852882AC2953FB52005267B4 /* TabBar.Debug.xcconfig */;
+			buildSettings = {
+			};
+			name = Debug;
+		};
+		852882A12953FAE8005267B4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 852882AE2953FB52005267B4 /* TabBar.Release.xcconfig */;
+			buildSettings = {
+			};
+			name = Release;
+		};
+		852882A32953FAE8005267B4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = App_TabBar;
+			};
+			name = Debug;
+		};
+		852882A42953FAE8005267B4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = App_TabBar;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		852882952953FAE8005267B4 /* Build configuration list for PBXProject "App_TabBar" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				852882A02953FAE8005267B4 /* Debug */,
+				852882A12953FAE8005267B4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		852882A22953FAE8005267B4 /* Build configuration list for PBXNativeTarget "App_TabBar" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				852882A32953FAE8005267B4 /* Debug */,
+				852882A42953FAE8005267B4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 852882922953FAE8005267B4 /* Project object */;
+}

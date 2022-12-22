@@ -3,8 +3,8 @@
 //
 
 @_exported import AppLifecycle
-@_exported import AsyncImageView
-@_exported import BaseUI
+@_exported import UIWebImage
+@_exported import UIBase
 @_exported import Chain
 @_exported import UICombine
 @_exported import UIExtensionsKit

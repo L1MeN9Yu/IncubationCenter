@@ -1,0 +1,269 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		855318DB2954454D00728465 /* Radahn_Center.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 855318D82954454D00728465 /* Radahn_Center.framework */; };
+		855318DD2954454D00728465 /* Radahn_Service.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 855318D92954454D00728465 /* Radahn_Service.framework */; };
+		855318DF2954454D00728465 /* Radahn_UICore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 855318DA2954454D00728465 /* Radahn_UICore.framework */; };
+		858A3AF72954325C00819398 /* Exported.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858A3AEF2954325C00819398 /* Exported.swift */; };
+		858A3AF82954325C00819398 /* BootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858A3AF12954325C00819398 /* BootViewController.swift */; };
+		858A3AF92954325C00819398 /* BootContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858A3AF22954325C00819398 /* BootContentView.swift */; };
+		858A3AFA2954325C00819398 /* DiagnoseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858A3AF42954325C00819398 /* DiagnoseViewController.swift */; };
+		858A3AFB2954325C00819398 /* DiagnoseContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858A3AF52954325C00819398 /* DiagnoseContentView.swift */; };
+		858A3AFC2954325C00819398 /* BootstrapModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858A3AF62954325C00819398 /* BootstrapModule.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		855318D82954454D00728465 /* Radahn_Center.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Radahn_Center.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		855318D92954454D00728465 /* Radahn_Service.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Radahn_Service.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		855318DA2954454D00728465 /* Radahn_UICore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Radahn_UICore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		858A3ACF29542F6700819398 /* App_Boot.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = App_Boot.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		858A3AE129542FBC00819398 /* Boot.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Boot.xcconfig; sourceTree = "<group>"; };
+		858A3AE229542FBC00819398 /* Boot.Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Boot.Debug.xcconfig; sourceTree = "<group>"; };
+		858A3AE329542FBC00819398 /* Boot.Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Boot.Release.xcconfig; sourceTree = "<group>"; };
+		858A3AE429542FBC00819398 /* Boot.Debug.Override.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Boot.Debug.Override.xcconfig; sourceTree = "<group>"; };
+		858A3AE6295430FC00819398 /* Radahn.Center.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Radahn.Center.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		858A3AE8295430FC00819398 /* Radahn.Service.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Radahn.Service.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		858A3AEA295430FC00819398 /* Radahn.UICore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Radahn.UICore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		858A3AEF2954325C00819398 /* Exported.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Exported.swift; sourceTree = "<group>"; };
+		858A3AF12954325C00819398 /* BootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BootViewController.swift; sourceTree = "<group>"; };
+		858A3AF22954325C00819398 /* BootContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BootContentView.swift; sourceTree = "<group>"; };
+		858A3AF42954325C00819398 /* DiagnoseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiagnoseViewController.swift; sourceTree = "<group>"; };
+		858A3AF52954325C00819398 /* DiagnoseContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiagnoseContentView.swift; sourceTree = "<group>"; };
+		858A3AF62954325C00819398 /* BootstrapModule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BootstrapModule.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		858A3ACC29542F6700819398 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				855318DD2954454D00728465 /* Radahn_Service.framework in Frameworks */,
+				855318DF2954454D00728465 /* Radahn_UICore.framework in Frameworks */,
+				855318DB2954454D00728465 /* Radahn_Center.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		858A3AC529542F6700819398 = {
+			isa = PBXGroup;
+			children = (
+				858A3AD129542F6700819398 /* Sources */,
+				858A3AE029542FBC00819398 /* XCConfig */,
+				858A3AD029542F6700819398 /* Products */,
+				858A3AE5295430FC00819398 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		858A3AD029542F6700819398 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				858A3ACF29542F6700819398 /* App_Boot.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		858A3AD129542F6700819398 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				858A3AEF2954325C00819398 /* Exported.swift */,
+				858A3AF62954325C00819398 /* BootstrapModule.swift */,
+				858A3AF02954325C00819398 /* Boot */,
+				858A3AF32954325C00819398 /* Diagnose */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		858A3AE029542FBC00819398 /* XCConfig */ = {
+			isa = PBXGroup;
+			children = (
+				858A3AE129542FBC00819398 /* Boot.xcconfig */,
+				858A3AE229542FBC00819398 /* Boot.Debug.xcconfig */,
+				858A3AE329542FBC00819398 /* Boot.Release.xcconfig */,
+				858A3AE429542FBC00819398 /* Boot.Debug.Override.xcconfig */,
+			);
+			path = XCConfig;
+			sourceTree = "<group>";
+		};
+		858A3AE5295430FC00819398 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				855318D82954454D00728465 /* Radahn_Center.framework */,
+				855318D92954454D00728465 /* Radahn_Service.framework */,
+				855318DA2954454D00728465 /* Radahn_UICore.framework */,
+				858A3AE6295430FC00819398 /* Radahn.Center.framework */,
+				858A3AE8295430FC00819398 /* Radahn.Service.framework */,
+				858A3AEA295430FC00819398 /* Radahn.UICore.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		858A3AF02954325C00819398 /* Boot */ = {
+			isa = PBXGroup;
+			children = (
+				858A3AF12954325C00819398 /* BootViewController.swift */,
+				858A3AF22954325C00819398 /* BootContentView.swift */,
+			);
+			path = Boot;
+			sourceTree = "<group>";
+		};
+		858A3AF32954325C00819398 /* Diagnose */ = {
+			isa = PBXGroup;
+			children = (
+				858A3AF42954325C00819398 /* DiagnoseViewController.swift */,
+				858A3AF52954325C00819398 /* DiagnoseContentView.swift */,
+			);
+			path = Diagnose;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		858A3ACA29542F6700819398 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		858A3ACE29542F6700819398 /* App_Boot */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 858A3AD629542F6700819398 /* Build configuration list for PBXNativeTarget "App_Boot" */;
+			buildPhases = (
+				858A3ACA29542F6700819398 /* Headers */,
+				858A3ACB29542F6700819398 /* Sources */,
+				858A3ACC29542F6700819398 /* Frameworks */,
+				858A3ACD29542F6700819398 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = App_Boot;
+			productName = App.Boot;
+			productReference = 858A3ACF29542F6700819398 /* App_Boot.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		858A3AC629542F6700819398 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastUpgradeCheck = 1410;
+				TargetAttributes = {
+					858A3ACE29542F6700819398 = {
+						CreatedOnToolsVersion = 14.1;
+						LastSwiftMigration = 1410;
+					};
+				};
+			};
+			buildConfigurationList = 858A3AC929542F6700819398 /* Build configuration list for PBXProject "App_Boot" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 858A3AC529542F6700819398;
+			productRefGroup = 858A3AD029542F6700819398 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				858A3ACE29542F6700819398 /* App_Boot */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		858A3ACD29542F6700819398 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		858A3ACB29542F6700819398 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				858A3AFA2954325C00819398 /* DiagnoseViewController.swift in Sources */,
+				858A3AF92954325C00819398 /* BootContentView.swift in Sources */,
+				858A3AFC2954325C00819398 /* BootstrapModule.swift in Sources */,
+				858A3AF82954325C00819398 /* BootViewController.swift in Sources */,
+				858A3AF72954325C00819398 /* Exported.swift in Sources */,
+				858A3AFB2954325C00819398 /* DiagnoseContentView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		858A3AD429542F6700819398 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 858A3AE229542FBC00819398 /* Boot.Debug.xcconfig */;
+			buildSettings = {
+			};
+			name = Debug;
+		};
+		858A3AD529542F6700819398 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 858A3AE329542FBC00819398 /* Boot.Release.xcconfig */;
+			buildSettings = {
+			};
+			name = Release;
+		};
+		858A3AD729542F6700819398 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = App_Boot;
+			};
+			name = Debug;
+		};
+		858A3AD829542F6700819398 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = App_Boot;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		858A3AC929542F6700819398 /* Build configuration list for PBXProject "App_Boot" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				858A3AD429542F6700819398 /* Debug */,
+				858A3AD529542F6700819398 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		858A3AD629542F6700819398 /* Build configuration list for PBXNativeTarget "App_Boot" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				858A3AD729542F6700819398 /* Debug */,
+				858A3AD829542F6700819398 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 858A3AC629542F6700819398 /* Project object */;
+}

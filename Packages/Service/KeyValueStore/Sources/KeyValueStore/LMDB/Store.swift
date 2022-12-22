@@ -11,10 +11,10 @@ public class Store {
 
     public lazy var async = AsyncStore(database: database)
     public lazy var sync = SyncStore(database: database)
-    #if canImport(_Concurrency)
-    @available(macOS 10.15, iOS 13.0, watchOS 6.0, tvOS 13.0, *)
-    public lazy var await = AwaitStore(database: database)
-    #endif
+//    #if canImport(_Concurrency)
+//    @available(macOS 10.15, iOS 13.0, watchOS 6.0, tvOS 13.0, *)
+//    private lazy var await = AwaitStore(database: database)
+//    #endif
 
     public init(name: String, environment: Environment) throws {
         precondition(!name.isEmpty, "name is empty")

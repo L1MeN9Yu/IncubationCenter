@@ -2,7 +2,7 @@
 // Created by Mengyu Li on 2022/6/27.
 //
 
-import BaseUI
+import UIBase
 import CenterAPI
 import Foundation
 import OrderedCollections

@@ -21,13 +21,10 @@
             location = "group:Packages/UICore/AppLifecycle">
          </FileRef>
          <FileRef
-            location = "group:Packages/UICore/AsyncImageView">
-         </FileRef>
-         <FileRef
-            location = "group:Packages/UICore/BaseUI">
-         </FileRef>
-         <FileRef
             location = "group:Packages/UICore/Chain">
+         </FileRef>
+         <FileRef
+            location = "group:Packages/UICore/UIBase">
          </FileRef>
          <FileRef
             location = "group:Packages/UICore/UIRoute">
@@ -61,6 +58,9 @@
          </FileRef>
          <FileRef
             location = "group:Packages/UICore/UIWebKit">
+         </FileRef>
+         <FileRef
+            location = "group:Packages/UICore/UIWebImage">
          </FileRef>
       </Group>
       <Group

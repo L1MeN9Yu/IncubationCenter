@@ -1,0 +1,238 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		855318CF295444E600728465 /* Radahn_Service.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 855318CE295444E600728465 /* Radahn_Service.framework */; };
+		855318D0295444E600728465 /* Radahn_Service.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 855318CE295444E600728465 /* Radahn_Service.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		8E8998A00BE16FFD33EC268E /* Exported.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E899EEDB9D4478F916F2B3B /* Exported.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		855318D1295444E600728465 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				855318D0295444E600728465 /* Radahn_Service.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		855318CE295444E600728465 /* Radahn_Service.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Radahn_Service.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		858A3AC329542C9B00819398 /* Center.Debug.Override.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Center.Debug.Override.xcconfig; sourceTree = "<group>"; };
+		85BAB88929532F1F0070A505 /* Radahn_Center.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Radahn_Center.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		85BAB8E1295333890070A505 /* Center.Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Center.Debug.xcconfig; sourceTree = "<group>"; };
+		85BAB8E2295333890070A505 /* Center.Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Center.Release.xcconfig; sourceTree = "<group>"; };
+		85BAB8E3295333890070A505 /* Center.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Center.xcconfig; sourceTree = "<group>"; };
+		85BAB91B295341FA0070A505 /* Service.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Service.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		85BAB930295344EE0070A505 /* Radahn.Service.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Radahn.Service.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8E899EEDB9D4478F916F2B3B /* Exported.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Exported.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		85BAB88629532F1F0070A505 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				855318CF295444E600728465 /* Radahn_Service.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		85BAB87F29532F1F0070A505 = {
+			isa = PBXGroup;
+			children = (
+				85BAB88B29532F1F0070A505 /* Sources */,
+				85BAB8E0295333890070A505 /* XCConfig */,
+				85BAB88A29532F1F0070A505 /* Products */,
+				85BAB91A295341FA0070A505 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		85BAB88A29532F1F0070A505 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				85BAB88929532F1F0070A505 /* Radahn_Center.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		85BAB88B29532F1F0070A505 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				8E899EEDB9D4478F916F2B3B /* Exported.swift */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		85BAB8E0295333890070A505 /* XCConfig */ = {
+			isa = PBXGroup;
+			children = (
+				85BAB8E3295333890070A505 /* Center.xcconfig */,
+				85BAB8E1295333890070A505 /* Center.Debug.xcconfig */,
+				85BAB8E2295333890070A505 /* Center.Release.xcconfig */,
+				858A3AC329542C9B00819398 /* Center.Debug.Override.xcconfig */,
+			);
+			path = XCConfig;
+			sourceTree = "<group>";
+		};
+		85BAB91A295341FA0070A505 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				855318CE295444E600728465 /* Radahn_Service.framework */,
+				85BAB930295344EE0070A505 /* Radahn.Service.framework */,
+				85BAB91B295341FA0070A505 /* Service.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		85BAB88429532F1F0070A505 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		85BAB88829532F1F0070A505 /* Radahn_Center */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 85BAB89029532F1F0070A505 /* Build configuration list for PBXNativeTarget "Radahn_Center" */;
+			buildPhases = (
+				85BAB88429532F1F0070A505 /* Headers */,
+				85BAB88529532F1F0070A505 /* Sources */,
+				85BAB88629532F1F0070A505 /* Frameworks */,
+				85BAB88729532F1F0070A505 /* Resources */,
+				855318D1295444E600728465 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Radahn_Center;
+			productName = Center;
+			productReference = 85BAB88929532F1F0070A505 /* Radahn_Center.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		85BAB88029532F1F0070A505 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastUpgradeCheck = 1410;
+				TargetAttributes = {
+					85BAB88829532F1F0070A505 = {
+						CreatedOnToolsVersion = 14.1;
+					};
+				};
+			};
+			buildConfigurationList = 85BAB88329532F1F0070A505 /* Build configuration list for PBXProject "Radahn_Center" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 85BAB87F29532F1F0070A505;
+			productRefGroup = 85BAB88A29532F1F0070A505 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				85BAB88829532F1F0070A505 /* Radahn_Center */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		85BAB88729532F1F0070A505 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		85BAB88529532F1F0070A505 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8E8998A00BE16FFD33EC268E /* Exported.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		85BAB88E29532F1F0070A505 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 85BAB8E1295333890070A505 /* Center.Debug.xcconfig */;
+			buildSettings = {
+			};
+			name = Debug;
+		};
+		85BAB88F29532F1F0070A505 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 85BAB8E2295333890070A505 /* Center.Release.xcconfig */;
+			buildSettings = {
+			};
+			name = Release;
+		};
+		85BAB89129532F1F0070A505 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = Radahn_Center;
+			};
+			name = Debug;
+		};
+		85BAB89229532F1F0070A505 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = Radahn_Center;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		85BAB88329532F1F0070A505 /* Build configuration list for PBXProject "Radahn_Center" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				85BAB88E29532F1F0070A505 /* Debug */,
+				85BAB88F29532F1F0070A505 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		85BAB89029532F1F0070A505 /* Build configuration list for PBXNativeTarget "Radahn_Center" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				85BAB89129532F1F0070A505 /* Debug */,
+				85BAB89229532F1F0070A505 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 85BAB88029532F1F0070A505 /* Project object */;
+}

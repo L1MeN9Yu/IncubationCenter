@@ -86,7 +86,7 @@ private extension Application {
 
     @discardableResult
     static func registerUI() -> Self.Type {
-        BaseUI.register(
+        UIBase.register(
             viewWillAppearAction: {
                 logger.trace("\($0) viewWillAppear")
             },
@@ -94,7 +94,7 @@ private extension Application {
                 logger.trace("\($0) viewWillDisappear")
             }
         )
-        BaseUI.register(viewControllerDeinitAction: {
+        UIBase.register(viewControllerDeinitAction: {
             logger.debug("\($0) deinit")
         })
         return self
